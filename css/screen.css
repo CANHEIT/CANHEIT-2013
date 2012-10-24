@@ -1,11 +1,11 @@
-/* -------------------------------------------------------------------------*/
+/* ------------------------------------------------------------------------- */
 /* Layout */
-/* line 9, ../sass/screen.scss */
+/* line 9, ../sass/screen.sass */
 body {
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
 }
 
-/* line 13, ../sass/screen.scss */
+/* line 12, ../sass/screen.sass */
 .container {
   *zoom: 1;
   max-width: 19em;
@@ -21,15 +21,15 @@ body {
   display: table;
   clear: both;
 }
-/* line 15, ../sass/screen.scss */
+/* line 14, ../sass/screen.sass */
 .container img {
   max-width: 100%;
 }
-/* line 19, ../sass/screen.scss */
+/* line 17, ../sass/screen.sass */
 .container header p.tagline {
   text-align: center;
 }
-/* line 22, ../sass/screen.scss */
+/* line 19, ../sass/screen.sass */
 .container header img {
   display: block;
   max-width: 14em;
