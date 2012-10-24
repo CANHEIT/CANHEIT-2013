@@ -23,6 +23,15 @@ bold, strong
 img, video, embed, object
   max-width: 100%
 
+h1
+  font-weight: 400
+  text-transform: uppercase
+  color: $primary-gray
+  font-size: 1.875em /* 30 / 16 = 1.875 */
+  line-height: 1.06666666666667em /* 32 / 30 = 1.06666666666667 */
+  margin-top: 2em
+  margin-right: 3em
+
 h2
   font-weight: 600
   color: $primary-orange
@@ -67,19 +76,14 @@ a.button:hover
   background: rgba($secondary-blue, 0.8)
 
 header
-  text-align: center
-  background-color: #fffcfc
-  background-image: -moz-radial-gradient(50% 40%, circle closest-side, #ffffff, rgba(255, 255, 255, 0.1) 8em,rgba(0, 0, 0, 0.05) 11em)
-  background-image: -webkit-radial-gradient(50% 40%, circle closest-side, #ffffff, rgba(255, 255, 255, 1) 8em,rgba(0, 0, 0, 0.05) 11em)
-  background-image: -o-radial-gradient(50% 40%, circle closest-side, #ffffff, rgba(255, 255, 255, 1) 8em,rgba(0, 0, 0, 0.05) 11em)
-  background-image: -ms-radial-gradient(50% 40%, circle closest-side, #ffffff, rgba(255, 255, 255, 1) 8em,rgba(0, 0, 0, 0.05) 11em)
-  background-image: radial-gradient(50% 40%, circle closest-side, #ffffff, rgba(255, 255, 255, 1) 8em,rgba(0, 0, 0, 0.05) 11em)
-
-  margin: -1em -1em 1em
-  padding: 1em  
-  p.tagline
+  p.tagline, p.summary
     font-size: 0.875em /* 14px / 16px = 0.875 */
     margin-top: 0
+  p.summary
+    padding: 1.14285714285714em /* 16 / 14 = 1.14285714285714 */
+    margin: -1.14285714285714em /* */
+    margin-bottom: 1em
+    background: rgba(0 , 0, 0, 0.05)
   img
     display: block
     max-width: 14em
@@ -94,9 +98,38 @@ header
     padding: 0 2em
     color: $primary-orange
 
+.home header
+  text-align: center
+  background-color: #fffcfc
+  background-image: -moz-radial-gradient(50% 40%, circle closest-side, #ffffff, rgba(255, 255, 255, 0.1) 8em,rgba(0, 0, 0, 0.05) 11em)
+  background-image: -webkit-radial-gradient(50% 40%, circle closest-side, #ffffff, rgba(255, 255, 255, 1) 8em,rgba(0, 0, 0, 0.05) 11em)
+  background-image: -o-radial-gradient(50% 40%, circle closest-side, #ffffff, rgba(255, 255, 255, 1) 8em,rgba(0, 0, 0, 0.05) 11em)
+  background-image: -ms-radial-gradient(50% 40%, circle closest-side, #ffffff, rgba(255, 255, 255, 1) 8em,rgba(0, 0, 0, 0.05) 11em)
+  background-image: radial-gradient(50% 40%, circle closest-side, #ffffff, rgba(255, 255, 255, 1) 8em,rgba(0, 0, 0, 0.05) 11em)
+
+  margin: -1em -1em 1em
+  padding: 1em  
+
 #promovideo
   iframe
     margin: 0 auto
+
+p.note
+  font-size: 0.6875em /* 11 / 16 = 0.6875 */
+  line-height: 1.01818181818182em /* 11.2 / 11 = 1.01818181818182 */
+  margin-top: 0.43636363636364em /* (4.8 / 11 = 0.43636363636364 */
+  margin-bottom: 1em
+
+.intro
+  border-bottom: 1px solid #ccc
+  p
+    color: $primary-gray
+  
+p.theme
+  font-style: italic
+  margin: 0 4em 0 2em
+  font-weight: 600
+  color: $primary-gray
 
 #organizers
   background-color: $charcoal
