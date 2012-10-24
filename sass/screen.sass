@@ -8,15 +8,32 @@
 
 body
   font-family: 'Source Sans Pro', sans-serif
+  font-weight: 400
+  background-color: #f0f0f0
+
+bold, strong
+  font-weight: 700   
 
 .container
   +container
+  background-color: white
+  padding-top: 1em
   img
     max-width: 100%
   header
+    text-align: center
     p.tagline
-      text-align: center
+      font-size: 0.875em /* 14px / 16px = 0.875 */
+      margin-top: 0
     img
       display: block
       max-width: 14em
       margin: 0 auto
+    p.location-date
+      margin-top: 1.5em
+      color: #777
+    span.location
+      padding-right: 1em
+    p.theme
+      font-size: 1.125em /* 18px / 16px = 1.125 */
+      padding: 0 2em

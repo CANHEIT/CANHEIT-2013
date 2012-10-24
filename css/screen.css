@@ -3,9 +3,16 @@
 /* line 9, ../sass/screen.sass */
 body {
   font-family: "Source Sans Pro", sans-serif;
+  font-weight: 400;
+  background-color: #f0f0f0;
 }
 
-/* line 12, ../sass/screen.sass */
+/* line 14, ../sass/screen.sass */
+bold, strong {
+  font-weight: 700;
+}
+
+/* line 17, ../sass/screen.sass */
 .container {
   *zoom: 1;
   max-width: 19em;
@@ -14,6 +21,8 @@ body {
   margin-right: auto;
   padding-left: 1em;
   padding-right: 1em;
+  background-color: white;
+  padding-top: 1em;
 }
 /* line 38, ../../../../../../usr/local/Cellar/ruby/1.9.3-p286/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
 .container:after {
@@ -21,17 +30,36 @@ body {
   display: table;
   clear: both;
 }
-/* line 14, ../sass/screen.sass */
+/* line 21, ../sass/screen.sass */
 .container img {
   max-width: 100%;
 }
-/* line 17, ../sass/screen.sass */
-.container header p.tagline {
+/* line 23, ../sass/screen.sass */
+.container header {
   text-align: center;
 }
-/* line 19, ../sass/screen.sass */
+/* line 25, ../sass/screen.sass */
+.container header p.tagline {
+  font-size: 0.875em;
+  margin-top: 0;
+}
+/* line 28, ../sass/screen.sass */
 .container header img {
   display: block;
   max-width: 14em;
   margin: 0 auto;
+}
+/* line 32, ../sass/screen.sass */
+.container header p.location-date {
+  margin-top: 1.5em;
+  color: #777777;
+}
+/* line 35, ../sass/screen.sass */
+.container header span.location {
+  padding-right: 1em;
+}
+/* line 37, ../sass/screen.sass */
+.container header p.theme {
+  font-size: 1.125em;
+  padding: 0 2em;
 }
