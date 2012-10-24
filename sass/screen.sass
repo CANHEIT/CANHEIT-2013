@@ -2,6 +2,7 @@
 // Imports
 
 @import base
+@import colors
 
 /* -------------------------------------------------------------------------
 /* Layout */
@@ -18,22 +19,72 @@ bold, strong
   +container
   background-color: white
   padding-top: 1em
+
+img, video, embed, object
+  max-width: 100%
+
+header
+  text-align: center
+  p.tagline
+    font-size: 0.875em /* 14px / 16px = 0.875 */
+    margin-top: 0
   img
-    max-width: 100%
-  header
-    text-align: center
-    p.tagline
-      font-size: 0.875em /* 14px / 16px = 0.875 */
-      margin-top: 0
-    img
-      display: block
-      max-width: 14em
-      margin: 0 auto
-    p.location-date
-      margin-top: 1.5em
-      color: #777
-    span.location
-      padding-right: 1em
-    p.theme
-      font-size: 1.125em /* 18px / 16px = 1.125 */
-      padding: 0 2em
+    display: block
+    max-width: 14em
+    margin: 0 auto
+  p.location-date
+    margin-top: 1.5em
+    color: #777
+  span.location
+    padding-right: 1em
+  p.theme
+    font-size: 1.125em /* 18px / 16px = 1.125 */
+    padding: 0 2em
+    color: $primary-orange
+
+#promovideo
+  iframe
+    margin: 0 auto
+
+h2
+  font-weight: 600
+  color: $primary-orange
+  font-size: 1.875em /* 30 / 16 = 1.875 */
+  line-height: 1.06666666666667em /* 32 / 30 = 1.06666666666667 */
+  
+h3
+  color: $primary-gray
+  font-size: 1.25em /* 20 / 16 = 1.25 */
+  line-height: 1.2em /* 24 / 20 = 1.2 */
+  
+a:link, a:visited
+  font-weight: 700   
+  color: #55bed8
+  -webkit-transition: color 0.2s linear, background-color 0.2s linear
+  -moz-transition: color 0.2s linear, background-color 0.2s linear
+  -ms-transition: color 0.2s linear, background-color 0.2s linear
+  -o-transition: color 0.2s linear, background-color 0.2s linear
+  transition: color 0.2s linear, background-color 0.2s linear
+
+a:hover
+  color: rgba($secondary-blue, 0.8)
+  -webkit-transition: color 0.2s linear, background-color 0.2s linear
+  -moz-transition: color 0.2s linear, background-color 0.2s linear
+  -ms-transition: color 0.2s linear, background-color 0.2s linear
+  -o-transition: color 0.2s linear, background-color 0.2s linear
+  transition: color 0.2s linear, background-color 0.2s linear
+
+a.button
+  display: inline-block
+  text-decoration: none
+  background: $secondary-blue
+  color: white
+  padding: 0.3em 0.5em
+  border: 1px solid white
+  -webkit-box-shadow:  1px 3px 10px 0px rgba(0, 0, 0, .2)
+  box-shadow:  1px 3px 10px 0px rgba(0, 0, 0, .2)
+  margin-left: -1px
+  text-transform: uppercase
+  
+a.button:hover
+  background: rgba($secondary-blue, 0.8)
