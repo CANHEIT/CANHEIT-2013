@@ -4,7 +4,7 @@
 body {
   font-family: "Source Sans Pro", sans-serif;
   font-weight: 400;
-  background-color: #f0f0f0;
+  background-color: rgba(0, 0, 0, 0.05);
 }
 
 /* line 15, ../sass/screen.sass */
@@ -22,7 +22,7 @@ bold, strong {
   padding-left: 1em;
   padding-right: 1em;
   background-color: white;
-  padding-top: 1em;
+  padding: 1em 1em;
 }
 /* line 38, ../../../../../../usr/local/Cellar/ruby/1.9.3-p286/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
 .container:after {
@@ -37,42 +37,6 @@ img, video, embed, object {
 }
 
 /* line 26, ../sass/screen.sass */
-header {
-  text-align: center;
-}
-/* line 28, ../sass/screen.sass */
-header p.tagline {
-  font-size: 0.875em;
-  margin-top: 0;
-}
-/* line 31, ../sass/screen.sass */
-header img {
-  display: block;
-  max-width: 14em;
-  margin: 0 auto;
-}
-/* line 35, ../sass/screen.sass */
-header p.location-date {
-  margin-top: 1.5em;
-  color: #777777;
-}
-/* line 38, ../sass/screen.sass */
-header span.location {
-  padding-right: 1em;
-}
-/* line 40, ../sass/screen.sass */
-header p.theme {
-  font-size: 1.125em;
-  padding: 0 2em;
-  color: #ffa23e;
-}
-
-/* line 46, ../sass/screen.sass */
-#promovideo iframe {
-  margin: 0 auto;
-}
-
-/* line 49, ../sass/screen.sass */
 h2 {
   font-weight: 600;
   color: #ffa23e;
@@ -80,14 +44,14 @@ h2 {
   line-height: 1.06667em;
 }
 
-/* line 55, ../sass/screen.sass */
+/* line 32, ../sass/screen.sass */
 h3 {
   color: #989a9e;
   font-size: 1.25em;
   line-height: 1.2em;
 }
 
-/* line 60, ../sass/screen.sass */
+/* line 37, ../sass/screen.sass */
 a:link, a:visited {
   font-weight: 700;
   color: #55bed8;
@@ -98,7 +62,7 @@ a:link, a:visited {
   transition: color 0.2s linear, background-color 0.2s linear;
 }
 
-/* line 69, ../sass/screen.sass */
+/* line 46, ../sass/screen.sass */
 a:hover {
   color: rgba(85, 190, 216, 0.8);
   -webkit-transition: color 0.2s linear, background-color 0.2s linear;
@@ -108,7 +72,7 @@ a:hover {
   transition: color 0.2s linear, background-color 0.2s linear;
 }
 
-/* line 77, ../sass/screen.sass */
+/* line 54, ../sass/screen.sass */
 a.button {
   display: inline-block;
   text-decoration: none;
@@ -122,7 +86,70 @@ a.button {
   text-transform: uppercase;
 }
 
-/* line 89, ../sass/screen.sass */
+/* line 66, ../sass/screen.sass */
 a.button:hover {
   background: rgba(85, 190, 216, 0.8);
+}
+
+/* line 69, ../sass/screen.sass */
+header {
+  text-align: center;
+  background-color: #fffcfc;
+  background-image: -moz-radial-gradient(50% 40%, circle closest-side, white, rgba(255, 255, 255, 0.1) 8em, rgba(0, 0, 0, 0.05) 11em);
+  background-image: -webkit-radial-gradient(50% 40%, circle closest-side, white, white 8em, rgba(0, 0, 0, 0.05) 11em);
+  background-image: -o-radial-gradient(50% 40%, circle closest-side, white, white 8em, rgba(0, 0, 0, 0.05) 11em);
+  background-image: -ms-radial-gradient(50% 40%, circle closest-side, white, white 8em, rgba(0, 0, 0, 0.05) 11em);
+  background-image: radial-gradient(50% 40%, circle closest-side, #ffffff, #ffffff 8em, rgba(0, 0, 0, 0.05) 11em);
+  margin: -1em -1em 1em;
+  padding: 1em;
+}
+/* line 80, ../sass/screen.sass */
+header p.tagline {
+  font-size: 0.875em;
+  margin-top: 0;
+}
+/* line 83, ../sass/screen.sass */
+header img {
+  display: block;
+  max-width: 14em;
+  margin: 0 auto;
+}
+/* line 87, ../sass/screen.sass */
+header p.location-date {
+  margin-top: 1.5em;
+  color: #777777;
+}
+/* line 90, ../sass/screen.sass */
+header span.location {
+  padding-right: 1em;
+}
+/* line 92, ../sass/screen.sass */
+header p.theme {
+  font-size: 1.125em;
+  padding: 0 2em;
+  color: #ffa23e;
+}
+
+/* line 98, ../sass/screen.sass */
+#promovideo iframe {
+  margin: 0 auto;
+}
+
+/* line 101, ../sass/screen.sass */
+#organizers {
+  background-color: #303030;
+  margin: 1em -1em;
+  padding: 1em;
+}
+/* line 105, ../sass/screen.sass */
+#organizers h2, #organizers p {
+  font-size: 0.875em;
+  line-height: 1.6em;
+  color: white;
+  text-align: center;
+}
+/* line 110, ../sass/screen.sass */
+#organizers .uottawa-logo, #organizers .carleton-logo {
+  background-image: url(../img/organizers-logo.png);
+  background-repeat: no-repeat;
 }

@@ -10,7 +10,7 @@
 body
   font-family: 'Source Sans Pro', sans-serif
   font-weight: 400
-  background-color: #f0f0f0
+  background-color: rgba(0 , 0, 0, 0.05)
 
 bold, strong
   font-weight: 700   
@@ -18,33 +18,10 @@ bold, strong
 .container
   +container
   background-color: white
-  padding-top: 1em
+  padding: 1em 1em
 
 img, video, embed, object
   max-width: 100%
-
-header
-  text-align: center
-  p.tagline
-    font-size: 0.875em /* 14px / 16px = 0.875 */
-    margin-top: 0
-  img
-    display: block
-    max-width: 14em
-    margin: 0 auto
-  p.location-date
-    margin-top: 1.5em
-    color: #777
-  span.location
-    padding-right: 1em
-  p.theme
-    font-size: 1.125em /* 18px / 16px = 1.125 */
-    padding: 0 2em
-    color: $primary-orange
-
-#promovideo
-  iframe
-    margin: 0 auto
 
 h2
   font-weight: 600
@@ -88,3 +65,49 @@ a.button
   
 a.button:hover
   background: rgba($secondary-blue, 0.8)
+
+header
+  text-align: center
+  background-color: #fffcfc
+  background-image: -moz-radial-gradient(50% 40%, circle closest-side, #ffffff, rgba(255, 255, 255, 0.1) 8em,rgba(0, 0, 0, 0.05) 11em)
+  background-image: -webkit-radial-gradient(50% 40%, circle closest-side, #ffffff, rgba(255, 255, 255, 1) 8em,rgba(0, 0, 0, 0.05) 11em)
+  background-image: -o-radial-gradient(50% 40%, circle closest-side, #ffffff, rgba(255, 255, 255, 1) 8em,rgba(0, 0, 0, 0.05) 11em)
+  background-image: -ms-radial-gradient(50% 40%, circle closest-side, #ffffff, rgba(255, 255, 255, 1) 8em,rgba(0, 0, 0, 0.05) 11em)
+  background-image: radial-gradient(50% 40%, circle closest-side, #ffffff, rgba(255, 255, 255, 1) 8em,rgba(0, 0, 0, 0.05) 11em)
+
+  margin: -1em -1em 1em
+  padding: 1em  
+  p.tagline
+    font-size: 0.875em /* 14px / 16px = 0.875 */
+    margin-top: 0
+  img
+    display: block
+    max-width: 14em
+    margin: 0 auto
+  p.location-date
+    margin-top: 1.5em
+    color: #777
+  span.location
+    padding-right: 1em
+  p.theme
+    font-size: 1.125em /* 18px / 16px = 1.125 */
+    padding: 0 2em
+    color: $primary-orange
+
+#promovideo
+  iframe
+    margin: 0 auto
+
+#organizers
+  background-color: $charcoal
+  margin: 1em -1em
+  padding: 1em
+  h2, p
+    font-size: 0.875em /* 14 / 16 = 0.875 */
+    line-height: 1.6em /* 22.4 / 14 = 1.6 */
+    color: white
+    text-align: center
+  .uottawa-logo, .carleton-logo
+    background-image: url(../img/organizers-logo.png)
+    background-repeat: no-repeat
+    
