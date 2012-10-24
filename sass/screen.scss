@@ -6,7 +6,24 @@
 /* -------------------------------------------------------------------------*/
 /* Layout */
 
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
 .container {
   @include container;
-  @include susy-grid-background;
+  img {
+    max-width: 100%;
+  }
+  header {
+    p.tagline {
+      text-align: center;
+    }
+    img {
+      display: block;
+      max-width: 14em;
+      margin: 0 auto;
+    }
+  }
 }
+
