@@ -9,7 +9,7 @@
 body
   font-family: 'Source Sans Pro', sans-serif
   font-weight: $weight-normal
-  background-color: rgba(0 , 0, 0, 0.05)
+  background-color: darken(white, 5%)
 
 bold, strong
   font-weight: $weight-bold   
@@ -82,6 +82,11 @@ a.bigbutton
     display: block
     text-transform: uppercase
     font-weight: $weight-bold
+
+.chromeframe
+  background-color: lighten($secondary-blue, 30%)
+  margin: 0
+  padding: 1em
 
 header
   p.tagline, p.summary

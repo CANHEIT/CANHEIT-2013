@@ -4,7 +4,7 @@
 body {
   font-family: "Source Sans Pro", sans-serif;
   font-weight: 400;
-  background-color: rgba(0, 0, 0, 0.05);
+  background-color: #f2f2f2;
 }
 
 /* line 14, ../sass/screen.sass */
@@ -115,42 +115,49 @@ a.bigbutton strong {
   font-weight: 700;
 }
 
-/* line 87, ../sass/screen.sass */
+/* line 86, ../sass/screen.sass */
+.chromeframe {
+  background-color: #d1eef5;
+  margin: 0;
+  padding: 1em;
+}
+
+/* line 92, ../sass/screen.sass */
 header p.tagline, header p.summary {
   font-size: 0.875em;
   margin-top: 0;
 }
-/* line 90, ../sass/screen.sass */
+/* line 95, ../sass/screen.sass */
 header p.summary {
   padding: 1.14286em;
   margin: -1.14286em;
   margin-bottom: 1em;
   background: rgba(0, 0, 0, 0.05);
 }
-/* line 95, ../sass/screen.sass */
+/* line 100, ../sass/screen.sass */
 header p.summary a {
   color: #ffa23e;
 }
-/* line 97, ../sass/screen.sass */
+/* line 102, ../sass/screen.sass */
 header p.summary a:hover {
   color: #ffbb71;
 }
-/* line 99, ../sass/screen.sass */
+/* line 104, ../sass/screen.sass */
 header img {
   display: block;
   max-width: 14em;
   margin: 0 auto;
 }
-/* line 103, ../sass/screen.sass */
+/* line 108, ../sass/screen.sass */
 header p.location-date {
   margin-top: 1.5em;
   color: #777777;
 }
-/* line 106, ../sass/screen.sass */
+/* line 111, ../sass/screen.sass */
 header span.location {
   padding-right: 1em;
 }
-/* line 108, ../sass/screen.sass */
+/* line 113, ../sass/screen.sass */
 header p.theme {
   font-size: 1.125em;
   padding: 0 2em;
@@ -158,7 +165,7 @@ header p.theme {
   margin: 0;
 }
 
-/* line 114, ../sass/screen.sass */
+/* line 119, ../sass/screen.sass */
 .home header {
   text-align: center;
   background-color: white;
@@ -171,13 +178,13 @@ header p.theme {
   padding: 1em;
 }
 
-/* line 126, ../sass/screen.sass */
+/* line 131, ../sass/screen.sass */
 footer {
   background-color: rgba(0, 0, 0, 0.05);
   padding: 1em;
   margin: 1em -1em -1em;
 }
-/* line 130, ../sass/screen.sass */
+/* line 135, ../sass/screen.sass */
 footer h2 {
   font-size: 1em;
   line-height: 1.4em;
@@ -185,18 +192,18 @@ footer h2 {
   font-weight: 400;
   margin: 0 0 1em;
 }
-/* line 136, ../sass/screen.sass */
+/* line 141, ../sass/screen.sass */
 footer .twitter-follow-button {
   margin-bottom: 1em;
 }
 
-/* line 139, ../sass/screen.sass */
+/* line 144, ../sass/screen.sass */
 #promovideo {
   max-width: 288px;
   margin: 0 auto;
 }
 
-/* line 143, ../sass/screen.sass */
+/* line 148, ../sass/screen.sass */
 p.note {
   font-size: 0.6875em;
   line-height: 1.01818em;
@@ -204,16 +211,16 @@ p.note {
   margin-bottom: 1em;
 }
 
-/* line 149, ../sass/screen.sass */
+/* line 154, ../sass/screen.sass */
 .intro {
   border-bottom: 1px solid #cccccc;
 }
-/* line 151, ../sass/screen.sass */
+/* line 156, ../sass/screen.sass */
 .intro p {
   color: #989a9e;
 }
 
-/* line 154, ../sass/screen.sass */
+/* line 159, ../sass/screen.sass */
 p.theme {
   font-style: italic;
   margin: 0 4em 0 2em;
@@ -221,7 +228,7 @@ p.theme {
   color: #989a9e;
 }
 
-/* line 160, ../sass/screen.sass */
+/* line 165, ../sass/screen.sass */
 #organizers {
   background-color: #303030;
   background-image: -moz-radial-gradient(50% 50%, circle closest-side, #303030, #303030 8em, #232323 11em);
@@ -232,7 +239,7 @@ p.theme {
   margin: 1em -1em -1em;
   padding: 1em;
 }
-/* line 169, ../sass/screen.sass */
+/* line 174, ../sass/screen.sass */
 #organizers h2, #organizers p {
   font-size: 0.875em;
   line-height: 1.6em;
@@ -240,11 +247,11 @@ p.theme {
   text-align: center;
   clear: both;
 }
-/* line 175, ../sass/screen.sass */
+/* line 180, ../sass/screen.sass */
 #organizers h2 {
   font-weight: 400;
 }
-/* line 177, ../sass/screen.sass */
+/* line 182, ../sass/screen.sass */
 #organizers .uottawa-logo, #organizers .carleton-logo {
   background-image: url(../img/organizer-logos.png?);
   background-repeat: no-repeat;
@@ -258,21 +265,21 @@ p.theme {
   -o-transition: opacity 0.2s linear;
   transition: opacity 0.2s linear;
 }
-/* line 189, ../sass/screen.sass */
+/* line 194, ../sass/screen.sass */
 #organizers .uottawa-logo {
   width: 83px;
   height: 72px;
   background-position: 0, 0;
   margin: 10px 23px 20px 27px;
 }
-/* line 194, ../sass/screen.sass */
+/* line 199, ../sass/screen.sass */
 #organizers .carleton-logo {
   width: 140px;
   height: 35px;
   background-position: -106px -22px;
   margin: 32px 0 15px 0;
 }
-/* line 199, ../sass/screen.sass */
+/* line 204, ../sass/screen.sass */
 #organizers .uottawa-logo:hover, #organizers .carleton-logo:hover {
   opacity: 1;
   -webkit-transition: opacity 0.2s linear;
@@ -282,24 +289,24 @@ p.theme {
   transition: opacity 0.2s linear;
 }
 
-/* line 207, ../sass/screen.sass */
+/* line 212, ../sass/screen.sass */
 aside.highlight {
   border: 2px solid #ffa23e;
   padding: 1em;
 }
-/* line 210, ../sass/screen.sass */
+/* line 215, ../sass/screen.sass */
 aside.highlight h2 {
   font-size: 1em;
   line-height: 1.4em;
   color: #ffa23e;
   margin: 0;
 }
-/* line 215, ../sass/screen.sass */
+/* line 220, ../sass/screen.sass */
 aside.highlight p:last-of-type {
   margin-bottom: 0;
 }
 
-/* line 218, ../sass/screen.sass */
+/* line 223, ../sass/screen.sass */
 #answers h3 {
   font-size: 1em;
   line-height: 1.4em;
