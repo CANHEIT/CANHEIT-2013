@@ -60,7 +60,13 @@ a:hover
   -o-transition: color 0.2s linear, background-color 0.2s linear
   transition: color 0.2s linear, background-color 0.2s linear
 
-a.button, a.bigbutton
+input[type=submit]
+  font-size: 1em
+  font-weight: $weight-bold
+  line-height: 1.4em
+  font-family: inherit
+
+a.button, a.bigbutton, input[type=submit]
   display: inline-block
   text-decoration: none
   background: $secondary-blue
@@ -72,7 +78,7 @@ a.button, a.bigbutton
   margin-left: -1px
   text-transform: uppercase
   
-a.button:hover, a.bigbutton:hover
+a.button:hover, a.bigbutton:hover, input[type=submit]:hover
   background: lighten($secondary-blue, 10%)
 
 a.bigbutton
@@ -225,3 +231,24 @@ aside.highlight
     line-height: 1.4em
     color: black
     font-weight: $weight-bold
+
+#subscribe
+  .subscribe-loader
+    background: url(../img/ajax-loader.gif) no-repeat top left
+    width: 12px
+    height: 12px
+    display: inline-block
+  #subemail
+    width: 100%
+    padding: 0.5em
+    box-sizing: border-box
+    margin-bottom: 0.5em
+  .error_message
+    margin-bottom: 1em
+    color: #f36f67
+  #success_page
+    h3
+      color: #95b257
+      margin: 0
+    h3 + p
+      margin-top: 0

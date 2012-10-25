@@ -85,7 +85,15 @@ a:hover {
 }
 
 /* line 63, ../sass/screen.sass */
-a.button, a.bigbutton {
+input[type=submit] {
+  font-size: 1em;
+  font-weight: 700;
+  line-height: 1.4em;
+  font-family: inherit;
+}
+
+/* line 69, ../sass/screen.sass */
+a.button, a.bigbutton, input[type=submit] {
   display: inline-block;
   text-decoration: none;
   background: #55bed8;
@@ -98,66 +106,66 @@ a.button, a.bigbutton {
   text-transform: uppercase;
 }
 
-/* line 75, ../sass/screen.sass */
-a.button:hover, a.bigbutton:hover {
+/* line 81, ../sass/screen.sass */
+a.button:hover, a.bigbutton:hover, input[type=submit]:hover {
   background: #7ecee2;
 }
 
-/* line 78, ../sass/screen.sass */
+/* line 84, ../sass/screen.sass */
 a.bigbutton {
   text-transform: none;
   font-weight: 400;
 }
-/* line 81, ../sass/screen.sass */
+/* line 87, ../sass/screen.sass */
 a.bigbutton strong {
   display: block;
   text-transform: uppercase;
   font-weight: 700;
 }
 
-/* line 86, ../sass/screen.sass */
+/* line 92, ../sass/screen.sass */
 .chromeframe {
   background-color: #d1eef5;
   margin: 0;
   padding: 1em;
 }
 
-/* line 92, ../sass/screen.sass */
+/* line 98, ../sass/screen.sass */
 header p.tagline, header p.summary {
   font-size: 0.875em;
   margin-top: 0;
 }
-/* line 95, ../sass/screen.sass */
+/* line 101, ../sass/screen.sass */
 header p.summary {
   padding: 1.14286em;
   margin: -1.14286em;
   margin-bottom: 1em;
   background: rgba(0, 0, 0, 0.05);
 }
-/* line 100, ../sass/screen.sass */
+/* line 106, ../sass/screen.sass */
 header p.summary a {
   color: #ffa23e;
 }
-/* line 102, ../sass/screen.sass */
+/* line 108, ../sass/screen.sass */
 header p.summary a:hover {
   color: #ffbb71;
 }
-/* line 104, ../sass/screen.sass */
+/* line 110, ../sass/screen.sass */
 header img {
   display: block;
   max-width: 14em;
   margin: 0 auto;
 }
-/* line 108, ../sass/screen.sass */
+/* line 114, ../sass/screen.sass */
 header p.location-date {
   margin-top: 1.5em;
   color: #777777;
 }
-/* line 111, ../sass/screen.sass */
+/* line 117, ../sass/screen.sass */
 header span.location {
   padding-right: 1em;
 }
-/* line 113, ../sass/screen.sass */
+/* line 119, ../sass/screen.sass */
 header p.theme {
   font-size: 1.125em;
   padding: 0 2em;
@@ -165,7 +173,7 @@ header p.theme {
   margin: 0;
 }
 
-/* line 119, ../sass/screen.sass */
+/* line 125, ../sass/screen.sass */
 .home header {
   text-align: center;
   background-color: white;
@@ -178,13 +186,13 @@ header p.theme {
   padding: 1em;
 }
 
-/* line 131, ../sass/screen.sass */
+/* line 137, ../sass/screen.sass */
 footer {
   background-color: rgba(0, 0, 0, 0.05);
   padding: 1em;
   margin: 1em -1em -1em;
 }
-/* line 135, ../sass/screen.sass */
+/* line 141, ../sass/screen.sass */
 footer h2 {
   font-size: 1em;
   line-height: 1.4em;
@@ -192,18 +200,18 @@ footer h2 {
   font-weight: 400;
   margin: 0 0 1em;
 }
-/* line 141, ../sass/screen.sass */
+/* line 147, ../sass/screen.sass */
 footer .twitter-follow-button {
   margin-bottom: 1em;
 }
 
-/* line 144, ../sass/screen.sass */
+/* line 150, ../sass/screen.sass */
 #promovideo {
   max-width: 288px;
   margin: 0 auto;
 }
 
-/* line 148, ../sass/screen.sass */
+/* line 154, ../sass/screen.sass */
 p.note {
   font-size: 0.6875em;
   line-height: 1.01818em;
@@ -211,16 +219,16 @@ p.note {
   margin-bottom: 1em;
 }
 
-/* line 154, ../sass/screen.sass */
+/* line 160, ../sass/screen.sass */
 .intro {
   border-bottom: 1px solid #cccccc;
 }
-/* line 156, ../sass/screen.sass */
+/* line 162, ../sass/screen.sass */
 .intro p {
   color: #989a9e;
 }
 
-/* line 159, ../sass/screen.sass */
+/* line 165, ../sass/screen.sass */
 p.theme {
   font-style: italic;
   margin: 0 4em 0 2em;
@@ -228,7 +236,7 @@ p.theme {
   color: #989a9e;
 }
 
-/* line 165, ../sass/screen.sass */
+/* line 171, ../sass/screen.sass */
 #organizers {
   background-color: #303030;
   background-image: -moz-radial-gradient(50% 50%, circle closest-side, #303030, #303030 8em, #232323 11em);
@@ -239,7 +247,7 @@ p.theme {
   margin: 1em -1em -1em;
   padding: 1em;
 }
-/* line 174, ../sass/screen.sass */
+/* line 180, ../sass/screen.sass */
 #organizers h2, #organizers p {
   font-size: 0.875em;
   line-height: 1.6em;
@@ -247,11 +255,11 @@ p.theme {
   text-align: center;
   clear: both;
 }
-/* line 180, ../sass/screen.sass */
+/* line 186, ../sass/screen.sass */
 #organizers h2 {
   font-weight: 400;
 }
-/* line 182, ../sass/screen.sass */
+/* line 188, ../sass/screen.sass */
 #organizers .uottawa-logo, #organizers .carleton-logo {
   background-image: url(../img/organizer-logos.png?);
   background-repeat: no-repeat;
@@ -265,21 +273,21 @@ p.theme {
   -o-transition: opacity 0.2s linear;
   transition: opacity 0.2s linear;
 }
-/* line 194, ../sass/screen.sass */
+/* line 200, ../sass/screen.sass */
 #organizers .uottawa-logo {
   width: 83px;
   height: 72px;
   background-position: 0, 0;
   margin: 10px 23px 20px 27px;
 }
-/* line 199, ../sass/screen.sass */
+/* line 205, ../sass/screen.sass */
 #organizers .carleton-logo {
   width: 140px;
   height: 35px;
   background-position: -106px -22px;
   margin: 32px 0 15px 0;
 }
-/* line 204, ../sass/screen.sass */
+/* line 210, ../sass/screen.sass */
 #organizers .uottawa-logo:hover, #organizers .carleton-logo:hover {
   opacity: 1;
   -webkit-transition: opacity 0.2s linear;
@@ -289,27 +297,56 @@ p.theme {
   transition: opacity 0.2s linear;
 }
 
-/* line 212, ../sass/screen.sass */
+/* line 218, ../sass/screen.sass */
 aside.highlight {
   border: 2px solid #ffa23e;
   padding: 1em;
 }
-/* line 215, ../sass/screen.sass */
+/* line 221, ../sass/screen.sass */
 aside.highlight h2 {
   font-size: 1em;
   line-height: 1.4em;
   color: #ffa23e;
   margin: 0;
 }
-/* line 220, ../sass/screen.sass */
+/* line 226, ../sass/screen.sass */
 aside.highlight p:last-of-type {
   margin-bottom: 0;
 }
 
-/* line 223, ../sass/screen.sass */
+/* line 229, ../sass/screen.sass */
 #answers h3 {
   font-size: 1em;
   line-height: 1.4em;
   color: black;
   font-weight: 700;
+}
+
+/* line 236, ../sass/screen.sass */
+#subscribe .subscribe-loader {
+  background: url(../img/ajax-loader.gif) no-repeat top left;
+  width: 12px;
+  height: 12px;
+  display: inline-block;
+}
+/* line 241, ../sass/screen.sass */
+#subscribe #subemail {
+  width: 100%;
+  padding: 0.5em;
+  box-sizing: border-box;
+  margin-bottom: 0.5em;
+}
+/* line 246, ../sass/screen.sass */
+#subscribe .error_message {
+  margin-bottom: 1em;
+  color: #f36f67;
+}
+/* line 250, ../sass/screen.sass */
+#subscribe #success_page h3 {
+  color: #95b257;
+  margin: 0;
+}
+/* line 253, ../sass/screen.sass */
+#subscribe #success_page h3 + p {
+  margin-top: 0;
 }
