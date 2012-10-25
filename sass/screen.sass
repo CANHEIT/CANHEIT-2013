@@ -60,7 +60,7 @@ a:hover
   -o-transition: color 0.2s linear, background-color 0.2s linear
   transition: color 0.2s linear, background-color 0.2s linear
 
-a.button
+a.button, a.bigbutton
   display: inline-block
   text-decoration: none
   background: $secondary-blue
@@ -72,8 +72,16 @@ a.button
   margin-left: -1px
   text-transform: uppercase
   
-a.button:hover
+a.button:hover, a.bigbutton:hover
   background: lighten($secondary-blue, 10%)
+
+a.bigbutton
+  text-transform: none
+  font-weight: $weight-normal
+  strong
+    display: block
+    text-transform: uppercase
+    font-weight: $weight-bold
 
 header
   p.tagline, p.summary
@@ -84,6 +92,10 @@ header
     margin: -1.14285714285714em /* */
     margin-bottom: 1em
     background: rgba(0 , 0, 0, 0.05)
+    a
+      color: $primary-orange
+    a:hover
+      color: lighten($primary-orange, 10%)
   img
     display: block
     max-width: 14em
@@ -191,6 +203,7 @@ p.theme
     -ms-transition: opacity 0.2s linear
     -o-transition: opacity 0.2s linear
     transition: opacity 0.2s linear
+    
 aside.highlight
   border: 2px solid $primary-orange
   padding: 1em
