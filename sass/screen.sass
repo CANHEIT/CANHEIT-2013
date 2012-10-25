@@ -2,18 +2,17 @@
 // Imports
 
 @import base
-@import colors
 
 /* -------------------------------------------------------------------------
 /* Layout */
 
 body
   font-family: 'Source Sans Pro', sans-serif
-  font-weight: 400
+  font-weight: $weight-normal
   background-color: rgba(0 , 0, 0, 0.05)
 
 bold, strong
-  font-weight: 700   
+  font-weight: $weight-bold   
 
 .container
   +container
@@ -24,7 +23,7 @@ img, video, embed, object
   max-width: 100%
 
 h1
-  font-weight: 400
+  font-weight: $weight-normal
   text-transform: uppercase
   color: $primary-gray
   font-size: 1.875em /* 30 / 16 = 1.875 */
@@ -33,19 +32,19 @@ h1
   margin-right: 3em
 
 h2
-  font-weight: 600
+  font-weight: $weight-semibold
   color: $primary-orange
   font-size: 1.875em /* 30 / 16 = 1.875 */
   line-height: 1.06666666666667em /* 32 / 30 = 1.06666666666667 */
   
 h3
   color: $primary-gray
-  font-weight: 400
+  font-weight: $weight-normal
   font-size: 1.25em /* 20 / 16 = 1.25 */
   line-height: 1.2em /* 24 / 20 = 1.2 */
   
 a:link, a:visited
-  font-weight: 700   
+  font-weight: $weight-bold   
   color: #55bed8
   -webkit-transition: color 0.2s linear, background-color 0.2s linear
   -moz-transition: color 0.2s linear, background-color 0.2s linear
@@ -116,6 +115,14 @@ footer
   background-color: rgba(0, 0, 0, 0.05)
   padding: 1em
   margin: 1em -1em -1em
+  h2
+    font-size: 1em
+    line-height: 1.4em
+    color: $primary-gray
+    font-weight: $weight-normal
+    margin: 0 0 1em
+  .twitter-follow-button
+    margin-bottom: 1em
 
 #promovideo
   iframe
@@ -135,7 +142,7 @@ p.note
 p.theme
   font-style: italic
   margin: 0 4em 0 2em
-  font-weight: 600
+  font-weight: $weight-semibold
   color: $primary-gray
 
 #organizers
@@ -145,7 +152,7 @@ p.theme
   background-image: -o-radial-gradient(50% 50%, circle closest-side, $charcoal, $charcoal 8em, darken($charcoal, 5%) 11em)
   background-image: -ms-radial-gradient(50% 50%, circle closest-side, $charcoal, $charcoal 8em, darken($charcoal, 5%) 11em)
   background-image: radial-gradient(50% 50%, circle closest-side, $charcoal, $charcoal 8em, darken($charcoal, 5%) 11em)
-  margin: 1em -1em
+  margin: 1em -1em -1em
   padding: 1em
   h2, p
     font-size: 0.875em /* 14 / 16 = 0.875 */
@@ -154,7 +161,7 @@ p.theme
     text-align: center
     clear: both
   h2
-    font-weight: 400
+    font-weight: $weight-normal
   .uottawa-logo, .carleton-logo
     background-image: url(../img/organizer-logos.png?)
     background-repeat: no-repeat
@@ -184,7 +191,7 @@ p.theme
     -ms-transition: opacity 0.2s linear
     -o-transition: opacity 0.2s linear
     transition: opacity 0.2s linear
-aside#crowdsource
+aside.highlight
   border: 2px solid $primary-orange
   padding: 1em
   h2
@@ -199,4 +206,4 @@ aside#crowdsource
     font-size: 1em
     line-height: 1.4em
     color: black
-    font-weight: 700
+    font-weight: $weight-bold
