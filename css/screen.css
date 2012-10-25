@@ -170,8 +170,9 @@ footer .twitter-follow-button {
   margin-bottom: 1em;
 }
 
-/* line 128, ../sass/screen.sass */
-#promovideo iframe {
+/* line 127, ../sass/screen.sass */
+#promovideo {
+  max-width: 288px;
   margin: 0 auto;
 }
 
