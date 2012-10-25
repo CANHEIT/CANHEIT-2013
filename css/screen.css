@@ -75,7 +75,7 @@ a:link, a:visited {
 
 /* line 55, ../sass/screen.sass */
 a:hover {
-  color: rgba(85, 190, 216, 0.8);
+  color: #7ecee2;
   -webkit-transition: color 0.2s linear, background-color 0.2s linear;
   -moz-transition: color 0.2s linear, background-color 0.2s linear;
   -ms-transition: color 0.2s linear, background-color 0.2s linear;
@@ -99,7 +99,7 @@ a.button {
 
 /* line 75, ../sass/screen.sass */
 a.button:hover {
-  background: rgba(85, 190, 216, 0.8);
+  background: #7ecee2;
 }
 
 /* line 79, ../sass/screen.sass */
@@ -134,13 +134,14 @@ header p.theme {
   font-size: 1.125em;
   padding: 0 2em;
   color: #ffa23e;
+  margin: 0;
 }
 
-/* line 101, ../sass/screen.sass */
+/* line 102, ../sass/screen.sass */
 .home header {
   text-align: center;
-  background-color: #fffcfc;
-  background-image: -moz-radial-gradient(50% 40%, circle closest-side, white, rgba(255, 255, 255, 0.1) 8em, rgba(0, 0, 0, 0.05) 11em);
+  background-color: white;
+  background-image: -moz-radial-gradient(50% 40%, circle closest-side, white, white 8em, rgba(0, 0, 0, 0.05) 11em);
   background-image: -webkit-radial-gradient(50% 40%, circle closest-side, white, white 8em, rgba(0, 0, 0, 0.05) 11em);
   background-image: -o-radial-gradient(50% 40%, circle closest-side, white, white 8em, rgba(0, 0, 0, 0.05) 11em);
   background-image: -ms-radial-gradient(50% 40%, circle closest-side, white, white 8em, rgba(0, 0, 0, 0.05) 11em);
@@ -149,12 +150,12 @@ header p.theme {
   padding: 1em;
 }
 
-/* line 114, ../sass/screen.sass */
+/* line 115, ../sass/screen.sass */
 #promovideo iframe {
   margin: 0 auto;
 }
 
-/* line 117, ../sass/screen.sass */
+/* line 118, ../sass/screen.sass */
 p.note {
   font-size: 0.6875em;
   line-height: 1.01818em;
@@ -162,16 +163,16 @@ p.note {
   margin-bottom: 1em;
 }
 
-/* line 123, ../sass/screen.sass */
+/* line 124, ../sass/screen.sass */
 .intro {
   border-bottom: 1px solid #cccccc;
 }
-/* line 125, ../sass/screen.sass */
+/* line 126, ../sass/screen.sass */
 .intro p {
   color: #989a9e;
 }
 
-/* line 128, ../sass/screen.sass */
+/* line 129, ../sass/screen.sass */
 p.theme {
   font-style: italic;
   margin: 0 4em 0 2em;
@@ -179,21 +180,63 @@ p.theme {
   color: #989a9e;
 }
 
-/* line 134, ../sass/screen.sass */
+/* line 135, ../sass/screen.sass */
 #organizers {
   background-color: #303030;
+  background-image: -moz-radial-gradient(50% 50%, circle closest-side, #303030, #303030 8em, #232323 11em);
+  background-image: -webkit-radial-gradient(50% 50%, circle closest-side, #303030, #303030 8em, #232323 11em);
+  background-image: -o-radial-gradient(50% 50%, circle closest-side, #303030, #303030 8em, #232323 11em);
+  background-image: -ms-radial-gradient(50% 50%, circle closest-side, #303030, #303030 8em, #232323 11em);
+  background-image: radial-gradient(50% 50%, circle closest-side, #303030, #303030 8em, #232323 11em);
   margin: 1em -1em;
   padding: 1em;
 }
-/* line 138, ../sass/screen.sass */
+/* line 144, ../sass/screen.sass */
 #organizers h2, #organizers p {
   font-size: 0.875em;
   line-height: 1.6em;
-  color: white;
+  color: rgba(255, 255, 255, 0.8);
   text-align: center;
+  clear: both;
 }
-/* line 143, ../sass/screen.sass */
+/* line 150, ../sass/screen.sass */
+#organizers h2 {
+  font-weight: 400;
+}
+/* line 152, ../sass/screen.sass */
 #organizers .uottawa-logo, #organizers .carleton-logo {
-  background-image: url(../img/organizers-logo.png);
+  background-image: url(../img/organizer-logos.png?);
   background-repeat: no-repeat;
+  text-indent: -9999px;
+  display: block;
+  float: left;
+  opacity: 0.8;
+  -webkit-transition: opacity 0.2s linear;
+  -moz-transition: opacity 0.2s linear;
+  -ms-transition: opacity 0.2s linear;
+  -o-transition: opacity 0.2s linear;
+  transition: opacity 0.2s linear;
+}
+/* line 164, ../sass/screen.sass */
+#organizers .uottawa-logo {
+  width: 83px;
+  height: 72px;
+  background-position: 0, 0;
+  margin: 10px 23px 20px 27px;
+}
+/* line 169, ../sass/screen.sass */
+#organizers .carleton-logo {
+  width: 140px;
+  height: 35px;
+  background-position: -106px -22px;
+  margin: 32px 0 15px 0;
+}
+/* line 174, ../sass/screen.sass */
+#organizers .uottawa-logo:hover, #organizers .carleton-logo:hover {
+  opacity: 1;
+  -webkit-transition: opacity 0.2s linear;
+  -moz-transition: opacity 0.2s linear;
+  -ms-transition: opacity 0.2s linear;
+  -o-transition: opacity 0.2s linear;
+  transition: opacity 0.2s linear;
 }

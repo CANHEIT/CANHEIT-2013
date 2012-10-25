@@ -53,7 +53,7 @@ a:link, a:visited
   transition: color 0.2s linear, background-color 0.2s linear
 
 a:hover
-  color: rgba($secondary-blue, 0.8)
+  color: lighten($secondary-blue, 10%)
   -webkit-transition: color 0.2s linear, background-color 0.2s linear
   -moz-transition: color 0.2s linear, background-color 0.2s linear
   -ms-transition: color 0.2s linear, background-color 0.2s linear
@@ -73,7 +73,7 @@ a.button
   text-transform: uppercase
   
 a.button:hover
-  background: rgba($secondary-blue, 0.8)
+  background: lighten($secondary-blue, 10%)
 
 header
   p.tagline, p.summary
@@ -97,11 +97,12 @@ header
     font-size: 1.125em /* 18px / 16px = 1.125 */
     padding: 0 2em
     color: $primary-orange
+    margin: 0
 
 .home header
   text-align: center
-  background-color: #fffcfc
-  background-image: -moz-radial-gradient(50% 40%, circle closest-side, #ffffff, rgba(255, 255, 255, 0.1) 8em,rgba(0, 0, 0, 0.05) 11em)
+  background-color: #fff
+  background-image: -moz-radial-gradient(50% 40%, circle closest-side, #ffffff, rgba(255, 255, 255, 1) 8em,rgba(0, 0, 0, 0.05) 11em)
   background-image: -webkit-radial-gradient(50% 40%, circle closest-side, #ffffff, rgba(255, 255, 255, 1) 8em,rgba(0, 0, 0, 0.05) 11em)
   background-image: -o-radial-gradient(50% 40%, circle closest-side, #ffffff, rgba(255, 255, 255, 1) 8em,rgba(0, 0, 0, 0.05) 11em)
   background-image: -ms-radial-gradient(50% 40%, circle closest-side, #ffffff, rgba(255, 255, 255, 1) 8em,rgba(0, 0, 0, 0.05) 11em)
@@ -133,14 +134,47 @@ p.theme
 
 #organizers
   background-color: $charcoal
+  background-image: -moz-radial-gradient(50% 50%, circle closest-side, $charcoal, $charcoal 8em, darken($charcoal, 5%) 11em)
+  background-image: -webkit-radial-gradient(50% 50%, circle closest-side, $charcoal, $charcoal 8em, darken($charcoal, 5%) 11em)
+  background-image: -o-radial-gradient(50% 50%, circle closest-side, $charcoal, $charcoal 8em, darken($charcoal, 5%) 11em)
+  background-image: -ms-radial-gradient(50% 50%, circle closest-side, $charcoal, $charcoal 8em, darken($charcoal, 5%) 11em)
+  background-image: radial-gradient(50% 50%, circle closest-side, $charcoal, $charcoal 8em, darken($charcoal, 5%) 11em)
   margin: 1em -1em
   padding: 1em
   h2, p
     font-size: 0.875em /* 14 / 16 = 0.875 */
     line-height: 1.6em /* 22.4 / 14 = 1.6 */
-    color: white
+    color: rgba(white, 0.8)
     text-align: center
+    clear: both
+  h2
+    font-weight: 400
   .uottawa-logo, .carleton-logo
-    background-image: url(../img/organizers-logo.png)
+    background-image: url(../img/organizer-logos.png?)
     background-repeat: no-repeat
-    
+    text-indent: -9999px
+    display: block
+    float: left
+    opacity: 0.8
+    -webkit-transition: opacity 0.2s linear
+    -moz-transition: opacity 0.2s linear
+    -ms-transition: opacity 0.2s linear
+    -o-transition: opacity 0.2s linear
+    transition: opacity 0.2s linear
+  .uottawa-logo
+    width: 83px
+    height: 72px
+    background-position: 0, 0
+    margin: 10px 23px 20px 27px
+  .carleton-logo
+    width: 140px
+    height: 35px
+    background-position: -106px -22px
+    margin: 32px 0 15px 0
+  .uottawa-logo:hover, .carleton-logo:hover
+    opacity: 1
+    -webkit-transition: opacity 0.2s linear
+    -moz-transition: opacity 0.2s linear
+    -ms-transition: opacity 0.2s linear
+    -o-transition: opacity 0.2s linear
+    transition: opacity 0.2s linear
