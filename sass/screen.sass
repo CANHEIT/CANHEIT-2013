@@ -18,6 +18,8 @@ bold, strong
   +container
   background-color: white
   padding: 1em 1em
+  +at-breakpoint(30em 6)
+    +container
 
 img, video, embed, object
   max-width: 100%
@@ -148,8 +150,9 @@ footer
     margin-bottom: 1em
 
 #promovideo
-  max-width: 288px
   margin: 0 auto
+  .twitter-share-button
+    margin-top: 0.5em
 
 p.note
   font-size: 0.6875em /* 11 / 16 = 0.6875 */
@@ -185,6 +188,9 @@ p.theme
     clear: both
   h2
     font-weight: $weight-normal
+  .logos
+    max-width: 246px
+    margin: 0 auto
   .uottawa-logo, .carleton-logo
     background-image: url(../img/organizer-logos.png?)
     background-repeat: no-repeat
@@ -201,7 +207,7 @@ p.theme
     width: 83px
     height: 72px
     background-position: 0, 0
-    margin: 10px 23px 20px 27px
+    margin: 10px 23px 20px 0
   .carleton-logo
     width: 140px
     height: 35px
@@ -240,9 +246,16 @@ aside.highlight
     display: inline-block
   #subemail
     width: 100%
-    padding: 0.5em
+    padding: 0.3em 0.5em
     box-sizing: border-box
+    margin-top: 1px
     margin-bottom: 0.5em
+    +at-breakpoint(30em 8)
+      +span-columns(6, 8)
+  #subsubmit
+    +at-breakpoint(30em 8)
+      +span-columns(2, 8)
+      +omega
   .error_message
     margin-bottom: 1em
     color: #f36f67
