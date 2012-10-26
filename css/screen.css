@@ -378,10 +378,12 @@ aside.highlight p:last-of-type {
   box-sizing: border-box;
   margin-top: 1px;
   margin-bottom: 0.5em;
+  font-size: 0.9em;
 }
 @media (min-width: 30em) {
   /* line 249, ../sass/screen.sass */
   #subscribe #subemail {
+    font-size: 1em;
     width: 74.35897%;
     float: left;
     margin-right: 2.5641%;
@@ -396,7 +398,7 @@ aside.highlight p:last-of-type {
   }
 }
 @media (min-width: 30em) {
-  /* line 261, ../sass/screen.sass */
+  /* line 263, ../sass/screen.sass */
   #subscribe #subsubmit {
     width: 23.07692%;
     float: left;
@@ -406,7 +408,7 @@ aside.highlight p:last-of-type {
   }
 }
 @media (min-width: 35em) {
-  /* line 261, ../sass/screen.sass */
+  /* line 263, ../sass/screen.sass */
   #subscribe #subsubmit {
     width: 20.45455%;
     float: left;
@@ -415,17 +417,17 @@ aside.highlight p:last-of-type {
     margin-right: 0;
   }
 }
-/* line 268, ../sass/screen.sass */
+/* line 270, ../sass/screen.sass */
 #subscribe .error_message {
   margin-bottom: 1em;
   color: #f36f67;
 }
-/* line 272, ../sass/screen.sass */
+/* line 274, ../sass/screen.sass */
 #subscribe #success_page h3 {
   color: #95b257;
   margin: 0;
 }
-/* line 275, ../sass/screen.sass */
+/* line 277, ../sass/screen.sass */
 #subscribe #success_page h3 + p {
   margin-top: 0;
 }
