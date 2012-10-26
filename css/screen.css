@@ -373,6 +373,8 @@ aside.highlight p:last-of-type {
 #subscribe #subemail {
   width: 100%;
   padding: 0.3em 0.5em;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
   margin-top: 1px;
   margin-bottom: 0.5em;
@@ -394,7 +396,7 @@ aside.highlight p:last-of-type {
   }
 }
 @media (min-width: 30em) {
-  /* line 259, ../sass/screen.sass */
+  /* line 261, ../sass/screen.sass */
   #subscribe #subsubmit {
     width: 23.07692%;
     float: left;
@@ -404,7 +406,7 @@ aside.highlight p:last-of-type {
   }
 }
 @media (min-width: 35em) {
-  /* line 259, ../sass/screen.sass */
+  /* line 261, ../sass/screen.sass */
   #subscribe #subsubmit {
     width: 20.45455%;
     float: left;
@@ -413,17 +415,17 @@ aside.highlight p:last-of-type {
     margin-right: 0;
   }
 }
-/* line 266, ../sass/screen.sass */
+/* line 268, ../sass/screen.sass */
 #subscribe .error_message {
   margin-bottom: 1em;
   color: #f36f67;
 }
-/* line 270, ../sass/screen.sass */
+/* line 272, ../sass/screen.sass */
 #subscribe #success_page h3 {
   color: #95b257;
   margin: 0;
 }
-/* line 273, ../sass/screen.sass */
+/* line 275, ../sass/screen.sass */
 #subscribe #success_page h3 + p {
   margin-top: 0;
 }
