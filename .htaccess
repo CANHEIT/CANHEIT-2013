@@ -337,6 +337,12 @@ FileETag None
 </IfModule>
 
 
+# Redirect old URLs
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteRule ^index-fr\.html$ / [R=301,L]
+</IfModule>
+
 # ----------------------------------------------------------------------
 # Suppress or force the "www." at the beginning of URLs
 # ----------------------------------------------------------------------
