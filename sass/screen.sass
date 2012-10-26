@@ -20,7 +20,9 @@ bold, strong
   padding: 1em 1em
   +at-breakpoint(30em 6)
     +container
-
+  +at-breakpoint(35em 7)
+    +container
+  
 img, video, embed, object
   max-width: 100%
 
@@ -252,9 +254,14 @@ aside.highlight
     margin-bottom: 0.5em
     +at-breakpoint(30em 8)
       +span-columns(6, 8)
+    +at-breakpoint(35em 9)
+      +span-columns(7, 9)
   #subsubmit
     +at-breakpoint(30em 8)
       +span-columns(2, 8)
+      +omega
+    +at-breakpoint(35em 9)
+      +span-columns(2, 9)
       +omega
   .error_message
     margin-bottom: 1em

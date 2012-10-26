@@ -86,5 +86,7 @@ jQuery(document).ready(function(){
 });
 
 jQuery(document).ready(function(){
-  $("#promovideo").fitVids();
+  if($("#promovideo").length) {
+    $("#promovideo").fitVids();
+  }
 });
