@@ -140,6 +140,18 @@
         <script src="../js/vendor/jquery.collapse.js"></script>
 
         <script>
+          new jQueryCollapse($("aside.note"), {
+            open: function() {
+              this.slideDown(150);
+            },
+            close: function() {
+              this.slideUp(150);
+            }
+          });
+        </script>
+        
+
+        <script>
             var _gaq=[['_setAccount','UA-35890616-1'],['_trackPageview']];
             (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
             g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
