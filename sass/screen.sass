@@ -233,6 +233,32 @@ aside.highlight
     margin: 0
   p:last-of-type
     margin-bottom: 0
+
+aside.note
+  padding-left: 30px
+  h3
+    margin: 0
+    font-size: 1em
+  h3:before
+    content: ''
+    font-size: 0
+    width: 0
+    height: 0
+    border-right: 0
+    border-left: 10px solid $secondary-blue
+    border-top: 7px solid transparent
+    border-bottom: 7px solid transparent
+    margin-right: 7px
+  h3.open:before
+    -moz-transform: scale() rotate(90deg) translateX(0px) translateY(0px) skewX(0deg) skewY(0deg)
+    -webkit-transform: scale() rotate(90deg) translateX(0px) translateY(0px) skewX(0deg) skewY(0deg)
+    -o-transform: scale() rotate(90deg) translateX(0px) translateY(0px) skewX(0deg) skewY(0deg)
+    -ms-transform: scale() rotate(90deg) translateX(0px) translateY(0px) skewX(0deg) skewY(0deg)
+    transform: scale() rotate(90deg) translateX(0px) translateY(0px) skewX(0deg) skewY(0deg)
+  li, ul
+    padding-left: 0
+    margin-left: 0
+
 #answers
   h3
     font-size: 1em
