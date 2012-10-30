@@ -356,7 +356,7 @@ aside.highlight p:last-of-type {
 
 /* line 237, ../sass/screen.sass */
 aside.note {
-  padding-left: 30px;
+  padding-left: 1em;
 }
 /* line 239, ../sass/screen.sass */
 aside.note h3 {
@@ -364,32 +364,23 @@ aside.note h3 {
   font-size: 1em;
 }
 /* line 242, ../sass/screen.sass */
-aside.note h3:before {
-  content: "";
-  font-size: 0;
-  width: 0;
-  height: 0;
-  border-right: 0;
-  border-left: 10px solid #55bed8;
-  border-top: 7px solid transparent;
-  border-bottom: 7px solid transparent;
-  margin-right: 7px;
+aside.note h3 a {
+  display: block;
+  margin-left: -15px;
+  padding-left: 15px;
+  background: url(../img/disclosure-triangle.png) no-repeat 4px 4px;
 }
-/* line 252, ../sass/screen.sass */
-aside.note h3.open:before {
-  -moz-transform: scale() rotate(90deg) translateX(0px) translateY(0px) skewX(0deg) skewY(0deg);
-  -webkit-transform: scale() rotate(90deg) translateX(0px) translateY(0px) skewX(0deg) skewY(0deg);
-  -o-transform: scale() rotate(90deg) translateX(0px) translateY(0px) skewX(0deg) skewY(0deg);
-  -ms-transform: scale() rotate(90deg) translateX(0px) translateY(0px) skewX(0deg) skewY(0deg);
-  transform: scale() rotate(90deg) translateX(0px) translateY(0px) skewX(0deg) skewY(0deg);
+/* line 247, ../sass/screen.sass */
+aside.note h3.open a {
+  background-position: 0 -85px;
 }
-/* line 258, ../sass/screen.sass */
+/* line 249, ../sass/screen.sass */
 aside.note li, aside.note ul {
   padding-left: 0;
   margin-left: 0;
 }
 
-/* line 263, ../sass/screen.sass */
+/* line 254, ../sass/screen.sass */
 #answers h3 {
   font-size: 1em;
   line-height: 1.4em;
@@ -397,14 +388,14 @@ aside.note li, aside.note ul {
   font-weight: 700;
 }
 
-/* line 270, ../sass/screen.sass */
+/* line 261, ../sass/screen.sass */
 #subscribe .subscribe-loader {
   background: url(../img/ajax-loader.gif) no-repeat top left;
   width: 12px;
   height: 12px;
   display: inline-block;
 }
-/* line 275, ../sass/screen.sass */
+/* line 266, ../sass/screen.sass */
 #subscribe #subemail {
   width: 100%;
   padding: 0.3em 0.5em;
@@ -416,7 +407,7 @@ aside.note li, aside.note ul {
   font-size: 0.9em;
 }
 @media (min-width: 30em) {
-  /* line 275, ../sass/screen.sass */
+  /* line 266, ../sass/screen.sass */
   #subscribe #subemail {
     font-size: 1em;
     width: 74.35897%;
@@ -425,7 +416,7 @@ aside.note li, aside.note ul {
   }
 }
 @media (min-width: 35em) {
-  /* line 275, ../sass/screen.sass */
+  /* line 266, ../sass/screen.sass */
   #subscribe #subemail {
     width: 77.27273%;
     float: left;
@@ -433,7 +424,7 @@ aside.note li, aside.note ul {
   }
 }
 @media (min-width: 30em) {
-  /* line 289, ../sass/screen.sass */
+  /* line 280, ../sass/screen.sass */
   #subscribe #subsubmit {
     width: 23.07692%;
     float: left;
@@ -443,7 +434,7 @@ aside.note li, aside.note ul {
   }
 }
 @media (min-width: 35em) {
-  /* line 289, ../sass/screen.sass */
+  /* line 280, ../sass/screen.sass */
   #subscribe #subsubmit {
     width: 20.45455%;
     float: left;
@@ -452,17 +443,17 @@ aside.note li, aside.note ul {
     margin-right: 0;
   }
 }
-/* line 296, ../sass/screen.sass */
+/* line 287, ../sass/screen.sass */
 #subscribe .error_message {
   margin-bottom: 1em;
   color: #f36f67;
 }
-/* line 300, ../sass/screen.sass */
+/* line 291, ../sass/screen.sass */
 #subscribe #success_page h3 {
   color: #95b257;
   margin: 0;
 }
-/* line 303, ../sass/screen.sass */
+/* line 294, ../sass/screen.sass */
 #subscribe #success_page h3 + p {
   margin-top: 0;
 }
