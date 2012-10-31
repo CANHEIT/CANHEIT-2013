@@ -1,47 +1,43 @@
-function recordOutboundLink(link, category, action) {
-  try {
-  		_gaq = window._gaq || [];
-      _gaq.push(['canheit._trackEvent', category , action ]);
-      setTimeout('document.location = "' + link.href + '"', 100);
-  } catch(err) {}
-}
-
 jQuery(document).ready(function(){
+
+	_gaq = window._gaq || [];
   
   $('a[rel=external]').each(function(){
     var category = 'outbound-links';
-    var action = '';
-    if ($(this).data('ga-label')) {
-      $(this).click(function() {
-        action = $(this).data('ga-label')
-        recordOutboundLink(this,category,action);
-        return false;
-      })
-    } else if ($(this).attr('href')) {
-      $(this).click(function() {
-        action = $(this).attr('href')
-        recordOutboundLink(this,category,action);
-        return false;
-      })
-    }
+    var action = 'click';
+    $(this).click(function() {
+      action = 'click';
+      label = $(this).data('ga-label') || this.href;
+      try {
+          _gaq.push(['canheit._trackEvent', category , action, label ]);
+          setTimeout('document.location = "' + this.href + '"', 100);
+      } catch(err) {}
+      return false;
+    });
   });
 
-  $('a[rel=email]').each(function(){
+  $('a[href^="mailto:"]').each(function(){
     var category = 'email';
-    var action = '';
-    if ($(this).data('ga-label')) {
-      $(this).click(function() {
-        action = $(this).data('ga-label')
-        recordOutboundLink(this,category,action);
-        return false;
-      })
-    } else if ($(this).attr('href')) {
-      $(this).click(function() {
-        action = $(this).attr('href')
-        recordOutboundLink(this,category,action);
-        return false;
-      })
-    }
+    var action = 'click';
+    $(this).click(function() {
+      action = 'click';
+      label = $(this).data('ga-label') || this.href;
+      try {
+          _gaq.push(['canheit._trackEvent', category , action, label ]);
+      } catch(err) {}
+    });
+  });
+  
+  $('a[href^="tel:"]').each(function(){
+    var category = 'tel';
+    var action = 'click';
+    $(this).click(function() {
+      action = 'click';
+      label = $(this).data('ga-label') || this.href;
+      try {
+          _gaq.push(['canheit._trackEvent', category , action, label ]);
+      } catch(err) {}
+    });
   });
   
 });

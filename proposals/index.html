@@ -63,7 +63,7 @@
               <li><strong>Demonstrate attention to the topic</strong>, including an awareness of its larger context</li>
               <li><strong>Think about quality</strong> – clarity, readability, and sufficiency of information.</li>
               <li><strong>Consider a different and exciting session format</strong> to engage and stimulate your audience
-                  <aside role="note" data-collapse="accordion" class="note">
+                  <aside role="note" class="note">
                     <h3>What are the session formats I can choose from?</h3>
                     <div>
                       <p>The traditional conference-style presentation continues to hold an important role in the program. But why not stimulate and engage the attention of delegates by adapting your presentation to a new format! </p>
@@ -140,13 +140,23 @@
         <script src="../js/vendor/jquery.collapse.js"></script>
 
         <script>
-          new jQueryCollapse($("aside.note"), {
-            open: function() {
-              this.slideDown(150);
-            },
-            close: function() {
-              this.slideUp(150);
-            }
+          jQuery(document).ready(function($){
+            $("aside.note").collapse({
+              open: function() {
+                // The context of 'this' is applied to
+                // the collapsed details in a jQuery wrapper 
+                _gaq = window._gaq || [];
+                _gaq.push(['canheit._trackEvent', 'page-content' , 'open', 'sessions-formats' ]);
+                this.slideDown(200);
+              },
+              close: function() {
+                _gaq = window._gaq || [];
+                _gaq.push(['canheit._trackEvent', 'page-content' , 'close', 'sessions-formats' ]);
+                this.slideUp(200);
+              },
+              accordion : true,
+              persist: false
+            });
           });
         </script>
         
