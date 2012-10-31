@@ -1,12 +1,12 @@
-jQuery(document).ready(function(){
+function recordOutboundLink(link, category, action) {
+  try {
+  		_gaq = window._gaq || [];
+      _gaq.push(['canheit._trackEvent', category , action ]);
+      setTimeout('document.location = "' + link.href + '"', 100);
+  } catch(err) {}
+}
 
-  function recordOutboundLink(link, category, action) {
-    try {
-      var myTracker=_gat._getTrackerByName();
-        _gaq.push(['myTracker._trackEvent', category , action ]);
-        setTimeout('document.location = "' + link.href + '"', 100)
-    } catch(err) {}
-  }
+jQuery(document).ready(function(){
   
   $('a[rel=external]').each(function(){
     var category = 'outbound-links';
