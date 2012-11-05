@@ -15,6 +15,17 @@ jQuery(document).ready(function(){
       return false;
     });
   });
+  
+  $('a[rel=file]').each(function(){
+    $(this).click(function() {
+      try {
+          console.log(this.href.pathname);
+          _gaq.push(['canheit._trackPageview', 'file/' + $(this).attr('href') ]);
+          setTimeout('document.location = "' + this.href + '"', 100);
+      } catch(err) {}
+      return false;
+    });
+  });
 
   $('a[href^="mailto:"]').each(function(){
     var category = 'email';

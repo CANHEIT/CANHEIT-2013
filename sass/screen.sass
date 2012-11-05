@@ -81,9 +81,20 @@ a.button, a.bigbutton, input[type=submit]
   box-shadow:  1px 3px 10px 0px rgba(0, 0, 0, .2)
   margin-left: -1px
   text-transform: uppercase
+  margin-right: 1em
+  margin-bottom: 1em
+
+a.button + p, a.bigbutton + p, input[type=submit] + p
+  margin-top: 0
+
+a.button.secondary, a.bigbutton.secondary, input[type=submit].secondary
+  background: $secondary-green
   
 a.button:hover, a.bigbutton:hover, input[type=submit]:hover
   background: lighten($secondary-blue, 10%)
+  
+a.button.secondary:hover, a.bigbutton.secondary:hover, input[type=submit].secondary:hover
+  background: lighten($secondary-green, 10%)
 
 a.bigbutton
   text-transform: none
@@ -293,3 +304,7 @@ aside.note
       margin: 0
     h3 + p
       margin-top: 0
+
+.sponsors #interested
+  +at-breakpoint(40em 7)
+    display: none
