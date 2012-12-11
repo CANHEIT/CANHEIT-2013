@@ -304,17 +304,48 @@ footer h2 {
 footer .twitter-follow-button {
   margin-bottom: 1em;
 }
+@media (min-width: 45em) {
+  /* line 179, ../sass/screen.sass */
+  footer {
+    background-color: transparent;
+  }
+  /* line 193, ../sass/screen.sass */
+  footer h2 {
+    width: 16.66667%;
+    float: left;
+    margin-right: 4.16667%;
+  }
+  /* line 195, ../sass/screen.sass */
+  footer .twitter-follow-button {
+    width: 79.16667%;
+    float: left;
+    margin-right: 4.16667%;
+  }
+  /* line 197, ../sass/screen.sass */
+  footer #subscribe {
+    padding-left: 20.83333%;
+    width: 79.16667%;
+    float: left;
+    margin-right: 4.16667%;
+  }
+}
 
-/* line 192, ../sass/screen.sass */
+/* line 201, ../sass/screen.sass */
 #promovideo {
   margin: 0 auto;
 }
-/* line 194, ../sass/screen.sass */
+/* line 203, ../sass/screen.sass */
 #promovideo .twitter-share-button {
   margin-top: 0.5em;
 }
+@media (min-width: 45em) {
+  /* line 201, ../sass/screen.sass */
+  #promovideo {
+    margin: 0 -1em;
+  }
+}
 
-/* line 197, ../sass/screen.sass */
+/* line 208, ../sass/screen.sass */
 p.note {
   font-size: 0.6875em;
   line-height: 1.01818em;
@@ -322,16 +353,16 @@ p.note {
   margin-bottom: 1em;
 }
 
-/* line 203, ../sass/screen.sass */
+/* line 214, ../sass/screen.sass */
 .intro {
   border-bottom: 1px solid #cccccc;
 }
-/* line 205, ../sass/screen.sass */
+/* line 216, ../sass/screen.sass */
 .intro p {
   color: #989a9e;
 }
 
-/* line 208, ../sass/screen.sass */
+/* line 219, ../sass/screen.sass */
 p.theme {
   font-style: italic;
   margin: 0 4em 0 2em;
@@ -340,16 +371,47 @@ p.theme {
 }
 
 @media (min-width: 45em) {
-  /* line 214, ../sass/screen.sass */
+  /* line 226, ../sass/screen.sass */
   .home div#proposals, .home div#sponsors {
     background: white;
-    margin: 1em -1em;
+    margin: 1em 3em 2em -1em;
     padding: 1em;
+    float: left;
+    max-width: 20em;
+    -webkit-box-shadow: 0px 30px 30px -30px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 30px 30px -30px rgba(0, 0, 0, 0.5);
+  }
+  /* line 232, ../sass/screen.sass */
+  .home div#proposals h2, .home div#sponsors h2 {
+    margin-top: 0;
+  }
+  /* line 234, ../sass/screen.sass */
+  .home div#proposals *:last-child, .home div#sponsors *:last-child {
+    margin-bottom: 0;
+  }
+
+  /* line 238, ../sass/screen.sass */
+  .home div#proposals {
+    transform: rotate(1deg);
+    -ms-transform: rotate(1deg);
+    -moz-transform: rotate(1deg);
+    -webkit-transform: rotate(1deg);
+    -o-transform: rotate(1deg);
+  }
+
+  /* line 245, ../sass/screen.sass */
+  .home div#sponsors {
+    margin-right: -1em;
+    transform: rotate(-1deg);
+    -ms-transform: rotate(-1deg);
+    -moz-transform: rotate(-1deg);
+    -webkit-transform: rotate(-1deg);
+    -o-transform: rotate(-1deg);
   }
 }
-
-/* line 220, ../sass/screen.sass */
+/* line 253, ../sass/screen.sass */
 #organizers {
+  clear: left;
   background-color: #303030;
   background-image: -moz-radial-gradient(50% 50%, circle closest-side, #303030, #303030 8em, #232323 11em);
   background-image: -webkit-radial-gradient(50% 50%, circle closest-side, #303030, #303030 8em, #232323 11em);
@@ -359,7 +421,7 @@ p.theme {
   margin: 1em -1em -1em;
   padding: 1em;
 }
-/* line 229, ../sass/screen.sass */
+/* line 263, ../sass/screen.sass */
 #organizers h2, #organizers p {
   font-size: 0.875em;
   line-height: 1.6em;
@@ -367,16 +429,16 @@ p.theme {
   text-align: center;
   clear: both;
 }
-/* line 235, ../sass/screen.sass */
+/* line 269, ../sass/screen.sass */
 #organizers h2 {
   font-weight: 400;
 }
-/* line 237, ../sass/screen.sass */
+/* line 271, ../sass/screen.sass */
 #organizers .logos {
   max-width: 246px;
   margin: 0 auto;
 }
-/* line 240, ../sass/screen.sass */
+/* line 274, ../sass/screen.sass */
 #organizers .uottawa-logo, #organizers .carleton-logo {
   background-image: url(../img/organizer-logos.png?);
   background-repeat: no-repeat;
@@ -390,21 +452,21 @@ p.theme {
   -o-transition: opacity 0.2s linear;
   transition: opacity 0.2s linear;
 }
-/* line 252, ../sass/screen.sass */
+/* line 286, ../sass/screen.sass */
 #organizers .uottawa-logo {
   width: 83px;
   height: 72px;
   background-position: 0, 0;
   margin: 10px 23px 20px 0;
 }
-/* line 257, ../sass/screen.sass */
-#organizers .carleton-logow {
+/* line 291, ../sass/screen.sass */
+#organizers .carleton-logo {
   width: 140px;
   height: 35px;
   background-position: -106px -22px;
   margin: 32px 0 15px 0;
 }
-/* line 262, ../sass/screen.sass */
+/* line 296, ../sass/screen.sass */
 #organizers .uottawa-logo:hover, #organizers .carleton-logo:hover {
   opacity: 1;
   -webkit-transition: opacity 0.2s linear;
@@ -414,57 +476,57 @@ p.theme {
   transition: opacity 0.2s linear;
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5) {
-  /* line 270, ../sass/screen.sass */
+  /* line 304, ../sass/screen.sass */
   #organizers .uottawa-logo, #organizers .carleton-logo {
     background-image: url(../img/organizer-logos@2x.png);
     background-size: 246px 72px;
   }
 }
 
-/* line 274, ../sass/screen.sass */
+/* line 308, ../sass/screen.sass */
 aside.highlight {
   border: 2px solid #ffa23e;
   padding: 1em;
 }
-/* line 277, ../sass/screen.sass */
+/* line 311, ../sass/screen.sass */
 aside.highlight h2 {
   font-size: 1em;
   line-height: 1.4em;
   color: #ffa23e;
   margin: 0;
 }
-/* line 282, ../sass/screen.sass */
+/* line 316, ../sass/screen.sass */
 aside.highlight p:last-of-type {
   margin-bottom: 0;
 }
 
-/* line 285, ../sass/screen.sass */
+/* line 319, ../sass/screen.sass */
 aside.note {
   padding-left: 1em;
 }
-/* line 287, ../sass/screen.sass */
+/* line 321, ../sass/screen.sass */
 aside.note h3 {
   margin: 0;
   font-size: 1em;
 }
-/* line 290, ../sass/screen.sass */
+/* line 324, ../sass/screen.sass */
 aside.note h3 a {
   display: block;
   margin-left: -15px;
   padding-left: 15px;
   background: url(../img/disclosure-triangle.png) no-repeat 4px 4px;
 }
-/* line 295, ../sass/screen.sass */
+/* line 329, ../sass/screen.sass */
 aside.note h3.open a {
   background-position: 0 -85px;
 }
-/* line 297, ../sass/screen.sass */
+/* line 331, ../sass/screen.sass */
 aside.note li, aside.note ul {
   padding-left: 0;
   margin-left: 0;
 }
 
-/* line 302, ../sass/screen.sass */
+/* line 336, ../sass/screen.sass */
 #answers h3 {
   font-size: 1em;
   line-height: 1.4em;
@@ -472,14 +534,14 @@ aside.note li, aside.note ul {
   font-weight: 700;
 }
 
-/* line 309, ../sass/screen.sass */
+/* line 343, ../sass/screen.sass */
 #subscribe .subscribe-loader {
   background: url(../img/ajax-loader.gif) no-repeat top left;
   width: 12px;
   height: 12px;
   display: inline-block;
 }
-/* line 314, ../sass/screen.sass */
+/* line 348, ../sass/screen.sass */
 #subscribe #subemail {
   width: 100%;
   padding: 0.3em 0.5em;
@@ -491,7 +553,7 @@ aside.note li, aside.note ul {
   font-size: 0.9em;
 }
 @media (min-width: 30em) {
-  /* line 314, ../sass/screen.sass */
+  /* line 348, ../sass/screen.sass */
   #subscribe #subemail {
     font-size: 1em;
     width: 74.35897%;
@@ -500,7 +562,7 @@ aside.note li, aside.note ul {
   }
 }
 @media (min-width: 35em) {
-  /* line 314, ../sass/screen.sass */
+  /* line 348, ../sass/screen.sass */
   #subscribe #subemail {
     width: 77.27273%;
     float: left;
@@ -508,7 +570,7 @@ aside.note li, aside.note ul {
   }
 }
 @media (min-width: 30em) {
-  /* line 328, ../sass/screen.sass */
+  /* line 362, ../sass/screen.sass */
   #subscribe #subsubmit {
     width: 23.07692%;
     float: left;
@@ -518,7 +580,7 @@ aside.note li, aside.note ul {
   }
 }
 @media (min-width: 35em) {
-  /* line 328, ../sass/screen.sass */
+  /* line 362, ../sass/screen.sass */
   #subscribe #subsubmit {
     width: 20.45455%;
     float: left;
@@ -527,23 +589,23 @@ aside.note li, aside.note ul {
     margin-right: 0;
   }
 }
-/* line 335, ../sass/screen.sass */
+/* line 369, ../sass/screen.sass */
 #subscribe .error_message {
   margin-bottom: 1em;
   color: #f36f67;
 }
-/* line 339, ../sass/screen.sass */
+/* line 373, ../sass/screen.sass */
 #subscribe #success_page h3 {
   color: #95b257;
   margin: 0;
 }
-/* line 342, ../sass/screen.sass */
+/* line 376, ../sass/screen.sass */
 #subscribe #success_page h3 + p {
   margin-top: 0;
 }
 
 @media (min-width: 40em) {
-  /* line 345, ../sass/screen.sass */
+  /* line 379, ../sass/screen.sass */
   .sponsors #interested {
     display: none;
   }
