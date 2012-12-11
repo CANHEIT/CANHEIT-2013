@@ -328,41 +328,42 @@ footer .twitter-follow-button {
   }
   /* line 204, ../sass/screen.sass */
   footer h2 {
-    width: 16.66667%;
+    width: 26.47059%;
     float: left;
-    margin-right: 4.16667%;
-  }
-  /* line 206, ../sass/screen.sass */
-  footer .twitter-follow-button {
-    width: 79.16667%;
-    float: left;
-    margin-right: 4.16667%;
+    margin-right: 2.94118%;
+    font-size: 1.6em;
+    text-align: center;
   }
   /* line 208, ../sass/screen.sass */
-  footer #subscribe {
-    padding-left: 20.83333%;
-    width: 79.16667%;
+  footer .twitter-follow-button {
+    width: 70.58824%;
     float: left;
-    margin-right: 4.16667%;
+    margin-right: 2.94118%;
+  }
+  /* line 210, ../sass/screen.sass */
+  footer #subscribe {
+    width: 70.58824%;
+    float: right;
+    margin-right: 0;
   }
 }
 
-/* line 212, ../sass/screen.sass */
+/* line 213, ../sass/screen.sass */
 #promovideo {
   margin: 0 auto;
 }
-/* line 214, ../sass/screen.sass */
+/* line 215, ../sass/screen.sass */
 #promovideo .twitter-share-button {
   margin-top: 0.5em;
 }
 @media (min-width: 45em) {
-  /* line 212, ../sass/screen.sass */
+  /* line 213, ../sass/screen.sass */
   #promovideo {
     margin: 0 -1em;
   }
 }
 
-/* line 219, ../sass/screen.sass */
+/* line 220, ../sass/screen.sass */
 p.note {
   font-size: 0.6875em;
   line-height: 1.01818em;
@@ -370,16 +371,16 @@ p.note {
   margin-bottom: 1em;
 }
 
-/* line 225, ../sass/screen.sass */
+/* line 226, ../sass/screen.sass */
 .intro {
   border-bottom: 1px solid #cccccc;
 }
-/* line 227, ../sass/screen.sass */
+/* line 228, ../sass/screen.sass */
 .intro p {
   color: #989a9e;
 }
 
-/* line 230, ../sass/screen.sass */
+/* line 231, ../sass/screen.sass */
 p.theme {
   font-style: italic;
   margin: 0 4em 0 2em;
@@ -388,7 +389,7 @@ p.theme {
 }
 
 @media (min-width: 45em) {
-  /* line 237, ../sass/screen.sass */
+  /* line 238, ../sass/screen.sass */
   .home div#proposals, .home div#sponsors {
     background: white;
     margin: 1em 3em 2em -1em;
@@ -398,16 +399,16 @@ p.theme {
     -webkit-box-shadow: 0px 30px 30px -30px rgba(0, 0, 0, 0.5);
     box-shadow: 0px 30px 30px -30px rgba(0, 0, 0, 0.5);
   }
-  /* line 243, ../sass/screen.sass */
+  /* line 244, ../sass/screen.sass */
   .home div#proposals h2, .home div#sponsors h2 {
     margin-top: 0;
   }
-  /* line 245, ../sass/screen.sass */
+  /* line 246, ../sass/screen.sass */
   .home div#proposals *:last-child, .home div#sponsors *:last-child {
     margin-bottom: 0;
   }
 
-  /* line 249, ../sass/screen.sass */
+  /* line 250, ../sass/screen.sass */
   .home div#proposals {
     transform: rotate(1deg);
     -ms-transform: rotate(1deg);
@@ -416,7 +417,7 @@ p.theme {
     -o-transform: rotate(1deg);
   }
 
-  /* line 256, ../sass/screen.sass */
+  /* line 257, ../sass/screen.sass */
   .home div#sponsors {
     margin-right: -1em;
     transform: rotate(-1deg);
@@ -426,7 +427,7 @@ p.theme {
     -o-transform: rotate(-1deg);
   }
 }
-/* line 264, ../sass/screen.sass */
+/* line 265, ../sass/screen.sass */
 #organizers {
   clear: left;
   background-color: #303030;
@@ -439,16 +440,16 @@ p.theme {
   padding: 1em;
 }
 @media (min-width: 45em) {
-  /* line 264, ../sass/screen.sass */
+  /* line 265, ../sass/screen.sass */
   #organizers {
-    background-image: -moz-radial-gradient(50% 50%, circle closest-side, #303030, #303030 10em, #232323 13em);
-    background-image: -webkit-radial-gradient(50% 50%, circle closest-side, #303030, #303030 10em, #232323 13em);
-    background-image: -o-radial-gradient(50% 50%, circle closest-side, #303030, #303030 10em, #232323 13em);
-    background-image: -ms-radial-gradient(50% 50%, circle closest-side, #303030, #303030 10em, #232323 13em);
-    background-image: radial-gradient(50% 50%, circle closest-side, #303030, #303030 10em, #232323 13em);
+    background-image: -moz-radial-gradient(50% 50%, circle closest-side, #303030, #303030 12em, #232323 19em);
+    background-image: -webkit-radial-gradient(50% 50%, circle closest-side, #303030, #303030 12em, #232323 19em);
+    background-image: -o-radial-gradient(50% 50%, circle closest-side, #303030, #303030 12em, #232323 19em);
+    background-image: -ms-radial-gradient(50% 50%, circle closest-side, #303030, #303030 12em, #232323 19em);
+    background-image: radial-gradient(50% 50%, circle closest-side, #303030, #303030 12em, #232323 19em);
   }
 }
-/* line 282, ../sass/screen.sass */
+/* line 283, ../sass/screen.sass */
 #organizers h2, #organizers p {
   font-size: 0.875em;
   line-height: 1.6em;
@@ -456,16 +457,16 @@ p.theme {
   text-align: center;
   clear: both;
 }
-/* line 288, ../sass/screen.sass */
+/* line 289, ../sass/screen.sass */
 #organizers h2 {
   font-weight: 400;
 }
-/* line 290, ../sass/screen.sass */
+/* line 291, ../sass/screen.sass */
 #organizers .logos {
   max-width: 246px;
   margin: 0 auto;
 }
-/* line 293, ../sass/screen.sass */
+/* line 294, ../sass/screen.sass */
 #organizers .uottawa-logo, #organizers .carleton-logo {
   background-image: url(../img/organizer-logos.png?);
   background-repeat: no-repeat;
@@ -479,21 +480,21 @@ p.theme {
   -o-transition: opacity 0.2s linear;
   transition: opacity 0.2s linear;
 }
-/* line 305, ../sass/screen.sass */
+/* line 306, ../sass/screen.sass */
 #organizers .uottawa-logo {
   width: 83px;
   height: 72px;
   background-position: 0, 0;
   margin: 10px 23px 20px 0;
 }
-/* line 310, ../sass/screen.sass */
+/* line 311, ../sass/screen.sass */
 #organizers .carleton-logo {
   width: 140px;
   height: 35px;
   background-position: -106px -22px;
   margin: 32px 0 15px 0;
 }
-/* line 315, ../sass/screen.sass */
+/* line 316, ../sass/screen.sass */
 #organizers .uottawa-logo:hover, #organizers .carleton-logo:hover {
   opacity: 1;
   -webkit-transition: opacity 0.2s linear;
@@ -503,57 +504,57 @@ p.theme {
   transition: opacity 0.2s linear;
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5) {
-  /* line 323, ../sass/screen.sass */
+  /* line 324, ../sass/screen.sass */
   #organizers .uottawa-logo, #organizers .carleton-logo {
     background-image: url(../img/organizer-logos@2x.png);
     background-size: 246px 72px;
   }
 }
 
-/* line 327, ../sass/screen.sass */
+/* line 328, ../sass/screen.sass */
 aside.highlight {
   border: 2px solid #ffa23e;
   padding: 1em;
 }
-/* line 330, ../sass/screen.sass */
+/* line 331, ../sass/screen.sass */
 aside.highlight h2 {
   font-size: 1em;
   line-height: 1.4em;
   color: #ffa23e;
   margin: 0;
 }
-/* line 335, ../sass/screen.sass */
+/* line 336, ../sass/screen.sass */
 aside.highlight p:last-of-type {
   margin-bottom: 0;
 }
 
-/* line 338, ../sass/screen.sass */
+/* line 339, ../sass/screen.sass */
 aside.note {
   padding-left: 1em;
 }
-/* line 340, ../sass/screen.sass */
+/* line 341, ../sass/screen.sass */
 aside.note h3 {
   margin: 0;
   font-size: 1em;
 }
-/* line 343, ../sass/screen.sass */
+/* line 344, ../sass/screen.sass */
 aside.note h3 a {
   display: block;
   margin-left: -15px;
   padding-left: 15px;
   background: url(../img/disclosure-triangle.png) no-repeat 4px 4px;
 }
-/* line 348, ../sass/screen.sass */
+/* line 349, ../sass/screen.sass */
 aside.note h3.open a {
   background-position: 0 -85px;
 }
-/* line 350, ../sass/screen.sass */
+/* line 351, ../sass/screen.sass */
 aside.note li, aside.note ul {
   padding-left: 0;
   margin-left: 0;
 }
 
-/* line 355, ../sass/screen.sass */
+/* line 356, ../sass/screen.sass */
 #answers h3 {
   font-size: 1em;
   line-height: 1.4em;
@@ -561,14 +562,14 @@ aside.note li, aside.note ul {
   font-weight: 700;
 }
 
-/* line 362, ../sass/screen.sass */
+/* line 363, ../sass/screen.sass */
 #subscribe .subscribe-loader {
   background: url(../img/ajax-loader.gif) no-repeat top left;
   width: 12px;
   height: 12px;
   display: inline-block;
 }
-/* line 367, ../sass/screen.sass */
+/* line 368, ../sass/screen.sass */
 #subscribe #subemail {
   width: 100%;
   padding: 0.3em 0.5em;
@@ -580,7 +581,7 @@ aside.note li, aside.note ul {
   font-size: 0.9em;
 }
 @media (min-width: 30em) {
-  /* line 367, ../sass/screen.sass */
+  /* line 368, ../sass/screen.sass */
   #subscribe #subemail {
     font-size: 1em;
     width: 74.35897%;
@@ -589,7 +590,7 @@ aside.note li, aside.note ul {
   }
 }
 @media (min-width: 35em) {
-  /* line 367, ../sass/screen.sass */
+  /* line 368, ../sass/screen.sass */
   #subscribe #subemail {
     width: 77.27273%;
     float: left;
@@ -597,7 +598,7 @@ aside.note li, aside.note ul {
   }
 }
 @media (min-width: 30em) {
-  /* line 381, ../sass/screen.sass */
+  /* line 382, ../sass/screen.sass */
   #subscribe #subsubmit {
     width: 23.07692%;
     float: left;
@@ -607,7 +608,7 @@ aside.note li, aside.note ul {
   }
 }
 @media (min-width: 35em) {
-  /* line 381, ../sass/screen.sass */
+  /* line 382, ../sass/screen.sass */
   #subscribe #subsubmit {
     width: 20.45455%;
     float: left;
@@ -616,23 +617,23 @@ aside.note li, aside.note ul {
     margin-right: 0;
   }
 }
-/* line 388, ../sass/screen.sass */
+/* line 389, ../sass/screen.sass */
 #subscribe .error_message {
   margin-bottom: 1em;
   color: #f36f67;
 }
-/* line 392, ../sass/screen.sass */
+/* line 393, ../sass/screen.sass */
 #subscribe #success_page h3 {
   color: #95b257;
   margin: 0;
 }
-/* line 395, ../sass/screen.sass */
+/* line 396, ../sass/screen.sass */
 #subscribe #success_page h3 + p {
   margin-top: 0;
 }
 
 @media (min-width: 40em) {
-  /* line 398, ../sass/screen.sass */
+  /* line 399, ../sass/screen.sass */
   .sponsors #interested {
     display: none;
   }
