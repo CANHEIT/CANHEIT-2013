@@ -125,32 +125,46 @@ a.bigbutton
   padding: 1em
 
 header
-  p.tagline, p.summary
+  background: rgba(0 , 0, 0, 0.05)
+  +clearfix
+  padding: 1em
+  margin: -1em
+  margin-bottom: 1em
+  p.location-date
     font-size: 0.875em /* 14px / 16px = 0.875 */
+    color: #333
+    text-align: center
+    margin: 0
+    span.location
+      padding-right: 1em
+  p.tagline
+    font-size: 0.875em /* 14px / 16px = 0.875 */
+    margin: 0
     margin-top: 0
-  p.summary
-    padding: 1.14285714285714em /* 16 / 14 = 1.14285714285714 */
-    margin: -1.14285714285714em /* */
-    margin-bottom: 1em
-    background: rgba(0 , 0, 0, 0.05)
-    a
-      color: $primary-orange
-    a:hover
-      color: lighten($primary-orange, 10%)
+    color: #777
+    text-align: center
   img
     display: block
     max-width: 14em
-    margin: 0 auto
-  p.location-date
-    margin-top: 1.5em
-    color: #777
-  span.location
+    margin: 0 auto 1em
+  +at-breakpoint(30em 6)
+    padding-left: 16em
     padding-right: 1em
-  p.theme
-    font-size: 1.125em /* 18px / 16px = 1.125 */
-    padding: 0 2em
-    color: $primary-orange
-    margin: 0
+    padding-top: 2.5em
+    
+    img
+      float: left
+      margin: -1.5em 0 0 -15em
+    p.location-date, p.tagline
+      text-align: left
+  +at-breakpoint(45em 9)
+    padding-left: 22em
+    padding-right: 2em
+    padding-top: 3em
+    
+    img
+      max-width: 18em
+      margin: -2em 0 0 -21em
 
 .home header
   text-align: center
@@ -164,13 +178,44 @@ header
   margin: -1em -1em 1em
   padding: 1em
   
+  img
+    display: block
+    max-width: 14em
+    margin: 0 auto
+  
+  p.tagline
+    color: #333
+    margin-bottom: 1em
+  p.location-date
+    margin-top: 1.5em
+    color: #777
+    +at-breakpoint(45em 9)
+      margin: 0
+  span.location
+    padding-right: 1em
+  
+  p.theme
+    font-size: 1.125em /* 18px / 16px = 1.125 */
+    padding: 0 2em
+    color: $primary-orange
+    margin: 0
+    
+  +at-breakpoint(30em 6)
+    padding: 1em
+    
+    img
+      float: none
+      margin: 0 auto
+    p.location-date, p.tagline
+      text-align: inherit
+      
   +at-breakpoint(45em 9)
     margin: -1em
-    background-image: -moz-radial-gradient(12.5em 10em, circle closest-side, white, white 8em, darken(white, 5%) 11em)
+    background-image: -moz-radial-gradient(14.5em 10em, circle closest-side, white, white 8em, darken(white, 5%) 11em)
     background-image: -webkit-radial-gradient(14.5em 11em, circle closest-side, white, white 9em, darken(white, 5%) 12em)
-    background-image: -o-radial-gradient(12.5em 40%, circle closest-side, white, white 8em, darken(white, 5%) 11em)
-    background-image: -ms-radial-gradient(12.5em 40%, circle closest-side, white, white 8em, darken(white, 5%) 11em)
-    background-image: radial-gradient(12.5em 40%, circle closest-side, white, white 8em, darken(white, 5%) 11em)
+    background-image: -o-radial-gradient(14.5em 40%, circle closest-side, white, white 8em, darken(white, 5%) 11em)
+    background-image: -ms-radial-gradient(14.5em 40%, circle closest-side, white, white 8em, darken(white, 5%) 11em)
+    background-image: radial-gradient(14.5em 40%, circle closest-side, white, white 8em, darken(white, 5%) 11em)
     +clearfix
     
     padding-left: 23em
@@ -179,11 +224,14 @@ header
 
     img
       max-width: 18em
+      margin: 0
       margin-left: -18em
       float: left
     p.location-date
       font-size: 1.8em
       color: #333
+      margin-bottom: 1em
+      text-align: center
       span.location, span.date
         display: block
         margin: 0
@@ -195,6 +243,7 @@ header
       padding: 0 4em
       margin-bottom: 2em
       float: right
+      text-align: center
     p.theme
       +hide-text()
       background: url(../img/theme-bubble@2x.png) no-repeat top left
@@ -205,6 +254,26 @@ header
       margin: 0 auto -0.5em
       position: relative
       z-index: 1
+
+article header
+  background: transparent
+  padding: 1em 1em 0
+  a.return
+    background: url(../img/back-triangle-999.png) no-repeat 0 0.3em
+    padding-left: 0.71428571428571em /* 10 / 14*/
+    text-transform: uppercase
+    font-size: 0.875em /* 14 / 16 */
+    font-weight: $weight-semibold
+    color: #999
+    @media only screen and (-webkit-min-device-pixel-ratio: 1.5)
+      background-image: url(../img/back-triangle-999@2x.png)
+      background-size: 5px 11px
+    +at-breakpoint(45em 9)
+      background-image: url(../img/back-triangle-999@2x.png)
+      background-size: 7px 15.4px
+  a.return:hover
+    color: $primary-orange
+
 footer
   background-color: rgba(0, 0, 0, 0.05)
   padding: 1em
