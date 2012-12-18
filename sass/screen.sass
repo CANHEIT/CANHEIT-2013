@@ -303,21 +303,29 @@ footer
   
 
 #promovideo
-  margin: 0 auto
-  padding-bottom: 2.5em
+  width: 144px
+  border: 6px solid white
   position: relative
-  .twitter-share-button
-    margin-top: 0.5em
+  -webkit-box-shadow:  0px 30px 30px -30px rgba(0, 0, 0, .5)
+  box-shadow:  0px 30px 30px -30px rgba(0, 0, 0, .5)
+  -webkit-border-radius: 5px
+  -moz-border-radius: 5px
+  border-radius: 5px
+  img
+    max-width: 100%
+  a
+    +hide-text()
+    display: block
+    width: 144px
+    height: 81.6px
     position: absolute
-    bottom: 0
-    right: 0
-  +at-breakpoint(45em 9)
-    margin: 0 -1em 1em
-    padding-bottom: 0
-    .twitter-share-button
-      margin-top: 0.5em
-      top: -3em
-      bottom: auto
+    top: 0
+    z-index: 1
+    background: url(../img/thumbnail-image-play-button.png) no-repeat 50% 50%
+    background-size: 39px 27.5px
+    opacity: 0.7
+  a:hover
+    opacity: 1
 
 p.note
   font-size: 0.6875em /* 11 / 16 = 0.6875 */

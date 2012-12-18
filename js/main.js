@@ -93,7 +93,9 @@ jQuery(document).ready(function(){
 });
 
 jQuery(document).ready(function(){
-  if($("#promovideo").length) {
-    $("#promovideo").fitVids();
+  console.log(Modernizr);
+  if (Modernizr.touch){
+     window.previousTitle = document.title;
+     document.title = "CANHEIT.ca";
   }
 });
