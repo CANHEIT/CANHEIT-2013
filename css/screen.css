@@ -562,7 +562,7 @@ p.theme {
   }
 
   /* line 361, ../sass/screen.sass */
-  .home div#proposals, .home div#sponsors, .home div#proposals2, .home div#sponsors2 {
+  .home #options .item {
     background: white;
     margin: 1em 3em 2em -1em;
     padding: 1em;
@@ -572,16 +572,16 @@ p.theme {
     box-shadow: 0px 30px 30px -30px rgba(0, 0, 0, 0.5);
   }
   /* line 367, ../sass/screen.sass */
-  .home div#proposals h2, .home div#sponsors h2, .home div#proposals2 h2, .home div#sponsors2 h2 {
+  .home #options .item h2 {
     margin-top: 0;
   }
   /* line 369, ../sass/screen.sass */
-  .home div#proposals *:last-child, .home div#sponsors *:last-child, .home div#proposals2 *:last-child, .home div#sponsors2 *:last-child {
+  .home #options .item *:last-child {
     margin-bottom: 0;
   }
 
   /* line 373, ../sass/screen.sass */
-  .home div#proposals, .home div#sponsors2 {
+  .home div#why-attend, .home div#sponsors {
     transform: rotate(1deg);
     -ms-transform: rotate(1deg);
     -moz-transform: rotate(1deg);
@@ -590,7 +590,7 @@ p.theme {
   }
 
   /* line 380, ../sass/screen.sass */
-  .home div#sponsors, .home div#proposals2 {
+  .home div#crowdvote, .home div#your-stay {
     margin-right: -1em;
     transform: rotate(-1deg);
     -ms-transform: rotate(-1deg);
