@@ -355,21 +355,24 @@ p.theme
 
 +at-breakpoint(45em 9)
   #options
-    max-width: 42em
-    margin: 0 auto
-    padding: 1em 1em 1em 2em
+    +clearfix
+    margin: 0 -1em
+    padding: 1em 0.5em
   .home #options .item
     background: white
-    margin: 1em 3em 2em -1em
+    margin: 1em 2em 2em 0
     padding: 1em
     float: left
-    max-width: 18em
+    max-width: 19em
     h2
       margin-top: 0
     *:last-child
       margin-bottom: 0
     -webkit-box-shadow:  0px 30px 30px -30px rgba(0, 0, 0, .5)
     box-shadow:  0px 30px 30px -30px rgba(0, 0, 0, .5)
+  .home div#crowdvote.item, .home div#sponsors.item
+    float: right
+    margin-right: 0
   .home div#why-attend, .home div#sponsors
     transform: rotate(1deg)
     -ms-transform: rotate(1deg) /* IE 9 */
