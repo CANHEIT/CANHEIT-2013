@@ -343,16 +343,16 @@ header img#logo {
 @media (min-width: 45em) {
   /* line 169, ../sass/screen.sass */
   .home header {
-    margin: 1em;
-    background-image: -moz-radial-gradient(12.5em 10em, circle closest-side, white, white 8em, #f2f2f2 11em);
-    background-image: -webkit-radial-gradient(12.5em 11em, circle closest-side, white, white 9em, #f2f2f2 12em);
-    background-image: -o-radial-gradient(12.5em 40%, circle closest-side, white, white 8em, #f2f2f2 11em);
-    background-image: -ms-radial-gradient(12.5em 40%, circle closest-side, white, white 8em, #f2f2f2 11em);
-    background-image: radial-gradient(12.5em 40%, circle closest-side, #ffffff, #ffffff 8em, #f2f2f2 11em);
+    margin: 0 1em 1em;
+    background-image: -moz-radial-gradient(12.5em 12em, circle closest-side, white, white 8em, #f2f2f2 11em);
+    background-image: -webkit-radial-gradient(11.5em 12em, circle closest-side, white, white 9em, #f2f2f2 12em);
+    background-image: -o-radial-gradient(12.5em 12em, circle closest-side, white, white 8em, #f2f2f2 11em);
+    background-image: -ms-radial-gradient(12.5em 12em, circle closest-side, white, white 8em, #f2f2f2 11em);
+    background-image: radial-gradient(12.5em 12em, circle closest-side, #ffffff, #ffffff 8em, #f2f2f2 11em);
     overflow: hidden;
     padding-left: 22em;
     padding-right: 1em;
-    padding-top: 4em;
+    padding-top: 5em;
     padding-bottom: 3em;
     border-bottom: 1px solid #cccccc;
   }
@@ -401,7 +401,7 @@ header img#logo {
     -webkit-transform: rotate(12deg);
     -o-transform: rotate(12deg);
     padding: 0;
-    margin: -2em -2em -3em 12em;
+    margin: -2em -4em -3em 12em;
     position: relative;
     z-index: 1;
   }
@@ -556,9 +556,9 @@ p.theme {
 @media (min-width: 45em) {
   /* line 357, ../sass/screen.sass */
   #options {
-    max-width: 100%;
-    margin: 0 -1em 0 1em;
-    padding: 1em;
+    max-width: 42em;
+    margin: 0 auto;
+    padding: 1em 1em 1em 2em;
   }
 
   /* line 361, ../sass/screen.sass */
