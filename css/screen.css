@@ -331,7 +331,7 @@ header img#logo {
     padding: 1em;
   }
   /* line 206, ../sass/screen.sass */
-  .home header img {
+  .home header img#logo {
     float: none;
     margin: 0 auto;
   }
