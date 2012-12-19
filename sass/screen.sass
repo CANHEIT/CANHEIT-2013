@@ -143,7 +143,7 @@ header
     margin-top: 0
     color: #777
     text-align: center
-  img
+  img#logo
     display: block
     max-width: 14em
     margin: 0 auto 1em
@@ -152,7 +152,7 @@ header
     padding-right: 1em
     padding-top: 2.5em
     
-    img
+    img#logo
       float: left
       margin: -1.5em 0 0 -15em
     p.location-date, p.tagline
@@ -162,7 +162,7 @@ header
     padding-right: 2em
     padding-top: 3em
     
-    img
+    img#logo
       max-width: 18em
       margin: -2em 0 0 -21em
 
@@ -178,7 +178,7 @@ header
   margin: -1em -1em 1em
   padding: 1em
   
-  img
+  img#logo
     display: block
     max-width: 14em
     margin: 0 auto
@@ -210,22 +210,24 @@ header
       text-align: inherit
       
   +at-breakpoint(45em 9)
-    margin: -1em
-    background-image: -moz-radial-gradient(14.5em 10em, circle closest-side, white, white 8em, darken(white, 5%) 11em)
-    background-image: -webkit-radial-gradient(14.5em 11em, circle closest-side, white, white 9em, darken(white, 5%) 12em)
-    background-image: -o-radial-gradient(14.5em 40%, circle closest-side, white, white 8em, darken(white, 5%) 11em)
-    background-image: -ms-radial-gradient(14.5em 40%, circle closest-side, white, white 8em, darken(white, 5%) 11em)
-    background-image: radial-gradient(14.5em 40%, circle closest-side, white, white 8em, darken(white, 5%) 11em)
+    margin: 1em
+    background-image: -moz-radial-gradient(12.5em 10em, circle closest-side, white, white 8em, darken(white, 5%) 11em)
+    background-image: -webkit-radial-gradient(12.5em 11em, circle closest-side, white, white 9em, darken(white, 5%) 12em)
+    background-image: -o-radial-gradient(12.5em 40%, circle closest-side, white, white 8em, darken(white, 5%) 11em)
+    background-image: -ms-radial-gradient(12.5em 40%, circle closest-side, white, white 8em, darken(white, 5%) 11em)
+    background-image: radial-gradient(12.5em 40%, circle closest-side, white, white 8em, darken(white, 5%) 11em)
     +clearfix
     
-    padding-left: 23em
-    padding-right: 2em
+    padding-left: 22em
+    padding-right: 1em
     padding-top: 4em
+    padding-bottom: 3em
+    border-bottom: 1px solid #ccc
 
-    img
+    img#logo
       max-width: 18em
       margin: 0
-      margin-left: -18em
+      margin-left: -20em
       float: left
     p.location-date
       font-size: 1.8em
@@ -247,11 +249,18 @@ header
     p.theme
       +hide-text()
       background: url(../img/theme-bubble@2x.png) no-repeat top left
-      width: 167px
-      height: 197px
-      background-size: 167px 197px
+      width: 100px
+      height: 118px
+      background-size: 100px 118px
+      
+      transform: rotate(12deg)
+      -ms-transform: rotate(12deg) /* IE 9 */
+      -moz-transform: rotate(12deg) /* Firefox */
+      -webkit-transform: rotate(12deg) /* Safari and Chrome */
+      -o-transform: rotate(12deg) /* Opera */
+      
       padding: 0
-      margin: 0 auto -0.5em
+      margin: -2em -2em -3em 12em
       position: relative
       z-index: 1
 
@@ -301,10 +310,10 @@ footer
   +at-breakpoint(45em 7)
     background-color: transparent
   
-
 #promovideo
   width: 144px
   border: 6px solid white
+  margin: 0 auto
   position: relative
   -webkit-box-shadow:  0px 30px 30px -30px rgba(0, 0, 0, .5)
   box-shadow:  0px 30px 30px -30px rgba(0, 0, 0, .5)
@@ -345,26 +354,30 @@ p.theme
   color: $primary-gray
 
 +at-breakpoint(45em 9)
-  .home div#proposals, .home div#sponsors
+  #options
+    max-width: 100%
+    margin: 0 -1em 0 1em
+    padding: 1em
+  .home div#proposals, .home div#sponsors, .home div#proposals2, .home div#sponsors2
     background: white
     margin: 1em 3em 2em -1em
     padding: 1em
     float: left
-    max-width: 20em
+    max-width: 18em
     h2
       margin-top: 0
     *:last-child
       margin-bottom: 0
     -webkit-box-shadow:  0px 30px 30px -30px rgba(0, 0, 0, .5)
     box-shadow:  0px 30px 30px -30px rgba(0, 0, 0, .5)
-  .home div#proposals
+  .home div#proposals, .home div#sponsors2
     transform: rotate(1deg)
     -ms-transform: rotate(1deg) /* IE 9 */
     -moz-transform: rotate(1deg) /* Firefox */
     -webkit-transform: rotate(1deg) /* Safari and Chrome */
     -o-transform: rotate(1deg) /* Opera */
     
-  .home div#sponsors
+  .home div#sponsors, .home div#proposals2
     margin-right: -1em
     transform: rotate(-1deg)
     -ms-transform: rotate(-1deg) /* IE 9 */

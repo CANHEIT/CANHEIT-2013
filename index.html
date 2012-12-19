@@ -25,31 +25,47 @@
           <header>
             <h1 class="visuallyhidden">CANHEIT 2013</h1>
             <p class="tagline">Canada's premier Higher Education IT Conference</p>
-            <img src="img/canheit2013_logo.png" />
+            <img src="img/canheit2013_logo.png" id="logo" />
             <p class="location-date">
               <span class="location">Ottawa, Ontario</span>
               <span class="date">June 9 - 13, 2013</span>
             </p>
             <p class="theme">Exceptional ideas for a changing world</p>
+            <div id="promovideo">
+              <img src="img/youtube-video-thumb.png" />
+              <a href="http://www.youtube.com/watch?v=ubDznfrxwqg">View the CANHEIT 2013 intro video</a>
+            </div>
           </header>
           
-          <div id="promovideo">
-            <img src="img/youtube-video-thumb.png" />
-            <a href="http://www.youtube.com/watch?v=ubDznfrxwqg">View the CANHEIT 2013 intro video</a>
-					</div>
+					<div id="options">
 					
-          <div id="proposals">
+          <div id="proposals" class="item">
   					<h2>Want to present something? YAY!</h2>
   					<p>Got an exceptional idea? Dying to expose your work at a national level? Doing something epic? Sweet! We're now accepting presentation proposals, and looking for the unexpected, the visionary and the exceptional. Show us what you got!</p>
   					<a class="button" href="proposals/">How to submit your proposal</a>
   					<p class="note">Call for proposals ends January 31, 2013</p>
   				</div>
   				
-  				<div id="sponsors">	
+  				<div id="sponsors" class="item">	
   					<h2>Sponsors: let's talk!</h2>
   					<p>Want to chat with the best looking higher-ed crowd in the country? Great coincidence! We'll work with your company to deliver awesome marketing impact!</p>
   					<a class="button" href="sponsors/">Learn about becoming a sponsor</a>
-  				</div>	
+  				</div>
+  				
+  				<div id="proposals2" class="item">
+  					<h2>Want to present something? YAY!</h2>
+  					<p>Got an exceptional idea? Dying to expose your work at a national level? Doing something epic? Sweet! We're now accepting presentation proposals, and looking for the unexpected, the visionary and the exceptional. Show us what you got!</p>
+  					<a class="button" href="proposals/">How to submit your proposal</a>
+  					<p class="note">Call for proposals ends January 31, 2013</p>
+  				</div>
+  				
+          <div id="sponsors2" class="item">	
+          	<h2>Sponsors: let's talk!</h2>
+          	<p>Want to chat with the best looking higher-ed crowd in the country? Great coincidence! We'll work with your company to deliver awesome marketing impact!</p>
+          	<a class="button" href="sponsors/">Learn about becoming a sponsor</a>
+          </div>
+          
+  				</div><!-- /#options -->
   				
 					<div id="organizers">
 					  <h2>Brought to you by</h2>
@@ -81,12 +97,24 @@
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.8.2.min.js"><\/script>')</script>
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
+        <script src="js/vendor/jquery.masonry.min.js"></script>
 
         <script>
             var _gaq=[['canheit._setAccount','UA-35890616-1'],['canheit._trackPageview']];
             (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
             g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
             s.parentNode.insertBefore(g,s)}(document,'script'));
+        </script>
+        
+        <script>
+          $(function(){
+            $('#options').masonry({
+              // options
+              itemSelector : '.item',
+              isFitWidth : true,
+              isResizable : true
+            });
+          });
         </script>
     </body>
 </html>

@@ -93,7 +93,6 @@ jQuery(document).ready(function(){
 });
 
 jQuery(document).ready(function(){
-  console.log(Modernizr);
   if (Modernizr.touch){
      window.previousTitle = document.title;
      document.title = "CANHEIT.ca";
