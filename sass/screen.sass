@@ -65,27 +65,25 @@ h3
 a:link, a:visited
   font-weight: $weight-bold   
   color: #55bed8
-  -webkit-transition: color 0.2s linear, background-color 0.2s linear
-  -moz-transition: color 0.2s linear, background-color 0.2s linear
-  -ms-transition: color 0.2s linear, background-color 0.2s linear
-  -o-transition: color 0.2s linear, background-color 0.2s linear
-  transition: color 0.2s linear, background-color 0.2s linear
 
 a:hover
   color: lighten($secondary-blue, 10%)
-  -webkit-transition: color 0.2s linear, background-color 0.2s linear
-  -moz-transition: color 0.2s linear, background-color 0.2s linear
-  -ms-transition: color 0.2s linear, background-color 0.2s linear
-  -o-transition: color 0.2s linear, background-color 0.2s linear
-  transition: color 0.2s linear, background-color 0.2s linear
+  
+a:link, a:visited, a:hover, input[type=submit], button
+  -webkit-transition: color 0.2s linear, background-color 0.2s linear, opacity 0.2s linear
+  -moz-transition: color 0.2s linear, background-color 0.2s linear, opacity 0.2s linear
+  -ms-transition: color 0.2s linear, background-color 0.2s linear, opacity 0.2s linear
+  -o-transition: color 0.2s linear, background-color 0.2s linear, opacity 0.2s linear
+  transition: color 0.2s linear, background-color 0.2s linear, opacity 0.2s linear
 
-input[type=submit]
+
+input[type=submit], button
   font-size: 1em
   font-weight: $weight-bold
   line-height: 1.4em
   font-family: inherit
 
-a.button, a.bigbutton, input[type=submit]
+a.button, a.bigbutton, input[type=submit], button
   display: inline-block
   text-decoration: none
   background: $secondary-blue
@@ -99,16 +97,25 @@ a.button, a.bigbutton, input[type=submit]
   margin-right: 1em
   margin-bottom: 1em
 
-a.button + p, a.bigbutton + p, input[type=submit] + p
+a.button + p, a.bigbutton + p, input[type=submit] + p, button + p
   margin-top: 0
 
-a.button.secondary, a.bigbutton.secondary, input[type=submit].secondary
+a.button.secondary, a.bigbutton.secondary, input[type=submit].secondary, button.secondary
   background: $secondary-green
   
-a.button:hover, a.bigbutton:hover, input[type=submit]:hover
+a.button:hover, a.bigbutton:hover, input[type=submit]:hover, button:hover
   background: lighten($secondary-blue, 10%)
-  
-a.button.secondary:hover, a.bigbutton.secondary:hover, input[type=submit].secondary:hover
+
+a.button.cancel, a.bigbutton.cancel, input[type=submit].cancel, button.cancel
+  background: lighten($primary-gray, 10%)
+  opacity: 0.8
+  font-size: 0.8em
+
+a.button.cancel:hover, a.bigbutton.cancel:hover, input[type=submit].cancel:hover, button.cancel:hover
+  background: $primary-gray
+  opacity: 1
+
+a.button.secondary:hover, a.bigbutton.secondary:hover, input[type=submit].secondary:hover, button.secondary:hover
   background: lighten($secondary-green, 10%)
 
 a.bigbutton
@@ -352,6 +359,11 @@ p.theme
   margin: 0 4em 0 2em
   font-weight: $weight-semibold
   color: $primary-gray
+  
+.home #options div#crowdvote.item
+  background-color: lighten($primary-orange, 25%)
+  margin: -1em -1em 1em
+  padding: 1em 1em 1em
 
 +at-breakpoint(45em 9)
   #options
@@ -370,7 +382,7 @@ p.theme
       margin-bottom: 0
     -webkit-box-shadow:  0px 30px 30px -30px rgba(0, 0, 0, .5)
     box-shadow:  0px 30px 30px -30px rgba(0, 0, 0, .5)
-  .home div#crowdvote.item, .home div#sponsors.item
+  .home div#program.item, .home div#sponsors.item
     float: right
     margin-right: 0
   .home div#why-attend, .home div#sponsors
@@ -380,13 +392,42 @@ p.theme
     -webkit-transform: rotate(1deg) /* Safari and Chrome */
     -o-transform: rotate(1deg) /* Opera */
     
-  .home div#crowdvote, .home div#your-stay
+  .home div#program, .home div#your-stay
     margin-right: -1em
     transform: rotate(-1deg)
     -ms-transform: rotate(-1deg) /* IE 9 */
     -moz-transform: rotate(-1deg) /* Firefox */
     -webkit-transform: rotate(-1deg) /* Safari and Chrome */
     -o-transform: rotate(-1deg) /* Opera */
+  
+  .home #options div#crowdvote.item
+    float: left
+    +clearfix
+    margin: 1em 2em 2em 0
+    padding: 1em
+    max-width: 45em
+    margin-right: 0
+    transform: rotate(-0.5deg)
+    -ms-transform: rotate(-0.5deg) /* IE 9 */
+    -moz-transform: rotate(-0.5deg) /* Firefox */
+    -webkit-transform: rotate(-0.5deg) /* Safari and Chrome */
+    -o-transform: rotate(-0.5deg) /* Opera */
+    p
+      float: left
+      max-width: 15em
+      margin-top: 0
+      margin-right: 2em
+    h2
+      float: left
+      max-width: 5em
+      margin-right: 1em
+    .actions
+      float: right
+      max-width: 14em
+      p 
+        margin-left: 0
+        margin-right: 0
+        float: none
     
 #organizers
   clear: left
