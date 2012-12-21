@@ -341,6 +341,7 @@
 <IfModule mod_rewrite.c>
   RewriteEngine On
   RewriteRule ^index-fr\.html$ / [R=301,L]
+  RewriteRule ^proposals/(index\.html)?$ / [R=301,L]
 </IfModule>
 
 # ----------------------------------------------------------------------
