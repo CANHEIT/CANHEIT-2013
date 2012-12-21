@@ -47,8 +47,8 @@
 					  <div class="actions">
   						<a class="button" href="#crowdvote">Vote for your top sessions</a>
   						<p class="note">Quick! You got until February 22nd!</p>
- 						  <button class="cancel">Not today</button>
- 						  <button class="cancel">Don't think I will</button>
+ 						  <button class="cancel" id="not-today">Not today</button>
+ 						  <button class="cancel" id="never">Don't think I will</button>
   					</div>
 					</div>
 					
@@ -74,7 +74,7 @@
           <div id="sponsors" class="item">	
           	<h2>Sponsors: let's talk!</h2>
           	<p>Want to chat with the best looking higher-ed crowd in the country? Great coincidence! We'll work with your company to <strong>deliver awesome marketing impact</strong>!</p>
-          	<a class="button" href="sponsors/">Becoming a sponsor</a>
+          	<a class="button" href="sponsors/">Become a sponsor</a>
           </div>
           
   				</div><!-- /#options -->
@@ -109,12 +109,36 @@
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.8.2.min.js"><\/script>')</script>
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
+        <script src="js/vendor/jquery.cookie.js"></script>
 
         <script>
             var _gaq=[['canheit._setAccount','UA-35890616-1'],['canheit._trackPageview']];
             (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
             g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
             s.parentNode.insertBefore(g,s)}(document,'script'));
+        </script>
+        
+        <script>
+          $(function() {
+            
+            if($.cookie('crowdvoting') == 'never' || $.cookie('crowdvoting') == 'not-today') {
+              $('#crowdvote').hide(0);
+              return;
+            }
+            
+            $('.cancel').fadeIn('fast');
+            
+            $('#not-today').click(function(){
+              $.cookie('crowdvoting','not-today',{ expires: 1 });
+              $('#crowdvote').fadeOut('slow');
+            });
+            
+            $('#never').click(function(){
+              $.cookie('crowdvoting','never',{ expires: 365 });
+              $('#crowdvote').fadeOut('slow');
+            });
+            
+          });
         </script>
         
     </body>

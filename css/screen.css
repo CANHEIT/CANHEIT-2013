@@ -671,8 +671,12 @@ p.theme {
     margin-right: 0;
     float: none;
   }
+  /* line 436, ../sass/screen.sass */
+  .home #options div#crowdvote.item .cancel {
+    display: none;
+  }
 }
-/* line 437, ../sass/screen.sass */
+/* line 439, ../sass/screen.sass */
 #organizers {
   clear: left;
   background-color: #303030;
@@ -685,7 +689,7 @@ p.theme {
   padding: 1em;
 }
 @media (min-width: 45em) {
-  /* line 437, ../sass/screen.sass */
+  /* line 439, ../sass/screen.sass */
   #organizers {
     background-image: -moz-radial-gradient(50% 50%, circle closest-side, #303030, #303030 12em, #232323 19em);
     background-image: -webkit-radial-gradient(50% 50%, circle closest-side, #303030, #303030 12em, #232323 19em);
@@ -694,7 +698,7 @@ p.theme {
     background-image: radial-gradient(50% 50%, circle closest-side, #303030, #303030 12em, #232323 19em);
   }
 }
-/* line 455, ../sass/screen.sass */
+/* line 457, ../sass/screen.sass */
 #organizers h2, #organizers p {
   font-size: 0.875em;
   line-height: 1.6em;
@@ -702,16 +706,16 @@ p.theme {
   text-align: center;
   clear: both;
 }
-/* line 461, ../sass/screen.sass */
+/* line 463, ../sass/screen.sass */
 #organizers h2 {
   font-weight: 400;
 }
-/* line 463, ../sass/screen.sass */
+/* line 465, ../sass/screen.sass */
 #organizers .logos {
   max-width: 246px;
   margin: 0 auto;
 }
-/* line 466, ../sass/screen.sass */
+/* line 468, ../sass/screen.sass */
 #organizers .uottawa-logo, #organizers .carleton-logo {
   background-image: url(../img/organizer-logos.png?);
   background-repeat: no-repeat;
@@ -725,21 +729,21 @@ p.theme {
   -o-transition: opacity 0.2s linear;
   transition: opacity 0.2s linear;
 }
-/* line 478, ../sass/screen.sass */
+/* line 480, ../sass/screen.sass */
 #organizers .uottawa-logo {
   width: 83px;
   height: 72px;
   background-position: 0, 0;
   margin: 10px 23px 20px 0;
 }
-/* line 483, ../sass/screen.sass */
+/* line 485, ../sass/screen.sass */
 #organizers .carleton-logo {
   width: 140px;
   height: 35px;
   background-position: -106px -22px;
   margin: 32px 0 15px 0;
 }
-/* line 488, ../sass/screen.sass */
+/* line 490, ../sass/screen.sass */
 #organizers .uottawa-logo:hover, #organizers .carleton-logo:hover {
   opacity: 1;
   -webkit-transition: opacity 0.2s linear;
@@ -749,57 +753,57 @@ p.theme {
   transition: opacity 0.2s linear;
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5) {
-  /* line 496, ../sass/screen.sass */
+  /* line 498, ../sass/screen.sass */
   #organizers .uottawa-logo, #organizers .carleton-logo {
     background-image: url(../img/organizer-logos@2x.png);
     background-size: 246px 72px;
   }
 }
 
-/* line 500, ../sass/screen.sass */
+/* line 502, ../sass/screen.sass */
 aside.highlight {
   border: 2px solid #ffa23e;
   padding: 1em;
 }
-/* line 503, ../sass/screen.sass */
+/* line 505, ../sass/screen.sass */
 aside.highlight h2 {
   font-size: 1em;
   line-height: 1.4em;
   color: #ffa23e;
   margin: 0;
 }
-/* line 508, ../sass/screen.sass */
+/* line 510, ../sass/screen.sass */
 aside.highlight p:last-of-type {
   margin-bottom: 0;
 }
 
-/* line 511, ../sass/screen.sass */
+/* line 513, ../sass/screen.sass */
 aside.note {
   padding-left: 1em;
 }
-/* line 513, ../sass/screen.sass */
+/* line 515, ../sass/screen.sass */
 aside.note h3 {
   margin: 0;
   font-size: 1em;
 }
-/* line 516, ../sass/screen.sass */
+/* line 518, ../sass/screen.sass */
 aside.note h3 a {
   display: block;
   margin-left: -15px;
   padding-left: 15px;
   background: url(../img/disclosure-triangle.png) no-repeat 4px 4px;
 }
-/* line 521, ../sass/screen.sass */
+/* line 523, ../sass/screen.sass */
 aside.note h3.open a {
   background-position: 0 -85px;
 }
-/* line 523, ../sass/screen.sass */
+/* line 525, ../sass/screen.sass */
 aside.note li, aside.note ul {
   padding-left: 0;
   margin-left: 0;
 }
 
-/* line 528, ../sass/screen.sass */
+/* line 530, ../sass/screen.sass */
 #answers h3 {
   font-size: 1em;
   line-height: 1.4em;
@@ -807,14 +811,14 @@ aside.note li, aside.note ul {
   font-weight: 700;
 }
 
-/* line 535, ../sass/screen.sass */
+/* line 537, ../sass/screen.sass */
 #subscribe .subscribe-loader {
   background: url(../img/ajax-loader.gif) no-repeat top left;
   width: 12px;
   height: 12px;
   display: inline-block;
 }
-/* line 540, ../sass/screen.sass */
+/* line 542, ../sass/screen.sass */
 #subscribe #subemail {
   width: 100%;
   padding: 0.3em 0.5em;
@@ -826,7 +830,7 @@ aside.note li, aside.note ul {
   font-size: 0.9em;
 }
 @media (min-width: 30em) {
-  /* line 540, ../sass/screen.sass */
+  /* line 542, ../sass/screen.sass */
   #subscribe #subemail {
     font-size: 1em;
     width: 74.35897%;
@@ -835,7 +839,7 @@ aside.note li, aside.note ul {
   }
 }
 @media (min-width: 35em) {
-  /* line 540, ../sass/screen.sass */
+  /* line 542, ../sass/screen.sass */
   #subscribe #subemail {
     width: 77.27273%;
     float: left;
@@ -843,7 +847,7 @@ aside.note li, aside.note ul {
   }
 }
 @media (min-width: 30em) {
-  /* line 554, ../sass/screen.sass */
+  /* line 556, ../sass/screen.sass */
   #subscribe #subsubmit {
     width: 23.07692%;
     float: left;
@@ -853,7 +857,7 @@ aside.note li, aside.note ul {
   }
 }
 @media (min-width: 35em) {
-  /* line 554, ../sass/screen.sass */
+  /* line 556, ../sass/screen.sass */
   #subscribe #subsubmit {
     width: 20.45455%;
     float: left;
@@ -862,23 +866,23 @@ aside.note li, aside.note ul {
     margin-right: 0;
   }
 }
-/* line 561, ../sass/screen.sass */
+/* line 563, ../sass/screen.sass */
 #subscribe .error_message {
   margin-bottom: 1em;
   color: #f36f67;
 }
-/* line 565, ../sass/screen.sass */
+/* line 567, ../sass/screen.sass */
 #subscribe #success_page h3 {
   color: #95b257;
   margin: 0;
 }
-/* line 568, ../sass/screen.sass */
+/* line 570, ../sass/screen.sass */
 #subscribe #success_page h3 + p {
   margin-top: 0;
 }
 
 @media (min-width: 40em) {
-  /* line 571, ../sass/screen.sass */
+  /* line 573, ../sass/screen.sass */
   .sponsors #interested {
     display: none;
   }
