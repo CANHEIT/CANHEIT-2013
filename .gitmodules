@@ -1,0 +1,3 @@
+[submodule "lib/vendor/vagrant-lamp-box"]
+	path = lib/vendor/vagrant-lamp-box
+	url = git://github.com/sofadesign/vagrant-lamp-box.git
