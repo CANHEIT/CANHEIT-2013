@@ -887,3 +887,9 @@ aside.note li, aside.note ul {
     display: none;
   }
 }
+
+/* line 577, ../sass/screen.sass */
+section#description h1 {
+  margin-top: 0;
+  font-weight: normal;
+}
