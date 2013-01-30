@@ -1,3 +1,0 @@
-[submodule "lib/vendor/vagrant-puppet-lamp"]
-	path = lib/vendor/vagrant-puppet-lamp
-	url = git://github.com/TomJaeger/vagrant-puppet-lamp.git
