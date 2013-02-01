@@ -1,0 +1,3 @@
+[submodule "lib/.vendor/simplecache"]
+	path = lib/.vendor/simplecache
+	url = git://github.com/gilbitron/PHP-SimpleCache.git

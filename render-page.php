@@ -5,38 +5,44 @@
 
 # set defaults
 
-  $cache_dir = 'json-cache/';
+  $cache_dir = '.json-cache/';
   $template_dir = 'templates';
+  $api_url_start = 'http://gears.guidebook.com';
+  $api_url_end = 'format=json&username=jarsenea@uottawa.ca&api_key=DYJmr8vDWBrfZeBUr8wfgrhxMQUemRvnvSGYnfdKDQQxsvY';
 
 # load requirements
 
   require_once 'lib/.vendor/autoload.php';
+  require_once 'lib/.vendor/simplecache/simpleCache.php';
   $loader = new Twig_Loader_Filesystem($template_dir);
   $twig = new Twig_Environment($loader);
+  $cache = new SimpleCache();
+  $cache->cache_path = $cache_dir;
+  $cache->cache_time = 3600;
 
 # parse the URI
 
   $p = $_SERVER['REQUEST_URI'];
-  $json_file = "";
+  $json_uri = "";
   $template_file = "";
   $parse_functions = Array();
   
   switch ($p) {
     case (
       preg_match(
-        "/^\/(your-stay\/accommodations|attractions|restaurants|travel)\/([0-9]{1,6})\.html$/"
+        "/^\/(your-stay\/accommodations)\/([0-9]{1,6})\.html$/"
         , $p, $matches) ? true : false
-      ):
-      $json_file = $matches[1].'/'.$matches[2].'.json';
+      ) :
+      $json_uri = '/api/v1/poi/' . $matches[2] . '/?category=14833&';
       $template_file = $matches[1].'/accommodation.twig';
       array_push($parse_functions, 'fetch_links');
       break;
     case (
       preg_match(
-        "/^\/(your-stay\/accommodations|attractions|restaurants|travel)\/$/"
+        "/^\/(your-stay\/accommodations)\/$/"
         , $p, $matches) ? true : false
       ) :
-      $json_file = $matches[1].'/index.json';
+      $json_uri = '/api/v1/poi/?category=14833&';
       $template_file = $matches[1].'/index.twig';
       break;
     default:
@@ -45,7 +51,7 @@
 
 # load the json, throw a 404 on error
 
-  $json = file_get_contents($cache_dir . $json_file);
+  $json = get_api_object($json_uri);
   
   if (false === $json) {
     return_404();
@@ -91,6 +97,20 @@
     
     foreach ($data['links'] as $key => $value) {
     }
+  }
+  
+  function get_api_object($object_uri) {
+    global $cache, $api_url_start, $api_url_end;
+    
+    return $cache->get_data(
+      get_api_object_hash($object_uri),
+      $api_url_start . $object_uri . $api_url_end
+    );
+    
+  }
+  
+  function get_api_object_hash($object_uri) {
+    return hash('sha1',$object_uri);
   }
 
 ?>
