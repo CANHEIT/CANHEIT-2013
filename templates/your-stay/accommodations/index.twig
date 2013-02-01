@@ -44,8 +44,9 @@
             </div>
             
             <ul>
-              <li><a href="571968.html">Traditional residence</a></li>
-              <li><a href="532628.html">Holiday Inn</a></li>
+              {% for object in objects %}
+                <li><a href="{{ object.id }}.html">{{ object.name }}</a></li>
+              {% endfor %}
             </ul>
                         
 					</article>  				

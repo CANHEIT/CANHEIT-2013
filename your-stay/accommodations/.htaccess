@@ -2,4 +2,5 @@ RewriteEngine On
 
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^([0-9]{1,10})\.html$ ../../json2html.php?src=$1&template=accommodation.twig [L]
+RewriteRule ^([0-9]{1,10})\.html$ ../../json2html.php?src=your-stay/accommodations/$1&template=your-stay/accommodations/accommodation.twig
+RewriteRule ^$ ../../json2html.php?src=your-stay/accommodations/index&template=your-stay/accommodations/index.twig [L]
