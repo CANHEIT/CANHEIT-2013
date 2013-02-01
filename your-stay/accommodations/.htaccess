@@ -1,6 +1,0 @@
-RewriteEngine On
-
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^([0-9]{1,10})\.html$ ../../php/render-page.php?src=your-stay/accommodations/$1&template=your-stay/accommodations/accommodation.twig
-RewriteRule ^$ ../../php/render-page.php?src=your-stay/accommodations/index&template=your-stay/accommodations/index.twig [L]
