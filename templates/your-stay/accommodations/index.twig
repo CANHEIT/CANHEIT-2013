@@ -39,22 +39,12 @@
               <h1>Accommodations</h1>
             </header>
             
-            <div class="intro">
-              <p>We've got some details for you to start planning your stay in beautiful Ottawa. Airlines, Hotels, Restaurants, and attractions to see for while you're here.</p>
-            </div>
-            
             <ul>
               {% for object in objects %}
                 <li><a href="{{ object.id }}.html">{{ object.name }}</a></li>
               {% endfor %}
-            </ul><!--
-
-            <pre>
-            {% for object in objects %}
-              {{ object.id }}
-            {% endfor %}
-            </pre>-->
-                        
+            </ul>
+                                    
 					</article>  				
 					<footer>
 					  <h2>Don't be shy! Stay in touch&hellip;</h2>

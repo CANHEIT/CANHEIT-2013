@@ -6,6 +6,7 @@
 # set defaults
 
   $cache_dir = '.json-cache/';
+  $cache_time = 3600; //seconds
   $template_dir = 'templates';
   $api_url_start = 'http://gears.guidebook.com';
   $api_url_end = 'format=json&username=jarsenea@uottawa.ca&api_key=DYJmr8vDWBrfZeBUr8wfgrhxMQUemRvnvSGYnfdKDQQxsvY';
@@ -18,7 +19,7 @@
   $twig = new Twig_Environment($loader);
   $cache = new SimpleCache();
   $cache->cache_path = $cache_dir;
-  $cache->cache_time = 3600;
+  $cache->cache_time = $cache_time;
 
 # parse the URI
 
@@ -28,6 +29,9 @@
   $parse_functions = Array();
   
   switch ($p) {
+  
+    # accommodations
+  
     case (
       preg_match(
         "/^\/(your-stay\/accommodations)\/([0-9]{1,6})\.html$/"
@@ -45,6 +49,49 @@
       $json_uri = '/api/v1/poi/?category=14833&';
       $template_file = $matches[1].'/index.twig';
       break;
+  
+    # restaurants
+  
+    case (
+      preg_match(
+        "/^\/(your-stay\/restaurants)\/([0-9]{1,6})\.html$/"
+        , $p, $matches) ? true : false
+      ) :
+      $json_uri = '/api/v1/poi/' . $matches[2] . '/?category=14833&';
+      $template_file = $matches[1].'/restaurant.twig';
+      array_push($parse_functions, 'fetch_links');
+      break;
+    case (
+      preg_match(
+        "/^\/(your-stay\/restaurants)\/$/"
+        , $p, $matches) ? true : false
+      ) :
+      $json_uri = '/api/v1/poi/?category=13617&';
+      $template_file = $matches[1].'/index.twig';
+      break;
+      
+    # attractions
+  
+    case (
+      preg_match(
+        "/^\/(your-stay\/attractions)\/([0-9]{1,6})\.html$/"
+        , $p, $matches) ? true : false
+      ) :
+      $json_uri = '/api/v1/poi/' . $matches[2] . '/?category=13618&';
+      $template_file = $matches[1].'/attraction.twig';
+      array_push($parse_functions, 'fetch_links');
+      break;
+    case (
+      preg_match(
+        "/^\/(your-stay\/attractions)\/$/"
+        , $p, $matches) ? true : false
+      ) :
+      $json_uri = '/api/v1/poi/?category=13618&';
+      $template_file = $matches[1].'/index.twig';
+      break;
+      
+    # otherwise, 404
+    
     default:
       return_404();
   }
@@ -106,7 +153,6 @@
       get_api_object_hash($object_uri),
       $api_url_start . $object_uri . $api_url_end
     );
-    
   }
   
   function get_api_object_hash($object_uri) {
