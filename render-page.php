@@ -19,13 +19,23 @@
   $p = $_SERVER['REQUEST_URI'];
   $json_file = "";
   $template_file = "";
+  $parse_functions = Array();
   
   switch ($p) {
-    case (preg_match("/^\/(your-stay\/accommodations)\/([0-9]{1,6})\.html$/", $p, $matches) ? true : false) :
+    case (
+      preg_match(
+        "/^\/(your-stay\/accommodations|attractions|restaurants|travel)\/([0-9]{1,6})\.html$/"
+        , $p, $matches) ? true : false
+      ):
       $json_file = $matches[1].'/'.$matches[2].'.json';
       $template_file = $matches[1].'/accommodation.twig';
+      array_push($parse_functions, 'fetch_links');
       break;
-    case (preg_match("/^\/(your-stay\/accommodations)\/$/", $p, $matches) ? true : false) :
+    case (
+      preg_match(
+        "/^\/(your-stay\/accommodations|attractions|restaurants|travel)\/$/"
+        , $p, $matches) ? true : false
+      ) :
       $json_file = $matches[1].'/index.json';
       $template_file = $matches[1].'/index.twig';
       break;
@@ -50,6 +60,13 @@
   if (false == is_array($data)) {
     return_404();
   }
+  
+  # run parse functions to modify the output
+  foreach ($parse_functions as $parse_function) {
+    if (function_exists($parse_function)) {
+      $parse_function($data);
+    }
+  }
 
 # load the template
 
@@ -65,6 +82,15 @@
     header("HTTP/1.0 404 Not Found");
     require '404.html';
     exit;
+  }
+  
+  function fetch_links(&$data) {
+    if(!is_array($data['links'])) {
+      return;
+    }
+    
+    foreach ($data['links'] as $key => $value) {
+    }
   }
 
 ?>
