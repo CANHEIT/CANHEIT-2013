@@ -17,13 +17,26 @@ $loader = new Twig_Loader_Filesystem('../templates/');
 $twig = new Twig_Environment($loader);
 
 $json = file_get_contents($json_url);
-//var_dump($json);
-$json = utf8_encode($json); 
 
+if (false === $json) {
+  return_404();
+}
+
+$json = utf8_encode($json); 
 $data = json_decode($json, true);
+
+if (false == is_array($data)) {
+  return_404();
+}
+
+echo $twig->render($template, $data);
 
 //echo "<pre>".print_r($data,true)."</pre>";
 
-echo $twig->render($template, $data);
+function return_404() {
+  header("HTTP/1.0 404 Not Found");
+  require '../404.html';
+  exit;
+}
 
 ?>
