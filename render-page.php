@@ -30,11 +30,22 @@
   
   switch ($p) {
   
+    # program
+    
+    case (
+      preg_match(
+        "/^\/(program)\/$/"
+        , $p, $matches) ? true : false
+      ) :
+      $json_uri = '/api/v1/event/?guide__id=5396&';
+      $template_file = $matches[1].'/index.twig';
+      break;
+    
     # accommodations
   
     case (
       preg_match(
-        "/^\/(your-stay\/accommodations)\/([0-9]{1,6})\.html$/"
+        "/^\/(your-stay\/accommodations)\/([0-9]{1,6})$/"
         , $p, $matches) ? true : false
       ) :
       $json_uri = '/api/v1/poi/' . $matches[2] . '/?category=14833&';
@@ -54,7 +65,7 @@
   
     case (
       preg_match(
-        "/^\/(your-stay\/restaurants)\/([0-9]{1,6})\.html$/"
+        "/^\/(your-stay\/restaurants)\/([0-9]{1,6})$/"
         , $p, $matches) ? true : false
       ) :
       $json_uri = '/api/v1/poi/' . $matches[2] . '/?category=14833&';
@@ -74,7 +85,7 @@
   
     case (
       preg_match(
-        "/^\/(your-stay\/attractions)\/([0-9]{1,6})\.html$/"
+        "/^\/(your-stay\/attractions)\/([0-9]{1,6})$/"
         , $p, $matches) ? true : false
       ) :
       $json_uri = '/api/v1/poi/' . $matches[2] . '/?category=13618&';
@@ -157,6 +168,20 @@
   
   function get_api_object_hash($object_uri) {
     return hash('sha1',$object_uri);
+  }
+  
+# program helpers
+
+  function prepare_program_data(&$data) {
+    
+  }
+  
+  function get_all_results_pages(&$data) {
+    
+  }
+  
+  function group_sessions_by_start_time(&$data) {
+    
   }
 
 ?>

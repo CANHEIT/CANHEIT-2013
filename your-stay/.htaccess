@@ -2,9 +2,9 @@ RewriteEngine On
 
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^accommodations/([0-9]{1,10})\.html$ ../render-page.php [L]
+RewriteRule ^accommodations/([0-9]{1,10})$ ../render-page.php [L]
 RewriteRule ^accommodations(/?)$ ../render-page.php [L]
-RewriteRule ^attractions/([0-9]{1,10})\.html$ ../render-page.php [L]
+RewriteRule ^attractions/([0-9]{1,10})$ ../render-page.php [L]
 RewriteRule ^attractions(/?)$ ../render-page.php [L]
-RewriteRule ^restaurants/([0-9]{1,10})\.html$ ../render-page.php [L]
+RewriteRule ^restaurants/([0-9]{1,10})$ ../render-page.php [L]
 RewriteRule ^restaurants(/?)$ ../render-page.php [L]
