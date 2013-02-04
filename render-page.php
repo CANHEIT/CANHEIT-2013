@@ -153,14 +153,12 @@
       return;
     }
     
-    foreach ($data['links'] as $link) {
-      $json = get_api_object($link);
-      if (true === $json) {
-        $json = utf8_encode($json);
-        $data = json_decode($json, true);
-        if (false == is_array($data)) {
-          $link = $data;
-        }
+    foreach ($data['links'] as $i => $link) {
+      $json = get_api_object($link . "?guide__id=5396&");
+      $json = utf8_encode($json);
+      $link_data = json_decode($json, true);
+      if (is_array($link_data)) {
+        $data['links'][$i] = $link_data;
       }
     }
   }

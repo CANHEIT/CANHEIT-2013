@@ -54,12 +54,17 @@
             {% endautoescape %}
             </section>
             
+            {% if links %}
+            <h2>Links</h2>
+            <ul id="links">
             {% for link in links %}
-            
-            {{ link.name }}
-            
+              {% if link.objectType == "url" %}
+              <li><a href="{{ link.objectID }}">{{ link.name }}</a></li>
+              {% endif %}
             {% endfor %}
-                        
+            </ul>
+            {% endif %}
+
 					</article>
 					<footer>
 					  <h2>Don't be shy! Stay in touch&hellip;</h2>

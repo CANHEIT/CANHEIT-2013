@@ -53,6 +53,17 @@
               {{ description }}
             {% endautoescape %}
             </section>
+            
+            {% if links %}
+            <h2>Links</h2>
+            <ul id="links">
+            {% for link in links %}
+              {% if link.objectType == "url" %}
+              <li><a href="{{ link.objectID }}">{{ link.name }}</a></li>
+              {% endif %}
+            {% endfor %}
+            </ul>
+            {% endif %}
                         
 					</article>
 					<footer>
