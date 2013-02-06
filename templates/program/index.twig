@@ -54,19 +54,23 @@
             	</div>
             </div>
             
+            <section id="program">
+            
             {% for day in days %}
-            <h2>{{ day.day }}</h2>
+            <h2>{{ day.day | date("D. M d, Y") }}</h2>
 
             {% for starttime in day.starttimes %}
-            <h3>{{ starttime.starttime }}</h3>
+            <h3>{{ starttime.starttime | date("g:i A") }}</h3>
             <ul>
               {% for event in starttime.events %}
-                <li>{{ event.name }}<br />until {{ event.endTime }}</li>
+                <li><span class="eventname">{{ event.name }}</span> <span class="endtime">until {{ event.endTime | date("g:i A") }}</span></li>
               {% endfor %}
             </ul>
             {% endfor %}
 
             {% endfor %}
+            
+            </section>
             
 					</article>  				
 					<footer>

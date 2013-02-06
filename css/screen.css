@@ -893,3 +893,13 @@ section#description h1 {
   margin-top: 0;
   font-weight: normal;
 }
+
+/* line 582, ../sass/screen.sass */
+section#program .eventname {
+  font-weight: 700;
+  display: block;
+}
+/* line 585, ../sass/screen.sass */
+section#program .endtime {
+  color: #989a9e;
+}
