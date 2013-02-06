@@ -54,11 +54,19 @@
             	</div>
             </div>
             
+            {% for day in days %}
+            <h2>{{ day.day }}</h2>
+
+            {% for starttime in day.starttimes %}
+            <h3>{{ starttime.starttime }}</h3>
             <ul>
-              {% for object in objects %}
-                <li>{{ object.name }}</li>
+              {% for event in starttime.events %}
+                <li>{{ event.name }}<br />until {{ event.endTime }}</li>
               {% endfor %}
             </ul>
+            {% endfor %}
+
+            {% endfor %}
             
 					</article>  				
 					<footer>

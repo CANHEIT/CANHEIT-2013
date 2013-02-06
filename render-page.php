@@ -180,43 +180,97 @@
 # program helpers
 
   function prepare_program_data(&$data) {
-    # build a new object to store all the pages
-
-    $pages = array();
-    $count = array_push($pages, $data);
-    $is_next_page = false;
-    
-    # keep fetching until you get all the pages
-    
-    do {
-      $i = $count - 1;
-      $is_next_page = (isset($pages[$i]['meta']['next']) && $pages[$i]['meta']['next'] != "null")? true : false;
-      
-      $json = get_api_object($pages[$i]['meta']['next'] . "&");
-      $json = utf8_encode($json);
-      $count = array_push($pages, json_decode($json, true));
-    } while ($is_next_page);
-    
-    # assemble back into a single object for usage
-    unset($data['objects']);
-    
-    $data['objects'] = array();
-    
-    foreach ($pages as $page) {
-      foreach ($page['objects'] as $object) {
-        array_push($data['objects'], $object);
-      }
-    }
-    
-    # invalidate the "next" attribute in the data field
-    $data['meta']['next'] = "null";
+    get_all_results_pages($data);
+    group_sessions_by_day_and_start_time($data);
   }
   
   function get_all_results_pages(&$data) {
+    # build a new object to store all the pages
     
+      $pages = array();
+      $count = array_push($pages, $data);
+      $is_next_page = false;
+      
+      # keep fetching until you get all the pages
+      
+      do {
+        $i = $count - 1;
+        $is_next_page = (isset($pages[$i]['meta']['next']) && $pages[$i]['meta']['next'] != "null")? true : false;
+        
+        $json = get_api_object($pages[$i]['meta']['next'] . "&");
+        $json = utf8_encode($json);
+        $count = array_push($pages, json_decode($json, true));
+      } while ($is_next_page);
+      
+      # assemble back into a single object for usage
+      unset($data['objects']);
+      
+      $data['objects'] = array();
+      
+      foreach ($pages as $page) {
+        foreach ($page['objects'] as $object) {
+          array_push($data['objects'], $object);
+        }
+      }
+      
+      # invalidate the "next" attribute in the data field
+      $data['meta']['next'] = "null";
   }
   
-  function group_sessions_by_start_time(&$data) {
+  function group_sessions_by_day_and_start_time(&$data) {
+    
+    $list_of_days = array();
+    $day = $new_day = null;
+    $starttime = $new_starttime = null;
+    
+    foreach ($data['objects'] as $session) {   
+      # group sessions by day
+      
+        # determine the day of the first event
+        $new_day = substr($session['startTime'],0,10);
+        if ($day != $new_day) {
+        
+          # if different day, then setup a new object
+          $days_count = array_push(
+            $list_of_days,
+            array(
+              'day' => $new_day,
+              'starttimes' => array(),
+            )
+          );
+          $day = $new_day;
+        }
+      
+      # until the next day, group by start time
+
+        # determine the start time of the first event
+        $new_starttime = $session['startTime'];
+        
+        if ($starttime != $new_starttime) {
+          
+          # if different starttime, the setup a new object
+          
+          $starttimes_count = array_push(
+            $list_of_days[$days_count - 1]['starttimes'],
+            array(
+              'starttime' => $new_starttime,
+              'events' => array(),
+            )
+          );
+          $starttime = $new_starttime;
+        }
+        
+      # store the object in its new location in the new day => starttime listing
+      
+      array_push($list_of_days[$days_count - 1]['starttimes'][$starttimes_count - 1]['events'], $session);
+      
+    }
+    
+    # replace the original $data objects list with the new dat => starttime listing
+    
+    unset($data['objects']);
+    
+    $data['days'] = $list_of_days;
     
   }
 
