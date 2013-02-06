@@ -37,8 +37,9 @@
         "/^\/(program)\/$/"
         , $p, $matches) ? true : false
       ) :
-      $json_uri = '/api/v1/event/?guide__id=5396&';
+      $json_uri = '/api/v1/event/?guide__id=5396&limit=20&';
       $template_file = $matches[1].'/index.twig';
+      array_push($parse_functions, 'prepare_program_data');
       break;
     
     # accommodations
@@ -179,7 +180,36 @@
 # program helpers
 
   function prepare_program_data(&$data) {
+    # build a new object to store all the pages
+
+    $pages = array();
+    $count = array_push($pages, $data);
+    $is_next_page = false;
     
+    # keep fetching until you get all the pages
+    
+    do {
+      $i = $count - 1;
+      $is_next_page = (isset($pages[$i]['meta']['next']) && $pages[$i]['meta']['next'] != "null")? true : false;
+      
+      $json = get_api_object($pages[$i]['meta']['next'] . "&");
+      $json = utf8_encode($json);
+      $count = array_push($pages, json_decode($json, true));
+    } while ($is_next_page);
+    
+    # assemble back into a single object for usage
+    unset($data['objects']);
+    
+    $data['objects'] = array();
+    
+    foreach ($pages as $page) {
+      foreach ($page['objects'] as $object) {
+        array_push($data['objects'], $object);
+      }
+    }
+    
+    # invalidate the "next" attribute in the data field
+    $data['meta']['next'] = "null";
   }
   
   function get_all_results_pages(&$data) {
