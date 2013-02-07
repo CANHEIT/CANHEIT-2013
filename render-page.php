@@ -101,6 +101,27 @@
       $json_uri = '/api/v1/poi/?category=13618&';
       $template_file = $matches[1].'/index.twig';
       break;
+          
+    # getting-here
+  
+    case (
+      preg_match(
+        "/^\/(your-stay\/getting-here)\/([0-9]{1,6})$/"
+        , $p, $matches) ? true : false
+      ) :
+      $json_uri = '/api/v1/poi/' . $matches[2] . '/?category=14836&';
+      $template_file = $matches[1].'/getting-here.twig';
+      array_push($parse_functions, 'fetch_links');
+      break;
+    case (
+      preg_match(
+        "/^\/(your-stay\/getting-here)\/$/"
+        , $p, $matches) ? true : false
+      ) :
+      $json_uri = '/api/v1/poi/?category=14836&';
+      $template_file = $matches[1].'/index.twig';
+      break;
+  
       
     # otherwise, 404
     
