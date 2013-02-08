@@ -98,3 +98,13 @@ jQuery(document).ready(function(){
      document.title = "CANHEIT.ca";
   }
 });
+
+jQuery(document).ready(function(){
+  $.smartbanner({
+    title: 'CANHEIT 2013',
+    author: 'Guidebook, Inc.',
+    daysHidden: 0,
+    icon: 'https://lh4.ggpht.com/0-4b0HHC6tcIQdY4zvnhWvH_Tn0yoO8rafCSZEfwjArpgs2fFGD0ji6J3-ROxkUqDWQ=w124'
+  });
+});
+
