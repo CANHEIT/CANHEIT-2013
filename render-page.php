@@ -5,7 +5,7 @@
 
 # set defaults
 
-  $cache_dir = '.json-cache/';
+  $cache_dir = '/.json-cache/';
   $cache_time = 3600; //seconds
   $template_dir = 'templates';
   $api_url_start = 'http://gears.guidebook.com';
@@ -62,11 +62,11 @@
       $template_file = $matches[1].'/index.twig';
       break;
   
-    # restaurants
+    # local-eats
   
     case (
       preg_match(
-        "/^\/(your-stay\/restaurants)\/([0-9]{1,6})$/"
+        "/^\/(your-stay\/local-eats)\/([0-9]{1,6})$/"
         , $p, $matches) ? true : false
       ) :
       $json_uri = '/api/v1/poi/' . $matches[2] . '/?category=13617&';
@@ -75,7 +75,7 @@
       break;
     case (
       preg_match(
-        "/^\/(your-stay\/restaurants)\/$/"
+        "/^\/(your-stay\/local-eats)\/$/"
         , $p, $matches) ? true : false
       ) :
       $json_uri = '/api/v1/poi/?category=13617&';
@@ -121,7 +121,6 @@
       $json_uri = '/api/v1/poi/?category=14836&';
       $template_file = $matches[1].'/index.twig';
       break;
-  
       
     # otherwise, 404
     
