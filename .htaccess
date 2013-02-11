@@ -342,6 +342,7 @@
   RewriteEngine On
   RewriteRule ^index-fr\.html$ / [R=301,L]
   RewriteRule ^proposals/(index\.html)?$ / [R=301,L]
+  RewriteRule ^(en/training|fr/formation)/user http://sweetmarie.cc.uottawa.ca/tabaret/user/ [R=301,L]
 </IfModule>
 
 # ----------------------------------------------------------------------
