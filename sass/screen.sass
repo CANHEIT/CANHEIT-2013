@@ -360,15 +360,6 @@ p.theme
   font-weight: $weight-semibold
   color: $primary-gray
   
-.home #options div#crowdvote.item
-  background-color: lighten($primary-orange, 25%)
-  margin: -1em -1em 1em
-  padding: 1em 1em 1em
-  a.button
-    background: $primary-orange
-  a.button:hover
-    background: lighten($primary-orange, 10%)
-
 +at-breakpoint(45em 9)
   #options
     +clearfix
@@ -404,38 +395,6 @@ p.theme
     -webkit-transform: rotate(-1deg) /* Safari and Chrome */
     -o-transform: rotate(-1deg) /* Opera */
   
-  .home #options div#crowdvote.item
-    float: none
-    +clearfix
-    margin: 1em auto 2em auto
-    padding: 1em
-    max-width: 45em
-    margin-right: 0
-    transform: rotate(-0.5deg)
-    -ms-transform: rotate(-0.5deg) /* IE 9 */
-    -moz-transform: rotate(-0.5deg) /* Firefox */
-    -webkit-transform: rotate(-0.5deg) /* Safari and Chrome */
-    -o-transform: rotate(-0.5deg) /* Opera */
-    p
-      float: left
-      max-width: 14em
-      margin-top: 0
-      margin-right: 2em
-    h2
-      float: left
-      max-width: 5em
-      margin-right: 1em
-    .actions
-      float: right
-      max-width: 15em
-      p 
-        max-width: 100%
-        margin-left: 0
-        margin-right: 0
-        float: none
-    .cancel
-      display: none
-    
 #organizers
   clear: left
   background-color: $charcoal
