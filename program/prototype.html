@@ -44,17 +44,6 @@
               <p>Write here an intro to summarizes the page's content. e.g. We've got a skeleton of the program and some keynotes confirmed. Check back on March 7 for the full program and registration or get notified via our newsletter.</p>              
             </div>
             
-            <div id="crowdvote" class="item">
-            	<h2>Hey Crowd! Vote!</h2>
-            	<p>This year, you get to pick which sessions are in the program. That's right, <strong>we're crowdvoting this year's program</strong> to make CANHEIT 2013 the awesommest ever.</p>
-              <div class="actions">
-            		<a class="button" href="#crowdvote">Vote for your top sessions</a>
-            		<p class="note">Quick! You got until February 22nd!</p>
-            		  <button class="cancel" id="not-today">Not today</button>
-            		  <button class="cancel" id="never">Already did!</button>
-            	</div>
-            </div>
-            
 					</article>  				
 					<footer>
 					  <h2>Don't be shy! Stay in touch&hellip;</h2>
@@ -104,30 +93,6 @@
             (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
             g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
             s.parentNode.insertBefore(g,s)}(document,'script'));
-        </script>
-        
-        <script>
-          $(function() {
-            
-            if($.cookie('crowdvoting') == 'never' || $.cookie('crowdvoting') == 'not-today') {
-              $('#crowdvote').hide(0);
-              return;
-            }
-            
-            $('.cancel').fadeIn('fast');
-            
-            $('#not-today').click(function(){
-              $.cookie('crowdvoting','not-today',{ expires: 1 });
-              $('#crowdvote').fadeOut('slow');
-            });
-            
-            $('#never').click(function(){
-              $.cookie('crowdvoting','never',{ expires: 365 });
-              $('#crowdvote').fadeOut('slow');
-            });
-            
-          });
-        </script>
-        
+        </script>        
     </body>
 </html>
