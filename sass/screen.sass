@@ -65,27 +65,25 @@ h3
 a:link, a:visited
   font-weight: $weight-bold   
   color: #55bed8
-  -webkit-transition: color 0.2s linear, background-color 0.2s linear
-  -moz-transition: color 0.2s linear, background-color 0.2s linear
-  -ms-transition: color 0.2s linear, background-color 0.2s linear
-  -o-transition: color 0.2s linear, background-color 0.2s linear
-  transition: color 0.2s linear, background-color 0.2s linear
 
 a:hover
   color: lighten($secondary-blue, 10%)
-  -webkit-transition: color 0.2s linear, background-color 0.2s linear
-  -moz-transition: color 0.2s linear, background-color 0.2s linear
-  -ms-transition: color 0.2s linear, background-color 0.2s linear
-  -o-transition: color 0.2s linear, background-color 0.2s linear
-  transition: color 0.2s linear, background-color 0.2s linear
+  
+a:link, a:visited, a:hover, input[type=submit], button
+  -webkit-transition: color 0.2s linear, background-color 0.2s linear, opacity 0.2s linear
+  -moz-transition: color 0.2s linear, background-color 0.2s linear, opacity 0.2s linear
+  -ms-transition: color 0.2s linear, background-color 0.2s linear, opacity 0.2s linear
+  -o-transition: color 0.2s linear, background-color 0.2s linear, opacity 0.2s linear
+  transition: color 0.2s linear, background-color 0.2s linear, opacity 0.2s linear
 
-input[type=submit]
+
+input[type=submit], button
   font-size: 1em
   font-weight: $weight-bold
   line-height: 1.4em
   font-family: inherit
 
-a.button, a.bigbutton, input[type=submit]
+a.button, a.bigbutton, input[type=submit], button
   display: inline-block
   text-decoration: none
   background: $secondary-blue
@@ -99,16 +97,25 @@ a.button, a.bigbutton, input[type=submit]
   margin-right: 1em
   margin-bottom: 1em
 
-a.button + p, a.bigbutton + p, input[type=submit] + p
+a.button + p, a.bigbutton + p, input[type=submit] + p, button + p
   margin-top: 0
 
-a.button.secondary, a.bigbutton.secondary, input[type=submit].secondary
+a.button.secondary, a.bigbutton.secondary, input[type=submit].secondary, button.secondary
   background: $secondary-green
   
-a.button:hover, a.bigbutton:hover, input[type=submit]:hover
+a.button:hover, a.bigbutton:hover, input[type=submit]:hover, button:hover
   background: lighten($secondary-blue, 10%)
-  
-a.button.secondary:hover, a.bigbutton.secondary:hover, input[type=submit].secondary:hover
+
+a.button.cancel, a.bigbutton.cancel, input[type=submit].cancel, button.cancel
+  background: lighten($primary-gray, 10%)
+  opacity: 0.8
+  font-size: 0.8em
+
+a.button.cancel:hover, a.bigbutton.cancel:hover, input[type=submit].cancel:hover, button.cancel:hover
+  background: $primary-gray
+  opacity: 1
+
+a.button.secondary:hover, a.bigbutton.secondary:hover, input[type=submit].secondary:hover, button.secondary:hover
   background: lighten($secondary-green, 10%)
 
 a.bigbutton
@@ -143,7 +150,7 @@ header
     margin-top: 0
     color: #777
     text-align: center
-  img
+  img#logo
     display: block
     max-width: 14em
     margin: 0 auto 1em
@@ -152,7 +159,7 @@ header
     padding-right: 1em
     padding-top: 2.5em
     
-    img
+    img#logo
       float: left
       margin: -1.5em 0 0 -15em
     p.location-date, p.tagline
@@ -162,7 +169,7 @@ header
     padding-right: 2em
     padding-top: 3em
     
-    img
+    img#logo
       max-width: 18em
       margin: -2em 0 0 -21em
 
@@ -178,7 +185,7 @@ header
   margin: -1em -1em 1em
   padding: 1em
   
-  img
+  img#logo
     display: block
     max-width: 14em
     margin: 0 auto
@@ -203,29 +210,31 @@ header
   +at-breakpoint(30em 6)
     padding: 1em
     
-    img
+    img#logo
       float: none
       margin: 0 auto
     p.location-date, p.tagline
       text-align: inherit
       
   +at-breakpoint(45em 9)
-    margin: -1em
-    background-image: -moz-radial-gradient(14.5em 10em, circle closest-side, white, white 8em, darken(white, 5%) 11em)
-    background-image: -webkit-radial-gradient(14.5em 11em, circle closest-side, white, white 9em, darken(white, 5%) 12em)
-    background-image: -o-radial-gradient(14.5em 40%, circle closest-side, white, white 8em, darken(white, 5%) 11em)
-    background-image: -ms-radial-gradient(14.5em 40%, circle closest-side, white, white 8em, darken(white, 5%) 11em)
-    background-image: radial-gradient(14.5em 40%, circle closest-side, white, white 8em, darken(white, 5%) 11em)
+    margin: 0 1em 1em
+    background-image: -moz-radial-gradient(12.5em 12em, circle closest-side, white, white 8em, darken(white, 5%) 11em)
+    background-image: -webkit-radial-gradient(11.5em 12em, circle closest-side, white, white 9em, darken(white, 5%) 12em)
+    background-image: -o-radial-gradient(12.5em 12em, circle closest-side, white, white 8em, darken(white, 5%) 11em)
+    background-image: -ms-radial-gradient(12.5em 12em, circle closest-side, white, white 8em, darken(white, 5%) 11em)
+    background-image: radial-gradient(12.5em 12em, circle closest-side, white, white 8em, darken(white, 5%) 11em)
     +clearfix
     
-    padding-left: 23em
-    padding-right: 2em
-    padding-top: 4em
+    padding-left: 22em
+    padding-right: 1em
+    padding-top: 5em
+    padding-bottom: 3em
+    border-bottom: 1px solid #ccc
 
-    img
+    img#logo
       max-width: 18em
       margin: 0
-      margin-left: -18em
+      margin-left: -20em
       float: left
     p.location-date
       font-size: 1.8em
@@ -247,11 +256,18 @@ header
     p.theme
       +hide-text()
       background: url(../img/theme-bubble@2x.png) no-repeat top left
-      width: 167px
-      height: 197px
-      background-size: 167px 197px
+      width: 100px
+      height: 118px
+      background-size: 100px 118px
+      
+      transform: rotate(12deg)
+      -ms-transform: rotate(12deg) /* IE 9 */
+      -moz-transform: rotate(12deg) /* Firefox */
+      -webkit-transform: rotate(12deg) /* Safari and Chrome */
+      -o-transform: rotate(12deg) /* Opera */
+      
       padding: 0
-      margin: 0 auto -0.5em
+      margin: -2em -4em -3em 12em
       position: relative
       z-index: 1
 
@@ -301,23 +317,31 @@ footer
   +at-breakpoint(45em 7)
     background-color: transparent
   
-
 #promovideo
+  width: 144px
+  border: 6px solid white
   margin: 0 auto
-  padding-bottom: 2.5em
   position: relative
-  .twitter-share-button
-    margin-top: 0.5em
+  -webkit-box-shadow:  0px 30px 30px -30px rgba(0, 0, 0, .5)
+  box-shadow:  0px 30px 30px -30px rgba(0, 0, 0, .5)
+  -webkit-border-radius: 5px
+  -moz-border-radius: 5px
+  border-radius: 5px
+  img
+    max-width: 100%
+  a
+    +hide-text()
+    display: block
+    width: 144px
+    height: 81.6px
     position: absolute
-    bottom: 0
-    right: 0
-  +at-breakpoint(45em 9)
-    margin: 0 -1em 1em
-    padding-bottom: 0
-    .twitter-share-button
-      margin-top: 0.5em
-      top: -3em
-      bottom: auto
+    top: 0
+    z-index: 1
+    background: url(../img/thumbnail-image-play-button.png) no-repeat 50% 50%
+    background-size: 39px 27.5px
+    opacity: 0.7
+  a:hover
+    opacity: 1
 
 p.note
   font-size: 0.6875em /* 11 / 16 = 0.6875 */
@@ -335,34 +359,82 @@ p.theme
   margin: 0 4em 0 2em
   font-weight: $weight-semibold
   color: $primary-gray
+  
+.home #options div#crowdvote.item
+  background-color: lighten($primary-orange, 25%)
+  margin: -1em -1em 1em
+  padding: 1em 1em 1em
+  a.button
+    background: $primary-orange
+  a.button:hover
+    background: lighten($primary-orange, 10%)
 
 +at-breakpoint(45em 9)
-  .home div#proposals, .home div#sponsors
+  #options
+    +clearfix
+    margin: 0 -1em
+    padding: 1em 0.5em
+  .home #options .item
     background: white
-    margin: 1em 3em 2em -1em
+    margin: 1em 2em 2em 0
     padding: 1em
     float: left
-    max-width: 20em
+    max-width: 19em
     h2
       margin-top: 0
     *:last-child
       margin-bottom: 0
     -webkit-box-shadow:  0px 30px 30px -30px rgba(0, 0, 0, .5)
     box-shadow:  0px 30px 30px -30px rgba(0, 0, 0, .5)
-  .home div#proposals
+  .home div#program.item, .home div#sponsors.item
+    float: right
+    margin-right: 0
+  .home div#why-attend, .home div#sponsors
     transform: rotate(1deg)
     -ms-transform: rotate(1deg) /* IE 9 */
     -moz-transform: rotate(1deg) /* Firefox */
     -webkit-transform: rotate(1deg) /* Safari and Chrome */
     -o-transform: rotate(1deg) /* Opera */
     
-  .home div#sponsors
+  .home div#program, .home div#your-stay
     margin-right: -1em
     transform: rotate(-1deg)
     -ms-transform: rotate(-1deg) /* IE 9 */
     -moz-transform: rotate(-1deg) /* Firefox */
     -webkit-transform: rotate(-1deg) /* Safari and Chrome */
     -o-transform: rotate(-1deg) /* Opera */
+  
+  .home #options div#crowdvote.item
+    float: none
+    +clearfix
+    margin: 1em auto 2em auto
+    padding: 1em
+    max-width: 45em
+    margin-right: 0
+    transform: rotate(-0.5deg)
+    -ms-transform: rotate(-0.5deg) /* IE 9 */
+    -moz-transform: rotate(-0.5deg) /* Firefox */
+    -webkit-transform: rotate(-0.5deg) /* Safari and Chrome */
+    -o-transform: rotate(-0.5deg) /* Opera */
+    p
+      float: left
+      max-width: 14em
+      margin-top: 0
+      margin-right: 2em
+    h2
+      float: left
+      max-width: 5em
+      margin-right: 1em
+    .actions
+      float: right
+      max-width: 15em
+      p 
+        max-width: 100%
+        margin-left: 0
+        margin-right: 0
+        float: none
+    .cancel
+      display: none
     
 #organizers
   clear: left
@@ -394,7 +466,7 @@ p.theme
     max-width: 246px
     margin: 0 auto
   .uottawa-logo, .carleton-logo
-    background-image: url(../img/organizer-logos.png?)
+    background-image: url(../img/organizer-logos.png)
     background-repeat: no-repeat
     text-indent: -9999px
     display: block
@@ -501,3 +573,15 @@ aside.note
 .sponsors #interested
   +at-breakpoint(40em 7)
     display: none
+    
+section#description h1
+  margin-top: 0
+  font-weight: normal
+  
+section#program
+  .eventname
+    font-weight: $weight-bold
+    display: block
+  .endtime
+    color: $primary-gray
+    

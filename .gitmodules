@@ -1,0 +1,6 @@
+[submodule "lib/.vendor/simplecache"]
+	path = lib/.vendor/simplecache
+	url = git://github.com/gilbitron/PHP-SimpleCache.git
+[submodule "js/vendor/jquery.smartbanner"]
+	path = js/vendor/jquery.smartbanner
+	url = git://github.com/jasny/jquery.smartbanner.git
