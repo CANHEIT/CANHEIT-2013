@@ -1,0 +1,46 @@
+CANHEIT-2013
+============
+
+CANHEIT - The Canadian Higher-Ed IT conference - is being held in Ottawa this year and is being hosted by the University of Ottawa and Carleton University.
+
+Its website's code is hosted here, and if you'd like to propose a change, fork the project, make a change and send us a pull request. We'll review your contribution and put it live if all's well.
+
+Guiding principles
+==================
+
+The site was built with the following goals in mind:
+
+1. **Responsive**: the site has to continue being responsive to different screen sizes, at all stages of the pre-conferences milestones, during the conference, and afterwards.
+2. **The home page has to reflect today's top message**: at all stages, the home page is a reflection of the top messages for that time slot.
+3. **The site and app are matched up**. When viewing the site on your mobile phone, you can switch to the app and you'll be taken in the same(ish) spot in the app, when possible.
+4. **Make the experience of the sub-pages really great**. Purposeful, task-driven, responsive to different screen sizes, and contextual (we hold the user by the hand, repeat from other pages as necessary and point elsewhere for more info, not assume that they have pogosticked all pages of the site to get the whole picture).
+
+Requirements
+============
+
+For collaborating on the CANHEIT 2013 website, you'll need the following packages installed on your workstation.
+
+*Assuming here that you're running Mac OS, but if you'd like to contribute a patch that makes it work on Windows, super!*
+
+* Ruby
+* VirtualBox
+* Vagrant
+* Susy
+
+Installation
+============
+
+Once you installed the requirements, run the following:
+
+Clone the project:
+
+    git clone https://github.com/CANHEIT/CANHEIT-2013.git
+    
+Start up the local dev server (Vagrant)
+
+    vagrant up
+    
+Start the CSS pre-processor that comes with Susy
+
+    compass watch
+    
