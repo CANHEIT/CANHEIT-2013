@@ -22,15 +22,16 @@ For collaborating on the CANHEIT 2013 website, you'll need the following package
 
 *Assuming here that you're running Mac OS, but if you'd like to contribute a patch that makes it work on Windows, super!*
 
-* Ruby
-* VirtualBox
-* Vagrant
-* Susy
+* [Ruby](http://www.ruby-lang.org/en/)
+* [RubyGems](http://rubygems.org)
+* [VirtualBox](https://www.virtualbox.org/wiki/Downloads)
+* [Vagrant](http://www.vagrantup.com)
+* [Susy](http://susy.oddbird.net)
 
 Installation
 ============
 
-Once you installed the requirements, run the following:
+Once you installed the requirements, find a spot on your computer where you'll be working from to edit the CANHEIT website and run the following in your terminal:
 
 Clone the project:
 
