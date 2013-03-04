@@ -41,7 +41,10 @@ Start up the local dev server (Vagrant)
 
     vagrant up
     
+The CANHEIT website should now run at http://localhost:8080/
+
 Start the CSS pre-processor that comes with Susy
 
     compass watch
     
+If you make changes to [sass/screen.sass](sass/screen.sass), compass (end Susy) should now update [css/screen.css](css/screen.css)
