@@ -37,6 +37,10 @@ Clone the project:
 
     git clone https://github.com/CANHEIT/CANHEIT-2013.git
     
+Download the base VM
+
+    vagrant box add lucid32 http://files.vagrantup.com/lucid32.box
+
 Start up the local dev server (Vagrant)
 
     vagrant up
