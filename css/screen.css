@@ -836,11 +836,16 @@ section#description h1 {
 }
 
 /* line 541, ../sass/screen.sass */
-section#program .eventname {
+section#program .eventname, article#session .eventname {
   font-weight: 700;
   display: block;
 }
 /* line 544, ../sass/screen.sass */
-section#program .endtime {
+section#program .starttime, article#session .starttime {
+  color: #ffa23e;
+  display: block;
+}
+/* line 547, ../sass/screen.sass */
+section#program .endtime, article#session .endtime {
   color: #989a9e;
 }

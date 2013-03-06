@@ -1,3 +1,4 @@
 RewriteEngine On
 
 RewriteRule ^$ ../render-page.php [L]
+RewriteRule ^([0-9]{1,10})$ ../render-page.php [L]
