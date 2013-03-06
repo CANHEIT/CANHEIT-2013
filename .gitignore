@@ -4,3 +4,5 @@
 .json-cache/
 *.esproj
 .vagrant
+localhost\:8080
+wget.log
