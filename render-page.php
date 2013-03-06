@@ -60,6 +60,7 @@
       ) :
       $json_uri = '/api/v1/poi/?category=14833&';
       $template_file = $matches[1].'/index.twig';
+      array_push($parse_functions, 'get_all_results_pages');
       break;
   
     # local-eats
@@ -80,6 +81,7 @@
       ) :
       $json_uri = '/api/v1/poi/?category=13617&';
       $template_file = $matches[1].'/index.twig';
+      array_push($parse_functions, 'get_all_results_pages');
       break;
       
     # attractions
@@ -100,6 +102,7 @@
       ) :
       $json_uri = '/api/v1/poi/?category=13618&';
       $template_file = $matches[1].'/index.twig';
+      array_push($parse_functions, 'get_all_results_pages');
       break;
           
     # getting-here
@@ -120,6 +123,28 @@
       ) :
       $json_uri = '/api/v1/poi/?category=14836&';
       $template_file = $matches[1].'/index.twig';
+      array_push($parse_functions, 'get_all_results_pages');
+      break;
+              
+    # uottawa-campus
+  
+    case (
+      preg_match(
+        "/^\/(your-stay\/uottawa-campus)\/([0-9]{1,6})$/"
+        , $p, $matches) ? true : false
+      ) :
+      $json_uri = '/api/v1/poi/' . $matches[2] . '/?category=14836&';
+      $template_file = $matches[1].'/uottawa-campus.twig';
+      array_push($parse_functions, 'fetch_links');
+      break;
+    case (
+      preg_match(
+        "/^\/(your-stay\/uottawa-campus)\/$/"
+        , $p, $matches) ? true : false
+      ) :
+      $json_uri = '/api/v1/poi/?category=17939&';
+      $template_file = $matches[1].'/index.twig';
+      array_push($parse_functions, 'get_all_results_pages');
       break;
       
     # otherwise, 404
