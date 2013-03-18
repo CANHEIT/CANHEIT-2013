@@ -175,6 +175,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
 }
 
 
+h3.or {
+	text-align: center;
+}
 
 
 .virtual, .full, .partial {
@@ -271,6 +274,7 @@ display: block;
   text-align: left;
   color: #989a9e;
   margin-left: 10px;
+
   
 }
 
@@ -309,3 +313,25 @@ float:left;
 	padding: 0 20px 20px 20px;
 }
 
+
+.numberIcon {
+	
+	float: left;
+	padding-left: 20px;
+	padding-right: 20px;
+	max-width: 1em;
+	display: block;
+}
+
+#notice div#timerIcon {
+	float: left;
+	padding-left: 10px;
+	padding-right: 10px;
+	max-width: auto;
+	height: auto;
+	display: block;
+}
+
+#notice div#timerIcon img {
+max-width: 5em;
+}
