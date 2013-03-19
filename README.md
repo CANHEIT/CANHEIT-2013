@@ -37,6 +37,11 @@ Clone the project:
 
     git clone https://github.com/CANHEIT/CANHEIT-2013.git
     
+Fetch the necessary sub-modules
+
+    git submodule init
+    git submodule update
+
 Start up the local dev server (Vagrant)
 
     vagrant up

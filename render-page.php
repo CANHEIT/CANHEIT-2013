@@ -34,6 +34,16 @@
     
     case (
       preg_match(
+        "/^\/(program)\/([0-9]{1,6})$/"
+        , $p, $matches) ? true : false
+      ) :
+      $json_uri = '/api/v1/event/' . $matches[2] . '/?guide__id=5396&';
+      $template_file = $matches[1].'/session.twig';
+      array_push($parse_functions, 'fetch_links');
+      break;
+    
+    case (
+      preg_match(
         "/^\/(program)\/$/"
         , $p, $matches) ? true : false
       ) :
