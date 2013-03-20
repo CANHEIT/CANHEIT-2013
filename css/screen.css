@@ -451,14 +451,18 @@ article header a.return {
 article header a.return:hover {
   color: #ffa23e;
 }
+/* line 292, ../sass/screen.sass */
+article header a.register {
+  float: right;
+}
 
-/* line 293, ../sass/screen.sass */
+/* line 295, ../sass/screen.sass */
 footer {
   background-color: rgba(0, 0, 0, 0.05);
   padding: 1em;
   margin: 1em -1em -1em;
 }
-/* line 297, ../sass/screen.sass */
+/* line 299, ../sass/screen.sass */
 footer h2 {
   font-size: 1em;
   line-height: 1.4em;
@@ -466,16 +470,16 @@ footer h2 {
   font-weight: 400;
   margin: 0 0 1em;
 }
-/* line 303, ../sass/screen.sass */
+/* line 305, ../sass/screen.sass */
 footer .twitter-follow-button {
   margin-bottom: 1em;
 }
 @media (min-width: 45em) {
-  /* line 293, ../sass/screen.sass */
+  /* line 295, ../sass/screen.sass */
   footer {
     overflow: hidden;
   }
-  /* line 307, ../sass/screen.sass */
+  /* line 309, ../sass/screen.sass */
   footer h2 {
     width: 26.47059%;
     float: left;
@@ -483,13 +487,13 @@ footer .twitter-follow-button {
     font-size: 1.6em;
     text-align: center;
   }
-  /* line 311, ../sass/screen.sass */
+  /* line 313, ../sass/screen.sass */
   footer .twitter-follow-button {
     width: 70.58824%;
     float: left;
     margin-right: 2.94118%;
   }
-  /* line 313, ../sass/screen.sass */
+  /* line 315, ../sass/screen.sass */
   footer #subscribe {
     width: 70.58824%;
     float: right;
@@ -498,13 +502,13 @@ footer .twitter-follow-button {
 }
 
 @media (min-width: 45em) {
-  /* line 316, ../sass/screen.sass */
+  /* line 318, ../sass/screen.sass */
   .home footer {
     background-color: transparent;
   }
 }
 
-/* line 320, ../sass/screen.sass */
+/* line 322, ../sass/screen.sass */
 #promovideo {
   width: 144px;
   border: 6px solid white;
@@ -516,11 +520,11 @@ footer .twitter-follow-button {
   -moz-border-radius: 5px;
   border-radius: 5px;
 }
-/* line 330, ../sass/screen.sass */
+/* line 332, ../sass/screen.sass */
 #promovideo img {
   max-width: 100%;
 }
-/* line 332, ../sass/screen.sass */
+/* line 334, ../sass/screen.sass */
 #promovideo a {
   text-indent: -119988px;
   overflow: hidden;
@@ -535,12 +539,12 @@ footer .twitter-follow-button {
   background-size: 39px 27.5px;
   opacity: 0.7;
 }
-/* line 343, ../sass/screen.sass */
+/* line 345, ../sass/screen.sass */
 #promovideo a:hover {
   opacity: 1;
 }
 
-/* line 346, ../sass/screen.sass */
+/* line 348, ../sass/screen.sass */
 p.note {
   font-size: 0.6875em;
   line-height: 1.01818em;
@@ -548,16 +552,16 @@ p.note {
   margin-bottom: 1em;
 }
 
-/* line 352, ../sass/screen.sass */
+/* line 354, ../sass/screen.sass */
 .intro {
   border-bottom: 1px solid #cccccc;
 }
-/* line 354, ../sass/screen.sass */
+/* line 356, ../sass/screen.sass */
 .intro p {
   color: #989a9e;
 }
 
-/* line 357, ../sass/screen.sass */
+/* line 359, ../sass/screen.sass */
 p.theme {
   font-style: italic;
   margin: 0 4em 0 2em;
@@ -566,14 +570,14 @@ p.theme {
 }
 
 @media (min-width: 45em) {
-  /* line 364, ../sass/screen.sass */
+  /* line 366, ../sass/screen.sass */
   #options {
     overflow: hidden;
     margin: 0 -1em;
     padding: 1em 0.5em;
   }
 
-  /* line 368, ../sass/screen.sass */
+  /* line 370, ../sass/screen.sass */
   .home #options .item {
     background: white;
     margin: 1em 2em 2em 0;
@@ -583,22 +587,22 @@ p.theme {
     -webkit-box-shadow: 0px 30px 30px -30px rgba(0, 0, 0, 0.5);
     box-shadow: 0px 30px 30px -30px rgba(0, 0, 0, 0.5);
   }
-  /* line 374, ../sass/screen.sass */
+  /* line 376, ../sass/screen.sass */
   .home #options .item h2 {
     margin-top: 0;
   }
-  /* line 376, ../sass/screen.sass */
+  /* line 378, ../sass/screen.sass */
   .home #options .item *:last-child {
     margin-bottom: 0;
   }
 
-  /* line 380, ../sass/screen.sass */
+  /* line 382, ../sass/screen.sass */
   .home div#program.item, .home div#speakers-toolkit.item, .home div#your-stay.item {
     float: right;
     margin-right: 0;
   }
 
-  /* line 383, ../sass/screen.sass */
+  /* line 385, ../sass/screen.sass */
   .home div#why-attend, .home div#sponsors, .home div#register {
     transform: rotate(1deg);
     -ms-transform: rotate(1deg);
@@ -607,7 +611,7 @@ p.theme {
     -o-transform: rotate(1deg);
   }
 
-  /* line 390, ../sass/screen.sass */
+  /* line 392, ../sass/screen.sass */
   .home div#program, .home div#your-stay, .home div#speakers-toolkit {
     margin-right: -1em;
     transform: rotate(-1deg);
@@ -617,7 +621,7 @@ p.theme {
     -o-transform: rotate(-1deg);
   }
 }
-/* line 398, ../sass/screen.sass */
+/* line 400, ../sass/screen.sass */
 #organizers {
   clear: left;
   background-color: #303030;
@@ -630,7 +634,7 @@ p.theme {
   padding: 1em;
 }
 @media (min-width: 45em) {
-  /* line 398, ../sass/screen.sass */
+  /* line 400, ../sass/screen.sass */
   #organizers {
     background-image: -moz-radial-gradient(50% 50%, circle closest-side, #303030, #303030 12em, #232323 19em);
     background-image: -webkit-radial-gradient(50% 50%, circle closest-side, #303030, #303030 12em, #232323 19em);
@@ -639,7 +643,7 @@ p.theme {
     background-image: radial-gradient(50% 50%, circle closest-side, #303030, #303030 12em, #232323 19em);
   }
 }
-/* line 416, ../sass/screen.sass */
+/* line 418, ../sass/screen.sass */
 #organizers h2, #organizers p {
   font-size: 0.875em;
   line-height: 1.6em;
@@ -647,16 +651,16 @@ p.theme {
   text-align: center;
   clear: both;
 }
-/* line 422, ../sass/screen.sass */
+/* line 424, ../sass/screen.sass */
 #organizers h2 {
   font-weight: 400;
 }
-/* line 424, ../sass/screen.sass */
+/* line 426, ../sass/screen.sass */
 #organizers .logos {
   max-width: 246px;
   margin: 0 auto;
 }
-/* line 427, ../sass/screen.sass */
+/* line 429, ../sass/screen.sass */
 #organizers .uottawa-logo, #organizers .carleton-logo {
   background-image: url(../img/organizer-logos.png);
   background-repeat: no-repeat;
@@ -670,21 +674,21 @@ p.theme {
   -o-transition: opacity 0.2s linear;
   transition: opacity 0.2s linear;
 }
-/* line 439, ../sass/screen.sass */
+/* line 441, ../sass/screen.sass */
 #organizers .uottawa-logo {
   width: 83px;
   height: 72px;
   background-position: 0, 0;
   margin: 10px 23px 20px 0;
 }
-/* line 444, ../sass/screen.sass */
+/* line 446, ../sass/screen.sass */
 #organizers .carleton-logo {
   width: 140px;
   height: 35px;
   background-position: -106px -22px;
   margin: 32px 0 15px 0;
 }
-/* line 449, ../sass/screen.sass */
+/* line 451, ../sass/screen.sass */
 #organizers .uottawa-logo:hover, #organizers .carleton-logo:hover {
   opacity: 1;
   -webkit-transition: opacity 0.2s linear;
@@ -694,57 +698,57 @@ p.theme {
   transition: opacity 0.2s linear;
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5) {
-  /* line 457, ../sass/screen.sass */
+  /* line 459, ../sass/screen.sass */
   #organizers .uottawa-logo, #organizers .carleton-logo {
     background-image: url(../img/organizer-logos@2x.png);
     background-size: 246px 72px;
   }
 }
 
-/* line 461, ../sass/screen.sass */
+/* line 463, ../sass/screen.sass */
 aside.highlight {
   border: 2px solid #ffa23e;
   padding: 1em;
 }
-/* line 464, ../sass/screen.sass */
+/* line 466, ../sass/screen.sass */
 aside.highlight h2 {
   font-size: 1em;
   line-height: 1.4em;
   color: #ffa23e;
   margin: 0;
 }
-/* line 469, ../sass/screen.sass */
+/* line 471, ../sass/screen.sass */
 aside.highlight p:last-of-type {
   margin-bottom: 0;
 }
 
-/* line 472, ../sass/screen.sass */
+/* line 474, ../sass/screen.sass */
 aside.note {
   padding-left: 1em;
 }
-/* line 474, ../sass/screen.sass */
+/* line 476, ../sass/screen.sass */
 aside.note h3 {
   margin: 0;
   font-size: 1em;
 }
-/* line 477, ../sass/screen.sass */
+/* line 479, ../sass/screen.sass */
 aside.note h3 a {
   display: block;
   margin-left: -15px;
   padding-left: 15px;
   background: url(../img/disclosure-triangle.png) no-repeat 4px 4px;
 }
-/* line 482, ../sass/screen.sass */
+/* line 484, ../sass/screen.sass */
 aside.note h3.open a {
   background-position: 0 -85px;
 }
-/* line 484, ../sass/screen.sass */
+/* line 486, ../sass/screen.sass */
 aside.note li, aside.note ul {
   padding-left: 0;
   margin-left: 0;
 }
 
-/* line 489, ../sass/screen.sass */
+/* line 491, ../sass/screen.sass */
 #answers h3 {
   font-size: 1em;
   line-height: 1.4em;
@@ -752,14 +756,14 @@ aside.note li, aside.note ul {
   font-weight: 700;
 }
 
-/* line 496, ../sass/screen.sass */
+/* line 498, ../sass/screen.sass */
 #subscribe .subscribe-loader {
   background: url(../img/ajax-loader.gif) no-repeat top left;
   width: 12px;
   height: 12px;
   display: inline-block;
 }
-/* line 501, ../sass/screen.sass */
+/* line 503, ../sass/screen.sass */
 #subscribe #subemail {
   width: 100%;
   padding: 0.3em 0.5em;
@@ -771,7 +775,7 @@ aside.note li, aside.note ul {
   font-size: 0.9em;
 }
 @media (min-width: 30em) {
-  /* line 501, ../sass/screen.sass */
+  /* line 503, ../sass/screen.sass */
   #subscribe #subemail {
     font-size: 1em;
     width: 74.35897%;
@@ -780,7 +784,7 @@ aside.note li, aside.note ul {
   }
 }
 @media (min-width: 35em) {
-  /* line 501, ../sass/screen.sass */
+  /* line 503, ../sass/screen.sass */
   #subscribe #subemail {
     width: 77.27273%;
     float: left;
@@ -788,7 +792,7 @@ aside.note li, aside.note ul {
   }
 }
 @media (min-width: 30em) {
-  /* line 515, ../sass/screen.sass */
+  /* line 517, ../sass/screen.sass */
   #subscribe #subsubmit {
     width: 23.07692%;
     float: left;
@@ -798,7 +802,7 @@ aside.note li, aside.note ul {
   }
 }
 @media (min-width: 35em) {
-  /* line 515, ../sass/screen.sass */
+  /* line 517, ../sass/screen.sass */
   #subscribe #subsubmit {
     width: 20.45455%;
     float: left;
@@ -807,45 +811,45 @@ aside.note li, aside.note ul {
     margin-right: 0;
   }
 }
-/* line 522, ../sass/screen.sass */
+/* line 524, ../sass/screen.sass */
 #subscribe .error_message {
   margin-bottom: 1em;
   color: #f36f67;
 }
-/* line 526, ../sass/screen.sass */
+/* line 528, ../sass/screen.sass */
 #subscribe #success_page h3 {
   color: #95b257;
   margin: 0;
 }
-/* line 529, ../sass/screen.sass */
+/* line 531, ../sass/screen.sass */
 #subscribe #success_page h3 + p {
   margin-top: 0;
 }
 
 @media (min-width: 40em) {
-  /* line 532, ../sass/screen.sass */
+  /* line 534, ../sass/screen.sass */
   .sponsors #interested {
     display: none;
   }
 }
 
-/* line 536, ../sass/screen.sass */
+/* line 538, ../sass/screen.sass */
 section#description h1 {
   margin-top: 0;
   font-weight: normal;
 }
 
-/* line 541, ../sass/screen.sass */
+/* line 543, ../sass/screen.sass */
 section#program .eventname, article#session .eventname {
   font-weight: 700;
   display: block;
 }
-/* line 544, ../sass/screen.sass */
+/* line 546, ../sass/screen.sass */
 section#program .starttime, article#session .starttime {
   color: #ffa23e;
   display: block;
 }
-/* line 547, ../sass/screen.sass */
+/* line 549, ../sass/screen.sass */
 section#program .endtime, article#session .endtime {
   color: #989a9e;
 }
