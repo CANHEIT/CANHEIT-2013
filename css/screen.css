@@ -636,12 +636,22 @@ p.theme {
   }
 
   /* line 400, ../sass/screen.sass */
-  .home div#program.item, .home div#speakers-toolkit.item, .home div#your-stay.item {
+  .home div#register.item, .home div#speakers-toolkit.item, .home div#your-stay.item {
     float: right;
     margin-right: 0;
   }
 
   /* line 403, ../sass/screen.sass */
+  .home div#speakers-toolkit.item {
+    clear: right;
+  }
+
+  /* line 405, ../sass/screen.sass */
+  .home div#program.item {
+    float: left;
+  }
+
+  /* line 407, ../sass/screen.sass */
   .home div#why-attend, .home div#sponsors, .home div#register {
     transform: rotate(1deg);
     -ms-transform: rotate(1deg);
@@ -650,7 +660,7 @@ p.theme {
     -o-transform: rotate(1deg);
   }
 
-  /* line 410, ../sass/screen.sass */
+  /* line 414, ../sass/screen.sass */
   .home div#program, .home div#your-stay, .home div#speakers-toolkit {
     margin-right: -1em;
     transform: rotate(-1deg);
@@ -660,7 +670,7 @@ p.theme {
     -o-transform: rotate(-1deg);
   }
 }
-/* line 418, ../sass/screen.sass */
+/* line 422, ../sass/screen.sass */
 #organizers {
   clear: left;
   background-color: #303030;
@@ -673,7 +683,7 @@ p.theme {
   padding: 1em;
 }
 @media (min-width: 45em) {
-  /* line 418, ../sass/screen.sass */
+  /* line 422, ../sass/screen.sass */
   #organizers {
     background-image: -moz-radial-gradient(50% 50%, circle closest-side, #303030, #303030 12em, #232323 19em);
     background-image: -webkit-radial-gradient(50% 50%, circle closest-side, #303030, #303030 12em, #232323 19em);
@@ -682,7 +692,7 @@ p.theme {
     background-image: radial-gradient(50% 50%, circle closest-side, #303030, #303030 12em, #232323 19em);
   }
 }
-/* line 436, ../sass/screen.sass */
+/* line 440, ../sass/screen.sass */
 #organizers h2, #organizers p {
   font-size: 0.875em;
   line-height: 1.6em;
@@ -690,16 +700,16 @@ p.theme {
   text-align: center;
   clear: both;
 }
-/* line 442, ../sass/screen.sass */
+/* line 446, ../sass/screen.sass */
 #organizers h2 {
   font-weight: 400;
 }
-/* line 444, ../sass/screen.sass */
+/* line 448, ../sass/screen.sass */
 #organizers .logos {
   max-width: 246px;
   margin: 0 auto;
 }
-/* line 447, ../sass/screen.sass */
+/* line 451, ../sass/screen.sass */
 #organizers .uottawa-logo, #organizers .carleton-logo {
   background-image: url(../img/organizer-logos.png);
   background-repeat: no-repeat;
@@ -713,21 +723,21 @@ p.theme {
   -o-transition: opacity 0.2s linear;
   transition: opacity 0.2s linear;
 }
-/* line 459, ../sass/screen.sass */
+/* line 463, ../sass/screen.sass */
 #organizers .uottawa-logo {
   width: 83px;
   height: 72px;
   background-position: 0, 0;
   margin: 10px 23px 20px 0;
 }
-/* line 464, ../sass/screen.sass */
+/* line 468, ../sass/screen.sass */
 #organizers .carleton-logo {
   width: 140px;
   height: 35px;
   background-position: -106px -22px;
   margin: 32px 0 15px 0;
 }
-/* line 469, ../sass/screen.sass */
+/* line 473, ../sass/screen.sass */
 #organizers .uottawa-logo:hover, #organizers .carleton-logo:hover {
   opacity: 1;
   -webkit-transition: opacity 0.2s linear;
@@ -737,57 +747,57 @@ p.theme {
   transition: opacity 0.2s linear;
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5) {
-  /* line 477, ../sass/screen.sass */
+  /* line 481, ../sass/screen.sass */
   #organizers .uottawa-logo, #organizers .carleton-logo {
     background-image: url(../img/organizer-logos@2x.png);
     background-size: 246px 72px;
   }
 }
 
-/* line 481, ../sass/screen.sass */
+/* line 485, ../sass/screen.sass */
 aside.highlight {
   border: 2px solid #ffa23e;
   padding: 1em;
 }
-/* line 484, ../sass/screen.sass */
+/* line 488, ../sass/screen.sass */
 aside.highlight h2 {
   font-size: 1em;
   line-height: 1.4em;
   color: #ffa23e;
   margin: 0;
 }
-/* line 489, ../sass/screen.sass */
+/* line 493, ../sass/screen.sass */
 aside.highlight p:last-of-type {
   margin-bottom: 0;
 }
 
-/* line 492, ../sass/screen.sass */
+/* line 496, ../sass/screen.sass */
 aside.note {
   padding-left: 1em;
 }
-/* line 494, ../sass/screen.sass */
+/* line 498, ../sass/screen.sass */
 aside.note h3 {
   margin: 0;
   font-size: 1em;
 }
-/* line 497, ../sass/screen.sass */
+/* line 501, ../sass/screen.sass */
 aside.note h3 a {
   display: block;
   margin-left: -15px;
   padding-left: 15px;
   background: url(../img/disclosure-triangle.png) no-repeat 4px 4px;
 }
-/* line 502, ../sass/screen.sass */
+/* line 506, ../sass/screen.sass */
 aside.note h3.open a {
   background-position: 0 -85px;
 }
-/* line 504, ../sass/screen.sass */
+/* line 508, ../sass/screen.sass */
 aside.note li, aside.note ul {
   padding-left: 0;
   margin-left: 0;
 }
 
-/* line 509, ../sass/screen.sass */
+/* line 513, ../sass/screen.sass */
 #answers h3 {
   font-size: 1em;
   line-height: 1.4em;
@@ -795,14 +805,14 @@ aside.note li, aside.note ul {
   font-weight: 700;
 }
 
-/* line 516, ../sass/screen.sass */
+/* line 520, ../sass/screen.sass */
 #subscribe .subscribe-loader {
   background: url(../img/ajax-loader.gif) no-repeat top left;
   width: 12px;
   height: 12px;
   display: inline-block;
 }
-/* line 521, ../sass/screen.sass */
+/* line 525, ../sass/screen.sass */
 #subscribe #subemail {
   width: 100%;
   padding: 0.3em 0.5em;
@@ -814,7 +824,7 @@ aside.note li, aside.note ul {
   font-size: 0.9em;
 }
 @media (min-width: 30em) {
-  /* line 521, ../sass/screen.sass */
+  /* line 525, ../sass/screen.sass */
   #subscribe #subemail {
     font-size: 1em;
     width: 74.35897%;
@@ -823,7 +833,7 @@ aside.note li, aside.note ul {
   }
 }
 @media (min-width: 35em) {
-  /* line 521, ../sass/screen.sass */
+  /* line 525, ../sass/screen.sass */
   #subscribe #subemail {
     width: 77.27273%;
     float: left;
@@ -831,7 +841,7 @@ aside.note li, aside.note ul {
   }
 }
 @media (min-width: 30em) {
-  /* line 535, ../sass/screen.sass */
+  /* line 539, ../sass/screen.sass */
   #subscribe #subsubmit {
     width: 23.07692%;
     float: left;
@@ -841,7 +851,7 @@ aside.note li, aside.note ul {
   }
 }
 @media (min-width: 35em) {
-  /* line 535, ../sass/screen.sass */
+  /* line 539, ../sass/screen.sass */
   #subscribe #subsubmit {
     width: 20.45455%;
     float: left;
@@ -850,45 +860,45 @@ aside.note li, aside.note ul {
     margin-right: 0;
   }
 }
-/* line 542, ../sass/screen.sass */
+/* line 546, ../sass/screen.sass */
 #subscribe .error_message {
   margin-bottom: 1em;
   color: #f36f67;
 }
-/* line 546, ../sass/screen.sass */
+/* line 550, ../sass/screen.sass */
 #subscribe #success_page h3 {
   color: #95b257;
   margin: 0;
 }
-/* line 549, ../sass/screen.sass */
+/* line 553, ../sass/screen.sass */
 #subscribe #success_page h3 + p {
   margin-top: 0;
 }
 
 @media (min-width: 40em) {
-  /* line 552, ../sass/screen.sass */
+  /* line 556, ../sass/screen.sass */
   .sponsors #interested {
     display: none;
   }
 }
 
-/* line 556, ../sass/screen.sass */
+/* line 560, ../sass/screen.sass */
 section#description h1 {
   margin-top: 0;
   font-weight: normal;
 }
 
-/* line 561, ../sass/screen.sass */
+/* line 565, ../sass/screen.sass */
 section#program .eventname, article#session .eventname {
   font-weight: 700;
   display: block;
 }
-/* line 564, ../sass/screen.sass */
+/* line 568, ../sass/screen.sass */
 section#program .starttime, article#session .starttime {
   color: #ffa23e;
   display: block;
 }
-/* line 567, ../sass/screen.sass */
+/* line 571, ../sass/screen.sass */
 section#program .endtime, article#session .endtime {
   color: #989a9e;
 }
