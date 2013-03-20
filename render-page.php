@@ -5,7 +5,8 @@
 
 # set defaults
 
-  $cache_dir = '/.json-cache/';
+  $current_dir = dirname(__FILE__);
+  $cache_dir = $current_dir . '/.json-cache/';
   $cache_time = 3600; //seconds
   $template_dir = 'templates';
   $api_url_start = 'http://gears.guidebook.com';
@@ -34,7 +35,7 @@
     
     case (
       preg_match(
-        "/^\/(program)\/([0-9]{1,6})$/"
+        "/^\/(program)\/([0-9]{1,10})$/"
         , $p, $matches) ? true : false
       ) :
       $json_uri = '/api/v1/event/' . $matches[2] . '/?guide__id=5396&';
