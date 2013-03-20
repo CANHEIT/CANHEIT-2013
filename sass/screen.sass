@@ -41,6 +41,24 @@ article
 img, video, embed, object
   max-width: 100%
 
+article figure.right
+  max-width: 100%
+  +at-breakpoint(30em 6)
+    max-width: 13.5em /* 28em - 1em for margin / 2 */
+    margin-left: 1em
+    margin-bottom: 1em
+    float: right
+  +at-breakpoint(35em 7)
+    max-width: 16.5em /* 34em - 1em for margin / 2 */
+  +at-breakpoint(45em 9)
+    max-width: 15.5em /* 32em - 1em for margin / 2 */
+  
+article figure.right.one-third
+  +at-breakpoint(35em 7)
+    max-width: 11em /* 34em - 1em for margin / 3 */
+  +at-breakpoint(45em 9)
+    max-width: 10.333333333em /* 32em - 1em for margin / 3 */
+
 h1
   font-weight: $weight-normal
   text-transform: uppercase
