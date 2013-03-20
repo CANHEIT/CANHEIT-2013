@@ -125,6 +125,7 @@ div.iconsBoxes h3 {
 /*Register Section*/
 
 
+<<<<<<< HEAD
 div.virtual {
 	
 	
@@ -175,6 +176,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
 }
 
 
+
 h3.or {
 	text-align: center;
 }
@@ -212,10 +214,15 @@ margin: 15px 6px 5px 5px;
   text-align: left;
   color: #989a9e;
 
+
   display:block;
 
   margin-left: 10px;
 
+
+
+
+  display:block;
 
   
 }
@@ -304,10 +311,12 @@ transition-duration: 0.5s;
 
 
 
+
 .partial {
 	margin-right: 0;
 	margin-bottom: 20px;
 }
+
 
 
 .virtual h3 img, .full h3 img, .partial h3 img {
@@ -367,11 +376,13 @@ float:left;
 	display: block;
 	margin: -10px auto;
 
+
 	padding-left: 20px;
 	padding-right: 20px;
 	max-width: 1em;
 	display: block;
 	margin-top: -10px;
+
 
 }
 
