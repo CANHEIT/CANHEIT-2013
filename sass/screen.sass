@@ -377,7 +377,7 @@ p.theme
       margin-bottom: 0
     -webkit-box-shadow:  0px 30px 30px -30px rgba(0, 0, 0, .5)
     box-shadow:  0px 30px 30px -30px rgba(0, 0, 0, .5)
-  .home div#program.item, .home div#sponsors.item
+  .home div#program.item, .home div#sponsors.item, .home div#speakers-toolkit.item
     float: right
     margin-right: 0
   .home div#why-attend, .home div#sponsors
@@ -387,13 +387,17 @@ p.theme
     -webkit-transform: rotate(1deg) /* Safari and Chrome */
     -o-transform: rotate(1deg) /* Opera */
     
-  .home div#program, .home div#your-stay
+  .home div#program, .home div#your-stay, .home div#speakers-toolkit
     margin-right: -1em
     transform: rotate(-1deg)
     -ms-transform: rotate(-1deg) /* IE 9 */
     -moz-transform: rotate(-1deg) /* Firefox */
     -webkit-transform: rotate(-1deg) /* Safari and Chrome */
     -o-transform: rotate(-1deg) /* Opera */
+  
+  .home div#speakers-toolkit, .home div#sponsors
+    position: relative
+    top: -4em
   
 #organizers
   clear: left
@@ -537,9 +541,12 @@ section#description h1
   margin-top: 0
   font-weight: normal
   
-section#program
+section#program, article#session
   .eventname
     font-weight: $weight-bold
+    display: block
+  .starttime
+    color: $primary-orange
     display: block
   .endtime
     color: $primary-gray
