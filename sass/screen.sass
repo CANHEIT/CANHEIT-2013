@@ -613,19 +613,30 @@ section div:first-child
   background: -ms-linear-gradient(top,  #ffffff 0%,#fdfdfd 28%,#f9f9f9 65%,#f4f4f4 100%) /* IE10+ */
   background: linear-gradient(to bottom,  #ffffff 0%,#fdfdfd 28%,#f9f9f9 65%,#f4f4f4 100%) /* W3C */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f4f4f4',GradientType=0 ) /* IE6-8 */  
-  h3
-    color: #989a9e
+
+section div:first-child h3
+  color: #989a9e
+  font-size: 1em
+  margin: 1em auto
+  +at-breakpoint(30em 6)
     font-size: 1.5em
-    margin: 1em auto
-    display: block
-    height: auto
-    overflow: hidden
-  img.numberIcon
-    max-width: 100%
-    margin-top: 0
-    margin-left: 1em
-    margin-right: 1em
-    margin-bottom: auto
+  +at-breakpoint(35em 7)
+    font-size: 1.5em
+  +at-breakpoint(45em 9)
+    font-size: 1.5em
+
+section div:first-child img.numberIcon
+  max-width: 2em
+  margin-top: 0
+  margin-left: 1em
+  margin-right: 0.5em
+  margin-bottom: auto
+  +at-breakpoint(30em 6)
+    
+  +at-breakpoint(35em 7)
+    
+  +at-breakpoint(45em 9)
+    
 
 section div:first-child:hover
   border: 1px solid rgba(252, 160, 69, .5)
@@ -684,6 +695,8 @@ div.virtualInfo
 
 div.virtualInfo a.bigbutton 
   display: block
+  text-align: center
+  margin-left: 1em
   +at-breakpoint(30em 6)
     display: none
   +at-breakpoint(35em 7)
@@ -693,6 +706,8 @@ div.virtualInfo a.bigbutton
 
 div.fullInfo a.bigbutton 
   display: block
+  text-align: center
+  margin-left: 1em
   +at-breakpoint(30em 6)
     display: none
   +at-breakpoint(35em 7)
@@ -702,6 +717,8 @@ div.fullInfo a.bigbutton
 
 div.partialInfo a.bigbutton 
   display: block
+  text-align: center
+  margin-left: 1em
   +at-breakpoint(30em 6)
     display: none
   +at-breakpoint(35em 7)

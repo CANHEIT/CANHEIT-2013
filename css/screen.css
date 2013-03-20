@@ -943,25 +943,42 @@ section div:first-child {
   background: linear-gradient(to bottom, #ffffff 0%, #fdfdfd 28%, #f9f9f9 65%, #f4f4f4 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#f4f4f4',GradientType=0 );
 }
-/* line 616, ../sass/screen.sass */
+
+/* line 617, ../sass/screen.sass */
 section div:first-child h3 {
   color: #989a9e;
-  font-size: 1.5em;
+  font-size: 1em;
   margin: 1em auto;
-  display: block;
-  height: auto;
-  overflow: hidden;
 }
-/* line 623, ../sass/screen.sass */
+@media (min-width: 30em) {
+  /* line 617, ../sass/screen.sass */
+  section div:first-child h3 {
+    font-size: 1.5em;
+  }
+}
+@media (min-width: 35em) {
+  /* line 617, ../sass/screen.sass */
+  section div:first-child h3 {
+    font-size: 1.5em;
+  }
+}
+@media (min-width: 45em) {
+  /* line 617, ../sass/screen.sass */
+  section div:first-child h3 {
+    font-size: 1.5em;
+  }
+}
+
+/* line 628, ../sass/screen.sass */
 section div:first-child img.numberIcon {
-  max-width: 100%;
+  max-width: 2em;
   margin-top: 0;
   margin-left: 1em;
-  margin-right: 1em;
+  margin-right: 0.5em;
   margin-bottom: auto;
 }
 
-/* line 630, ../sass/screen.sass */
+/* line 641, ../sass/screen.sass */
 section div:first-child:hover {
   border: 1px solid rgba(252, 160, 69, 0.5);
   -webkit-background-clip: padding-box;
@@ -979,17 +996,17 @@ section div:first-child:hover {
   transition-duration: 0.5s;
 }
 
-/* line 646, ../sass/screen.sass */
+/* line 657, ../sass/screen.sass */
 h3.or {
   text-align: center;
 }
 
-/* line 649, ../sass/screen.sass */
+/* line 660, ../sass/screen.sass */
 section a {
   text-decoration: none;
 }
 
-/* line 652, ../sass/screen.sass */
+/* line 663, ../sass/screen.sass */
 div.virtualInfo {
   border: 1px solid #f4f4f4;
   -webkit-border-radius: 10px;
@@ -1009,106 +1026,112 @@ div.virtualInfo {
   transition-duration: 0.5s;
   margin: 15px 6px 5px 5px;
 }
-/* line 671, ../sass/screen.sass */
+/* line 682, ../sass/screen.sass */
 div.virtualInfo p {
   padding: 10px;
   color: #999a9e;
   font-size: 1em;
 }
 
-/* line 676, ../sass/screen.sass */
+/* line 687, ../sass/screen.sass */
 .iframe {
   display: none;
 }
 @media (min-width: 30em) {
-  /* line 676, ../sass/screen.sass */
+  /* line 687, ../sass/screen.sass */
   .iframe {
     display: block;
   }
 }
 @media (min-width: 35em) {
-  /* line 676, ../sass/screen.sass */
+  /* line 687, ../sass/screen.sass */
   .iframe {
     display: block;
   }
 }
 @media (min-width: 45em) {
-  /* line 676, ../sass/screen.sass */
+  /* line 687, ../sass/screen.sass */
   .iframe {
     display: block;
   }
 }
 
-/* line 685, ../sass/screen.sass */
+/* line 696, ../sass/screen.sass */
 div.virtualInfo a.bigbutton {
   display: block;
+  text-align: center;
+  margin-left: 1em;
 }
 @media (min-width: 30em) {
-  /* line 685, ../sass/screen.sass */
+  /* line 696, ../sass/screen.sass */
   div.virtualInfo a.bigbutton {
     display: none;
   }
 }
 @media (min-width: 35em) {
-  /* line 685, ../sass/screen.sass */
+  /* line 696, ../sass/screen.sass */
   div.virtualInfo a.bigbutton {
     display: none;
   }
 }
 @media (min-width: 45em) {
-  /* line 685, ../sass/screen.sass */
+  /* line 696, ../sass/screen.sass */
   div.virtualInfo a.bigbutton {
     display: none;
   }
 }
 
-/* line 694, ../sass/screen.sass */
+/* line 707, ../sass/screen.sass */
 div.fullInfo a.bigbutton {
   display: block;
+  text-align: center;
+  margin-left: 1em;
 }
 @media (min-width: 30em) {
-  /* line 694, ../sass/screen.sass */
+  /* line 707, ../sass/screen.sass */
   div.fullInfo a.bigbutton {
     display: none;
   }
 }
 @media (min-width: 35em) {
-  /* line 694, ../sass/screen.sass */
+  /* line 707, ../sass/screen.sass */
   div.fullInfo a.bigbutton {
     display: none;
   }
 }
 @media (min-width: 45em) {
-  /* line 694, ../sass/screen.sass */
+  /* line 707, ../sass/screen.sass */
   div.fullInfo a.bigbutton {
     display: none;
   }
 }
 
-/* line 703, ../sass/screen.sass */
+/* line 718, ../sass/screen.sass */
 div.partialInfo a.bigbutton {
   display: block;
+  text-align: center;
+  margin-left: 1em;
 }
 @media (min-width: 30em) {
-  /* line 703, ../sass/screen.sass */
+  /* line 718, ../sass/screen.sass */
   div.partialInfo a.bigbutton {
     display: none;
   }
 }
 @media (min-width: 35em) {
-  /* line 703, ../sass/screen.sass */
+  /* line 718, ../sass/screen.sass */
   div.partialInfo a.bigbutton {
     display: none;
   }
 }
 @media (min-width: 45em) {
-  /* line 703, ../sass/screen.sass */
+  /* line 718, ../sass/screen.sass */
   div.partialInfo a.bigbutton {
     display: none;
   }
 }
 
-/* line 712, ../sass/screen.sass */
+/* line 729, ../sass/screen.sass */
 div.fullInfo {
   border: 1px solid #f4f4f4;
   -webkit-border-radius: 10px;
@@ -1128,14 +1151,14 @@ div.fullInfo {
   transition-duration: 0.5s;
   margin: 15px 6px 5px 5px;
 }
-/* line 731, ../sass/screen.sass */
+/* line 748, ../sass/screen.sass */
 div.fullInfo p {
   padding: 10px;
   color: #999a9e;
   font-size: 1em;
 }
 
-/* line 736, ../sass/screen.sass */
+/* line 753, ../sass/screen.sass */
 div.partialInfo {
   border: 1px solid #f4f4f4;
   -webkit-border-radius: 10px;
@@ -1155,7 +1178,7 @@ div.partialInfo {
   transition-duration: 0.5s;
   margin: 15px 6px 5px 5px;
 }
-/* line 755, ../sass/screen.sass */
+/* line 772, ../sass/screen.sass */
 div.partialInfo p {
   padding: 10px;
   color: #999a9e;
