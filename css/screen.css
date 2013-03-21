@@ -1007,131 +1007,148 @@ section a {
 }
 
 /* line 663, ../sass/screen.sass */
-div.virtualInfo {
-  border: 1px solid #f4f4f4;
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  border-radius: 10px;
-  background-color: white;
-  -webkit-box-shadow: 0 0 5px #f4f4f4;
-  -moz-box-shadow: 0 0 5px #f4f4f4;
-  box-shadow: 0 0 5px #f4f4f4;
-  -moz-transition-property: all;
-  -webkit-transition-property: all;
-  -o-transition-property: all;
-  transition-property: all;
-  -moz-transition-duration: 0.5s;
-  -webkit-transition-duration: 0.5s;
-  -o-transition-duration: 0.5s;
-  transition-duration: 0.5s;
-  margin: 15px 6px 5px 5px;
-}
-/* line 682, ../sass/screen.sass */
-div.virtualInfo p {
-  padding: 10px;
-  color: #999a9e;
-  font-size: 1em;
-}
-
-/* line 687, ../sass/screen.sass */
 .iframe {
   display: none;
 }
 @media (min-width: 30em) {
-  /* line 687, ../sass/screen.sass */
+  /* line 663, ../sass/screen.sass */
   .iframe {
     display: block;
   }
 }
 @media (min-width: 35em) {
-  /* line 687, ../sass/screen.sass */
+  /* line 663, ../sass/screen.sass */
   .iframe {
     display: block;
   }
 }
 @media (min-width: 45em) {
-  /* line 687, ../sass/screen.sass */
+  /* line 663, ../sass/screen.sass */
   .iframe {
     display: block;
   }
 }
 
-/* line 696, ../sass/screen.sass */
-div.virtualInfo a.bigbutton {
-  display: block;
-  text-align: center;
-  margin-left: 1em;
+/* line 672, ../sass/screen.sass */
+.touch.iframe {
+  display: none;
 }
 @media (min-width: 30em) {
-  /* line 696, ../sass/screen.sass */
-  div.virtualInfo a.bigbutton {
+  /* line 672, ../sass/screen.sass */
+  .touch.iframe {
     display: none;
   }
 }
 @media (min-width: 35em) {
-  /* line 696, ../sass/screen.sass */
-  div.virtualInfo a.bigbutton {
+  /* line 672, ../sass/screen.sass */
+  .touch.iframe {
     display: none;
   }
 }
 @media (min-width: 45em) {
-  /* line 696, ../sass/screen.sass */
-  div.virtualInfo a.bigbutton {
+  /* line 672, ../sass/screen.sass */
+  .touch.iframe {
     display: none;
   }
 }
 
-/* line 707, ../sass/screen.sass */
+/* line 681, ../sass/screen.sass */
 div.fullInfo a.bigbutton {
   display: block;
   text-align: center;
   margin-left: 1em;
 }
 @media (min-width: 30em) {
-  /* line 707, ../sass/screen.sass */
+  /* line 681, ../sass/screen.sass */
   div.fullInfo a.bigbutton {
     display: none;
   }
 }
 @media (min-width: 35em) {
-  /* line 707, ../sass/screen.sass */
+  /* line 681, ../sass/screen.sass */
   div.fullInfo a.bigbutton {
     display: none;
   }
 }
 @media (min-width: 45em) {
-  /* line 707, ../sass/screen.sass */
+  /* line 681, ../sass/screen.sass */
   div.fullInfo a.bigbutton {
     display: none;
   }
 }
 
-/* line 718, ../sass/screen.sass */
+/* line 692, ../sass/screen.sass */
+div.fullInfo a.touch.bigbutton {
+  display: block;
+}
+@media (min-width: 30em) {
+  /* line 692, ../sass/screen.sass */
+  div.fullInfo a.touch.bigbutton {
+    display: block;
+  }
+}
+@media (min-width: 35em) {
+  /* line 692, ../sass/screen.sass */
+  div.fullInfo a.touch.bigbutton {
+    display: block;
+  }
+}
+@media (min-width: 45em) {
+  /* line 692, ../sass/screen.sass */
+  div.fullInfo a.touch.bigbutton {
+    display: block;
+  }
+}
+
+/* line 701, ../sass/screen.sass */
 div.partialInfo a.bigbutton {
   display: block;
   text-align: center;
   margin-left: 1em;
 }
 @media (min-width: 30em) {
-  /* line 718, ../sass/screen.sass */
+  /* line 701, ../sass/screen.sass */
   div.partialInfo a.bigbutton {
     display: none;
   }
 }
 @media (min-width: 35em) {
-  /* line 718, ../sass/screen.sass */
+  /* line 701, ../sass/screen.sass */
   div.partialInfo a.bigbutton {
     display: none;
   }
 }
 @media (min-width: 45em) {
-  /* line 718, ../sass/screen.sass */
+  /* line 701, ../sass/screen.sass */
   div.partialInfo a.bigbutton {
     display: none;
   }
 }
 
-/* line 729, ../sass/screen.sass */
+/* line 712, ../sass/screen.sass */
+div.partialInfo a.touch.bigbutton {
+  display: block;
+}
+@media (min-width: 30em) {
+  /* line 712, ../sass/screen.sass */
+  div.partialInfo a.touch.bigbutton {
+    display: block;
+  }
+}
+@media (min-width: 35em) {
+  /* line 712, ../sass/screen.sass */
+  div.partialInfo a.touch.bigbutton {
+    display: block;
+  }
+}
+@media (min-width: 45em) {
+  /* line 712, ../sass/screen.sass */
+  div.partialInfo a.touch.bigbutton {
+    display: block;
+  }
+}
+
+/* line 721, ../sass/screen.sass */
 div.fullInfo {
   border: 1px solid #f4f4f4;
   -webkit-border-radius: 10px;
@@ -1151,14 +1168,14 @@ div.fullInfo {
   transition-duration: 0.5s;
   margin: 15px 6px 5px 5px;
 }
-/* line 748, ../sass/screen.sass */
+/* line 740, ../sass/screen.sass */
 div.fullInfo p {
   padding: 10px;
   color: #999a9e;
   font-size: 1em;
 }
 
-/* line 753, ../sass/screen.sass */
+/* line 745, ../sass/screen.sass */
 div.partialInfo {
   border: 1px solid #f4f4f4;
   -webkit-border-radius: 10px;
@@ -1178,7 +1195,7 @@ div.partialInfo {
   transition-duration: 0.5s;
   margin: 15px 6px 5px 5px;
 }
-/* line 772, ../sass/screen.sass */
+/* line 764, ../sass/screen.sass */
 div.partialInfo p {
   padding: 10px;
   color: #999a9e;

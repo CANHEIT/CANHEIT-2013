@@ -660,30 +660,6 @@ h3.or
 section a
   text-decoration: none
 
-div.virtualInfo
-  border: 1px solid #f4f4f4
-  -webkit-border-radius: 10px
-  -moz-border-radius: 10px
-  border-radius: 10px
-  display:block
-  background-color: white
-  -webkit-box-shadow: 0 0 5px #f4f4f4
-  -moz-box-shadow: 0 0 5px #f4f4f4
-  box-shadow: 0 0 5px #f4f4f4
-  -moz-transition-property: all
-  -webkit-transition-property: all
-  -o-transition-property: all
-  transition-property: all
-  -moz-transition-duration: 0.5s
-  -webkit-transition-duration: 0.5s
-  -o-transition-duration: 0.5s
-  transition-duration: 0.5s
-  margin: 15px 6px 5px 5px
-  p
-    padding: 10px
-    color: #999a9e
-    font-size: 1em
-
 .iframe
   display: none
   +at-breakpoint(30em 6)
@@ -693,16 +669,14 @@ div.virtualInfo
   +at-breakpoint(45em 9)
     display: block
 
-div.virtualInfo a.bigbutton 
-  display: block
-  text-align: center
-  margin-left: 1em
+.touch.iframe
+  display: none
   +at-breakpoint(30em 6)
     display: none
   +at-breakpoint(35em 7)
     display: none
   +at-breakpoint(45em 9)
-    display: none  
+    display: none
 
 div.fullInfo a.bigbutton 
   display: block
@@ -713,7 +687,16 @@ div.fullInfo a.bigbutton
   +at-breakpoint(35em 7)
     display: none
   +at-breakpoint(45em 9)
-    display: none  
+    display: none
+
+div.fullInfo a.touch.bigbutton 
+  display: block
+  +at-breakpoint(30em 6)
+    display: block
+  +at-breakpoint(35em 7)
+    display: block
+  +at-breakpoint(45em 9)
+    display: block    
 
 div.partialInfo a.bigbutton 
   display: block
@@ -725,6 +708,15 @@ div.partialInfo a.bigbutton
     display: none
   +at-breakpoint(45em 9)
     display: none  
+
+div.partialInfo a.touch.bigbutton 
+  display: block
+  +at-breakpoint(30em 6)
+    display: block
+  +at-breakpoint(35em 7)
+    display: block
+  +at-breakpoint(45em 9)
+    display: block  
 		
 div.fullInfo
   border: 1px solid #f4f4f4
