@@ -900,18 +900,18 @@ header h1 {
 /* line 577, ../sass/screen.sass */
 #notice h3 {
   color: white;
-  padding: 20px 10px 0 20px;
+  padding: 20px 15px 0 15px;
 }
 /* line 580, ../sass/screen.sass */
 #notice p {
   color: white;
-  padding: 0 10px 20px 20px;
+  padding: 0 15px 20px 15px;
 }
 /* line 583, ../sass/screen.sass */
 #notice img {
   max-width: 40%;
-  margin: 20px 0 20px 0;
-  float: left;
+  margin: 12px 0 5px 0;
+  float: right;
 }
 
 /* line 588, ../sass/screen.sass */
