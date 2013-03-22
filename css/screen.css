@@ -1191,9 +1191,9 @@ div.partialInfo p {
 
 /* line 779, ../sass/screen.sass */
 section div.iconsBoxes {
-  width: 8.5em;
+  width: 8em;
   max-width: 10em;
-  margin: 15px 6px 2px 7px;
+  margin: 15px 5px 2px 5px;
   height: 9em;
   float: left;
   border: 1px solid #f4f4f4;
