@@ -41,6 +41,24 @@ article
 img, video, embed, object
   max-width: 100%
 
+article figure.right
+  max-width: 100%
+  +at-breakpoint(30em 6)
+    max-width: 13.5em /* 28em - 1em for margin / 2 */
+    margin-left: 1em
+    margin-bottom: 1em
+    float: right
+  +at-breakpoint(35em 7)
+    max-width: 16.5em /* 34em - 1em for margin / 2 */
+  +at-breakpoint(45em 9)
+    max-width: 15.5em /* 32em - 1em for margin / 2 */
+  
+article figure.right.one-third
+  +at-breakpoint(35em 7)
+    max-width: 11em /* 34em - 1em for margin / 3 */
+  +at-breakpoint(45em 9)
+    max-width: 10.333333333em /* 32em - 1em for margin / 3 */
+
 h1
   font-weight: $weight-normal
   text-transform: uppercase
@@ -379,9 +397,13 @@ p.theme
       margin-bottom: 0
     -webkit-box-shadow:  0px 30px 30px -30px rgba(0, 0, 0, .5)
     box-shadow:  0px 30px 30px -30px rgba(0, 0, 0, .5)
-  .home div#program.item, .home div#speakers-toolkit.item, .home div#your-stay.item
+  .home div#register.item, .home div#speakers-toolkit.item, .home div#your-stay.item
     float: right
     margin-right: 0
+  .home div#speakers-toolkit.item
+    clear: right
+  .home div#program.item
+    float: left
   .home div#why-attend, .home div#sponsors, .home div#register
     transform: rotate(1deg)
     -ms-transform: rotate(1deg) /* IE 9 */
@@ -669,7 +691,7 @@ section a
   +at-breakpoint(45em 9)
     display: block
 
-.touch.iframe
+.touch .iframe
   display: none
   +at-breakpoint(30em 6)
     display: none
@@ -689,7 +711,7 @@ div.fullInfo a.bigbutton
   +at-breakpoint(45em 9)
     display: none
 
-div.fullInfo a.touch.bigbutton 
+.touch div.fullInfo a.bigbutton 
   display: block
   +at-breakpoint(30em 6)
     display: block
@@ -709,7 +731,7 @@ div.partialInfo a.bigbutton
   +at-breakpoint(45em 9)
     display: none  
 
-div.partialInfo a.touch.bigbutton 
+.touch div.partialInfo a.bigbutton 
   display: block
   +at-breakpoint(30em 6)
     display: block
