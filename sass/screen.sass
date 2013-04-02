@@ -2,7 +2,7 @@
 // Imports
 
 @import base
-@import "compass/utilities/text/replacement"
+@import "compass/typography/text/replacement"
 
 /* -------------------------------------------------------------------------
 /* Layout */
@@ -422,6 +422,151 @@ p.theme
     -webkit-transform: rotate(-1deg) /* Safari and Chrome */
     -o-transform: rotate(-1deg) /* Opera */
   
+  .home #options div#crowdvote.item
+    float: none
+    +clearfix
+    margin: 1em auto 2em auto
+    padding: 1em
+    max-width: 45em
+    margin-right: 0
+    transform: rotate(-0.5deg)
+    -ms-transform: rotate(-0.5deg) /* IE 9 */
+    -moz-transform: rotate(-0.5deg) /* Firefox */
+    -webkit-transform: rotate(-0.5deg) /* Safari and Chrome */
+    -o-transform: rotate(-0.5deg) /* Opera */
+    p
+      float: left
+      max-width: 14em
+      margin-top: 0
+      margin-right: 2em
+    h2
+      float: left
+      max-width: 5em
+      margin-right: 1em
+    .actions
+      float: right
+      max-width: 15em
+      p 
+        max-width: 100%
+        margin-left: 0
+        margin-right: 0
+        float: none
+    .cancel
+      display: none
+
+
+div#crowdvote.item
+  overflow: hidden
+  display: block
+  padding: 0 1em 1em
+  -moz-border-radius: 10px
+  -webkit-border-radius: 10px
+  border-radius: 10px
+  +at-breakpoint(30em 6)
+  +at-breakpoint(35em 7)
+  +at-breakpoint(45em 9)
+    background-color: white
+    padding: 1em 1em 0 1em
+	
+  img
+    float: left
+    display: none 
+    margin-right: 2em
+    margin-top: 0
+    margin-left: 0
+    margin-bottom: 0
+    max-width: 4em
+    +at-breakpoint(30em 6)
+      max-width: 5em
+      display: block 
+    +at-breakpoint(35em 7)
+      max-width: 6em
+    +at-breakpoint(45em 9)
+      margin-bottom: 1em
+		
+  h2
+    margin: 0.1em auto 
+    font-size: 2em
+    float: none
+    +at-breakpoint(30em 6)
+      margin: 0.3em auto
+      font-size: 1.9em
+    +at-breakpoint(35em 7)
+      margin: 0.5em auto
+    +at-breakpoint(45em 9)
+  p
+    float: none
+    max-width: 21em
+    margin-top: 0.2em
+    margin-bottom: 0
+    margin-right: 2em
+    +at-breakpoint(30em 6)
+      margin-top: 0
+      margin-bottom: 0
+      margin-right: 2em
+      font-size: 1.2em
+    +at-breakpoint(35em 7)
+      margin-top: -0.3em
+      margin-bottom: 0
+      margin-right: 2em
+    +at-breakpoint(45em 9)
+		
+  div.headings
+    float: left
+    display: block	
+    max-width: 18em
+
+    +at-breakpoint(30em 6)
+      max-width: 120em
+    +at-breakpoint(35em 7)
+
+    +at-breakpoint(45em 9)
+
+
+		
+  div.actions
+    margin-top: 10px
+    float: left
+    max-width: 50em
+    clear: both
+
+    +at-breakpoint(30em 6)
+   
+      margin-left: 7.1em
+ 
+    +at-breakpoint(35em 7)
+      margin-left: 8.1em
+
+
+    +at-breakpoint(45em 9)
+      float: left
+      clear: none
+      max-width: 15em
+      margin-left: 0
+      margin-top: 3em
+ 
+		
+  div.actions .button
+    max-width: 60em
+    margin-right: 0.4em
+    +at-breakpoint(30em 6)
+ 
+    +at-breakpoint(35em 7)
+
+    +at-breakpoint(45em 9)
+     
+		
+  div.actions .cancel
+    margin-left: 1em
+    margin-right: 0
+    +at-breakpoint(30em 6)
+ 
+    +at-breakpoint(35em 7)
+
+    +at-breakpoint(45em 9)
+      margin-left: 0
+    
+    
 #organizers
   clear: left
   background-color: $charcoal
