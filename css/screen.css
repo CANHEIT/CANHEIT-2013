@@ -695,7 +695,7 @@ div#crowdvote.item {
 /* line 453, ../sass/screen.sass */
 div#crowdvote.item img {
   float: left;
-  display: block;
+  display: none;
   margin-right: 2em;
   margin-top: 0;
   margin-left: 0;
@@ -706,6 +706,7 @@ div#crowdvote.item img {
   /* line 453, ../sass/screen.sass */
   div#crowdvote.item img {
     max-width: 5em;
+    display: block;
   }
 }
 @media (min-width: 35em) {
@@ -714,34 +715,41 @@ div#crowdvote.item img {
     max-width: 6em;
   }
 }
-/* line 466, ../sass/screen.sass */
+@media (min-width: 45em) {
+  /* line 453, ../sass/screen.sass */
+  div#crowdvote.item img {
+    margin-bottom: 1em;
+  }
+}
+/* line 469, ../sass/screen.sass */
 div#crowdvote.item h2 {
   margin: 0.1em auto;
-  font-size: 1.9em;
+  font-size: 2em;
   float: none;
 }
 @media (min-width: 30em) {
-  /* line 466, ../sass/screen.sass */
+  /* line 469, ../sass/screen.sass */
   div#crowdvote.item h2 {
     margin: 0.3em auto;
+    font-size: 1.9em;
   }
 }
 @media (min-width: 35em) {
-  /* line 466, ../sass/screen.sass */
+  /* line 469, ../sass/screen.sass */
   div#crowdvote.item h2 {
     margin: 0.5em auto;
   }
 }
-/* line 475, ../sass/screen.sass */
+/* line 479, ../sass/screen.sass */
 div#crowdvote.item p {
   float: none;
   max-width: 21em;
-  margin-top: 1em;
+  margin-top: 0.2em;
   margin-bottom: 0;
   margin-right: 2em;
 }
 @media (min-width: 30em) {
-  /* line 475, ../sass/screen.sass */
+  /* line 479, ../sass/screen.sass */
   div#crowdvote.item p {
     margin-top: 0;
     margin-bottom: 0;
@@ -750,48 +758,72 @@ div#crowdvote.item p {
   }
 }
 @media (min-width: 35em) {
-  /* line 475, ../sass/screen.sass */
+  /* line 479, ../sass/screen.sass */
   div#crowdvote.item p {
     margin-top: -0.3em;
     margin-bottom: 0;
     margin-right: 2em;
   }
 }
-/* line 492, ../sass/screen.sass */
+/* line 496, ../sass/screen.sass */
+div#crowdvote.item div.headings {
+  float: left;
+  display: block;
+  max-width: 18em;
+}
+@media (min-width: 30em) {
+  /* line 496, ../sass/screen.sass */
+  div#crowdvote.item div.headings {
+    max-width: 120em;
+  }
+}
+/* line 509, ../sass/screen.sass */
 div#crowdvote.item div.actions {
   margin-top: 10px;
-  clear: both;
-}
-/* line 495, ../sass/screen.sass */
-div#crowdvote.item div.actions .button {
-  margin-top: 10px;
+  float: left;
+  max-width: 50em;
   clear: both;
 }
 @media (min-width: 30em) {
-  /* line 495, ../sass/screen.sass */
-  div#crowdvote.item div.actions .button {
-    margin-top: 1em;
-    max-width: 20em;
-    margin-right: 1em;
+  /* line 509, ../sass/screen.sass */
+  div#crowdvote.item div.actions {
+    margin-left: 7.1em;
   }
 }
 @media (min-width: 35em) {
-  /* line 495, ../sass/screen.sass */
-  div#crowdvote.item div.actions .button {
-    margin-top: 2em;
-    max-width: 20em;
-    margin-right: 1em;
+  /* line 509, ../sass/screen.sass */
+  div#crowdvote.item div.actions {
+    margin-left: 8.1em;
   }
 }
-/* line 508, ../sass/screen.sass */
+@media (min-width: 45em) {
+  /* line 509, ../sass/screen.sass */
+  div#crowdvote.item div.actions {
+    float: left;
+    clear: none;
+    max-width: 15em;
+    margin-left: 0;
+    margin-top: 3em;
+  }
+}
+/* line 531, ../sass/screen.sass */
+div#crowdvote.item div.actions .button {
+  max-width: 60em;
+  margin-right: 0.4em;
+}
+/* line 541, ../sass/screen.sass */
 div#crowdvote.item div.actions .cancel {
-  clear: both;
-  float: none;
   margin-left: 1em;
   margin-right: 0;
 }
+@media (min-width: 45em) {
+  /* line 541, ../sass/screen.sass */
+  div#crowdvote.item div.actions .cancel {
+    margin-left: 0;
+  }
+}
 
-/* line 514, ../sass/screen.sass */
+/* line 552, ../sass/screen.sass */
 #organizers {
   clear: left;
   background-color: #303030;
@@ -804,7 +836,7 @@ div#crowdvote.item div.actions .cancel {
   padding: 1em;
 }
 @media (min-width: 45em) {
-  /* line 514, ../sass/screen.sass */
+  /* line 552, ../sass/screen.sass */
   #organizers {
     background-image: -moz-radial-gradient(50% 50%, circle closest-side, #303030, #303030 12em, #232323 19em);
     background-image: -webkit-radial-gradient(50% 50%, circle closest-side, #303030, #303030 12em, #232323 19em);
@@ -813,7 +845,7 @@ div#crowdvote.item div.actions .cancel {
     background-image: radial-gradient(50% 50%, circle closest-side, #303030, #303030 12em, #232323 19em);
   }
 }
-/* line 532, ../sass/screen.sass */
+/* line 570, ../sass/screen.sass */
 #organizers h2, #organizers p {
   font-size: 0.875em;
   line-height: 1.6em;
@@ -821,16 +853,16 @@ div#crowdvote.item div.actions .cancel {
   text-align: center;
   clear: both;
 }
-/* line 538, ../sass/screen.sass */
+/* line 576, ../sass/screen.sass */
 #organizers h2 {
   font-weight: 400;
 }
-/* line 540, ../sass/screen.sass */
+/* line 578, ../sass/screen.sass */
 #organizers .logos {
   max-width: 246px;
   margin: 0 auto;
 }
-/* line 543, ../sass/screen.sass */
+/* line 581, ../sass/screen.sass */
 #organizers .uottawa-logo, #organizers .carleton-logo {
   background-image: url(../img/organizer-logos.png);
   background-repeat: no-repeat;
@@ -844,21 +876,21 @@ div#crowdvote.item div.actions .cancel {
   -o-transition: opacity 0.2s linear;
   transition: opacity 0.2s linear;
 }
-/* line 555, ../sass/screen.sass */
+/* line 593, ../sass/screen.sass */
 #organizers .uottawa-logo {
   width: 83px;
   height: 72px;
   background-position: 0, 0;
   margin: 10px 23px 20px 0;
 }
-/* line 560, ../sass/screen.sass */
+/* line 598, ../sass/screen.sass */
 #organizers .carleton-logo {
   width: 140px;
   height: 35px;
   background-position: -106px -22px;
   margin: 32px 0 15px 0;
 }
-/* line 565, ../sass/screen.sass */
+/* line 603, ../sass/screen.sass */
 #organizers .uottawa-logo:hover, #organizers .carleton-logo:hover {
   opacity: 1;
   -webkit-transition: opacity 0.2s linear;
@@ -868,57 +900,57 @@ div#crowdvote.item div.actions .cancel {
   transition: opacity 0.2s linear;
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5) {
-  /* line 573, ../sass/screen.sass */
+  /* line 611, ../sass/screen.sass */
   #organizers .uottawa-logo, #organizers .carleton-logo {
     background-image: url(../img/organizer-logos@2x.png);
     background-size: 246px 72px;
   }
 }
 
-/* line 577, ../sass/screen.sass */
+/* line 615, ../sass/screen.sass */
 aside.highlight {
   border: 2px solid #ffa23e;
   padding: 1em;
 }
-/* line 580, ../sass/screen.sass */
+/* line 618, ../sass/screen.sass */
 aside.highlight h2 {
   font-size: 1em;
   line-height: 1.4em;
   color: #ffa23e;
   margin: 0;
 }
-/* line 585, ../sass/screen.sass */
+/* line 623, ../sass/screen.sass */
 aside.highlight p:last-of-type {
   margin-bottom: 0;
 }
 
-/* line 588, ../sass/screen.sass */
+/* line 626, ../sass/screen.sass */
 aside.note {
   padding-left: 1em;
 }
-/* line 590, ../sass/screen.sass */
+/* line 628, ../sass/screen.sass */
 aside.note h3 {
   margin: 0;
   font-size: 1em;
 }
-/* line 593, ../sass/screen.sass */
+/* line 631, ../sass/screen.sass */
 aside.note h3 a {
   display: block;
   margin-left: -15px;
   padding-left: 15px;
   background: url(../img/disclosure-triangle.png) no-repeat 4px 4px;
 }
-/* line 598, ../sass/screen.sass */
+/* line 636, ../sass/screen.sass */
 aside.note h3.open a {
   background-position: 0 -85px;
 }
-/* line 600, ../sass/screen.sass */
+/* line 638, ../sass/screen.sass */
 aside.note li, aside.note ul {
   padding-left: 0;
   margin-left: 0;
 }
 
-/* line 605, ../sass/screen.sass */
+/* line 643, ../sass/screen.sass */
 #answers h3 {
   font-size: 1em;
   line-height: 1.4em;
@@ -926,14 +958,14 @@ aside.note li, aside.note ul {
   font-weight: 700;
 }
 
-/* line 612, ../sass/screen.sass */
+/* line 650, ../sass/screen.sass */
 #subscribe .subscribe-loader {
   background: url(../img/ajax-loader.gif) no-repeat top left;
   width: 12px;
   height: 12px;
   display: inline-block;
 }
-/* line 617, ../sass/screen.sass */
+/* line 655, ../sass/screen.sass */
 #subscribe #subemail {
   width: 100%;
   padding: 0.3em 0.5em;
@@ -945,7 +977,7 @@ aside.note li, aside.note ul {
   font-size: 0.9em;
 }
 @media (min-width: 30em) {
-  /* line 617, ../sass/screen.sass */
+  /* line 655, ../sass/screen.sass */
   #subscribe #subemail {
     font-size: 1em;
     width: 74.35897%;
@@ -954,7 +986,7 @@ aside.note li, aside.note ul {
   }
 }
 @media (min-width: 35em) {
-  /* line 617, ../sass/screen.sass */
+  /* line 655, ../sass/screen.sass */
   #subscribe #subemail {
     width: 77.27273%;
     float: left;
@@ -962,7 +994,7 @@ aside.note li, aside.note ul {
   }
 }
 @media (min-width: 30em) {
-  /* line 631, ../sass/screen.sass */
+  /* line 669, ../sass/screen.sass */
   #subscribe #subsubmit {
     width: 23.07692%;
     float: left;
@@ -972,7 +1004,7 @@ aside.note li, aside.note ul {
   }
 }
 @media (min-width: 35em) {
-  /* line 631, ../sass/screen.sass */
+  /* line 669, ../sass/screen.sass */
   #subscribe #subsubmit {
     width: 20.45455%;
     float: left;
@@ -981,40 +1013,40 @@ aside.note li, aside.note ul {
     margin-right: 0;
   }
 }
-/* line 638, ../sass/screen.sass */
+/* line 676, ../sass/screen.sass */
 #subscribe .error_message {
   margin-bottom: 1em;
   color: #f36f67;
 }
-/* line 642, ../sass/screen.sass */
+/* line 680, ../sass/screen.sass */
 #subscribe #success_page h3 {
   color: #95b257;
   margin: 0;
 }
-/* line 645, ../sass/screen.sass */
+/* line 683, ../sass/screen.sass */
 #subscribe #success_page h3 + p {
   margin-top: 0;
 }
 
 @media (min-width: 40em) {
-  /* line 648, ../sass/screen.sass */
+  /* line 686, ../sass/screen.sass */
   .sponsors #interested {
     display: none;
   }
 }
 
-/* line 652, ../sass/screen.sass */
+/* line 690, ../sass/screen.sass */
 section#description h1 {
   margin-top: 0;
   font-weight: normal;
 }
 
-/* line 657, ../sass/screen.sass */
+/* line 695, ../sass/screen.sass */
 section#program .eventname {
   font-weight: 700;
   display: block;
 }
-/* line 660, ../sass/screen.sass */
+/* line 698, ../sass/screen.sass */
 section#program .endtime {
   color: #989a9e;
 }

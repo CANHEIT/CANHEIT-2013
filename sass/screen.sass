@@ -452,7 +452,7 @@ div#crowdvote.item
 	
   img
     float: left
-    display: block 
+    display: none 
     margin-right: 2em
     margin-top: 0
     margin-left: 0
@@ -460,22 +460,26 @@ div#crowdvote.item
     max-width: 4em
     +at-breakpoint(30em 6)
       max-width: 5em
+      display: block 
     +at-breakpoint(35em 7)
       max-width: 6em
     +at-breakpoint(45em 9)
+      margin-bottom: 1em
+		
   h2
     margin: 0.1em auto 
-    font-size: 1.9em
+    font-size: 2em
     float: none
     +at-breakpoint(30em 6)
       margin: 0.3em auto
+      font-size: 1.9em
     +at-breakpoint(35em 7)
       margin: 0.5em auto
     +at-breakpoint(45em 9)
   p
     float: none
     max-width: 21em
-    margin-top: 1em
+    margin-top: 0.2em
     margin-bottom: 0
     margin-right: 2em
     +at-breakpoint(30em 6)
@@ -488,28 +492,62 @@ div#crowdvote.item
       margin-bottom: 0
       margin-right: 2em
     +at-breakpoint(45em 9)
-			
+		
+  div.headings
+    float: left
+    display: block	
+    max-width: 18em
+
+    +at-breakpoint(30em 6)
+      max-width: 120em
+    +at-breakpoint(35em 7)
+
+    +at-breakpoint(45em 9)
+
+
+		
   div.actions
     margin-top: 10px
-    clear: both  
-  div.actions .button
-    margin-top: 10px
+    float: left
+    max-width: 50em
     clear: both
+
     +at-breakpoint(30em 6)
-      margin-top: 1em
-      max-width: 20em
-      margin-right: 1em
+   
+      margin-left: 7.1em
+ 
     +at-breakpoint(35em 7)
-      margin-top: 2em
-      max-width: 20em
-      margin-right: 1em
+      margin-left: 8.1em
+
+
     +at-breakpoint(45em 9)
+      float: left
+      clear: none
+      max-width: 15em
+      margin-left: 0
+      margin-top: 3em
+ 
+		
+  div.actions .button
+    max-width: 60em
+    margin-right: 0.4em
+    +at-breakpoint(30em 6)
+ 
+    +at-breakpoint(35em 7)
+
+    +at-breakpoint(45em 9)
+     
 		
   div.actions .cancel
-    clear: both
-    float: none
     margin-left: 1em
     margin-right: 0
+    +at-breakpoint(30em 6)
+ 
+    +at-breakpoint(35em 7)
+
+    +at-breakpoint(45em 9)
+      margin-left: 0
+    
     
 #organizers
   clear: left
