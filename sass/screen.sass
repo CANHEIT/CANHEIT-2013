@@ -700,6 +700,26 @@ section a
   +at-breakpoint(45em 9)
     display: none
 
+div.virtualInfo a.bigbutton 
+  display: block
+  text-align: center
+  margin-left: 1em
+  +at-breakpoint(30em 6)
+    display: none
+  +at-breakpoint(35em 7)
+    display: none
+  +at-breakpoint(45em 9)
+    display: none
+
+.touch div.virtualInfo a.bigbutton 
+  display: block
+  +at-breakpoint(30em 6)
+    display: block
+  +at-breakpoint(35em 7)
+    display: block
+  +at-breakpoint(45em 9)
+    display: block 
+
 div.fullInfo a.bigbutton 
   display: block
   text-align: center
@@ -740,6 +760,30 @@ div.partialInfo a.bigbutton
   +at-breakpoint(45em 9)
     display: block  
 		
+div.virtualInfo
+  border: 1px solid #f4f4f4
+  -webkit-border-radius: 10px
+  -moz-border-radius: 10px
+  border-radius: 10px
+  display:block
+  background-color: white
+  -webkit-box-shadow: 0 0 5px #f4f4f4
+  -moz-box-shadow: 0 0 5px #f4f4f4
+  box-shadow: 0 0 5px #f4f4f4
+  -moz-transition-property: all
+  -webkit-transition-property: all
+  -o-transition-property: all
+  transition-property: all
+  -moz-transition-duration: 0.5s
+  -webkit-transition-duration: 0.5s
+  -o-transition-duration: 0.5s
+  transition-duration: 0.5s
+  margin: 15px 6px 5px 5px
+  p
+    padding: 10px
+    color: #999a9e
+    font-size: 1em
+
 div.fullInfo
   border: 1px solid #f4f4f4
   -webkit-border-radius: 10px

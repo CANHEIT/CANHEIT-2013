@@ -48,15 +48,53 @@
             </header>
             
             <div class="intro">
-            
+              
+              <h2>Three ways to attend CANHEIT 2013!</h2>
+              
+              <p>Virtual attendance (!), full conference registration and one-day tickets are available. That's right, this year you can attend CANHEIT without actually being here. <a href="../why-attend/virtually">Learn more about virtual attendance</a>, and then continue below to the registration.</p>
+               
               <p><a href="../your-stay/">Accommodations and travel can be booked separately</a> using our Plan your stay resources. Special rates have been negotiated for CANHEIT delegates, book early to ensure availability.</p> 
           
               <p>Read below on our <a href="#cancellation-or-transfer">cancellation and transfer policies</a>. If you have questions about registrations, contact <a href="mailto:canheit@uOttawa.ca">canheit@uOttawa.ca</a></p>
               
                <section>
+               
+               <div class="virtual" id="virtual">
+               
+               <h3> <img class="numberIcon" src="../img/canheiticon-choice1-52X52.png" alt="Choice 1 - Virtual Attendance Registration">Virtual attendance registration</h3>
+               <div class="virtualInfo">
+               <p>For the first time ever in CANHEIT history, attend and participate in conference sessions and keynotes from the comfort of your home or office.  <a href="../why-attend/virtually/">More info</a></p>
+            
+
+
+<div  class="touch iframe" style="width:100%; text-align:left;" ><iframe  src="http://www.eventbrite.ca/tickets-external?eid=5902104353&ref=etckt&v=2" frameborder="0" height="214" width="100%" vspace="0" hspace="0" marginheight="5" marginwidth="5" scrolling="auto" allowtransparency="true"></iframe><div style="font-family:Helvetica, Arial; font-size:10px; padding:5px 0 5px; margin:2px; width:100%; text-align:left;" ><a style="color:#ddd; text-decoration:none;" target="_blank" href="http://www.eventbrite.ca/r/etckt">Sell Tickets Online</a> <span style="color:#ddd;">through</span> <a style="color:#ddd; text-decoration:none;" target="_blank" href="http://www.eventbrite.ca?ref=etckt">Eventbrite</a></div></div>
+
+
+               
+               
+                              
+                              
+               <a class="bigbutton" href="http://canheit2013-virtual.eventbrite.ca/" target="_blank">
+                         <strong>Continue to Virtual</strong>
+                         <strong>Conference registration</strong>
+                       </a>
+               
+
+        </div>
+        
+        
+      </div>
+      </section>
+               
+               
+               
+              <h3 class="or">OR</h3>
+
+              
+               <section>
                <div class="full" id="full">
         
-        <h3>  <img class="numberIcon" src="../img/canheiticon-choice1-52X52.png" alt="Choice 1 - Full Conference Registration">Full conference registration</h3>
+        <h3>  <img class="numberIcon" src="../img/canheiticon-choice2-52X52.png" alt="Choice 2 - Full Conference Registration">Full conference registration</h3>
         
         <div class="fullInfo">
      <p>Participate in all four days of CANHEIT 2013. Price includes all meals, events, and transportation to events.</p>
@@ -87,7 +125,7 @@
                   <section>
               <div class="partial" id="partial">
         
-        <h3>  <img class="numberIcon" src="../img/canheiticon-choice2-52X52.png" alt="Choice 2 - Partial Conference Registration">Partial conference registration</h3>
+        <h3>  <img class="numberIcon" src="../img/canheiticon-choice3-52X52.png" alt="Choice 3 - Partial Conference Registration">Partial conference registration</h3>
         
         <div class="partialInfo">
      <p>Can’t stick around for the whole conference? Bummer… Only pay for the days you can attend</p>
@@ -216,6 +254,18 @@
         
      
      <script>
+		   var el = $("#virtual"),
+          log = $("#event-log");
+
+        el.collapse()
+          .bind("open", function(e, section) {
+            log.html("'" + section.$summary.text() + "' was opened");
+
+          })
+          .bind("close", function(e, section) {
+            log.html("'" + section.$summary.text() + "' was closed");
+          });
+
 		   var el = $("#full"),
           log = $("#event-log");
 
