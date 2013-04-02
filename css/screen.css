@@ -1102,6 +1102,7 @@ header h1 {
 /* line 711, ../sass/screen.sass */
 #notice {
   background-color: #fca045;
+  display: block;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
   border-radius: 10px;
@@ -1125,6 +1126,7 @@ header h1 {
 
 /* line 728, ../sass/screen.sass */
 section div:first-child {
+  display: block;
   border: 1px solid #f4f4f4;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
@@ -1411,6 +1413,7 @@ div.virtualInfo {
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
   border-radius: 10px;
+  display: block;
   background-color: white;
   -webkit-box-shadow: 0 0 5px #f4f4f4;
   -moz-box-shadow: 0 0 5px #f4f4f4;
@@ -1438,6 +1441,7 @@ div.fullInfo {
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
   border-radius: 10px;
+  display: block;
   background-color: white;
   -webkit-box-shadow: 0 0 5px #f4f4f4;
   -moz-box-shadow: 0 0 5px #f4f4f4;
@@ -1465,6 +1469,7 @@ div.partialInfo {
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
   border-radius: 10px;
+  display: block;
   background-color: white;
   -webkit-box-shadow: 0 0 5px #f4f4f4;
   -moz-box-shadow: 0 0 5px #f4f4f4;
@@ -1488,6 +1493,7 @@ div.partialInfo p {
 
 /* line 953, ../sass/screen.sass */
 section div.iconsBoxes {
+  display: block;
   width: 8em;
   max-width: 10em;
   margin: 15px 5px 2px 5px;
