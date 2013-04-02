@@ -17,14 +17,14 @@ bold, strong {
   *zoom: 1;
   max-width: 19em;
   _width: 19em;
-  padding-left: 1em;
-  padding-right: 1em;
   margin-left: auto;
   margin-right: auto;
+  padding-left: 1em;
+  padding-right: 1em;
   background-color: white;
   padding: 1em 1em;
 }
-/* line 38, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+/* line 38, ../../../../../../usr/local/Cellar/ruby/1.9.3-p286/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
 .container:after {
   content: "";
   display: table;
@@ -34,12 +34,12 @@ bold, strong {
   /* line 18, ../sass/screen.sass */
   .container {
     max-width: 29em;
-    padding-left: 1em;
-    padding-right: 1em;
     margin-left: auto;
     margin-right: auto;
+    padding-left: 1em;
+    padding-right: 1em;
   }
-  /* line 38, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+  /* line 38, ../../../../../../usr/local/Cellar/ruby/1.9.3-p286/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
   .container:after {
     content: "";
     display: table;
@@ -50,12 +50,12 @@ bold, strong {
   /* line 18, ../sass/screen.sass */
   .container {
     max-width: 34em;
-    padding-left: 1em;
-    padding-right: 1em;
     margin-left: auto;
     margin-right: auto;
+    padding-left: 1em;
+    padding-right: 1em;
   }
-  /* line 38, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+  /* line 38, ../../../../../../usr/local/Cellar/ruby/1.9.3-p286/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
   .container:after {
     content: "";
     display: table;
@@ -66,12 +66,12 @@ bold, strong {
   /* line 18, ../sass/screen.sass */
   .container {
     max-width: 44em;
-    padding-left: 1em;
-    padding-right: 1em;
     margin-left: auto;
     margin-right: auto;
+    padding-left: 1em;
+    padding-right: 1em;
   }
-  /* line 38, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+  /* line 38, ../../../../../../usr/local/Cellar/ruby/1.9.3-p286/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
   .container:after {
     content: "";
     display: table;
