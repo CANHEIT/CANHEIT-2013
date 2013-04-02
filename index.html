@@ -25,6 +25,27 @@
         <![endif]-->
 
         <div class="container">
+        
+      
+        
+        	<div id="crowdvote" class="item">
+          
+          
+          
+        <img src="img/canheitGuidebookIcon.png" id="CANHEIT 2013 Guidebook Icon" />
+    
+						<h2>We've got an APP!</h2>
+				<p>Get it now for your mobile device.</p>
+					  <div class="actions">
+  						<a class="button" href="https://itunes.apple.com/ca/app/canheit-2013/id595230973?mt=8" target="_blank">IOS</a>
+              <a class="button" href="https://play.google.com/store/apps/details?id=com.guidebook.apps.CANHEIT2013.android" target="_blank">Android</a>
+  						<!--<p class="note">Quick! You've only got until February 22!</p>-->
+ 						 <button class="cancel" id="not-today">Not today</button>
+ 						<!--  <button class="cancel" id="never">Already did!</button>-->
+  					</div>
+					</div>
+          
+          
           <header>
             <h1 class="visuallyhidden">CANHEIT 2013</h1>
             <p class="tagline">Canada's premier Higher Education IT Conference</p>
@@ -42,16 +63,7 @@
           
 					<div id="options">
 					
-					<div id="crowdvote" class="item">
-						<h2>Hey Crowd! Vote for your faves!</h2>
-						<p>This year, you get to have your say about the sessions in the program. That's right, <strong>we're crowdvoting this year's program</strong> to make CANHEIT 2013 the awesomest ever.</p>
-					  <div class="actions">
-  						<a class="button" href="http://mycanheit2013.carleton.ca/crowdvote/">Vote for your top sessions</a>
-  						<p class="note">Quick! You've only got until February 22!</p>
- 						  <button class="cancel" id="not-today">Not today</button>
- 						  <button class="cancel" id="never">Already did!</button>
-  					</div>
-					</div>
+				
 					
           <div id="why-attend" class="item">
   					<h2>It's going to be EPIC!</h2>
@@ -111,7 +123,8 @@
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script><script src="js/vendor/jquery.smartbanner/jquery.smartbanner.js"></script>
         <script src="js/vendor/jquery.cookie.js"></script>
-
+				<script src="js/downloadMobile.js"></script>
+        
         <script>
             var _gaq=[['canheit._setAccount','UA-35890616-1'],['canheit._trackPageview']];
             (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
@@ -119,7 +132,7 @@
             s.parentNode.insertBefore(g,s)}(document,'script'));
         </script>
         
-        <script>
+       <!-- <script>
           $(function() {
             
             if($.cookie('crowdvoting') == 'never' || $.cookie('crowdvoting') == 'not-today') {
@@ -140,7 +153,7 @@
             });
             
           });
-        </script>
+        </script>-->
         
     </body>
 </html>

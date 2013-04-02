@@ -17,14 +17,14 @@ bold, strong {
   *zoom: 1;
   max-width: 19em;
   _width: 19em;
-  margin-left: auto;
-  margin-right: auto;
   padding-left: 1em;
   padding-right: 1em;
+  margin-left: auto;
+  margin-right: auto;
   background-color: white;
   padding: 1em 1em;
 }
-/* line 38, ../../../../../../usr/local/Cellar/ruby/1.9.3-p286/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+/* line 38, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
 .container:after {
   content: "";
   display: table;
@@ -34,12 +34,12 @@ bold, strong {
   /* line 18, ../sass/screen.sass */
   .container {
     max-width: 29em;
-    margin-left: auto;
-    margin-right: auto;
     padding-left: 1em;
     padding-right: 1em;
+    margin-left: auto;
+    margin-right: auto;
   }
-  /* line 38, ../../../../../../usr/local/Cellar/ruby/1.9.3-p286/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+  /* line 38, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
   .container:after {
     content: "";
     display: table;
@@ -50,12 +50,12 @@ bold, strong {
   /* line 18, ../sass/screen.sass */
   .container {
     max-width: 34em;
-    margin-left: auto;
-    margin-right: auto;
     padding-left: 1em;
     padding-right: 1em;
+    margin-left: auto;
+    margin-right: auto;
   }
-  /* line 38, ../../../../../../usr/local/Cellar/ruby/1.9.3-p286/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+  /* line 38, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
   .container:after {
     content: "";
     display: table;
@@ -66,12 +66,12 @@ bold, strong {
   /* line 18, ../sass/screen.sass */
   .container {
     max-width: 44em;
-    margin-left: auto;
-    margin-right: auto;
     padding-left: 1em;
     padding-right: 1em;
+    margin-left: auto;
+    margin-right: auto;
   }
-  /* line 38, ../../../../../../usr/local/Cellar/ruby/1.9.3-p286/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+  /* line 38, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
   .container:after {
     content: "";
     display: table;
@@ -676,7 +676,122 @@ p.theme {
     display: none;
   }
 }
-/* line 439, ../sass/screen.sass */
+/* line 440, ../sass/screen.sass */
+div#crowdvote.item {
+  overflow: hidden;
+  display: block;
+  padding: 0 1em 1em;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+}
+@media (min-width: 45em) {
+  /* line 440, ../sass/screen.sass */
+  div#crowdvote.item {
+    background-color: white;
+    padding: 1em 1em 0 1em;
+  }
+}
+/* line 453, ../sass/screen.sass */
+div#crowdvote.item img {
+  float: left;
+  display: block;
+  margin-right: 2em;
+  margin-top: 0;
+  margin-left: 0;
+  margin-bottom: 0;
+  max-width: 4em;
+}
+@media (min-width: 30em) {
+  /* line 453, ../sass/screen.sass */
+  div#crowdvote.item img {
+    max-width: 5em;
+  }
+}
+@media (min-width: 35em) {
+  /* line 453, ../sass/screen.sass */
+  div#crowdvote.item img {
+    max-width: 6em;
+  }
+}
+/* line 466, ../sass/screen.sass */
+div#crowdvote.item h2 {
+  margin: 0.1em auto;
+  font-size: 1.9em;
+  float: none;
+}
+@media (min-width: 30em) {
+  /* line 466, ../sass/screen.sass */
+  div#crowdvote.item h2 {
+    margin: 0.3em auto;
+  }
+}
+@media (min-width: 35em) {
+  /* line 466, ../sass/screen.sass */
+  div#crowdvote.item h2 {
+    margin: 0.5em auto;
+  }
+}
+/* line 475, ../sass/screen.sass */
+div#crowdvote.item p {
+  float: none;
+  max-width: 21em;
+  margin-top: 1em;
+  margin-bottom: 0;
+  margin-right: 2em;
+}
+@media (min-width: 30em) {
+  /* line 475, ../sass/screen.sass */
+  div#crowdvote.item p {
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-right: 2em;
+    font-size: 1.2em;
+  }
+}
+@media (min-width: 35em) {
+  /* line 475, ../sass/screen.sass */
+  div#crowdvote.item p {
+    margin-top: -0.3em;
+    margin-bottom: 0;
+    margin-right: 2em;
+  }
+}
+/* line 492, ../sass/screen.sass */
+div#crowdvote.item div.actions {
+  margin-top: 10px;
+  clear: both;
+}
+/* line 495, ../sass/screen.sass */
+div#crowdvote.item div.actions .button {
+  margin-top: 10px;
+  clear: both;
+}
+@media (min-width: 30em) {
+  /* line 495, ../sass/screen.sass */
+  div#crowdvote.item div.actions .button {
+    margin-top: 1em;
+    max-width: 20em;
+    margin-right: 1em;
+  }
+}
+@media (min-width: 35em) {
+  /* line 495, ../sass/screen.sass */
+  div#crowdvote.item div.actions .button {
+    margin-top: 2em;
+    max-width: 20em;
+    margin-right: 1em;
+  }
+}
+/* line 508, ../sass/screen.sass */
+div#crowdvote.item div.actions .cancel {
+  clear: both;
+  float: none;
+  margin-left: 1em;
+  margin-right: 0;
+}
+
+/* line 514, ../sass/screen.sass */
 #organizers {
   clear: left;
   background-color: #303030;
@@ -689,7 +804,7 @@ p.theme {
   padding: 1em;
 }
 @media (min-width: 45em) {
-  /* line 439, ../sass/screen.sass */
+  /* line 514, ../sass/screen.sass */
   #organizers {
     background-image: -moz-radial-gradient(50% 50%, circle closest-side, #303030, #303030 12em, #232323 19em);
     background-image: -webkit-radial-gradient(50% 50%, circle closest-side, #303030, #303030 12em, #232323 19em);
@@ -698,7 +813,7 @@ p.theme {
     background-image: radial-gradient(50% 50%, circle closest-side, #303030, #303030 12em, #232323 19em);
   }
 }
-/* line 457, ../sass/screen.sass */
+/* line 532, ../sass/screen.sass */
 #organizers h2, #organizers p {
   font-size: 0.875em;
   line-height: 1.6em;
@@ -706,16 +821,16 @@ p.theme {
   text-align: center;
   clear: both;
 }
-/* line 463, ../sass/screen.sass */
+/* line 538, ../sass/screen.sass */
 #organizers h2 {
   font-weight: 400;
 }
-/* line 465, ../sass/screen.sass */
+/* line 540, ../sass/screen.sass */
 #organizers .logos {
   max-width: 246px;
   margin: 0 auto;
 }
-/* line 468, ../sass/screen.sass */
+/* line 543, ../sass/screen.sass */
 #organizers .uottawa-logo, #organizers .carleton-logo {
   background-image: url(../img/organizer-logos.png);
   background-repeat: no-repeat;
@@ -729,21 +844,21 @@ p.theme {
   -o-transition: opacity 0.2s linear;
   transition: opacity 0.2s linear;
 }
-/* line 480, ../sass/screen.sass */
+/* line 555, ../sass/screen.sass */
 #organizers .uottawa-logo {
   width: 83px;
   height: 72px;
   background-position: 0, 0;
   margin: 10px 23px 20px 0;
 }
-/* line 485, ../sass/screen.sass */
+/* line 560, ../sass/screen.sass */
 #organizers .carleton-logo {
   width: 140px;
   height: 35px;
   background-position: -106px -22px;
   margin: 32px 0 15px 0;
 }
-/* line 490, ../sass/screen.sass */
+/* line 565, ../sass/screen.sass */
 #organizers .uottawa-logo:hover, #organizers .carleton-logo:hover {
   opacity: 1;
   -webkit-transition: opacity 0.2s linear;
@@ -753,57 +868,57 @@ p.theme {
   transition: opacity 0.2s linear;
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5) {
-  /* line 498, ../sass/screen.sass */
+  /* line 573, ../sass/screen.sass */
   #organizers .uottawa-logo, #organizers .carleton-logo {
     background-image: url(../img/organizer-logos@2x.png);
     background-size: 246px 72px;
   }
 }
 
-/* line 502, ../sass/screen.sass */
+/* line 577, ../sass/screen.sass */
 aside.highlight {
   border: 2px solid #ffa23e;
   padding: 1em;
 }
-/* line 505, ../sass/screen.sass */
+/* line 580, ../sass/screen.sass */
 aside.highlight h2 {
   font-size: 1em;
   line-height: 1.4em;
   color: #ffa23e;
   margin: 0;
 }
-/* line 510, ../sass/screen.sass */
+/* line 585, ../sass/screen.sass */
 aside.highlight p:last-of-type {
   margin-bottom: 0;
 }
 
-/* line 513, ../sass/screen.sass */
+/* line 588, ../sass/screen.sass */
 aside.note {
   padding-left: 1em;
 }
-/* line 515, ../sass/screen.sass */
+/* line 590, ../sass/screen.sass */
 aside.note h3 {
   margin: 0;
   font-size: 1em;
 }
-/* line 518, ../sass/screen.sass */
+/* line 593, ../sass/screen.sass */
 aside.note h3 a {
   display: block;
   margin-left: -15px;
   padding-left: 15px;
   background: url(../img/disclosure-triangle.png) no-repeat 4px 4px;
 }
-/* line 523, ../sass/screen.sass */
+/* line 598, ../sass/screen.sass */
 aside.note h3.open a {
   background-position: 0 -85px;
 }
-/* line 525, ../sass/screen.sass */
+/* line 600, ../sass/screen.sass */
 aside.note li, aside.note ul {
   padding-left: 0;
   margin-left: 0;
 }
 
-/* line 530, ../sass/screen.sass */
+/* line 605, ../sass/screen.sass */
 #answers h3 {
   font-size: 1em;
   line-height: 1.4em;
@@ -811,14 +926,14 @@ aside.note li, aside.note ul {
   font-weight: 700;
 }
 
-/* line 537, ../sass/screen.sass */
+/* line 612, ../sass/screen.sass */
 #subscribe .subscribe-loader {
   background: url(../img/ajax-loader.gif) no-repeat top left;
   width: 12px;
   height: 12px;
   display: inline-block;
 }
-/* line 542, ../sass/screen.sass */
+/* line 617, ../sass/screen.sass */
 #subscribe #subemail {
   width: 100%;
   padding: 0.3em 0.5em;
@@ -830,7 +945,7 @@ aside.note li, aside.note ul {
   font-size: 0.9em;
 }
 @media (min-width: 30em) {
-  /* line 542, ../sass/screen.sass */
+  /* line 617, ../sass/screen.sass */
   #subscribe #subemail {
     font-size: 1em;
     width: 74.35897%;
@@ -839,7 +954,7 @@ aside.note li, aside.note ul {
   }
 }
 @media (min-width: 35em) {
-  /* line 542, ../sass/screen.sass */
+  /* line 617, ../sass/screen.sass */
   #subscribe #subemail {
     width: 77.27273%;
     float: left;
@@ -847,7 +962,7 @@ aside.note li, aside.note ul {
   }
 }
 @media (min-width: 30em) {
-  /* line 556, ../sass/screen.sass */
+  /* line 631, ../sass/screen.sass */
   #subscribe #subsubmit {
     width: 23.07692%;
     float: left;
@@ -857,7 +972,7 @@ aside.note li, aside.note ul {
   }
 }
 @media (min-width: 35em) {
-  /* line 556, ../sass/screen.sass */
+  /* line 631, ../sass/screen.sass */
   #subscribe #subsubmit {
     width: 20.45455%;
     float: left;
@@ -866,40 +981,40 @@ aside.note li, aside.note ul {
     margin-right: 0;
   }
 }
-/* line 563, ../sass/screen.sass */
+/* line 638, ../sass/screen.sass */
 #subscribe .error_message {
   margin-bottom: 1em;
   color: #f36f67;
 }
-/* line 567, ../sass/screen.sass */
+/* line 642, ../sass/screen.sass */
 #subscribe #success_page h3 {
   color: #95b257;
   margin: 0;
 }
-/* line 570, ../sass/screen.sass */
+/* line 645, ../sass/screen.sass */
 #subscribe #success_page h3 + p {
   margin-top: 0;
 }
 
 @media (min-width: 40em) {
-  /* line 573, ../sass/screen.sass */
+  /* line 648, ../sass/screen.sass */
   .sponsors #interested {
     display: none;
   }
 }
 
-/* line 577, ../sass/screen.sass */
+/* line 652, ../sass/screen.sass */
 section#description h1 {
   margin-top: 0;
   font-weight: normal;
 }
 
-/* line 582, ../sass/screen.sass */
+/* line 657, ../sass/screen.sass */
 section#program .eventname {
   font-weight: 700;
   display: block;
 }
-/* line 585, ../sass/screen.sass */
+/* line 660, ../sass/screen.sass */
 section#program .endtime {
   color: #989a9e;
 }

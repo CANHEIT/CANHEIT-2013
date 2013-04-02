@@ -2,7 +2,7 @@
 // Imports
 
 @import base
-@import "compass/utilities/text/replacement"
+@import "compass/typography/text/replacement"
 
 /* -------------------------------------------------------------------------
 /* Layout */
@@ -435,6 +435,81 @@ p.theme
         float: none
     .cancel
       display: none
+
+
+div#crowdvote.item
+  overflow: hidden
+  display: block
+  padding: 0 1em 1em
+  -moz-border-radius: 10px
+  -webkit-border-radius: 10px
+  border-radius: 10px
+  +at-breakpoint(30em 6)
+  +at-breakpoint(35em 7)
+  +at-breakpoint(45em 9)
+    background-color: white
+    padding: 1em 1em 0 1em
+	
+  img
+    float: left
+    display: block 
+    margin-right: 2em
+    margin-top: 0
+    margin-left: 0
+    margin-bottom: 0
+    max-width: 4em
+    +at-breakpoint(30em 6)
+      max-width: 5em
+    +at-breakpoint(35em 7)
+      max-width: 6em
+    +at-breakpoint(45em 9)
+  h2
+    margin: 0.1em auto 
+    font-size: 1.9em
+    float: none
+    +at-breakpoint(30em 6)
+      margin: 0.3em auto
+    +at-breakpoint(35em 7)
+      margin: 0.5em auto
+    +at-breakpoint(45em 9)
+  p
+    float: none
+    max-width: 21em
+    margin-top: 1em
+    margin-bottom: 0
+    margin-right: 2em
+    +at-breakpoint(30em 6)
+      margin-top: 0
+      margin-bottom: 0
+      margin-right: 2em
+      font-size: 1.2em
+    +at-breakpoint(35em 7)
+      margin-top: -0.3em
+      margin-bottom: 0
+      margin-right: 2em
+    +at-breakpoint(45em 9)
+			
+  div.actions
+    margin-top: 10px
+    clear: both  
+  div.actions .button
+    margin-top: 10px
+    clear: both
+    +at-breakpoint(30em 6)
+      margin-top: 1em
+      max-width: 20em
+      margin-right: 1em
+    +at-breakpoint(35em 7)
+      margin-top: 2em
+      max-width: 20em
+      margin-right: 1em
+    +at-breakpoint(45em 9)
+		
+  div.actions .cancel
+    clear: both
+    float: none
+    margin-left: 1em
+    margin-right: 0
     
 #organizers
   clear: left
@@ -584,4 +659,4 @@ section#program
     display: block
   .endtime
     color: $primary-gray
-    
+		
