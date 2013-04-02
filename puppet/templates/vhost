@@ -13,7 +13,6 @@
 		AllowOverride All
 		Order allow,deny
 		allow from all
-		EnableSendfile off
 	</Directory>
 
 	ErrorLog /var/log/apache2/error.log
