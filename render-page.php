@@ -82,7 +82,7 @@
         , $p, $matches) ? true : false
       ) :
       $json_uri = '/api/v1/poi/' . $matches[2] . '/?category=13617&';
-      $template_file = $matches[1].'/restaurant.twig';
+      $template_file = $matches[1].'/local-eat.twig';
       array_push($parse_functions, 'fetch_links');
       break;
     case (
