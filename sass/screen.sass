@@ -672,8 +672,33 @@ aside.note
       margin-top: 0
 
 .sponsors #interested
-  +at-breakpoint(40em 7)
-    display: none
+  display: block
+  float: none
+  +at-breakpoint(30em 6)
+  +at-breakpoint(35em 7)
+  +at-breakpoint(45em 9)
+    float: right
+    max-width: 16em
+
+.sponsors article
+  ul
+    max-width: 13em
+    display: block
+    +at-breakpoint(30em 6)
+    +at-breakpoint(35em 7)
+    +at-breakpoint(45em 9)
+      float: left
+      max-width: 10em
+  h2
+    font-size: 1.6em
+    color: $secondary-pink
+    +at-breakpoint(30em 6)
+      font-size: 1.8em
+    +at-breakpoint(35em 7)
+    +at-breakpoint(45em 9)
+		
+  a.bigbutton
+    background-color: $secondary-pink
     
 section#description h1
   margin-top: 0
@@ -1028,3 +1053,4 @@ section div.iconBoxes:hover
 
 section div.iconBoxes:last-child
   margin-right: 0
+
