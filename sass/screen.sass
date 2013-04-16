@@ -671,9 +671,75 @@ aside.note
     h3 + p
       margin-top: 0
 
-.sponsors #interested
-  +at-breakpoint(40em 7)
-    display: none
+.sponsors #callAction
+  display: block
+  float: none
+  +at-breakpoint(30em 6)
+  +at-breakpoint(35em 7)
+    float: right
+    max-width: 16em
+  +at-breakpoint(45em 9)
+    float: right
+    max-width: 16em
+
+.sponsors .current
+  ul
+    max-width: 13em
+    display: block
+    +at-breakpoint(30em 6)
+    +at-breakpoint(35em 7)
+      float: left
+      max-width: 10em
+    +at-breakpoint(45em 9)
+      float: left
+      max-width: 10em
+  h2
+    font-size: 1.6em
+    color: $secondary-pink
+    +at-breakpoint(30em 6)
+      font-size: 1.8em
+    +at-breakpoint(35em 7)
+    +at-breakpoint(45em 9)
+		
+  a.bigbutton, a.button, a.bigbutton.secondary.register
+    background-color: $secondary-pink
+		
+  a.bigbutton:hover, a.button:hover, a.bigbutton.secondary.register:hover, input[type=submit]:hover, button:hover
+    background: lighten($secondary-pink, 10%)
+
+.sponsors article
+  h2
+    font-size: 1.6em
+    color: $secondary-pink
+    +at-breakpoint(30em 6)
+      font-size: 1.8em
+    +at-breakpoint(35em 7)
+    +at-breakpoint(45em 9)
+		
+  a.bigbutton, a.button, a.bigbutton.secondary.register
+    background-color: $secondary-pink
+
+  a.bigbutton:hover, a.button:hover, a.bigbutton.secondary.register:hover, input[type=submit]:hover, button:hover
+    background: lighten($secondary-pink, 10%)
+  
+
+.sponsors header a.register
+  background-color: $secondary-pink
+	
+.sponsors header
+  h1
+    margin: 1.6em auto
+  img#icon
+    max-width: 25%
+    margin-top: 3.5em
+    margin-left: 0
+    margin-right: 1em
+    float: left	
+    +at-breakpoint(30em 6)
+      margin-top: 2.4em
+    +at-breakpoint(35em 7)
+    +at-breakpoint(45em 9)
+      margin-top: 2em
     
 section#description h1
   margin-top: 0
@@ -1035,3 +1101,4 @@ section div.iconBoxes:hover
 
 section div.iconBoxes:last-child
   margin-right: 0
+
