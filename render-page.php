@@ -157,6 +157,28 @@
       $template_file = $matches[1].'/index.twig';
       array_push($parse_functions, 'get_all_results_pages');
       break;
+                  
+    # sponsors
+  
+    case (
+      preg_match(
+        "/^\/(sponsors)\/([0-9]{1,6})$/"
+        , $p, $matches) ? true : false
+      ) :
+      $json_uri = '/api/v1/poi/' . $matches[2] . '/?category=13615&';
+      $template_file = $matches[1].'/sponsor.twig';
+      array_push($parse_functions, 'fetch_links');
+      break;
+    case (
+      preg_match(
+        "/^\/(sponsors)\/$/"
+        , $p, $matches) ? true : false
+      ) :
+      $json_uri = '/api/v1/poi/?category=13615&';
+      $template_file = $matches[1].'/index.twig';
+      array_push($parse_functions, 'get_all_results_pages');
+      break;
+  
       
     # otherwise, 404
     
