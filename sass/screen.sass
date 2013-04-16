@@ -703,11 +703,17 @@ aside.note
     +at-breakpoint(35em 7)
     +at-breakpoint(45em 9)
 		
-  a.bigbutton, a.button, a.bigbutton.secondary.register
+  a.bigbutton
     background-color: $secondary-pink
 		
-  a.bigbutton:hover, a.button:hover, a.bigbutton.secondary.register:hover, input[type=submit]:hover, button:hover
+  a.bigbutton:hover
     background: lighten($secondary-pink, 10%)
+				
+  a.button.secondary.register
+    background-color: $secondary-green
+		
+  a.button.secondary.register:hover
+    background: lighten($secondary-green, 10%)
 
 .sponsors article
   h2
@@ -718,11 +724,23 @@ aside.note
     +at-breakpoint(35em 7)
     +at-breakpoint(45em 9)
 		
-  a.bigbutton, a.button, a.bigbutton.secondary.register
+  a.bigbutton
     background-color: $secondary-pink
 
-  a.bigbutton:hover, a.button:hover, a.bigbutton.secondary.register:hover, input[type=submit]:hover, button:hover
+  a.bigbutton:hover
     background: lighten($secondary-pink, 10%)
+		
+  a.bigbutton.secondary
+    background-color: $secondary-blue
+		
+  a.bigbutton.secondary:hover
+    background: lighten($secondary-blue, 10%)
+
+  a.button.secondary.register
+    background-color: $secondary-green
+		
+  a.button.secondary.register:hover
+    background: lighten($secondary-green, 10%)
 
   .level
     color: $primary-gray
