@@ -1109,3 +1109,26 @@ section div.iconBoxes:hover
 section div.iconBoxes:last-child
   margin-right: 0
 
+.your-stay article
+  ul
+    max-width: 100%
+    +at-breakpoint(35em 7)
+      +span-columns(3,7)
+    +at-breakpoint(45em 9)
+      +span-columns(4,9)
+    li
+      line-height: 1em
+      margin-bottom: 0.5em
+  .recommendations
+    max-width: 100%
+    font-size: 0.8em
+    h3
+      color: $secondary-green
+      margin-bottom: 0.5em
+      font-style: italic
+    p
+      margin-top: 0
+    +at-breakpoint(35em 7)
+      +span-columns(3 omega,7)
+    +at-breakpoint(45em 9)
+      +span-columns(4 omega,9)

@@ -1709,3 +1709,60 @@ section div.iconBoxes:hover {
 section div.iconBoxes:last-child {
   margin-right: 0;
 }
+
+/* line 1113, ../sass/screen.sass */
+.your-stay article ul {
+  max-width: 100%;
+}
+@media (min-width: 35em) {
+  /* line 1113, ../sass/screen.sass */
+  .your-stay article ul {
+    width: 41.17647%;
+    float: left;
+    margin-right: 2.94118%;
+  }
+}
+@media (min-width: 45em) {
+  /* line 1113, ../sass/screen.sass */
+  .your-stay article ul {
+    width: 43.18182%;
+    float: left;
+    margin-right: 2.27273%;
+  }
+}
+/* line 1119, ../sass/screen.sass */
+.your-stay article ul li {
+  line-height: 1em;
+  margin-bottom: 0.5em;
+}
+/* line 1122, ../sass/screen.sass */
+.your-stay article .recommendations {
+  max-width: 100%;
+  font-size: 0.8em;
+}
+/* line 1125, ../sass/screen.sass */
+.your-stay article .recommendations h3 {
+  color: #95b257;
+  margin-bottom: 0.5em;
+  font-style: italic;
+}
+/* line 1129, ../sass/screen.sass */
+.your-stay article .recommendations p {
+  margin-top: 0;
+}
+@media (min-width: 35em) {
+  /* line 1122, ../sass/screen.sass */
+  .your-stay article .recommendations {
+    width: 41.17647%;
+    float: right;
+    margin-right: 0;
+  }
+}
+@media (min-width: 45em) {
+  /* line 1122, ../sass/screen.sass */
+  .your-stay article .recommendations {
+    width: 43.18182%;
+    float: right;
+    margin-right: 0;
+  }
+}
