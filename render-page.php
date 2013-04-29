@@ -115,6 +115,27 @@
       $template_file = $matches[1].'/index.twig';
       array_push($parse_functions, 'get_all_results_pages');
       break;
+
+    # attractions
+  
+    case (
+      preg_match(
+        "/^\/(your-stay\/nightlife)\/([0-9]{1,6})$/"
+        , $p, $matches) ? true : false
+      ) :
+      $json_uri = '/api/v1/poi/' . $matches[2] . '/?category=18927&';
+      $template_file = $matches[1].'/nightlife.twig';
+      array_push($parse_functions, 'fetch_links');
+      break;
+    case (
+      preg_match(
+        "/^\/(your-stay\/nightlife)\/$/"
+        , $p, $matches) ? true : false
+      ) :
+      $json_uri = '/api/v1/poi/?category=18927&';
+      $template_file = $matches[1].'/index.twig';
+      array_push($parse_functions, 'get_all_results_pages');
+      break;
           
     # getting-here
   
