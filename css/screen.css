@@ -1743,12 +1743,24 @@ section div.iconBoxes:last-child {
 /* line 1125, ../sass/screen.sass */
 .your-stay article .recommendations h3 {
   color: #95b257;
-  margin-bottom: 0.5em;
+  margin-bottom: 0;
   font-style: italic;
 }
 /* line 1129, ../sass/screen.sass */
 .your-stay article .recommendations p {
   margin-top: 0;
+}
+/* line 1131, ../sass/screen.sass */
+.your-stay article .recommendations p.note {
+  font-size: 1em;
+  margin-bottom: 0.8em;
+  color: #999999;
+}
+@media (min-width: 45em) {
+  /* line 1131, ../sass/screen.sass */
+  .your-stay article .recommendations p.note {
+    font-size: 0.8em;
+  }
 }
 @media (min-width: 35em) {
   /* line 1122, ../sass/screen.sass */
