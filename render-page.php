@@ -1,7 +1,7 @@
 <?php
 
-//  ini_set('error_reporting', E_ALL);
-//  ini_set('display_errors', 1);
+  ini_set('error_reporting', E_ALL);
+  ini_set('display_errors', 1);
 
 # set defaults
 
@@ -238,7 +238,7 @@
   
     if ($stmt) {
       $result = $stmt->execute();
-      $data($result->fetchArray());
+      $data = $result->fetchArray();
     }
     
   } elseif (DATA_SOURCE == API) {
