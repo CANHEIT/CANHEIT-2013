@@ -5,11 +5,11 @@
 
 # set defaults
 
-  require_once('config.php');
+  require_once '../config.php';
   
 # load requirements
 
-  require_once 'lib/.vendor/autoload.php';
+  require_once '../lib/.vendor/autoload.php';
 
   $db = load_db();
 
