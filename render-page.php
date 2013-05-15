@@ -9,7 +9,7 @@
   $cache_dir = $current_dir . '/.json-cache/';
   $cache_time = 3600; //seconds
   $template_dir = 'templates';
-  $api_url_start = 'http://gears.guidebook.com';
+  $api_url_start = 'https://gears.guidebook.com';
   $api_url_end = 'format=json&username=jarsenea@uottawa.ca&api_key=DYJmr8vDWBrfZeBUr8wfgrhxMQUemRvnvSGYnfdKDQQxsvY';
 
 # load requirements
