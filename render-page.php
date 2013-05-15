@@ -210,8 +210,12 @@
 # load the data
 
   if ($stmt) {
+    $data = array();
+    $data['objects'] = array();
     $result = $stmt->execute();
-    $data = $result->fetchArray();
+    while($row = $result->fetchArray()) {
+      array_push($data['objects'], $row);
+    }
   }
 # test and parse the data 
 
@@ -310,7 +314,7 @@
     $day = $new_day = null;
     $starttime = $new_starttime = null;
     
-    foreach ($data['objects'] as $session) {   
+    foreach ($data['objects'] as $session) {
       # group sessions by day
       
         # determine the day of the first event
@@ -335,7 +339,7 @@
         
         if ($starttime != $new_starttime) {
           
-          # if different starttime, the setup a new object
+          # if different starttime, then setup a new object
           
           $starttimes_count = array_push(
             $list_of_days[$days_count - 1]['starttimes'],
@@ -352,8 +356,6 @@
       array_push($list_of_days[$days_count - 1]['starttimes'][$starttimes_count - 1]['events'], $session);
       
     }
-    
-    # replace the original $data objects list with the new dat => starttime listing
     
     unset($data['objects']);
     
