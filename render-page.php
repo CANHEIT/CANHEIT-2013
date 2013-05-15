@@ -14,25 +14,27 @@
   $template_dir = 'templates';
 
   $cache_dir = $current_dir . '/.cache/';
-  $cache_time = 3600; //seconds
-  $api_url_start = 'http://gears.guidebook.com';
-  $api_url_end = 'format=json&username=jarsenea@uottawa.ca&api_key=DYJmr8vDWBrfZeBUr8wfgrhxMQUemRvnvSGYnfdKDQQxsvY';
 
-  $db_file = $cache_dir . '/guide.db';
-  $db_source_url = 'http://s3.amazonaws.com/media.guidebook.com/service/vXSEB4weN3Px5jc7gCRKnAqask9yup6t/guide.db';
-
+  if (DATA_SOURCE == DB) {
+    $db_file = $cache_dir . '/guide.db';
+    $db_source_url = 'http://s3.amazonaws.com/media.guidebook.com/service/vXSEB4weN3Px5jc7gCRKnAqask9yup6t/guide.db';
+  } elseif (DATA_SOURCE == API) {
+    $cache_time = 3600; //seconds
+    $api_url_start = 'http://gears.guidebook.com';
+    $api_url_end = 'format=json&username=jarsenea@uottawa.ca&api_key=DYJmr8vDWBrfZeBUr8wfgrhxMQUemRvnvSGYnfdKDQQxsvY';
+  }
   
 # load requirements
 
   require_once 'lib/.vendor/autoload.php';
 
-  if (DATA_SOURCE == API) {
+  if (DATA_SOURCE == DB) {
+    $db = load_db();
+  } elseif (DATA_SOURCE == API) {
     require_once 'lib/.vendor/simplecache/simpleCache.php';
     $cache = new SimpleCache();
     $cache->cache_path = $cache_dir;
     $cache->cache_time = $cache_time;
-  } elseif (DATA_SOURCE == DB) {
-    $dbhandle = load_db();
   }
 
   $twig_loader = new Twig_Loader_Filesystem($template_dir);
@@ -54,6 +56,9 @@
         "/^\/(program)\/([0-9]{1,10})$/"
         , $p, $matches) ? true : false
       ) :
+      if (DATA_SOURCE == DB) {
+      } elseif (DATA_SOURCE == API) {
+      }
       $json_uri = '/api/v1/event/' . $matches[2] . '/?guide__id=5396&';
       $template_file = $matches[1].'/session.twig';
       array_push($parse_functions, 'fetch_links');
@@ -64,7 +69,11 @@
         "/^\/(program)\/$/"
         , $p, $matches) ? true : false
       ) :
-      $json_uri = '/api/v1/event/?guide__id=5396&limit=20&';
+      if (DATA_SOURCE == DB) {
+        $stmt = $db->prepare('SELECT * FROM `guidebook_event`;');
+      } elseif (DATA_SOURCE == API) {
+        $json_uri = '/api/v1/event/?guide__id=5396&limit=20&';
+      }
       $template_file = $matches[1].'/index.twig';
       array_push($parse_functions, 'prepare_program_data');
       break;
@@ -223,20 +232,35 @@
       return_404();
   }
 
-# load the json, throw a 404 on error
+# load the data
 
-  $json = get_api_object($json_uri);
+  if (DATA_SOURCE == DB) {
   
-  if (false === $json) {
-    return_404();
+    if ($stmt) {
+      $result = $stmt->execute();
+      $data($result->fetchArray());
+    }
+    
+  } elseif (DATA_SOURCE == API) {
+  
+    # load the json, throw a 404 on error
+    
+      $json = get_api_object($json_uri);
+      
+      if (false === $json) {
+        return_404();
+      }
+      
+      $json = utf8_encode($json);
+  
+    # decode the json into an array
+    
+      $data = json_decode($json, true);
   }
-  
-  $json = utf8_encode($json);
 
-# parse the json, throw a 404 on error
+# test and parse the data 
 
-  $data = json_decode($json, true);
-  
+  # test the data, throw a 404 on error
   if (false == is_array($data)) {
     return_404();
   }
@@ -282,7 +306,7 @@
       fclose($fp);
     }
     
-    return sqlite_open($db_file);
+    return new SQLite3($db_file);
   }
   
   function return_404() {
