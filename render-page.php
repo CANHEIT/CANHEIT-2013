@@ -5,15 +5,7 @@
 
 # set defaults
 
-  $current_dir = dirname(__FILE__);
-  $template_dir = 'templates';
-
-  $cache_dir = $current_dir . '/.cache/';
-
-  $db_file = $cache_dir . '/guide.db';
-  $db_source_url = 'http://s3.amazonaws.com/media.guidebook.com/service/vXSEB4weN3Px5jc7gCRKnAqask9yup6t/guide.db';
-  $image_aws_root_url = 'http://s3.amazonaws.com/media.guidebook.com/upload/5396/';
-  
+  require_once('config.php');
   
 # load requirements
 
@@ -21,7 +13,7 @@
 
   $db = load_db();
 
-  $twig_loader = new Twig_Loader_Filesystem($template_dir);
+  $twig_loader = new Twig_Loader_Filesystem(TEMPLATE_DIR);
   $twig = new Twig_Environment($twig_loader);
 
 # parse the URI
@@ -280,7 +272,7 @@
 
 # load the template
 
-  if (!is_file($template_dir . '/' . $template_file)) {
+  if (!is_file(TEMPLATE_DIR . '/' . $template_file)) {
     return_404();
   }
 
@@ -289,13 +281,12 @@
 # helper functions
 
   function load_db() {
-    global $db_file, $db_source_url;
 
     # if db_file doesn't exist, download it
-    if (!file_exists($db_file)) {
+    if (!file_exists(DB_FILE)) {
 
-      $ch = curl_init($db_source_url);
-      $fp = fopen($db_file, "w");
+      $ch = curl_init(DB_SOURCE_URL);
+      $fp = fopen(DB_FILE, "w");
       
       if ($fp === FALSE) {
         return_404();
@@ -312,7 +303,7 @@
       fclose($fp);
     }
     
-    return new SQLite3($db_file);
+    return new SQLite3(DB_FILE);
   }
   
   function return_404() {
@@ -334,9 +325,8 @@
   }
   
   function get_correct_image_url($image_filename) {
-    global $image_aws_root_url;
     if (preg_match('/img-(.*\.(png|jpg|gif))\.jpg/', $image_filename, $matches)) {
-      return $image_aws_root_url.$matches[1];
+      return IMAGE_AWS_ROOT_URL.$matches[1];
     }
   }
   
