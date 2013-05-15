@@ -14,6 +14,12 @@
   $db_source_url = 'http://s3.amazonaws.com/media.guidebook.com/service/vXSEB4weN3Px5jc7gCRKnAqask9yup6t/guide.db';
   $image_aws_root_url = 'http://s3.amazonaws.com/media.guidebook.com/upload/5396/';
   
+  $poi_query = 'SELECT guidebook_poi.* 
+  FROM guidebook_poi
+  INNER JOIN guidebook_poi_category
+  ON guidebook_poi_category.poi_id = guidebook_poi.id
+  WHERE guidebook_poi_category.poicategory_id = :id';
+  
 # load requirements
 
   require_once 'lib/.vendor/autoload.php';
@@ -74,7 +80,9 @@
         "/^\/(your-stay\/accommodations)\/$/"
         , $p, $matches) ? true : false
       ) :
-      $json_uri = '/api/v1/poi/?category=14833&';
+      $poi_category_id = 14833;
+      $stmt = $db->prepare($poi_query);
+      $stmt->bindParam(':id', $poi_category_id, SQLITE3_INTEGER);
       $template_file = $matches[1].'/index.twig';
       array_push($parse_functions, 'get_all_results_pages');
       break;
