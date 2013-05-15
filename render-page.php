@@ -5,15 +5,16 @@
 
 # set defaults
 
-  define(SQLITE, '1');
+  define(DB, '1');
   define(API, '2');
   
-  define(DATA_SOURCE, SQLITE);
+  define(DATA_SOURCE, DB);
 
   $current_dir = dirname(__FILE__);
   $template_dir = 'templates';
   
-  $sqlite_file = $current_dir . '/guide.db';
+  $db_file = $current_dir . '/guide-test.db';
+  $db_source_url = 'http://s3.amazonaws.com/media.guidebook.com/service/vXSEB4weN3Px5jc7gCRKnAqask9yup6t/guide.db';
   
   $api_cache_dir = $current_dir . '/.json-cache/';
   $api_cache_time = 3600; //seconds
@@ -29,8 +30,8 @@
     $api_cache = new SimpleCache();
     $api_cache->cache_path = $api_cache_dir;
     $api_cache->cache_time = $api_cache_time;
-  } elseif (DATA_SOURCE == SQLITE) {
-    ensure_sqlite_file();
+  } elseif (DATA_SOURCE == DB) {
+    $dbhandle = load_db();
   }
 
   $loader = new Twig_Loader_Filesystem($template_dir);
@@ -256,9 +257,27 @@
 
 # helper functions
 
-  function ensure_sqlite_download() {
-    # if sqlite_file doesn't exist, download it
-    # if error downloading, return a 404
+  function load_db() {
+    global $db_file, $db_source_url;
+
+    # if db_file doesn't exist, download it
+    if (!file_exists($db_file)) {
+
+      $ch = curl_init($db_source_url);
+      $fp = fopen($db_file, "w");
+      
+      curl_setopt($ch, CURLOPT_FILE, $fp);
+      curl_setopt($ch, CURLOPT_HEADER, 0);
+
+      # if error downloading, return a 404
+      if (curl_exec($ch) === FALSE) {
+        return_404();
+      }
+      curl_close($ch);
+      fclose($fp);
+    }
+    
+    return sqlite_open($db_file);
   }
   
   function return_404() {
