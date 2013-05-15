@@ -63,9 +63,11 @@
         "/^\/(your-stay\/accommodations)\/([0-9]{1,6})$/"
         , $p, $matches) ? true : false
       ) :
-      $json_uri = '/api/v1/poi/' . $matches[2] . '/?category=14833&';
+      $stmt = $db->prepare('SELECT * FROM `guidebook_poi` WHERE id = :id');
+      $stmt->bindParam(':id', $matches[2], SQLITE3_INTEGER);
+      $is_single_object_expected = true;
       $template_file = $matches[1].'/accommodation.twig';
-      array_push($parse_functions, 'fetch_links');
+      array_push($parse_functions, 'get_correct_image_urls', 'parse_links');
       break;
     case (
       preg_match(
@@ -85,8 +87,9 @@
         , $p, $matches) ? true : false
       ) :
       $json_uri = '/api/v1/poi/' . $matches[2] . '/?category=13617&';
+      $is_single_object_expected = true;
       $template_file = $matches[1].'/local-eat.twig';
-      array_push($parse_functions, 'fetch_links');
+      array_push($parse_functions, 'get_correct_image_urls', 'parse_links');
       break;
     case (
       preg_match(
@@ -106,8 +109,9 @@
         , $p, $matches) ? true : false
       ) :
       $json_uri = '/api/v1/poi/' . $matches[2] . '/?category=13618&';
+      $is_single_object_expected = true;
       $template_file = $matches[1].'/attraction.twig';
-      array_push($parse_functions, 'fetch_links');
+      array_push($parse_functions, 'get_correct_image_urls', 'parse_links');
       break;
     case (
       preg_match(
@@ -127,8 +131,9 @@
         , $p, $matches) ? true : false
       ) :
       $json_uri = '/api/v1/poi/' . $matches[2] . '/?category=18927&';
+      $is_single_object_expected = true;
       $template_file = $matches[1].'/nightlife.twig';
-      array_push($parse_functions, 'fetch_links');
+      array_push($parse_functions, 'get_correct_image_urls', 'parse_links');
       break;
     case (
       preg_match(
@@ -148,8 +153,9 @@
         , $p, $matches) ? true : false
       ) :
       $json_uri = '/api/v1/poi/' . $matches[2] . '/?category=14836&';
+      $is_single_object_expected = true;
       $template_file = $matches[1].'/getting-here.twig';
-      array_push($parse_functions, 'fetch_links');
+      array_push($parse_functions, 'get_correct_image_urls', 'parse_links');
       break;
     case (
       preg_match(
@@ -169,8 +175,9 @@
         , $p, $matches) ? true : false
       ) :
       $json_uri = '/api/v1/poi/' . $matches[2] . '/?category=14836&';
+      $is_single_object_expected = true;
       $template_file = $matches[1].'/uottawa-campus.twig';
-      array_push($parse_functions, 'fetch_links');
+      array_push($parse_functions, 'get_correct_image_urls', 'parse_links');
       break;
     case (
       preg_match(
@@ -190,8 +197,9 @@
         , $p, $matches) ? true : false
       ) :
       $json_uri = '/api/v1/poi/' . $matches[2] . '/?category=13615&';
+      $is_single_object_expected = true;
       $template_file = $matches[1].'/sponsor.twig';
-      array_push($parse_functions, 'fetch_links');
+      array_push($parse_functions, 'get_correct_image_urls', 'parse_links');
       break;
     case (
       preg_match(
