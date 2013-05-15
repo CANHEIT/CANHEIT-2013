@@ -35,8 +35,8 @@
     $dbhandle = load_db();
   }
 
-  $loader = new Twig_Loader_Filesystem($template_dir);
-  $twig = new Twig_Environment($loader);
+  $twig_loader = new Twig_Loader_Filesystem($template_dir);
+  $twig = new Twig_Environment($twig_loader);
 
 # parse the URI
 
