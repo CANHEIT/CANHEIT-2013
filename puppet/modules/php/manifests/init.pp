@@ -10,7 +10,7 @@ class php
         "php5-mcrypt", 
         "php5-gd", 
         "php5-curl",
-        "php5-sqlite3"
+        "php5-sqlite"
     ]
     
     package 

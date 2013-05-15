@@ -5,10 +5,10 @@
 
 # set defaults
 
-  define(DB, '1');
-  define(API, '2');
+  define('DB', 1);
+  define('API', 2);
   
-  define(DATA_SOURCE, DB);
+  define('DATA_SOURCE', DB);
 
   $current_dir = dirname(__FILE__);
   $template_dir = 'templates';

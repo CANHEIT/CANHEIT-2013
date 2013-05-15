@@ -12,6 +12,7 @@ exec
 
 include bootstrap
 include other
+include sqlite
 include apache
 include php
 include mysql
