@@ -14,11 +14,6 @@
   $db_source_url = 'http://s3.amazonaws.com/media.guidebook.com/service/vXSEB4weN3Px5jc7gCRKnAqask9yup6t/guide.db';
   $image_aws_root_url = 'http://s3.amazonaws.com/media.guidebook.com/upload/5396/';
   
-  $poi_query = 'SELECT guidebook_poi.* 
-  FROM guidebook_poi
-  INNER JOIN guidebook_poi_category
-  ON guidebook_poi_category.poi_id = guidebook_poi.id
-  WHERE guidebook_poi_category.poicategory_id = :id';
   
 # load requirements
 
@@ -34,6 +29,15 @@
   $p = $_SERVER['REQUEST_URI'];
   $template_file = "";
   $parse_functions = Array();
+  
+  # defaults for fetched data
+  $poi_category_id = NULL;
+  $poi_query = 'SELECT guidebook_poi.* 
+  FROM guidebook_poi
+  INNER JOIN guidebook_poi_category
+  ON guidebook_poi_category.poi_id = guidebook_poi.id
+  WHERE guidebook_poi_category.poicategory_id = :id
+  ORDER BY guidebook_poi.rank';
   $is_single_object_expected = false;
   
   switch ($p) {
@@ -57,7 +61,7 @@
         "/^\/(program)\/$/"
         , $p, $matches) ? true : false
       ) :
-      $stmt = $db->prepare('SELECT * FROM `guidebook_event`;');
+      $stmt = $db->prepare('SELECT * FROM `guidebook_event` ORDER BY startTime;');
       $template_file = $matches[1].'/index.twig';
       array_push($parse_functions, 'prepare_program_data');
       break;
@@ -104,7 +108,9 @@
         "/^\/(your-stay\/local-eats)\/$/"
         , $p, $matches) ? true : false
       ) :
-      $json_uri = '/api/v1/poi/?category=13617&';
+      $poi_category_id = 13617;
+      $stmt = $db->prepare($poi_query);
+      $stmt->bindParam(':id', $poi_category_id, SQLITE3_INTEGER);
       $template_file = $matches[1].'/index.twig';
       array_push($parse_functions, 'get_all_results_pages');
       break;
@@ -126,12 +132,14 @@
         "/^\/(your-stay\/attractions)\/$/"
         , $p, $matches) ? true : false
       ) :
-      $json_uri = '/api/v1/poi/?category=13618&';
+      $poi_category_id = 13618;
+      $stmt = $db->prepare($poi_query);
+      $stmt->bindParam(':id', $poi_category_id, SQLITE3_INTEGER);
       $template_file = $matches[1].'/index.twig';
       array_push($parse_functions, 'get_all_results_pages');
       break;
 
-    # attractions
+    # nightlife
   
     case (
       preg_match(
@@ -148,7 +156,9 @@
         "/^\/(your-stay\/nightlife)\/$/"
         , $p, $matches) ? true : false
       ) :
-      $json_uri = '/api/v1/poi/?category=18927&';
+      $poi_category_id = 18927;
+      $stmt = $db->prepare($poi_query);
+      $stmt->bindParam(':id', $poi_category_id, SQLITE3_INTEGER);
       $template_file = $matches[1].'/index.twig';
       array_push($parse_functions, 'get_all_results_pages');
       break;
@@ -170,7 +180,9 @@
         "/^\/(your-stay\/getting-here)\/$/"
         , $p, $matches) ? true : false
       ) :
-      $json_uri = '/api/v1/poi/?category=14836&';
+      $poi_category_id = 14836;
+      $stmt = $db->prepare($poi_query);
+      $stmt->bindParam(':id', $poi_category_id, SQLITE3_INTEGER);
       $template_file = $matches[1].'/index.twig';
       array_push($parse_functions, 'get_all_results_pages');
       break;
@@ -192,7 +204,9 @@
         "/^\/(your-stay\/uottawa-campus)\/$/"
         , $p, $matches) ? true : false
       ) :
-      $json_uri = '/api/v1/poi/?category=17939&';
+      $poi_category_id = 17939;
+      $stmt = $db->prepare($poi_query);
+      $stmt->bindParam(':id', $poi_category_id, SQLITE3_INTEGER);
       $template_file = $matches[1].'/index.twig';
       array_push($parse_functions, 'get_all_results_pages');
       break;
@@ -214,7 +228,9 @@
         "/^\/(sponsors)\/$/"
         , $p, $matches) ? true : false
       ) :
-      $json_uri = '/api/v1/poi/?category=13615&';
+      $poi_category_id = 13615;
+      $stmt = $db->prepare($poi_query);
+      $stmt->bindParam(':id', $poi_category_id, SQLITE3_INTEGER);
       $template_file = $matches[1].'/index.twig';
       array_push($parse_functions, 'get_all_results_pages');
       break;
