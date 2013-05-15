@@ -98,7 +98,8 @@
         "/^\/(your-stay\/local-eats)\/([0-9]{1,6})$/"
         , $p, $matches) ? true : false
       ) :
-      $json_uri = '/api/v1/poi/' . $matches[2] . '/?category=13617&';
+      $stmt = $db->prepare('SELECT * FROM `guidebook_poi` WHERE id = :id');
+      $stmt->bindParam(':id', $matches[2], SQLITE3_INTEGER);
       $is_single_object_expected = true;
       $template_file = $matches[1].'/local-eat.twig';
       array_push($parse_functions, 'get_correct_image_urls', 'parse_links');
@@ -122,7 +123,8 @@
         "/^\/(your-stay\/attractions)\/([0-9]{1,6})$/"
         , $p, $matches) ? true : false
       ) :
-      $json_uri = '/api/v1/poi/' . $matches[2] . '/?category=13618&';
+      $stmt = $db->prepare('SELECT * FROM `guidebook_poi` WHERE id = :id');
+      $stmt->bindParam(':id', $matches[2], SQLITE3_INTEGER);
       $is_single_object_expected = true;
       $template_file = $matches[1].'/attraction.twig';
       array_push($parse_functions, 'get_correct_image_urls', 'parse_links');
@@ -146,7 +148,8 @@
         "/^\/(your-stay\/nightlife)\/([0-9]{1,6})$/"
         , $p, $matches) ? true : false
       ) :
-      $json_uri = '/api/v1/poi/' . $matches[2] . '/?category=18927&';
+      $stmt = $db->prepare('SELECT * FROM `guidebook_poi` WHERE id = :id');
+      $stmt->bindParam(':id', $matches[2], SQLITE3_INTEGER);
       $is_single_object_expected = true;
       $template_file = $matches[1].'/nightlife.twig';
       array_push($parse_functions, 'get_correct_image_urls', 'parse_links');
@@ -170,7 +173,8 @@
         "/^\/(your-stay\/getting-here)\/([0-9]{1,6})$/"
         , $p, $matches) ? true : false
       ) :
-      $json_uri = '/api/v1/poi/' . $matches[2] . '/?category=14836&';
+      $stmt = $db->prepare('SELECT * FROM `guidebook_poi` WHERE id = :id');
+      $stmt->bindParam(':id', $matches[2], SQLITE3_INTEGER);
       $is_single_object_expected = true;
       $template_file = $matches[1].'/getting-here.twig';
       array_push($parse_functions, 'get_correct_image_urls', 'parse_links');
@@ -194,7 +198,8 @@
         "/^\/(your-stay\/uottawa-campus)\/([0-9]{1,6})$/"
         , $p, $matches) ? true : false
       ) :
-      $json_uri = '/api/v1/poi/' . $matches[2] . '/?category=14836&';
+      $stmt = $db->prepare('SELECT * FROM `guidebook_poi` WHERE id = :id');
+      $stmt->bindParam(':id', $matches[2], SQLITE3_INTEGER);
       $is_single_object_expected = true;
       $template_file = $matches[1].'/uottawa-campus.twig';
       array_push($parse_functions, 'get_correct_image_urls', 'parse_links');
@@ -218,7 +223,8 @@
         "/^\/(sponsors)\/([0-9]{1,6})$/"
         , $p, $matches) ? true : false
       ) :
-      $json_uri = '/api/v1/poi/' . $matches[2] . '/?category=13615&';
+      $stmt = $db->prepare('SELECT * FROM `guidebook_poi` WHERE id = :id');
+      $stmt->bindParam(':id', $matches[2], SQLITE3_INTEGER);
       $is_single_object_expected = true;
       $template_file = $matches[1].'/sponsor.twig';
       array_push($parse_functions, 'get_correct_image_urls', 'parse_links');
@@ -340,9 +346,12 @@
     }
     
     $new_links = json_decode($data['links'],1); // convert to array
-    
+
     unset($data['links']);
-    $data['links'] = $new_links[0]['links'];
+    
+    if(is_array($new_links) && !empty($new_links) && is_array($new_links[0]) && is_array($new_links[0]['links'])) {
+      $data['links'] = $new_links[0]['links'];
+    }
   }
   
   function get_api_object($object_uri) {
