@@ -12,6 +12,7 @@
 
   $db_file = $cache_dir . '/guide.db';
   $db_source_url = 'http://s3.amazonaws.com/media.guidebook.com/service/vXSEB4weN3Px5jc7gCRKnAqask9yup6t/guide.db';
+  $image_aws_root_url = 'http://s3.amazonaws.com/media.guidebook.com/upload/5396/';
   
 # load requirements
 
@@ -27,6 +28,7 @@
   $p = $_SERVER['REQUEST_URI'];
   $template_file = "";
   $parse_functions = Array();
+  $is_single_object_expected = false;
   
   switch ($p) {
   
@@ -37,9 +39,11 @@
         "/^\/(program)\/([0-9]{1,10})$/"
         , $p, $matches) ? true : false
       ) :
-      $json_uri = '/api/v1/event/' . $matches[2] . '/?guide__id=5396&';
+      $stmt = $db->prepare('SELECT * FROM `guidebook_event` WHERE id = :id');
+      $stmt->bindParam(':id', $matches[2], SQLITE3_INTEGER);
+      $is_single_object_expected = true;
       $template_file = $matches[1].'/session.twig';
-      array_push($parse_functions, 'fetch_links');
+      array_push($parse_functions, 'get_correct_image_urls', 'parse_links');
       break;
     
     case (
@@ -48,7 +52,6 @@
         , $p, $matches) ? true : false
       ) :
       $stmt = $db->prepare('SELECT * FROM `guidebook_event`;');
-      $json_uri = '/api/v1/event/?guide__id=5396&limit=20&';
       $template_file = $matches[1].'/index.twig';
       array_push($parse_functions, 'prepare_program_data');
       break;
@@ -213,9 +216,15 @@
     $data = array();
     $data['objects'] = array();
     $result = $stmt->execute();
-    while($row = $result->fetchArray()) {
-      array_push($data['objects'], $row);
+    
+    if ($is_single_object_expected) {
+      $data = $result->fetchArray();
+    } else {
+      while($row = $result->fetchArray()) {
+        array_push($data['objects'], $row);
+      }
     }
+    
   }
 # test and parse the data 
 
@@ -274,19 +283,34 @@
     exit;
   }
   
-  function fetch_links(&$data) {
-    if(!is_array($data['links'])) {
+  function get_correct_image_urls(&$data) {
+    if (isset($data['objects'])) {
+      foreach($data['objects'] as $object) {
+        if (isset($object['image'])) {
+          $object['image'] = get_correct_image_url($object['image']);
+        }
+      }
+    } else {
+       $data['image'] = get_correct_image_url($data['image']);
+    }
+  }
+  
+  function get_correct_image_url($image_filename) {
+    global $image_aws_root_url;
+    if (preg_match('/img-(.*\.(png|jpg|gif))\.jpg/', $image_filename, $matches)) {
+      return $image_aws_root_url.$matches[1];
+    }
+  }
+  
+  function parse_links(&$data) {
+    if(!isset($data['links'])) {
       return;
     }
     
-    foreach ($data['links'] as $i => $link) {
-      $json = get_api_object($link . "?guide__id=5396&");
-      $json = utf8_encode($json);
-      $link_data = json_decode($json, true);
-      if (is_array($link_data)) {
-        $data['links'][$i] = $link_data;
-      }
-    }
+    $new_links = json_decode($data['links'],1); // convert to array
+    
+    unset($data['links']);
+    $data['links'] = $new_links[0]['links'];
   }
   
   function get_api_object($object_uri) {
