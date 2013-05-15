@@ -20,7 +20,7 @@
     $db_source_url = 'http://s3.amazonaws.com/media.guidebook.com/service/vXSEB4weN3Px5jc7gCRKnAqask9yup6t/guide.db';
   } elseif (DATA_SOURCE == API) {
     $cache_time = 3600; //seconds
-    $api_url_start = 'http://gears.guidebook.com';
+    $api_url_start = 'https://gears.guidebook.com';
     $api_url_end = 'format=json&username=jarsenea@uottawa.ca&api_key=DYJmr8vDWBrfZeBUr8wfgrhxMQUemRvnvSGYnfdKDQQxsvY';
   }
   
