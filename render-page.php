@@ -5,22 +5,36 @@
 
 # set defaults
 
+  define(SQLITE, '1');
+  define(API, '2');
+  
+  define(DATA_SOURCE, SQLITE);
+
   $current_dir = dirname(__FILE__);
-  $cache_dir = $current_dir . '/.json-cache/';
-  $cache_time = 3600; //seconds
   $template_dir = 'templates';
+  
+  $sqlite_file = $current_dir . '/guide.db';
+  
+  $api_cache_dir = $current_dir . '/.json-cache/';
+  $api_cache_time = 3600; //seconds
   $api_url_start = 'http://gears.guidebook.com';
   $api_url_end = 'format=json&username=jarsenea@uottawa.ca&api_key=DYJmr8vDWBrfZeBUr8wfgrhxMQUemRvnvSGYnfdKDQQxsvY';
-
+  
 # load requirements
 
   require_once 'lib/.vendor/autoload.php';
-  require_once 'lib/.vendor/simplecache/simpleCache.php';
+
+  if (DATA_SOURCE == API) {
+    require_once 'lib/.vendor/simplecache/simpleCache.php';
+    $api_cache = new SimpleCache();
+    $api_cache->cache_path = $api_cache_dir;
+    $api_cache->cache_time = $api_cache_time;
+  } elseif (DATA_SOURCE == SQLITE) {
+    ensure_sqlite_file();
+  }
+
   $loader = new Twig_Loader_Filesystem($template_dir);
   $twig = new Twig_Environment($loader);
-  $cache = new SimpleCache();
-  $cache->cache_path = $cache_dir;
-  $cache->cache_time = $cache_time;
 
 # parse the URI
 
@@ -242,6 +256,11 @@
 
 # helper functions
 
+  function ensure_sqlite_download() {
+    # if sqlite_file doesn't exist, download it
+    # if error downloading, return a 404
+  }
+  
   function return_404() {
     header("HTTP/1.0 404 Not Found");
     require '404.html';
@@ -264,9 +283,9 @@
   }
   
   function get_api_object($object_uri) {
-    global $cache, $api_url_start, $api_url_end;
+    global $api_cache, $api_url_start, $api_url_end;
     
-    return $cache->get_data(
+    return $api_cache->get_data(
       get_api_object_hash($object_uri),
       $api_url_start . $object_uri . $api_url_end
     );

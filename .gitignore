@@ -3,6 +3,7 @@
 .sass-cache/
 .json-cache/
 .DS_Store
+guide.db
 *.esproj
 .vagrant
 localhost\:8080
