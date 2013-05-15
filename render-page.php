@@ -354,19 +354,6 @@
     }
   }
   
-  function get_api_object($object_uri) {
-    global $cache, $api_url_start, $api_url_end;
-    
-    return $cache->get_data(
-      get_api_object_hash($object_uri),
-      $api_url_start . $object_uri . $api_url_end
-    );
-  }
-  
-  function get_api_object_hash($object_uri) {
-    return hash('sha1',$object_uri);
-  }
-  
 # program helpers
 
   function prepare_program_data(&$data) {
