@@ -2,8 +2,8 @@
 # Read about how to use .gitignore: https://help.github.com/articles/ignoring-files
 .sass-cache/
 .json-cache/
+.cache/
 .DS_Store
-guide.db
 *.esproj
 .vagrant
 localhost\:8080
