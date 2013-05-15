@@ -301,41 +301,7 @@
 # program helpers
 
   function prepare_program_data(&$data) {
-    get_all_results_pages($data);
     group_sessions_by_day_and_start_time($data);
-  }
-  
-  function get_all_results_pages(&$data) {
-    # build a new object to store all the pages
-    
-      $pages = array();
-      $count = array_push($pages, $data);
-      $is_next_page = false;
-      
-      # keep fetching until you get all the pages
-      
-      do {
-        $i = $count - 1;
-        $is_next_page = (isset($pages[$i]['meta']['next']) && $pages[$i]['meta']['next'] != "null")? true : false;
-        
-        $json = get_api_object($pages[$i]['meta']['next'] . "&");
-        $json = utf8_encode($json);
-        $count = array_push($pages, json_decode($json, true));
-      } while ($is_next_page);
-      
-      # assemble back into a single object for usage
-      unset($data['objects']);
-      
-      $data['objects'] = array();
-      
-      foreach ($pages as $page) {
-        foreach ($page['objects'] as $object) {
-          array_push($data['objects'], $object);
-        }
-      }
-      
-      # invalidate the "next" attribute in the data field
-      $data['meta']['next'] = "null";
   }
   
   function group_sessions_by_day_and_start_time(&$data) {
