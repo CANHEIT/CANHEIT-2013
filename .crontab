@@ -1,0 +1,2 @@
+# run every minute
+* * * * *       curl http://canheit.uottawa.ca/php/update-db.php > /dev/null 2>&1
