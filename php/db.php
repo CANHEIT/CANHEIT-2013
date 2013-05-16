@@ -1,4 +1,4 @@
-<?
+<?php
 
   require_once '../config.php';
 
@@ -16,6 +16,10 @@
   
   function download_db() {
     $ch = curl_init(DB_SOURCE_URL);
+    
+    if (!file_exists(CACHE_DIR)) {
+    	mkdir(CACHE_DIR);
+    }
     $fp = fopen(DB_DOWNLOAD_FILE, "w");
     
     if ($fp === FALSE) {
@@ -32,7 +36,9 @@
     curl_close($ch);
     fclose($fp);
     
-    unlink(DB_FILE);
+    if (file_exists(DB_FILE)) {
+	    unlink(DB_FILE);
+	  }
     rename(DB_DOWNLOAD_FILE, DB_FILE);
     
     return file_exists(DB_FILE);

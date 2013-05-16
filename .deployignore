@@ -1,9 +1,9 @@
 .vagrant/
 Vagrantfile
 .sass-cache/
-.cache/
 .json-cache/
-composer*
+.cache/
+#composer*
 config.rb
 localhost:8080/
 wget.log
