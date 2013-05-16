@@ -1,8 +1,8 @@
 .vagrant/
 Vagrantfile
 .sass-cache/
-.cache/
 .json-cache/
+.cache/
 composer*
 config.rb
 localhost:8080/

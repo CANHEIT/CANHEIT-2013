@@ -16,6 +16,10 @@
   
   function download_db() {
     $ch = curl_init(DB_SOURCE_URL);
+    
+    if (!file_exists(CACHE_DIR)) {
+    	mkdir(CACHE_DIR);
+    }
     $fp = fopen(DB_DOWNLOAD_FILE, "w");
     
     if ($fp === FALSE) {

@@ -10,6 +10,7 @@ Vagrant::Config.run do |config|
         inv_config.vm.forward_port 80, 8080
         inv_config.vm.forward_port 3306, 8889
         inv_config.vm.host_name = "canheit"
+        inv_config.vm.share_folder("v-root", "/vagrant", ".", :owner => "www-data", :group => "www-data")
 
         inv_config.vm.provision :puppet do |puppet|
             puppet.manifests_path = "puppet/manifests"
