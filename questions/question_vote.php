@@ -24,9 +24,7 @@ if ($_POST['vote'] == 'up') {
 	$vote = "-";
 }
 
-/* count for testing allows 5 votes */
-if ($count >= 5) {
-// if ($count == 0) {
+if ($count == 0) {
 	$query_updatescore = "UPDATE questions SET score=(score $vote 1) WHERE id=$id";
 	$query_insertip = "INSERT INTO voting_ip (q_id_fk,ip_add) VALUES ('$id','$ip')";
 	
