@@ -1,4 +1,4 @@
-<?
+<?php
   define('TEMPLATE_DIR', dirname(__FILE__) . '/templates');
   
   define('CACHE_DIR', dirname(__FILE__) . '/.cache/');

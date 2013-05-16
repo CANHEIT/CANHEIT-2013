@@ -1,4 +1,4 @@
-<?
+<?php
 
   require_once '../config.php';
 
@@ -36,7 +36,9 @@
     curl_close($ch);
     fclose($fp);
     
-    unlink(DB_FILE);
+    if (file_exists(DB_FILE)) {
+	    unlink(DB_FILE);
+	  }
     rename(DB_DOWNLOAD_FILE, DB_FILE);
     
     return file_exists(DB_FILE);
