@@ -3,7 +3,7 @@ Vagrantfile
 .sass-cache/
 .json-cache/
 .cache/
-composer*
+#composer*
 config.rb
 localhost:8080/
 wget.log

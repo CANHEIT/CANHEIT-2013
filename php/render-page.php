@@ -20,6 +20,9 @@
 # parse the URI
 
   $p = $_SERVER['REQUEST_URI'];
+	if (preg_match('/^\/[0-9]{2}\//',$p)) {
+	  $p = substr($p, 3);
+	}
   $template_file = "";
   $parse_functions = Array();
   
@@ -284,7 +287,7 @@
 
   function return_404() {
     header("HTTP/1.0 404 Not Found");
-    require '404.html';
+    require '../404.html';
     exit;
   }
   
