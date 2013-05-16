@@ -45,7 +45,7 @@
             
             {% if image %}
             
-            <img src="http:{{ image }}" />
+            <img src="{{ image }}" />
             
             {% endif %}
             
@@ -62,8 +62,8 @@
             <h2>Links</h2>
             <ul id="links">
             {% for link in links %}
-              {% if link.objectType == "url" %}
-              <li><a href="{{ link.objectID }}">{{ link.name }}</a></li>
+              {% if link.gb_url|slice(0, 4) == 'http' %}
+              <li><a href="{{ link.gb_url }}">{{ link.title }}</a></li>
               {% endif %}
             {% endfor %}
             </ul>
