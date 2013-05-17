@@ -1773,15 +1773,17 @@ label#name_label {
   text-align: left;
   font-weight: bold;
   margin-bottom: 1em;
+  margin-top: 0.5em;
   display: block;
+  font-size: 1.2em;
 }
 
-/* line 1185, ../sass/screen.sass */
+/* line 1187, ../sass/screen.sass */
 textarea#question {
   width: 99%;
 }
 
-/* line 1189, ../sass/screen.sass */
+/* line 1191, ../sass/screen.sass */
 form#question_add {
   border: 0.05em solid black;
   padding: 1em;
@@ -1789,7 +1791,7 @@ form#question_add {
   background-color: #f2f2f2;
 }
 
-/* line 1195, ../sass/screen.sass */
+/* line 1197, ../sass/screen.sass */
 form#question_add input {
-  margin-top: 1em;
+  margin-top: 1.5em;
 }
