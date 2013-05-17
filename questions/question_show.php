@@ -54,7 +54,7 @@ if ($result = $mysqli->query($query)) {
 		printf("<div class=\"question\">");
 		printf("<div class=\"question-text\"><span class=\"question-score\">%s</span>%s</div>", $obj->score, $obj->question);
         printf("<div class=\"voting-buttons\"><a href=\"#\" id=\"%s\" class=\"vote vote-up\" name=\"up\">Up vote</a>&nbsp;&nbsp;<a href=\"#\" id=\"%s\" class=\"vote vote-down\" name=\"down\">Down vote</a></div>", $obj->id, $obj->id);
-        printf("</div>");
+        printf("</div><hr>");
     }
 
     /* free result set */
