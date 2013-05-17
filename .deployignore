@@ -1,0 +1,13 @@
+.vagrant/
+Vagrantfile
+.sass-cache/
+.json-cache/
+.cache/
+#composer*
+config.rb
+localhost:8080/
+wget.log
+README.md
+.git*
+.deployignore
+sass/
