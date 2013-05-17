@@ -17,14 +17,14 @@ bold, strong {
   *zoom: 1;
   max-width: 19em;
   _width: 19em;
-  margin-left: auto;
-  margin-right: auto;
   padding-left: 1em;
   padding-right: 1em;
+  margin-left: auto;
+  margin-right: auto;
   background-color: white;
   padding: 1em 1em;
 }
-/* line 38, ../../../../../../usr/local/Cellar/ruby/1.9.3-p286/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+/* line 38, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
 .container:after {
   content: "";
   display: table;
@@ -34,12 +34,12 @@ bold, strong {
   /* line 18, ../sass/screen.sass */
   .container {
     max-width: 29em;
-    margin-left: auto;
-    margin-right: auto;
     padding-left: 1em;
     padding-right: 1em;
+    margin-left: auto;
+    margin-right: auto;
   }
-  /* line 38, ../../../../../../usr/local/Cellar/ruby/1.9.3-p286/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+  /* line 38, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
   .container:after {
     content: "";
     display: table;
@@ -50,12 +50,12 @@ bold, strong {
   /* line 18, ../sass/screen.sass */
   .container {
     max-width: 34em;
-    margin-left: auto;
-    margin-right: auto;
     padding-left: 1em;
     padding-right: 1em;
+    margin-left: auto;
+    margin-right: auto;
   }
-  /* line 38, ../../../../../../usr/local/Cellar/ruby/1.9.3-p286/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+  /* line 38, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
   .container:after {
     content: "";
     display: table;
@@ -66,12 +66,12 @@ bold, strong {
   /* line 18, ../sass/screen.sass */
   .container {
     max-width: 44em;
-    margin-left: auto;
-    margin-right: auto;
     padding-left: 1em;
     padding-right: 1em;
+    margin-left: auto;
+    margin-right: auto;
   }
-  /* line 38, ../../../../../../usr/local/Cellar/ruby/1.9.3-p286/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+  /* line 38, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
   .container:after {
     content: "";
     display: table;
@@ -1708,4 +1708,88 @@ section div.iconBoxes:hover {
 /* line 1109, ../sass/screen.sass */
 section div.iconBoxes:last-child {
   margin-right: 0;
+}
+
+/* line 1115, ../sass/screen.sass */
+.voting-buttons {
+  margin-left: 70px;
+}
+
+/* line 1119, ../sass/screen.sass */
+a.vote {
+  text-decoration: none;
+  border: 1px solid white;
+  padding: 5px;
+  color: black;
+  border-radius: 3px;
+  color: white;
+  -webkit-box-shadow: 1px 3px 10px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 1px 3px 10px 0px rgba(0, 0, 0, 0.2);
+  font-size: 20px;
+}
+
+/* line 1131, ../sass/screen.sass */
+a.vote.vote-up {
+  background-color: #95b257;
+}
+
+/* line 1135, ../sass/screen.sass */
+a.vote.vote-up:hover {
+  background-color: #abc27a;
+}
+
+/* line 1139, ../sass/screen.sass */
+a.vote.vote-down {
+  background-color: #f36f67;
+}
+
+/* line 1143, ../sass/screen.sass */
+a.vote.vote-down:hover {
+  background-color: #f79a95;
+}
+
+/* line 1147, ../sass/screen.sass */
+span.question-score {
+  padding: 7px 15px;
+  margin-right: 20px;
+  background-color: #f3f3f3;
+  color: #777777;
+  text-align: center;
+  font-size: 32px;
+  font-weight: bold;
+  border-radius: 5px;
+  border: 1px solid #dddddd;
+}
+
+/* line 1174, ../sass/screen.sass */
+label.error {
+  width: 250px;
+  display: inline;
+  color: red;
+}
+
+/* line 1179, ../sass/screen.sass */
+label#name_label {
+  text-align: left;
+  font-weight: bold;
+  margin-bottom: 1em;
+  display: block;
+}
+
+/* line 1185, ../sass/screen.sass */
+textarea#question {
+  width: 99%;
+}
+
+/* line 1189, ../sass/screen.sass */
+form#question_add {
+  border: 0.05em solid black;
+  padding: 1em;
+  border-radius: 10px;
+  background-color: #f2f2f2;
+}
+
+/* line 1195, ../sass/screen.sass */
+form#question_add input {
+  margin-top: 1em;
 }

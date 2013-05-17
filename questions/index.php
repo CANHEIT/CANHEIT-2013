@@ -26,83 +26,7 @@ $session_name = $json_output->name;
         <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700,400italic,600italic,700italic' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="../../css/screen.css"><link rel="stylesheet" href="../../js/vendor/jquery.smartbanner/jquery.smartbanner.css">
         <script src="../../js/vendor/modernizr-2.6.2.min.js"></script>
-		<style>
-		label.error { width: 250px; display: inline; color: red;}
-		
-		.voting-buttons {
-			margin-left: 70px;
-		}		
-		a.vote {
-			text-decoration: none;
-			border: 1px solid #fff;
-			padding: 5px;
-			color: #000;
-			border-radius: 3px;	
-			color: #fff;
-			-webkit-box-shadow: 1px 3px 10px 0px rgba(0, 0, 0, 0.2);
-			box-shadow: 1px 3px 10px 0px rgba(0, 0, 0, 0.2);
-			font-size: 20px;
-		}
-		
-		a.vote.vote-up {
-			background-color: #95b257;
-		}		
-
-		a.vote.vote-up:hover {
-			background-color: #abc27a;
-		}
-		
-		a.vote.vote-down {
-			background-color: #f36f67;
-		}		
-		
-		a.vote.vote-down:hover {
-			background-color: #F79A95;
-		}
-		
-		span.question-score {
-			padding: 7px 15px;
-			margin-right: 20px;
-			background-color: #f3f3f3;
-			color: #777;
-			text-align: center;
-			font-size: 32px;
-			font-weight: bold;
-			border-radius: 5px;
-			border: 1px solid #ddd;
-		}
-				
-		.question-text {
-			margin-bottom: 10px;
-			font-size: 28px;
-			font-weight: bold;
-		}
-		
-		.question {
-			margin: 50px 0;
-		}
-		
-		#questions {
-
-		}
-		
-		form#question_add {
-			text-align: center;
-		}
-		textarea#question {
-			width: 90%;
-		}
-		
-		label#name_label {
-			text-align: left;
-			font-weight: bold;
-			display:block;
-		}
-		
-		form#question_add input {
-			margin-top: 20px;
-		}
-		</style>        
+		        
     </head>
     <body>
         <!--[if lt IE 9]>
@@ -131,6 +55,7 @@ $session_name = $json_output->name;
 				<form name="question_add" id="question_add" action="" method="POST">  
 				<!-- The Name form field -->
 					<label for="question" id="name_label">Enter your question</label>  
+          
 					<!-- <input type="text" name="question" id="question" size="30" value=""/>   -->
 					<textarea name="question" id="question" autofocus></textarea>
 					<br>
