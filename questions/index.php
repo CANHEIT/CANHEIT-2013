@@ -2,7 +2,6 @@
 $jsonurl = "https://gears.guidebook.com/api/v1/event/" . $_GET['sessionid'] . "/?guide__id=5396&format=json&username=jarsenea@uottawa.ca&api_key=DYJmr8vDWBrfZeBUr8wfgrhxMQUemRvnvSGYnfdKDQQxsvY";
 $json = file_get_contents($jsonurl,0,null,null);
 $json_output = json_decode($json);
-
 $session_name = $json_output->name;
 ?>
 
@@ -12,7 +11,7 @@ $session_name = $json_output->name;
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>Interactive Questions - <?= $session_name ?></title>
+        <title>Interactive Questions - <?php echo $session_name; ?></title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
         
@@ -45,7 +44,7 @@ $session_name = $json_output->name;
           </header>
           <article>
             <header>
-              <a href="../" rel="home" class="return">Return to session page: <?php echo $session_name; ?></a>
+              <a href="http://canheit.uottawa.ca/program/<?php echo $_GET[sessionid]; ?>" rel="home" class="return">Return to session page: <?php echo $session_name; ?></a>
               
 <!--               <h1><?php echo $session_name; ?></h1> -->
               <h2>Interactive Question Period</h2>
@@ -60,10 +59,11 @@ $session_name = $json_output->name;
 					<textarea name="question" id="question" autofocus></textarea>
 					<br>
 				<!-- The Submit button -->
-					<input type="hidden" name="sessionid" value="<?= $_GET['sessionid'] ?>"/>
+					<input type="hidden" name="sessionid" value="<?php $_GET['sessionid'] ?>"/>
 					<input type="submit" name="submit" value="Submit"> 
 				</form>
 				<!-- We will output the results from process.php here -->
+
 				<div id="questions"><div>
             
 					</article>  				
