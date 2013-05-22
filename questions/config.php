@@ -9,6 +9,4 @@ if (mysqli_connect_errno()) {
     exit();
 }
 
-require_once '../php/db.php';
-
 ?>

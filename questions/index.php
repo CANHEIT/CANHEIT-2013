@@ -25,7 +25,7 @@ $session_name = $json_output->name;
         <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700,400italic,600italic,700italic' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="../../css/screen.css"><link rel="stylesheet" href="../../js/vendor/jquery.smartbanner/jquery.smartbanner.css">
         <script src="../../js/vendor/modernizr-2.6.2.min.js"></script>
-		        
+	        
     </head>
     <body>
         <!--[if lt IE 9]>
@@ -59,7 +59,7 @@ $session_name = $json_output->name;
 					<textarea name="question" id="question" autofocus></textarea>
 					<br>
 				<!-- The Submit button -->
-					<input type="hidden" name="sessionid" value="<?php $_GET['sessionid'] ?>"/>
+					<input type="hidden" name="sessionid" value="<?php echo $_GET['sessionid']; ?>"/>
 					<input type="submit" name="submit" value="Submit"> 
 				</form>
 				<!-- We will output the results from process.php here -->
