@@ -37,7 +37,7 @@
 		
 		// The following provides the ability to test using any timestamp we want.
 		if($_GET['startTime']) { $session_start = $_GET['startTime']; }
-		if($_GET['endTime']) { $session_start = $_GET['endTime']; }		
+		if($_GET['endTime']) { $session_end = $_GET['endTime']; }		
 		
 		$db->close();
 	}
