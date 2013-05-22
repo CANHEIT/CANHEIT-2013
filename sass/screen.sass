@@ -769,6 +769,14 @@ section#program, article#session
   .endtime
     color: $primary-gray
 
+section#program
+  .fixed
+    position: fixed
+    top: 0
+    background: rgba(255,255,255,0.9)
+    margin: 0
+    border-bottom: 1px solid rgba(0,0,0,0.1)
+
 header
   h1
     margin: 1.6em auto
@@ -805,7 +813,7 @@ header h1
     margin: 12px 0 5px 0 
     float: right
 
-section div:first-child
+.register section div:first-child
   display: block
   border: 1px solid #f4f4f4
   -webkit-border-radius: 10px
@@ -834,7 +842,7 @@ section div:first-child
   background: linear-gradient(to bottom,  #ffffff 0%,#fdfdfd 28%,#f9f9f9 65%,#f4f4f4 100%) /* W3C */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f4f4f4',GradientType=0 ) /* IE6-8 */  
 
-section div:first-child h3
+.register section div:first-child h3
   color: #989a9e
   font-size: 1em
   margin: 1em auto
@@ -845,7 +853,7 @@ section div:first-child h3
   +at-breakpoint(45em 9)
     font-size: 1.5em
 
-section div:first-child img.numberIcon
+.register section div:first-child img.numberIcon
   max-width: 2em
   margin-top: 0
   margin-left: 1em
@@ -858,7 +866,7 @@ section div:first-child img.numberIcon
   +at-breakpoint(45em 9)
     
 
-section div:first-child:hover
+.register section div:first-child:hover
   border: 1px solid rgba(252, 160, 69, .5)
   -webkit-background-clip: padding-box
   background-clip: padding-box
@@ -874,13 +882,13 @@ section div:first-child:hover
   -o-transition-duration: 0.5s
   transition-duration: 0.5s
 
-h3.or
+.register h3.or
   text-align: center
 
-section a
+.register section a
   text-decoration: none
 
-.iframe
+.register .iframe
   display: none
   +at-breakpoint(30em 6)
     display: block
@@ -889,7 +897,7 @@ section a
   +at-breakpoint(45em 9)
     display: block
 
-.touch .iframe
+.touch .register .iframe
   display: none
   +at-breakpoint(30em 6)
     display: none
@@ -898,7 +906,7 @@ section a
   +at-breakpoint(45em 9)
     display: none
 
-div.virtualInfo a.bigbutton 
+.register div.virtualInfo a.bigbutton 
   display: block
   text-align: center
   margin-left: 1em
@@ -909,7 +917,7 @@ div.virtualInfo a.bigbutton
   +at-breakpoint(45em 9)
     display: none
 
-.touch div.virtualInfo a.bigbutton 
+.touch .register div.virtualInfo a.bigbutton 
   display: block
   +at-breakpoint(30em 6)
     display: block
@@ -918,7 +926,7 @@ div.virtualInfo a.bigbutton
   +at-breakpoint(45em 9)
     display: block 
 
-div.fullInfo a.bigbutton 
+.register div.fullInfo a.bigbutton 
   display: block
   text-align: center
   margin-left: 1em
@@ -929,7 +937,7 @@ div.fullInfo a.bigbutton
   +at-breakpoint(45em 9)
     display: none
 
-.touch div.fullInfo a.bigbutton 
+.touch .register div.fullInfo a.bigbutton 
   display: block
   +at-breakpoint(30em 6)
     display: block
@@ -938,7 +946,7 @@ div.fullInfo a.bigbutton
   +at-breakpoint(45em 9)
     display: block    
 
-div.partialInfo a.bigbutton 
+.register div.partialInfo a.bigbutton 
   display: block
   text-align: center
   margin-left: 1em
@@ -949,7 +957,7 @@ div.partialInfo a.bigbutton
   +at-breakpoint(45em 9)
     display: none  
 
-.touch div.partialInfo a.bigbutton 
+.touch .register div.partialInfo a.bigbutton 
   display: block
   +at-breakpoint(30em 6)
     display: block
@@ -958,7 +966,7 @@ div.partialInfo a.bigbutton
   +at-breakpoint(45em 9)
     display: block  
 		
-div.virtualInfo
+.register div.virtualInfo
   border: 1px solid #f4f4f4
   -webkit-border-radius: 10px
   -moz-border-radius: 10px
@@ -982,7 +990,7 @@ div.virtualInfo
     color: #999a9e
     font-size: 1em
 
-div.fullInfo
+.register div.fullInfo
   border: 1px solid #f4f4f4
   -webkit-border-radius: 10px
   -moz-border-radius: 10px
@@ -1006,7 +1014,7 @@ div.fullInfo
     color: #999a9e
     font-size: 1em
 	
-div.partialInfo
+.register div.partialInfo
   border: 1px solid #f4f4f4
   -webkit-border-radius: 10px
   -moz-border-radius: 10px
