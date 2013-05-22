@@ -1,8 +1,46 @@
 <?php
-$jsonurl = "https://gears.guidebook.com/api/v1/event/" . $_GET['sessionid'] . "/?guide__id=5396&format=json&username=jarsenea@uottawa.ca&api_key=DYJmr8vDWBrfZeBUr8wfgrhxMQUemRvnvSGYnfdKDQQxsvY";
-$json = file_get_contents($jsonurl,0,null,null);
-$json_output = json_decode($json);
-$session_name = $json_output->name;
+# set defaults
+
+	require_once '../config.php';
+  
+# load requirements
+
+	require_once '../lib/.vendor/autoload.php';
+  	require_once '../php/db.php';
+
+	$db = load_db();
+	$session_id = $_GET['sessionid'];
+
+	//$results = $db->query('SELECT * FROM guidebook_event WHERE id = 969446');
+
+	$stmt = $db->prepare('SELECT * FROM `guidebook_event` WHERE id = :id');
+    $stmt->bindParam(':id', $session_id, SQLITE3_INTEGER);
+    $is_single_object_expected = true;
+
+
+	if ($stmt) {
+		$data = array();
+ 		$data['objects'] = array();
+		$result = $stmt->execute();
+	
+	if ($is_single_object_expected) {
+		$data = $result->fetchArray();
+	} else {
+	  	while($row = $result->fetchArray()) {
+			array_push($data['objects'], $row);
+	  }
+	}
+		$session_name = $data['name'];
+		$session_start = strtotime($data['startTime']);
+		$session_end = strtotime($data['endTime']);
+		$current_time = strtotime("now");
+		
+		// The following provides the ability to test using any timestamp we want.
+		if($_GET['startTime']) { $session_start = $_GET['startTime']; }
+		if($_GET['endTime']) { $session_start = $_GET['endTimeTime']; }		
+		
+		$db->close();
+	}
 ?>
 
 <!DOCTYPE html>
@@ -44,14 +82,19 @@ $session_name = $json_output->name;
           </header>
           <article>
             <header>
-              <a href="http://canheit.uottawa.ca/program/<?php echo $_GET[sessionid]; ?>" rel="home" class="return">Return to session page: <?php echo $session_name; ?></a>
+              <a href="http://canheit.uottawa.ca/program/<?php echo $session_id; ?>" rel="home" class="return">Return to session page: <?php echo $session_name; ?></a>
               
 <!--               <h1><?php echo $session_name; ?></h1> -->
               <h2>Interactive Question Period</h2>
               <p>Enter your question for the speaker in the text area below and click "Submit". Up-vote the questions you want to get answered! Only one vote per question allowed.</p>
             </header>
             
+            
 				<form name="question_add" id="question_add" action="" method="POST">  
+	           	<?php 
+	           		if (($current_time >= $session_start) and ($current_time <= ($session_end + 300))) 
+	           		{ 
+	           	?>
 				<!-- The Name form field -->
 					<label for="question" id="name_label">Enter your question</label>  
           
@@ -59,9 +102,26 @@ $session_name = $json_output->name;
 					<textarea name="question" id="question" autofocus></textarea>
 					<br>
 				<!-- The Submit button -->
-					<input type="hidden" name="sessionid" value="<?php echo $_GET['sessionid']; ?>"/>
+					<input type="hidden" name="sessionid" value="<?php echo $session_id; ?>"/>
 					<input type="submit" name="submit" value="Submit"> 
+				<?php
+					} 
+					elseif ($current_time < $session_start) 
+					{
+				?>
+					<p style="color:red;">The interactive question period for the session "<?php echo $session_name; ?>" has not yet started. The session is scheduled to start on <?php echo date("l, F jS", $session_start); ?> at <?php echo date("g:i a", $session_start); ?>.</p>
+				<?php
+				} 
+				elseif ($current_time > ($session_end + 300)) 
+				{
+				?>
+					<p style="color:red;">Sorry, the interactive question period for the session "<?php echo $session_name; ?>" is now closed.</p>
+				<?php
+				}
+				?>
 				</form>
+
+
 				<!-- We will output the results from process.php here -->
 
 				<div id="questions"><div>
@@ -111,9 +171,9 @@ $session_name = $json_output->name;
 
 		<script>
 			$(document).ready(function() {
-				$("#questions").load("question_show.php?sessionid=" + <?php echo $_GET[sessionid]; ?>);
+				$("#questions").load("question_show.php?sessionid=" + <?php echo $session_id; ?>);
 				var refreshId = setInterval(function() {
-					$("#questions").load('question_show.php?sessionid=' + <?php echo $_GET[sessionid]; ?>);
+					$("#questions").load('question_show.php?sessionid=' + <?php echo $session_id; ?>);
 				}, 1000);
 				$.ajaxSetup({ cache: false });
 			});
