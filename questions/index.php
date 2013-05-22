@@ -86,7 +86,7 @@
               
 <!--               <h1><?php echo $session_name; ?></h1> -->
               <h2>Interactive Question Period</h2>
-              <p>Enter your question for the speaker in the text area below and click "Submit". Up-vote the questions you want to get answered! Only one vote per question allowed.</p>
+              <p>Enter your question for the speaker in the text area below and click "Submit". Up-vote the questions you want answered! Only one vote per question is permitted.</p>
             </header>
             
             
