@@ -82,7 +82,7 @@
           </header>
           <article>
             <header>
-              <a href="http://canheit.uottawa.ca/program/<?php echo $session_id; ?>" rel="home" class="return">Return to session page: <?php echo $session_name; ?></a>
+              <a href="../program/<?php echo $session_id; ?>" rel="home" class="return"><?php echo $session_name; ?></a>
               
 <!--               <h1><?php echo $session_name; ?></h1> -->
               <h2>Interactive Question Period</h2>
