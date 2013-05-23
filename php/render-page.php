@@ -51,6 +51,16 @@
       $template_file = $matches[1].'/session.twig';
       array_push($parse_functions, 'get_correct_image_urls', 'parse_links');
       break;
+      
+    case (
+      preg_match(
+        "/^\/(program)\/(saturday|sunday|monday|tuesday|wednesday|thursday|friday)$/"
+        , $p, $matches) ? true : false
+      ) :
+      $stmt = $db->prepare('SELECT * FROM `guidebook_event` WHERE startTime LIKE ":day%" ORDER BY startTime;');
+      $template_file = $matches[1].'/day.twig';
+      array_push($parse_functions, 'prepare_program_day');
+      break;
     
     case (
       preg_match(
@@ -325,8 +335,29 @@
   
 # program helpers
 
+  function get_program_date_from_day($day_name) {
+    switch(strtolower($day_name)):
+      case ('saturday'):  return '2013-06-08'; break;
+      case ('sunday'):    return '2013-06-09'; break;
+      case ('monday'):    return '2013-06-10'; break;
+      case ('tuesday'):   return '2013-06-11'; break;
+      case ('wednesday'): return '2013-06-12'; break;
+      case ('thursday'):  return '2013-06-13'; break;
+      case ('friday'):    return '2013-06-14'; break;
+    return null;
+  }
+  
+  function get_program_day_from_date($date) {
+    return strftime("%A", strtotime($date)); //weekday
+  }
+
   function prepare_program_data(&$data) {
     group_sessions_by_day_and_start_time($data);
+  }
+  
+  function prepare_program_day(&$data) {
+    prepare_program_data($data);
+    //add_next_previous_days($data);
   }
   
   function group_sessions_by_day_and_start_time(&$data) {
