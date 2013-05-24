@@ -61,10 +61,11 @@
 
         <link rel="icon" type="image/png" href="../favicon-256x256.png">
 
-        <link rel="stylesheet" href="../css/normalize.css">
-        <link rel="stylesheet" href="../css/boilerplate.css">
+        <link rel="stylesheet" href="../../css/normalize.css">
+        <link rel="stylesheet" href="../../css/boilerplate.css">
         <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700,400italic,600italic,700italic' rel='stylesheet' type='text/css'>
-        <link rel="stylesheet" href="../css/screen.css"><link rel="stylesheet" href="../js/vendor/jquery.smartbanner/jquery.smartbanner.css">
+        <link rel="stylesheet" href="../../css/screen.css">
+        <link rel="stylesheet" href="../../js/vendor/jquery.smartbanner/jquery.smartbanner.css">
         <script src="../js/vendor/modernizr-2.6.2.min.js"></script>
 	        
     </head>
@@ -75,7 +76,7 @@
 
         <div class="container">
           <header>
-            <a href="../" rel="home" class="return"><img src="../img/canheit2013_logo_horizontal.png" alt="home" id="logo" /></a>
+            <a href="../" rel="home" class="return"><img src="../../img/canheit2013_logo_horizontal.png" alt="home" id="logo" /></a>
             <p class="tagline">Canada's premier Higher Education IT Conference</p>
             <p class="location-date">
               <span class="host">University of Ottawa</span>
@@ -85,7 +86,7 @@
           </header>
           <article>
             <header>
-              <a href="../program/<?php echo $session_id; ?>" rel="home" class="return"><?php echo $session_name; ?></a>
+              <a href="../<?php echo $session_id; ?>" rel="home" class="return"><?php echo $session_name; ?></a>
               
 <!--               <h1><?php echo $session_name; ?></h1> -->
               <h2>Interactive Question Period</h2>
@@ -161,9 +162,9 @@
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="../js/vendor/jquery-1.8.2.min.js"><\/script>')</script>
-        <script src="../js/plugins.js"></script>
-        <script src="../js/main.js"></script><script src="../js/vendor/jquery.smartbanner/jquery.smartbanner.js"></script>
-        <script src="../js/vendor/jquery.collapse.js"></script>
+        <script src="../../js/plugins.js"></script>
+        <script src="../../js/main.js"></script><script src="../js/vendor/jquery.smartbanner/jquery.smartbanner.js"></script>
+        <script src="../../js/vendor/jquery.collapse.js"></script>
 		<script type="text/javascript" src="http://ajax.microsoft.com/ajax/jquery.validate/1.7/jquery.validate.min.js"></script>
 		<script type="text/javascript">
 			$(document).ready(function(){

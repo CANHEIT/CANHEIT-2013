@@ -1,6 +1,6 @@
 RewriteEngine On
 
 RewriteRule ^$ ../php/render-page.php [L]
-RewriteRule ^([0-9]{1,10})/questions$ ../questions/index.php?sessionid=$1$2 [L]
+RewriteRule ^([0-9]{1,10})/questions$ /questions/index.php?sessionid=$1 [QSA,L]
 RewriteRule ^([0-9]{1,10})$ ../php/render-page.php [L]
 
