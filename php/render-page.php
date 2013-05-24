@@ -58,7 +58,7 @@
         , $p, $matches) ? true : false
       ) :
       $stmt = $db->prepare('SELECT * FROM `guidebook_event` WHERE `startTime` LIKE :date ORDER BY startTime;');
-      $stmt->bindValue(':date', get_program_date_from_day($matches[2]) . '%', SQLITE3_TEXT);
+      $stmt->bindValue(':date', get_program_date_from_day($matches[2]).'%', SQLITE3_TEXT); // starts with
       $template_file = $matches[1].'/day.twig';
       array_push($parse_functions, 'prepare_program_day');
       break;
