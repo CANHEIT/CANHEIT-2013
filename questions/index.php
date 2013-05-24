@@ -65,7 +65,7 @@
         <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700,400italic,600italic,700italic' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="../../css/screen.css">
         <link rel="stylesheet" href="../../js/vendor/jquery.smartbanner/jquery.smartbanner.css">
-        <script src="../js/vendor/modernizr-2.6.2.min.js"></script>
+        <script src="../../js/vendor/modernizr-2.6.2.min.js"></script>
 	        
     </head>
     <body>
@@ -156,13 +156,14 @@
   						</form>
   					</div>
 					</footer>
+
 					
         </div>
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="../js/vendor/jquery-1.8.2.min.js"><\/script>')</script>
         <script src="../../js/plugins.js"></script>
-        <script src="../../js/main.js"></script><script src="../js/vendor/jquery.smartbanner/jquery.smartbanner.js"></script>
+        <script src="../../js/main.js"></script><script src="../../js/vendor/jquery.smartbanner/jquery.smartbanner.js"></script>
         <script src="../../js/vendor/jquery.collapse.js"></script>
 		<script type="text/javascript" src="http://ajax.microsoft.com/ajax/jquery.validate/1.7/jquery.validate.min.js"></script>
 		<script type="text/javascript">
