@@ -4,7 +4,8 @@
 include("config.php");
 
 // Get the IP address of the voting user.
-$ip = $_SERVER['REMOTE_ADDR']; 
+$headers = apache_request_headers(); 
+$ip = $headers["X-Forwarded-For"]; 
 $id = $_POST['id'];
 
 if ($id) {
@@ -30,6 +31,7 @@ if ($count == 0) {
 	
 	$mysqli->query($query_updatescore);
 	$mysqli->query($query_insertip);
+	echo "<script>alert('$ip');</script>";
 } else {
 	echo "<script>alert('You have already up/down voted this question.');</script>";
 }
