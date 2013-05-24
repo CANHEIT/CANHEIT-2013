@@ -1,2 +1,2 @@
 RewriteEngine on 
-RewriteRule ^([0-9]{1,10})$ ./index.php?sessionid=$1$2 [L]
+RewriteRule ^([0-9]{1,10})\?(.*)$ ./index.php?sessionid=$1&$2 [L]
