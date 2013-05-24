@@ -2,7 +2,6 @@
 # set defaults
 
 	require_once '../config.php';
-  
 # load requirements
 
 	require_once '../lib/.vendor/autoload.php';
@@ -178,7 +177,7 @@
 					},
 					submitHandler: function(form) {
 						// do other stuff for a valid form
-						$.post('question_add.php', $("#question_add").serialize(), function(data) {
+						$.post('../../questions/question_add.php', $("#question_add").serialize(), function(data) {
 							$('#questions').html(data);
 						});
 						$('#question_add')[0].reset();
@@ -189,9 +188,9 @@
 
 		<script>
 			$(document).ready(function() {
-				$("#questions").load("question_show.php?sessionid=" + <?php echo $session_id; ?> + "&viewonly=" + <?php echo $viewonly; ?>);
+				$("#questions").load("../../questions/question_show.php?sessionid=" + <?php echo $session_id; ?> + "&viewonly=" + <?php echo $viewonly; ?>);
 				var refreshId = setInterval(function() {
-					$("#questions").load('question_show.php?sessionid=' + <?php echo $session_id; ?> + "&viewonly=" + <?php echo $viewonly; ?>);
+					$("#questions").load('../../questions/question_show.php?sessionid=' + <?php echo $session_id; ?> + "&viewonly=" + <?php echo $viewonly; ?>);
 				}, 1000);
 				$.ajaxSetup({ cache: false });
 			});
