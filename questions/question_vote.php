@@ -20,7 +20,7 @@ if ($cookie) {
 	$query_updatescore = "UPDATE questions SET score=(score $vote 1) WHERE id=$id";
  	$mysqli->query($query_updatescore);
 
-	setcookie('canheit-question-'.$id,1,time() + (86400 * 7),"/",".uottawa.ca"); // Cookie expires in 7 days
+	setcookie('canheit-question-'.$id,1,time() + (86400 * 7),"/","canheit.uottawa.ca"); // Cookie expires in 7 days
 }
 
 $mysqli->close;
