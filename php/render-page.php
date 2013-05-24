@@ -57,7 +57,8 @@
         "/^\/(program)\/(saturday|sunday|monday|tuesday|wednesday|thursday|friday)$/"
         , $p, $matches) ? true : false
       ) :
-      $stmt = $db->prepare('SELECT * FROM `guidebook_event` WHERE startTime LIKE ":day%" ORDER BY startTime;');
+      $stmt = $db->prepare('SELECT * FROM `guidebook_event` WHERE `startTime` LIKE :date ORDER BY startTime;');
+      $stmt->bindValue(':date', get_program_date_from_day($matches[2]) . '%', SQLITE3_TEXT);
       $template_file = $matches[1].'/day.twig';
       array_push($parse_functions, 'prepare_program_day');
       break;
@@ -271,6 +272,7 @@
     
     $db->close();
   }
+  
 # test and parse the data 
 
   # test the data, throw a 404 on error
@@ -336,14 +338,15 @@
 # program helpers
 
   function get_program_date_from_day($day_name) {
-    switch(strtolower($day_name)):
-      case ('saturday'):  return '2013-06-08'; break;
-      case ('sunday'):    return '2013-06-09'; break;
-      case ('monday'):    return '2013-06-10'; break;
-      case ('tuesday'):   return '2013-06-11'; break;
-      case ('wednesday'): return '2013-06-12'; break;
-      case ('thursday'):  return '2013-06-13'; break;
-      case ('friday'):    return '2013-06-14'; break;
+    switch(strtolower($day_name)) {
+      case ('saturday'):  return '2013-06-08';
+      case ('sunday'):    return '2013-06-09';
+      case ('monday'):    return '2013-06-10';
+      case ('tuesday'):   return '2013-06-11';
+      case ('wednesday'): return '2013-06-12';
+      case ('thursday'):  return '2013-06-13';
+      case ('friday'):    return '2013-06-14';
+    }
     return null;
   }
   
