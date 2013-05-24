@@ -11,7 +11,7 @@ $(function() {
 		{
 			$.ajax({
 				type: "POST",
-				url: "../../question_vote.php",
+				url: "../../questions/question_vote.php",
 				data: dataString,
 				cache: false,
 
@@ -25,7 +25,7 @@ $(function() {
 		{
 			$.ajax({
 				type: "POST",
-				url: "../../question_vote.php",
+				url: "../../questions/question_vote.php",
 				data: dataString,
 				cache: false,
 
