@@ -1,0 +1,4 @@
+<IfModule mod_rewrite.c>
+RewriteEngine on 
+RewriteRule ([0-9]+)(&.*) /questions/index.php?sessionid=$1$2 [L]
+</IfModule>

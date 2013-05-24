@@ -40,6 +40,9 @@
 		if($_GET['endTime']) { $session_end = $_GET['endTime']; }		
 		
 		$db->close();
+		
+		// Are we in a "view only" mode for demonstration purposes?
+		if ($_GET['viewonly'] == 1) { $viewonly = 1; } else { $viewonly = 0; }
 	}
 ?>
 
@@ -86,45 +89,59 @@
               
 <!--               <h1><?php echo $session_name; ?></h1> -->
               <h2>Interactive Question Period</h2>
-              <p>Enter your question for the speaker in the text area below and click "Submit". Up-vote the questions you want answered! Only one vote per question is permitted.</p>
+              <?php if(!$viewonly) { ?>
+              	<p>Enter your question for the speaker in the text area below and click "Submit". Up-vote the questions you want answered! Only one vote per question is permitted.</p>
+              <?php } ?>
+
             </header>
             
             
-				<form name="question_add" id="question_add" action="" method="POST">  
 	           	<?php 
-	           		if (($current_time >= $session_start) and ($current_time <= ($session_end + 300))) 
+	           		if (($current_time >= $session_start) and ($current_time <= ($session_end + 300)))
 	           		{ 
+						if(!$viewonly) {
 	           	?>
-				<!-- The Name form field -->
-					<label for="question" id="name_label">Enter your question</label>  
-          
-					<!-- <input type="text" name="question" id="question" size="30" value=""/>   -->
-					<textarea name="question" id="question" autofocus></textarea>
-					<br>
-				<!-- The Submit button -->
-					<input type="hidden" name="sessionid" value="<?php echo $session_id; ?>"/>
-					<input type="submit" name="submit" value="Submit"> 
+							<!-- The Name form field -->
+
+							<form name="question_add" id="question_add" action="" method="POST">  
+								<label for="question" id="name_label">Enter your question</label>  
+		  
+								<!-- <input type="text" name="question" id="question" size="30" value=""/>   -->
+								<textarea name="question" id="question" autofocus></textarea>
+								<br>
+							<!-- The Submit button -->
+								<input type="hidden" name="sessionid" value="<?php echo $session_id; ?>"/>
+								<input type="submit" name="submit" value="Submit"> 
+							</form>
+				<?php
+					}
+				?>				
+				<!-- Question and voting buttons automatically outputted into this div -->
+				<div id="questions"><div>
 				<?php
 					} 
 					elseif ($current_time < $session_start) 
 					{
 				?>
+				<form name="question_add" id="question_add" action="" method="POST">  
 					<p style="color:red;">The interactive question period for the session "<?php echo $session_name; ?>" has not yet started. The session is scheduled to start on <?php echo date("l, F jS", $session_start); ?> at <?php echo date("g:i a", $session_start); ?>.</p>
+				</form>
 				<?php
 				} 
 				elseif ($current_time > ($session_end + 300)) 
 				{
+					$voting_closed = 1;
 				?>
+				<form name="question_add" id="question_add" action="" method="POST">  
 					<p style="color:red;">Sorry, the interactive question period for the session "<?php echo $session_name; ?>" is now closed.</p>
+				</form>
+
+				<!-- Question and voting buttons automatically outputted into this div -->
+				<div id="questions"><div>
+					
 				<?php
 				}
 				?>
-				</form>
-
-
-				<!-- We will output the results from process.php here -->
-
-				<div id="questions"><div>
             
 					</article>  				
 					<footer>
@@ -171,9 +188,9 @@
 
 		<script>
 			$(document).ready(function() {
-				$("#questions").load("question_show.php?sessionid=" + <?php echo $session_id; ?>);
+				$("#questions").load("question_show.php?sessionid=" + <?php echo $session_id; ?> + "&viewonly=" + <?php echo $viewonly; ?>);
 				var refreshId = setInterval(function() {
-					$("#questions").load('question_show.php?sessionid=' + <?php echo $session_id; ?>);
+					$("#questions").load('question_show.php?sessionid=' + <?php echo $session_id; ?> + "&viewonly=" + <?php echo $viewonly; ?>);
 				}, 1000);
 				$.ajaxSetup({ cache: false });
 			});
