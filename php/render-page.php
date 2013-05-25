@@ -359,8 +359,52 @@
   }
   
   function prepare_program_day(&$data) {
-    prepare_program_data($data);
-    //add_next_previous_days($data);
+    add_program_day_metadata($data);
+    group_sessions_by_start_time($data);
+  }
+  
+  function group_sessions_by_start_time(&$data) {
+    
+    $data['starttimes'] = array();
+    $starttime = $new_starttime = null;
+    
+    foreach ($data['objects'] as $session) {
+    
+      # determine the start time of the first event
+      $new_starttime = $session['startTime'];
+      
+      if ($starttime != $new_starttime) {
+        
+        # if different starttime, then setup a new object
+        
+        $starttimes_count = array_push(
+          $data['starttimes'],
+          array(
+            'starttime' => $new_starttime,
+            'events' => array(),
+          )
+        );
+        $starttime = $new_starttime;
+      }
+      
+      # store the object in its new location in the new starttime listing
+      
+      array_push($data['starttimes'][$starttimes_count - 1]['events'], $session);
+    }
+    
+    unset($data['objects']);
+  }
+  
+  function add_program_day_metadata(&$data) {
+    # determine the date of the first item in the result set
+    preg_match('/^([1-9][0-9]{3}-[0-9]{2}-[0-9]{2})/', $data['objects'][0]['startTime'], $matches);
+    $data['date'] = $matches[1];
+    if ($data['date'] != '2013-06-08') { // to fix
+      $data['prevday'] = date('Y-m-d', strtotime('-1 day', strtotime($data['date'])));
+    }
+    if ($data['date'] != '2013-06-14') { // to fix
+      $data['nextday'] = date('Y-m-d', strtotime('+1 day', strtotime($data['date'])));
+    }
   }
   
   function group_sessions_by_day_and_start_time(&$data) {
