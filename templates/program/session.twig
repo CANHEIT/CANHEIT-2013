@@ -37,7 +37,7 @@
           <article id="session">
             <header>
               <a href="../register/" class="button secondary register">Register Now</a>
-              <a href="./" rel="home" class="return">Program</a>
+              <a href="./{{ startTime | date("l") | lower }}" rel="home" class="return">{{ startTime | date("l") }}</a>
               
               <h1>{{ name }}</h1>
               <p>
