@@ -68,9 +68,18 @@
         "/^\/(program)\/$/"
         , $p, $matches) ? true : false
       ) :
-      $stmt = $db->prepare('SELECT * FROM `guidebook_event` ORDER BY startTime;');
-      $template_file = $matches[1].'/index.twig';
-      array_push($parse_functions, 'prepare_program_data');
+      # if now is prior to the first day, redirect to first day
+      if (time() < strtotime("2013-06-08")) {
+        header("Location: " . $_SERVER['REQUEST_URI'] . strtolower(get_program_day_from_date("2013-06-08"))); exit; // to fix
+      }
+      # if now is after to the last day, redirect to the last day
+      elseif (time() >= strtotime("2013-06-15")) {
+        header("Location: " . $_SERVER['REQUEST_URI'] . strtolower(get_program_day_from_date("2013-06-14"))); exit; // to fix
+      }
+      # otherwise, redirect to the current day
+      else {
+        header("Location: " . $_SERVER['REQUEST_URI'] . strtolower(get_program_day_from_date("today"))); exit;
+      }
       break;
     
     # accommodations
@@ -406,60 +415,4 @@
       $data['nextday'] = date('Y-m-d', strtotime('+1 day', strtotime($data['date'])));
     }
   }
-  
-  function group_sessions_by_day_and_start_time(&$data) {
-    
-    $list_of_days = array();
-    $day = $new_day = null;
-    $starttime = $new_starttime = null;
-    
-    foreach ($data['objects'] as $session) {
-      # group sessions by day
-      
-        # determine the day of the first event
-        $new_day = substr($session['startTime'],0,10);
-        if ($day != $new_day) {
-        
-          # if different day, then setup a new object
-          $days_count = array_push(
-            $list_of_days,
-            array(
-              'day' => $new_day,
-              'starttimes' => array(),
-            )
-          );
-          $day = $new_day;
-        }
-      
-      # until the next day, group by start time
-
-        # determine the start time of the first event
-        $new_starttime = $session['startTime'];
-        
-        if ($starttime != $new_starttime) {
-          
-          # if different starttime, then setup a new object
-          
-          $starttimes_count = array_push(
-            $list_of_days[$days_count - 1]['starttimes'],
-            array(
-              'starttime' => $new_starttime,
-              'events' => array(),
-            )
-          );
-          $starttime = $new_starttime;
-        }
-        
-      # store the object in its new location in the new day => starttime listing
-      
-      array_push($list_of_days[$days_count - 1]['starttimes'][$starttimes_count - 1]['events'], $session);
-      
-    }
-    
-    unset($data['objects']);
-    
-    $data['days'] = $list_of_days;
-    
-  }
-
 ?>
