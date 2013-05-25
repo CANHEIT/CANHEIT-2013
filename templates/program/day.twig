@@ -4,7 +4,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>{{ date | date("l F d") }} - CANHEIT 2013, Canada's premier Higher Education IT Conference</title>
+        <title>{{ date | date("l F j") }} - CANHEIT 2013, Canada's premier Higher Education IT Conference</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
         
@@ -40,7 +40,7 @@
               <a href="../register/" class="button secondary register">Register Now</a>
               <a href="../" rel="home" class="return">Home</a>
               
-              <h1>{{ date | date("l F d") }}</h1>
+              <h1>{{ date | date("l F j") }}</h1>
               {% if prevday %}
                 <a href="{{ prevday | date("l") | lower }}">{{ prevday | date("l") }}</a>
               {% endif %}
