@@ -16,6 +16,7 @@
         <link rel="stylesheet" href="../css/normalize.css">
         <link rel="stylesheet" href="../css/boilerplate.css">
         <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700,400italic,600italic,700italic' rel='stylesheet' type='text/css'>
+        <link href="//netdna.bootstrapcdn.com/font-awesome/3.1.1/css/font-awesome.css" rel="stylesheet">
         <link rel="stylesheet" href="../css/screen.css"><link rel="stylesheet" href="../js/vendor/jquery.smartbanner/jquery.smartbanner.css">
         <script src="../js/vendor/modernizr-2.6.2.min.js"></script>
    
@@ -35,22 +36,36 @@
               <span class="date">June 9 - 12, 2013</span>
             </p>
           </header>
-          <article>
+          <article id="program">
             <header>
               <a href="../register/" class="button secondary register">Register Now</a>
               <a href="../" rel="home" class="return">Home</a>
               
-              <h1>{{ date | date("l F j") }}</h1>
-              {% if prevday %}
-                <a href="{{ prevday | date("l") | lower }}">{{ prevday | date("l") }}</a>
-              {% endif %}
+              <h1>Conference Schedule</h1>
               
-              {% if nextday %}
-                <a href="{{ nextday | date("l") | lower }}">{{ nextday | date("l") }}</a>
-              {% endif %}
+              <nav>
+                <div class="prevday">
+                {% if prevday %}
+                  <a href="{{ prevday | date("l") | lower }}"><i class="icon-caret-left"></i><span class="title">{{ prevday | date("l") }}</span></a>
+                {% else %}
+                  <i class="icon-caret-left"></i>
+                {% endif %}
+                </div>
+                
+                <h2 class="current">{{ date | date("l F j") }}</h2>
+
+                <div class="nextday">                
+                {% if nextday %}
+                  <a href="{{ nextday | date("l") | lower }}"><i class="icon-caret-right"></i><span class="title">{{ nextday | date("l") }}</span></a>
+                {% else %}
+                  <i class="icon-caret-right"></i>
+                {% endif %}
+                </div>
+                
+              </nav>
             </header>
             
-            <section id="program">
+            <section>
             
             {% for starttime in starttimes %}
             <div class="time">
