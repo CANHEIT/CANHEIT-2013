@@ -177,6 +177,25 @@
                 });         
             }
         }
+            
+        jQuery(document).ready(function(){
+        
+            var newStickies = new stickyTitles(jQuery("nav"));
+        
+            newStickies.load();
+        
+            jQuery(window).on("scroll", function() {
+        
+                newStickies.scroll();
+        
+            });
+            jQuery(window).on("resize", function() {
+    
+                newStickies.load();
+                newStickies.scroll();
+    
+            });
+        });
         
         jQuery(document).ready(function(){
         
