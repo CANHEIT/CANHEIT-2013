@@ -34,7 +34,7 @@
               <span class="date">June 9 - 12, 2013</span>
             </p>
           </header>
-          <article>
+          <article id="program">
             <header>
               <a href="../register/" class="button secondary register">Register Now</a>
               <a href="../" rel="home" class="return">Home</a>
@@ -44,18 +44,38 @@
             
             <div class="intro">
               <p>Overall, here's how the conference is going to unfold:</p>
-              <ul>
-                <li><strong>Saturday and Sunday</strong>: Two days of pre-conference full-day workshops.</li>
-                <li><strong>Monday to Wednesday</strong>: Sessions, keynotes, evening activities.</li>
-                <li><strong>Thursday and Friday</strong>: Two days of post-conference full-day workshops.</li>
-                <li><strong>Location</strong>: Everything happens on the uOttawa campus, Social Science building (or <a href="/why-attend/virtually/">from the comfort of your own home</a>.)</li>
-              </ul>
+              <table>
+                <thead>
+                  <tr>
+                    <th scope="col">Days</th>
+                    <th scope="col">What to expect</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">Saturday<br />Sunday</th>
+                    <td>Two days of pre-conference full-day workshops.</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Monday<br />Tuesday</th>
+                    <td>Sessions, sponsor exhibition areas, keynotes, evening activities.</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Wednesday</th>
+                    <td>Sessions, sponsor exhibition areas, keynotes and a preview of CANHEIT 2014.</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Thursday<br />Friday</th>
+                    <td>Two days of post-conference full-day workshops.</td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
             
-            <section id="program">
+            <section>
             
             {% for day in days %}
-            <h2>{{ day.day | date("D. M d, Y") }}</h2>
+            <h2>{{ day.day | date("l, F d") }}</h2>
 
             {% for starttime in day.starttimes %}
             <h3>{{ starttime.starttime | date("g:i A") }}</h3>
