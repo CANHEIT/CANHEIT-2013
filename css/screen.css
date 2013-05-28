@@ -1194,7 +1194,7 @@ article#program .intro, article#session .intro {
 }
 
 /* line 784, ../sass/screen.sass */
-section#program .fixed {
+article#program .fixed {
   position: fixed;
   top: 0;
   background: rgba(255, 255, 255, 0.9);
@@ -1204,24 +1204,24 @@ section#program .fixed {
 }
 @media (min-width: 30em) {
   /* line 784, ../sass/screen.sass */
-  section#program .fixed {
+  article#program .fixed {
     width: 15.46667em;
   }
 }
 @media (min-width: 35em) {
   /* line 784, ../sass/screen.sass */
-  section#program .fixed {
+  article#program .fixed {
     width: 18.13333em;
   }
 }
 @media (min-width: 45em) {
   /* line 784, ../sass/screen.sass */
-  section#program .fixed {
+  article#program .fixed {
     width: 16.7619em;
   }
 }
 /* line 797, ../sass/screen.sass */
-section#program .absolute {
+article#program .absolute {
   position: absolute;
 }
 
@@ -1916,5 +1916,27 @@ form#question_add input {
     width: 43.18182%;
     float: right;
     margin-right: 0;
+  }
+}
+
+@media print {
+  /* line 1257, ../sass/screen.sass */
+  a[href]:after {
+    content: "";
+  }
+
+  /* line 1259, ../sass/screen.sass */
+  article {
+    font-size: 1em;
+  }
+
+  /* line 1261, ../sass/screen.sass */
+  body > div.container > footer {
+    display: none;
+  }
+
+  /* line 1263, ../sass/screen.sass */
+  div.container #app-promo.item {
+    display: none;
   }
 }

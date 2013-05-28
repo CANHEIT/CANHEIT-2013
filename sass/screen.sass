@@ -780,7 +780,7 @@ article#program, article#session
   .intro
     border-bottom: none
 
-section#program
+article#program
   .fixed
     position: fixed
     top: 0
@@ -1253,3 +1253,13 @@ form#question_add input
       +span-columns(3 omega,7)
     +at-breakpoint(45em 9)
       +span-columns(4 omega,9)
+@media print
+  a[href]:after 
+    content: ""
+  article
+    font-size: 1em
+  body > div.container > footer
+    display: none
+  div.container #app-promo.item
+    display: none
+  

@@ -76,6 +76,7 @@
             <section>
             
             {% for day in days %}
+            <div class="day">
             <h2>{{ day.day | date("l, F d") }}</h2>
 
             {% for starttime in day.starttimes %}
