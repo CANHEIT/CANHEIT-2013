@@ -759,7 +759,7 @@ section#description h1
   margin-top: 0
   font-weight: normal
   
-section#program, article#session
+article#program, article#session
   .eventname
     font-weight: $weight-bold
     display: block
@@ -768,6 +768,17 @@ section#program, article#session
     display: block
   .endtime
     color: $primary-gray
+  table
+    border-top: 1px solid lighten($primary-gray, 20%)
+    thead
+      display: none
+    tbody tr th, tbody tr td
+      padding: 0.5em
+      border-bottom: 1px solid lighten($primary-gray, 20%)
+    tbody tr td
+      color: lighten($charcoal, 20%)
+  .intro
+    border-bottom: none
 
 section#program
   .fixed
