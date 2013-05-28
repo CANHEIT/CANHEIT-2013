@@ -77,7 +77,10 @@
             
             {% for day in days %}
             <div class="day">
-            <h2>{{ day.day | date("l, F d") }}</h2>
+
+            <div class="day-title">
+              <h2>{{ day.day | date("l, F d") }}</h2>
+            </div>
 
             {% for starttime in day.starttimes %}
             <div class="time">
@@ -150,8 +153,6 @@
                       thisSticky.wrap('<div class="followWrap" />');
                     }
                     thisSticky.parent().height(thisSticky.outerHeight());
-                    thisSticky.parent().css('margin-top', thisSticky.css('margin-top'));
-                    thisSticky.parent().css('margin-bottom', thisSticky.css('margin-bottom'));
         
                     jQuery.data(thisSticky[0], 'pos', thisSticky.offset().top);
         
@@ -172,9 +173,9 @@
         
                         thisSticky.addClass("fixed");
         
-                        if (nextSticky.length > 0 && thisSticky.offset().top >= jQuery.data(nextSticky[0], 'pos') - thisSticky.outerHeight() - parseInt(thisSticky.css('margin-top'))) {
+                        if (nextSticky.length > 0 && thisSticky.offset().top >= jQuery.data(nextSticky[0], 'pos') - thisSticky.outerHeight()) {
         
-                            thisSticky.addClass("absolute").css("top", jQuery.data(nextSticky[0], 'pos') - thisSticky.outerHeight() - parseInt(thisSticky.css('margin-top')));
+                            thisSticky.addClass("absolute").css("top", jQuery.data(nextSticky[0], 'pos') - thisSticky.outerHeight());
         
                         }
         
@@ -182,7 +183,7 @@
         
                         thisSticky.removeClass("fixed");
         
-                        if (prevSticky.length > 0 && jQuery(window).scrollTop() <= jQuery.data(thisSticky[0], 'pos')  - prevSticky.outerHeight() - parseInt(prevSticky.css('margin-top'))) {
+                        if (prevSticky.length > 0 && jQuery(window).scrollTop() <= jQuery.data(thisSticky[0], 'pos')  - prevSticky.outerHeight()) {
         
                             prevSticky.removeClass("absolute").removeAttr("style");
         
@@ -195,7 +196,7 @@
         
         jQuery(document).ready(function(){
         
-            var newStickies = new stickyTitles(jQuery(".day > h2"));
+            var newStickies = new stickyTitles(jQuery(".day-title > h2"));
         
             newStickies.load();
         

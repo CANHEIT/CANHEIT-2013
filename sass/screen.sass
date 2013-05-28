@@ -781,12 +781,16 @@ article#program, article#session
     border-bottom: none
 
 article#program
-  .fixed
+  .day-title
+    margin: 1em 0
+    h2
+      margin: 0
+      padding: 0.2em 0
+      border-bottom: 1px solid rgba(0,0,0,0.1)
+  .day-title h2.fixed
     position: fixed
     top: 0
     background: rgba(255,255,255,0.9)
-    margin: 0
-    border-bottom: 1px solid rgba(0,0,0,0.1)
     width: 10.13333333333333em // 304 / 30
     +at-breakpoint(30em 6)
       width: 15.46666666666667em // 464 / 30
@@ -794,7 +798,7 @@ article#program
       width: 18.13333333333333em // 544 / 30
     +at-breakpoint(45em 9)
       width: 16.76190476190476em // 704 / 42
-  .absolute
+  .day-title h2.absolute
     position: absolute
 header
   h1
