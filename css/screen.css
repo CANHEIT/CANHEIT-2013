@@ -1805,32 +1805,43 @@ div.question-text {
 div.question-text .question-score {
   display: block;
   float: left;
+  margin-bottom: 1em;
 }
-/* line 1206, ../sass/screen.sass */
+/* line 1207, ../sass/screen.sass */
 div.question-text p {
   float: left;
   width: 12em;
   padding-top: 0;
   margin-top: 0;
+  margin-bottom: 1em;
 }
 @media (min-width: 30em) {
-  /* line 1206, ../sass/screen.sass */
+  /* line 1207, ../sass/screen.sass */
   div.question-text p {
     width: 20em;
   }
 }
 
-/* line 1216, ../sass/screen.sass */
+/* line 1218, ../sass/screen.sass */
+.rule {
+  clear: left;
+  float: none;
+  width: 100%;
+  margin-top: 1em;
+  margin-bottom: 2em;
+}
+
+/* line 1225, ../sass/screen.sass */
 div.voting-buttons {
   clear: both;
 }
 
-/* line 1220, ../sass/screen.sass */
+/* line 1229, ../sass/screen.sass */
 .your-stay article ul {
   max-width: 100%;
 }
 @media (min-width: 35em) {
-  /* line 1220, ../sass/screen.sass */
+  /* line 1229, ../sass/screen.sass */
   .your-stay article ul {
     width: 41.17647%;
     float: left;
@@ -1838,47 +1849,47 @@ div.voting-buttons {
   }
 }
 @media (min-width: 45em) {
-  /* line 1220, ../sass/screen.sass */
+  /* line 1229, ../sass/screen.sass */
   .your-stay article ul {
     width: 43.18182%;
     float: left;
     margin-right: 2.27273%;
   }
 }
-/* line 1226, ../sass/screen.sass */
+/* line 1235, ../sass/screen.sass */
 .your-stay article ul li {
   line-height: 1em;
   margin-bottom: 0.5em;
 }
-/* line 1229, ../sass/screen.sass */
+/* line 1238, ../sass/screen.sass */
 .your-stay article .recommendations {
   max-width: 100%;
   font-size: 0.8em;
 }
-/* line 1232, ../sass/screen.sass */
+/* line 1241, ../sass/screen.sass */
 .your-stay article .recommendations h3 {
   color: #95b257;
   margin-bottom: 0;
   font-style: italic;
 }
-/* line 1236, ../sass/screen.sass */
+/* line 1245, ../sass/screen.sass */
 .your-stay article .recommendations p {
   margin-top: 0;
 }
-/* line 1238, ../sass/screen.sass */
+/* line 1247, ../sass/screen.sass */
 .your-stay article .recommendations p.note {
   font-size: 1em;
   margin-bottom: 0.8em;
   color: #999999;
 }
 @media (min-width: 45em) {
-  /* line 1238, ../sass/screen.sass */
+  /* line 1247, ../sass/screen.sass */
   .your-stay article .recommendations p.note {
     font-size: 0.8em;
   }
 }
 @media (min-width: 35em) {
-  /* line 1229, ../sass/screen.sass */
+  /* line 1238, ../sass/screen.sass */
   .your-stay article .recommendations {
     width: 41.17647%;
     float: right;
@@ -1886,7 +1897,7 @@ div.voting-buttons {
   }
 }
 @media (min-width: 45em) {
-  /* line 1229, ../sass/screen.sass */
+  /* line 1238, ../sass/screen.sass */
   .your-stay article .recommendations {
     width: 43.18182%;
     float: right;
