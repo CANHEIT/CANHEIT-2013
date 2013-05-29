@@ -24,7 +24,7 @@ bold, strong {
   background-color: white;
   padding: 1em 1em;
 }
-/* line 38, ../../../.rvm/gems/ruby-1.9.3-p392/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+/* line 38, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
 .container:after {
   content: "";
   display: table;
@@ -39,7 +39,7 @@ bold, strong {
     margin-left: auto;
     margin-right: auto;
   }
-  /* line 38, ../../../.rvm/gems/ruby-1.9.3-p392/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+  /* line 38, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
   .container:after {
     content: "";
     display: table;
@@ -55,7 +55,7 @@ bold, strong {
     margin-left: auto;
     margin-right: auto;
   }
-  /* line 38, ../../../.rvm/gems/ruby-1.9.3-p392/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+  /* line 38, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
   .container:after {
     content: "";
     display: table;
@@ -71,7 +71,7 @@ bold, strong {
     margin-left: auto;
     margin-right: auto;
   }
-  /* line 38, ../../../.rvm/gems/ruby-1.9.3-p392/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+  /* line 38, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
   .container:after {
     content: "";
     display: table;
@@ -1797,12 +1797,40 @@ form#question_add input {
   margin-top: 1.5em;
 }
 
-/* line 1201, ../sass/screen.sass */
+/* line 1200, ../sass/screen.sass */
+div.question-text {
+  margin-top: 0;
+}
+/* line 1202, ../sass/screen.sass */
+div.question-text .question-score {
+  display: block;
+  float: left;
+}
+/* line 1206, ../sass/screen.sass */
+div.question-text p {
+  float: left;
+  width: 12em;
+  padding-top: 0;
+  margin-top: 0;
+}
+@media (min-width: 30em) {
+  /* line 1206, ../sass/screen.sass */
+  div.question-text p {
+    width: 20em;
+  }
+}
+
+/* line 1216, ../sass/screen.sass */
+div.voting-buttons {
+  clear: both;
+}
+
+/* line 1220, ../sass/screen.sass */
 .your-stay article ul {
   max-width: 100%;
 }
 @media (min-width: 35em) {
-  /* line 1201, ../sass/screen.sass */
+  /* line 1220, ../sass/screen.sass */
   .your-stay article ul {
     width: 41.17647%;
     float: left;
@@ -1810,47 +1838,47 @@ form#question_add input {
   }
 }
 @media (min-width: 45em) {
-  /* line 1201, ../sass/screen.sass */
+  /* line 1220, ../sass/screen.sass */
   .your-stay article ul {
     width: 43.18182%;
     float: left;
     margin-right: 2.27273%;
   }
 }
-/* line 1207, ../sass/screen.sass */
+/* line 1226, ../sass/screen.sass */
 .your-stay article ul li {
   line-height: 1em;
   margin-bottom: 0.5em;
 }
-/* line 1210, ../sass/screen.sass */
+/* line 1229, ../sass/screen.sass */
 .your-stay article .recommendations {
   max-width: 100%;
   font-size: 0.8em;
 }
-/* line 1213, ../sass/screen.sass */
+/* line 1232, ../sass/screen.sass */
 .your-stay article .recommendations h3 {
   color: #95b257;
   margin-bottom: 0;
   font-style: italic;
 }
-/* line 1217, ../sass/screen.sass */
+/* line 1236, ../sass/screen.sass */
 .your-stay article .recommendations p {
   margin-top: 0;
 }
-/* line 1219, ../sass/screen.sass */
+/* line 1238, ../sass/screen.sass */
 .your-stay article .recommendations p.note {
   font-size: 1em;
   margin-bottom: 0.8em;
   color: #999999;
 }
 @media (min-width: 45em) {
-  /* line 1219, ../sass/screen.sass */
+  /* line 1238, ../sass/screen.sass */
   .your-stay article .recommendations p.note {
     font-size: 0.8em;
   }
 }
 @media (min-width: 35em) {
-  /* line 1210, ../sass/screen.sass */
+  /* line 1229, ../sass/screen.sass */
   .your-stay article .recommendations {
     width: 41.17647%;
     float: right;
@@ -1858,7 +1886,7 @@ form#question_add input {
   }
 }
 @media (min-width: 45em) {
-  /* line 1210, ../sass/screen.sass */
+  /* line 1229, ../sass/screen.sass */
   .your-stay article .recommendations {
     width: 43.18182%;
     float: right;

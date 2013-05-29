@@ -55,7 +55,7 @@ if ($result = $mysqli->query($query)) {
     /* fetch object array */
     while ($obj = $result->fetch_object()) {
 		printf("<div class=\"question\">");
-		printf("<div class=\"question-text\"><span class=\"question-score\">%s</span>%s</div>", $obj->score, urldecode($obj->question));
+		printf("<div class=\"question-text\"><span class=\"question-score\">%s</span><p>%s</p></div>", $obj->score, urldecode($obj->question));
         if(!$voting_closed and !$viewonly) { printf("<div class=\"voting-buttons\"><a href=\"#\" id=\"%s\" class=\"vote vote-up\" name=\"up\">Up vote</a>&nbsp;&nbsp;<a href=\"#\" id=\"%s\" class=\"vote vote-down\" name=\"down\">Down vote</a></div>", $obj->id, $obj->id); }
         printf("</div><hr>");
     }
