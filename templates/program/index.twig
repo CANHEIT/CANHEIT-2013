@@ -54,19 +54,19 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <th scope="row">Saturday<br />Sunday</th>
+                    <th scope="row"><a href="#saturday">Saturday</a><br /><a href="#sunday">Sunday</a></th>
                     <td>Two days of pre-conference full-day workshops.</td>
                   </tr>
                   <tr>
-                    <th scope="row">Monday<br />Tuesday</th>
+                    <th scope="row"><a href="#monday">Monday</a><br /><a href="#Tuesday">Tuesday</a></th>
                     <td>Sessions, sponsor exhibition areas, keynotes, evening activities.</td>
                   </tr>
                   <tr>
-                    <th scope="row">Wednesday</th>
+                    <th scope="row"><a href="#wednesday">Wednesday</a></th>
                     <td>Sessions, sponsor exhibition areas, keynotes and a preview of CANHEIT 2014.</td>
                   </tr>
                   <tr>
-                    <th scope="row">Thursday<br />Friday</th>
+                    <th scope="row"><a href="#thursday">Thursday</a><br /><a href="#friday">Friday</a></th>
                     <td>Two days of post-conference full-day workshops.</td>
                   </tr>
                 </tbody>
@@ -79,12 +79,12 @@
             <div class="day">
 
             <div class="day-title">
-              <h2>{{ day.day | date("l, F d") }}</h2>
+              <h2 id="{{ day.day | date("l") | lower }}">{{ day.day | date("l, F d") }}</h2>
             </div>
 
             {% for starttime in day.starttimes %}
             <div class="time">
-            <h3>{{ starttime.starttime | date("g:i A") }}</h3>
+            <h3 id="{{ starttime.starttime | date("l-g:iA") | lower }}">{{ starttime.starttime | date("g:i A") }}</h3>
             <ul>
               {% for event in starttime.events %}
                 <li><span class="eventname"><a href="{{ event.id }}">{{ event.name }}</a></span> <span class="endtime">until {{ event.endTime | date("g:i A") }}</span></li>
