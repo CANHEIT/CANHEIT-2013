@@ -1823,7 +1823,7 @@ div.question-text p {
 }
 
 /* line 1218, ../sass/screen.sass */
-.rule {
+div.question {
   clear: left;
   float: none;
   width: 100%;
@@ -1832,16 +1832,25 @@ div.question-text p {
 }
 
 /* line 1225, ../sass/screen.sass */
+.rule {
+  clear: left;
+  float: none;
+  width: 100%;
+  margin-top: 1em;
+  margin-bottom: 2em;
+}
+
+/* line 1232, ../sass/screen.sass */
 div.voting-buttons {
   clear: both;
 }
 
-/* line 1229, ../sass/screen.sass */
+/* line 1236, ../sass/screen.sass */
 .your-stay article ul {
   max-width: 100%;
 }
 @media (min-width: 35em) {
-  /* line 1229, ../sass/screen.sass */
+  /* line 1236, ../sass/screen.sass */
   .your-stay article ul {
     width: 41.17647%;
     float: left;
@@ -1849,47 +1858,47 @@ div.voting-buttons {
   }
 }
 @media (min-width: 45em) {
-  /* line 1229, ../sass/screen.sass */
+  /* line 1236, ../sass/screen.sass */
   .your-stay article ul {
     width: 43.18182%;
     float: left;
     margin-right: 2.27273%;
   }
 }
-/* line 1235, ../sass/screen.sass */
+/* line 1242, ../sass/screen.sass */
 .your-stay article ul li {
   line-height: 1em;
   margin-bottom: 0.5em;
 }
-/* line 1238, ../sass/screen.sass */
+/* line 1245, ../sass/screen.sass */
 .your-stay article .recommendations {
   max-width: 100%;
   font-size: 0.8em;
 }
-/* line 1241, ../sass/screen.sass */
+/* line 1248, ../sass/screen.sass */
 .your-stay article .recommendations h3 {
   color: #95b257;
   margin-bottom: 0;
   font-style: italic;
 }
-/* line 1245, ../sass/screen.sass */
+/* line 1252, ../sass/screen.sass */
 .your-stay article .recommendations p {
   margin-top: 0;
 }
-/* line 1247, ../sass/screen.sass */
+/* line 1254, ../sass/screen.sass */
 .your-stay article .recommendations p.note {
   font-size: 1em;
   margin-bottom: 0.8em;
   color: #999999;
 }
 @media (min-width: 45em) {
-  /* line 1247, ../sass/screen.sass */
+  /* line 1254, ../sass/screen.sass */
   .your-stay article .recommendations p.note {
     font-size: 0.8em;
   }
 }
 @media (min-width: 35em) {
-  /* line 1238, ../sass/screen.sass */
+  /* line 1245, ../sass/screen.sass */
   .your-stay article .recommendations {
     width: 41.17647%;
     float: right;
@@ -1897,7 +1906,7 @@ div.voting-buttons {
   }
 }
 @media (min-width: 45em) {
-  /* line 1238, ../sass/screen.sass */
+  /* line 1245, ../sass/screen.sass */
   .your-stay article .recommendations {
     width: 43.18182%;
     float: right;
