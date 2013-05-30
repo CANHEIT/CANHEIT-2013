@@ -19,7 +19,7 @@
         <link rel="stylesheet" href="../../css/screen.css"><link rel="stylesheet" href="../../js/vendor/jquery.smartbanner/jquery.smartbanner.css">
         <script src="../../js/vendor/modernizr-2.6.2.min.js"></script>
     </head>
-    <body>
+    <body class="your-stay uottawa-campus">
         <!--[if lt IE 9]>
             <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
         <![endif]-->
@@ -36,7 +36,7 @@
           </header>
           <article>
             <header>
-              <a href="../../register/" class="button secondary register">Register Now</a>
+              {% include 'top-call-to-action.html' %}
               <a href="./" rel="home" class="return">uOttawa Campus</a>
               
               <h1>{{ name }}</h1>

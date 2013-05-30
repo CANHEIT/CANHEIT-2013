@@ -15,6 +15,7 @@
   $db = load_db();
 
   $twig_loader = new Twig_Loader_Filesystem(TEMPLATE_DIR);
+  $twig_loader->addPath('../include');
   $twig = new Twig_Environment($twig_loader);
 
 # parse the URI
