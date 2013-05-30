@@ -28,6 +28,14 @@ class apache
             target  => "/etc/apache2/mods-available/rewrite.load",
             require => Package['apache2'],
     }
+    
+    file
+    {
+        "/etc/apache2/mods-enabled/include.load":
+            ensure  => link,
+            target  => "/etc/apache2/mods-available/include.load",
+            require => Package['apache2'],
+    }
 
     file
     {

@@ -547,4 +547,4 @@ AddDefaultCharset utf-8
 #</IfModule>
 
 Options +Includes
-AddOutputFilter INCLUDES .html .twig
+AddOutputFilter INCLUDES .html

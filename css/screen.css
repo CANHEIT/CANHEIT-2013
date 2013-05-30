@@ -17,14 +17,14 @@ bold, strong {
   *zoom: 1;
   max-width: 19em;
   _width: 19em;
-  padding-left: 1em;
-  padding-right: 1em;
   margin-left: auto;
   margin-right: auto;
+  padding-left: 1em;
+  padding-right: 1em;
   background-color: white;
   padding: 1em 1em;
 }
-/* line 38, ../../../.rvm/gems/ruby-2.0.0-p195/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+/* line 38, ../../../../../../usr/local/Cellar/ruby/1.9.3-p286/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
 .container:after {
   content: "";
   display: table;
@@ -34,12 +34,12 @@ bold, strong {
   /* line 18, ../sass/screen.sass */
   .container {
     max-width: 29em;
-    padding-left: 1em;
-    padding-right: 1em;
     margin-left: auto;
     margin-right: auto;
+    padding-left: 1em;
+    padding-right: 1em;
   }
-  /* line 38, ../../../.rvm/gems/ruby-2.0.0-p195/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+  /* line 38, ../../../../../../usr/local/Cellar/ruby/1.9.3-p286/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
   .container:after {
     content: "";
     display: table;
@@ -50,12 +50,12 @@ bold, strong {
   /* line 18, ../sass/screen.sass */
   .container {
     max-width: 34em;
-    padding-left: 1em;
-    padding-right: 1em;
     margin-left: auto;
     margin-right: auto;
+    padding-left: 1em;
+    padding-right: 1em;
   }
-  /* line 38, ../../../.rvm/gems/ruby-2.0.0-p195/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+  /* line 38, ../../../../../../usr/local/Cellar/ruby/1.9.3-p286/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
   .container:after {
     content: "";
     display: table;
@@ -66,12 +66,12 @@ bold, strong {
   /* line 18, ../sass/screen.sass */
   .container {
     max-width: 44em;
-    padding-left: 1em;
-    padding-right: 1em;
     margin-left: auto;
     margin-right: auto;
+    padding-left: 1em;
+    padding-right: 1em;
   }
-  /* line 38, ../../../.rvm/gems/ruby-2.0.0-p195/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+  /* line 38, ../../../../../../usr/local/Cellar/ruby/1.9.3-p286/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
   .container:after {
     content: "";
     display: table;
@@ -688,10 +688,10 @@ div#app-promo.item {
   *zoom: 1;
   max-width: 19em;
   _width: 19em;
-  padding-left: 1em;
-  padding-right: 1em;
   margin-left: auto;
   margin-right: auto;
+  padding-left: 1em;
+  padding-right: 1em;
   padding: 1em 1em;
   overflow: hidden;
   display: block;
@@ -702,7 +702,7 @@ div#app-promo.item {
   background-color: white;
   padding: 1em 1em 0 1em;
 }
-/* line 38, ../../../.rvm/gems/ruby-2.0.0-p195/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+/* line 38, ../../../../../../usr/local/Cellar/ruby/1.9.3-p286/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
 .no-touch div#app-promo.item:after {
   content: "";
   display: table;
@@ -712,12 +712,12 @@ div#app-promo.item {
   /* line 428, ../sass/screen.sass */
   .no-touch div#app-promo.item {
     max-width: 29em;
-    padding-left: 1em;
-    padding-right: 1em;
     margin-left: auto;
     margin-right: auto;
+    padding-left: 1em;
+    padding-right: 1em;
   }
-  /* line 38, ../../../.rvm/gems/ruby-2.0.0-p195/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+  /* line 38, ../../../../../../usr/local/Cellar/ruby/1.9.3-p286/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
   .no-touch div#app-promo.item:after {
     content: "";
     display: table;
@@ -728,12 +728,12 @@ div#app-promo.item {
   /* line 428, ../sass/screen.sass */
   .no-touch div#app-promo.item {
     max-width: 34em;
-    padding-left: 1em;
-    padding-right: 1em;
     margin-left: auto;
     margin-right: auto;
+    padding-left: 1em;
+    padding-right: 1em;
   }
-  /* line 38, ../../../.rvm/gems/ruby-2.0.0-p195/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+  /* line 38, ../../../../../../usr/local/Cellar/ruby/1.9.3-p286/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
   .no-touch div#app-promo.item:after {
     content: "";
     display: table;
@@ -744,12 +744,12 @@ div#app-promo.item {
   /* line 428, ../sass/screen.sass */
   .no-touch div#app-promo.item {
     max-width: 44em;
-    padding-left: 1em;
-    padding-right: 1em;
     margin-left: auto;
     margin-right: auto;
+    padding-left: 1em;
+    padding-right: 1em;
   }
-  /* line 38, ../../../.rvm/gems/ruby-2.0.0-p195/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+  /* line 38, ../../../../../../usr/local/Cellar/ruby/1.9.3-p286/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
   .no-touch div#app-promo.item:after {
     content: "";
     display: table;
@@ -1447,280 +1447,101 @@ header h1 {
 }
 
 /* line 921, ../sass/screen.sass */
-.register .iframe {
+.register .continue .iframe {
   display: none;
 }
 @media (min-width: 30em) {
   /* line 921, ../sass/screen.sass */
-  .register .iframe {
+  .register .continue .iframe {
     display: block;
   }
 }
 @media (min-width: 35em) {
   /* line 921, ../sass/screen.sass */
-  .register .iframe {
+  .register .continue .iframe {
     display: block;
   }
 }
 @media (min-width: 45em) {
   /* line 921, ../sass/screen.sass */
-  .register .iframe {
+  .register .continue .iframe {
     display: block;
   }
 }
 
 /* line 930, ../sass/screen.sass */
-.touch .register .iframe {
+.touch .register .continue .iframe {
   display: none;
 }
 @media (min-width: 30em) {
   /* line 930, ../sass/screen.sass */
-  .touch .register .iframe {
+  .touch .register .continue .iframe {
     display: none;
   }
 }
 @media (min-width: 35em) {
   /* line 930, ../sass/screen.sass */
-  .touch .register .iframe {
+  .touch .register .continue .iframe {
     display: none;
   }
 }
 @media (min-width: 45em) {
   /* line 930, ../sass/screen.sass */
-  .touch .register .iframe {
+  .touch .register .continue .iframe {
     display: none;
   }
 }
 
 /* line 939, ../sass/screen.sass */
-.register div.virtualInfo a.bigbutton {
+.register .continue a.bigbutton {
   display: block;
   text-align: center;
   margin-left: 1em;
 }
 @media (min-width: 30em) {
   /* line 939, ../sass/screen.sass */
-  .register div.virtualInfo a.bigbutton {
+  .register .continue a.bigbutton {
     display: none;
   }
 }
 @media (min-width: 35em) {
   /* line 939, ../sass/screen.sass */
-  .register div.virtualInfo a.bigbutton {
+  .register .continue a.bigbutton {
     display: none;
   }
 }
 @media (min-width: 45em) {
   /* line 939, ../sass/screen.sass */
-  .register div.virtualInfo a.bigbutton {
+  .register .continue a.bigbutton {
     display: none;
   }
 }
 
 /* line 950, ../sass/screen.sass */
-.touch .register div.virtualInfo a.bigbutton {
-  display: block;
-}
-@media (min-width: 30em) {
-  /* line 950, ../sass/screen.sass */
-  .touch .register div.virtualInfo a.bigbutton {
-    display: block;
-  }
-}
-@media (min-width: 35em) {
-  /* line 950, ../sass/screen.sass */
-  .touch .register div.virtualInfo a.bigbutton {
-    display: block;
-  }
-}
-@media (min-width: 45em) {
-  /* line 950, ../sass/screen.sass */
-  .touch .register div.virtualInfo a.bigbutton {
-    display: block;
-  }
-}
-
-/* line 959, ../sass/screen.sass */
-.register div.fullInfo a.bigbutton {
+.touch .register .continue a.bigbutton {
   display: block;
   text-align: center;
-  margin-left: 1em;
 }
 @media (min-width: 30em) {
-  /* line 959, ../sass/screen.sass */
-  .register div.fullInfo a.bigbutton {
-    display: none;
-  }
-}
-@media (min-width: 35em) {
-  /* line 959, ../sass/screen.sass */
-  .register div.fullInfo a.bigbutton {
-    display: none;
-  }
-}
-@media (min-width: 45em) {
-  /* line 959, ../sass/screen.sass */
-  .register div.fullInfo a.bigbutton {
-    display: none;
-  }
-}
-
-/* line 970, ../sass/screen.sass */
-.touch .register div.fullInfo a.bigbutton {
-  display: block;
-}
-@media (min-width: 30em) {
-  /* line 970, ../sass/screen.sass */
-  .touch .register div.fullInfo a.bigbutton {
+  /* line 950, ../sass/screen.sass */
+  .touch .register .continue a.bigbutton {
     display: block;
   }
 }
 @media (min-width: 35em) {
-  /* line 970, ../sass/screen.sass */
-  .touch .register div.fullInfo a.bigbutton {
+  /* line 950, ../sass/screen.sass */
+  .touch .register .continue a.bigbutton {
     display: block;
   }
 }
 @media (min-width: 45em) {
-  /* line 970, ../sass/screen.sass */
-  .touch .register div.fullInfo a.bigbutton {
+  /* line 950, ../sass/screen.sass */
+  .touch .register .continue a.bigbutton {
     display: block;
   }
 }
 
-/* line 979, ../sass/screen.sass */
-.register div.partialInfo a.bigbutton {
-  display: block;
-  text-align: center;
-  margin-left: 1em;
-}
-@media (min-width: 30em) {
-  /* line 979, ../sass/screen.sass */
-  .register div.partialInfo a.bigbutton {
-    display: none;
-  }
-}
-@media (min-width: 35em) {
-  /* line 979, ../sass/screen.sass */
-  .register div.partialInfo a.bigbutton {
-    display: none;
-  }
-}
-@media (min-width: 45em) {
-  /* line 979, ../sass/screen.sass */
-  .register div.partialInfo a.bigbutton {
-    display: none;
-  }
-}
-
-/* line 991, ../sass/screen.sass */
-.touch .register div.partialInfo a.bigbutton {
-  display: block;
-}
-@media (min-width: 30em) {
-  /* line 991, ../sass/screen.sass */
-  .touch .register div.partialInfo a.bigbutton {
-    display: block;
-  }
-}
-@media (min-width: 35em) {
-  /* line 991, ../sass/screen.sass */
-  .touch .register div.partialInfo a.bigbutton {
-    display: block;
-  }
-}
-@media (min-width: 45em) {
-  /* line 991, ../sass/screen.sass */
-  .touch .register div.partialInfo a.bigbutton {
-    display: block;
-  }
-}
-
-/* line 1000, ../sass/screen.sass */
-.register div.virtualInfo {
-  border: 1px solid #f4f4f4;
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  border-radius: 10px;
-  display: block;
-  background-color: white;
-  -webkit-box-shadow: 0 0 5px #f4f4f4;
-  -moz-box-shadow: 0 0 5px #f4f4f4;
-  box-shadow: 0 0 5px #f4f4f4;
-  -moz-transition-property: all;
-  -webkit-transition-property: all;
-  -o-transition-property: all;
-  transition-property: all;
-  -moz-transition-duration: 0.5s;
-  -webkit-transition-duration: 0.5s;
-  -o-transition-duration: 0.5s;
-  transition-duration: 0.5s;
-  margin: 15px 6px 5px 5px;
-}
-/* line 1019, ../sass/screen.sass */
-.register div.virtualInfo p {
-  padding: 10px;
-  color: #999a9e;
-  font-size: 1em;
-}
-
-/* line 1024, ../sass/screen.sass */
-.register div.fullInfo {
-  border: 1px solid #f4f4f4;
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  border-radius: 10px;
-  display: block;
-  background-color: white;
-  -webkit-box-shadow: 0 0 5px #f4f4f4;
-  -moz-box-shadow: 0 0 5px #f4f4f4;
-  box-shadow: 0 0 5px #f4f4f4;
-  -moz-transition-property: all;
-  -webkit-transition-property: all;
-  -o-transition-property: all;
-  transition-property: all;
-  -moz-transition-duration: 0.5s;
-  -webkit-transition-duration: 0.5s;
-  -o-transition-duration: 0.5s;
-  transition-duration: 0.5s;
-  margin: 15px 6px 5px 5px;
-}
-/* line 1043, ../sass/screen.sass */
-.register div.fullInfo p {
-  padding: 10px;
-  color: #999a9e;
-  font-size: 1em;
-}
-
-/* line 1048, ../sass/screen.sass */
-.register div.partialInfo {
-  border: 1px solid #f4f4f4;
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  border-radius: 10px;
-  display: block;
-  background-color: white;
-  -webkit-box-shadow: 0 0 5px #f4f4f4;
-  -moz-box-shadow: 0 0 5px #f4f4f4;
-  box-shadow: 0 0 5px #f4f4f4;
-  -moz-transition-property: all;
-  -webkit-transition-property: all;
-  -o-transition-property: all;
-  transition-property: all;
-  -moz-transition-duration: 0.5s;
-  -webkit-transition-duration: 0.5s;
-  -o-transition-duration: 0.5s;
-  transition-duration: 0.5s;
-  margin: 15px 6px 5px 5px;
-}
-/* line 1067, ../sass/screen.sass */
-.register div.partialInfo p {
-  padding: 10px;
-  color: #999a9e;
-  font-size: 1em;
-}
-
-/* line 1072, ../sass/screen.sass */
+/* line 960, ../sass/screen.sass */
 section div.iconsBoxes {
   display: block;
   width: 8em;
@@ -1753,35 +1574,35 @@ section div.iconsBoxes {
   background: linear-gradient(to bottom, #ffffff 0%, #fdfdfd 28%, #f9f9f9 65%, #f4f4f4 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#f4f4f4',GradientType=0 );
 }
-/* line 1103, ../sass/screen.sass */
+/* line 991, ../sass/screen.sass */
 section div.iconsBoxes img {
   max-width: 3.5em;
   display: block;
   margin: 18px auto;
 }
 @media (min-width: 45em) {
-  /* line 1103, ../sass/screen.sass */
+  /* line 991, ../sass/screen.sass */
   section div.iconsBoxes img {
     margin-top: 25px;
   }
 }
-/* line 1109, ../sass/screen.sass */
+/* line 997, ../sass/screen.sass */
 section div.iconsBoxes img.oneLine {
   margin-top: 28px;
 }
 @media (min-width: 45em) {
-  /* line 1109, ../sass/screen.sass */
+  /* line 997, ../sass/screen.sass */
   section div.iconsBoxes img.oneLine {
     margin-top: 40px;
   }
 }
-/* line 1113, ../sass/screen.sass */
+/* line 1001, ../sass/screen.sass */
 section div.iconsBoxes h3 {
   font-size: 1.2em;
   text-align: center;
 }
 @media (min-width: 30em) {
-  /* line 1072, ../sass/screen.sass */
+  /* line 960, ../sass/screen.sass */
   section div.iconsBoxes {
     max-width: 10em;
     margin: 15px 6px 2px 6px;
@@ -1789,7 +1610,7 @@ section div.iconsBoxes h3 {
   }
 }
 @media (min-width: 35em) {
-  /* line 1072, ../sass/screen.sass */
+  /* line 960, ../sass/screen.sass */
   section div.iconsBoxes {
     width: 9em;
     height: 9em;
@@ -1799,7 +1620,7 @@ section div.iconsBoxes h3 {
   }
 }
 @media (min-width: 45em) {
-  /* line 1072, ../sass/screen.sass */
+  /* line 960, ../sass/screen.sass */
   section div.iconsBoxes {
     width: 8.5em;
     margin: 15px 11px 2px 11px;
@@ -1807,7 +1628,7 @@ section div.iconsBoxes h3 {
   }
 }
 
-/* line 1132, ../sass/screen.sass */
+/* line 1020, ../sass/screen.sass */
 section div.iconBoxes:hover {
   border: 1px solid rgba(148, 178, 88, 0.5);
   -webkit-background-clip: padding-box;
@@ -1825,17 +1646,17 @@ section div.iconBoxes:hover {
   transition-duration: 0.5s;
 }
 
-/* line 1148, ../sass/screen.sass */
+/* line 1036, ../sass/screen.sass */
 section div.iconBoxes:last-child {
   margin-right: 0;
 }
 
-/* line 1153, ../sass/screen.sass */
+/* line 1041, ../sass/screen.sass */
 .voting-buttons {
   margin-left: 70px;
 }
 
-/* line 1157, ../sass/screen.sass */
+/* line 1045, ../sass/screen.sass */
 a.vote {
   text-decoration: none;
   border: 1px solid white;
@@ -1848,27 +1669,27 @@ a.vote {
   font-size: 20px;
 }
 
-/* line 1169, ../sass/screen.sass */
+/* line 1057, ../sass/screen.sass */
 a.vote.vote-up {
   background-color: #95b257;
 }
 
-/* line 1173, ../sass/screen.sass */
+/* line 1061, ../sass/screen.sass */
 a.vote.vote-up:hover {
   background-color: #abc27a;
 }
 
-/* line 1177, ../sass/screen.sass */
+/* line 1065, ../sass/screen.sass */
 a.vote.vote-down {
   background-color: #f36f67;
 }
 
-/* line 1181, ../sass/screen.sass */
+/* line 1069, ../sass/screen.sass */
 a.vote.vote-down:hover {
   background-color: #f79a95;
 }
 
-/* line 1185, ../sass/screen.sass */
+/* line 1073, ../sass/screen.sass */
 span.question-score {
   padding: 7px 15px;
   margin-right: 20px;
@@ -1881,14 +1702,14 @@ span.question-score {
   border: 1px solid #dddddd;
 }
 
-/* line 1212, ../sass/screen.sass */
+/* line 1100, ../sass/screen.sass */
 label.error {
   width: 250px;
   display: inline;
   color: red;
 }
 
-/* line 1217, ../sass/screen.sass */
+/* line 1105, ../sass/screen.sass */
 label#name_label {
   text-align: left;
   font-weight: bold;
@@ -1898,12 +1719,12 @@ label#name_label {
   font-size: 1.2em;
 }
 
-/* line 1225, ../sass/screen.sass */
+/* line 1113, ../sass/screen.sass */
 textarea#question {
   width: 99%;
 }
 
-/* line 1229, ../sass/screen.sass */
+/* line 1117, ../sass/screen.sass */
 form#question_add {
   border: 0.05em solid black;
   padding: 1em;
@@ -1912,17 +1733,17 @@ form#question_add {
   margin-bottom: 2em;
 }
 
-/* line 1236, ../sass/screen.sass */
+/* line 1124, ../sass/screen.sass */
 form#question_add input {
   margin-top: 1.5em;
 }
 
-/* line 1240, ../sass/screen.sass */
+/* line 1128, ../sass/screen.sass */
 .your-stay article ul {
   max-width: 100%;
 }
 @media (min-width: 35em) {
-  /* line 1240, ../sass/screen.sass */
+  /* line 1128, ../sass/screen.sass */
   .your-stay article ul {
     width: 41.17647%;
     float: left;
@@ -1930,47 +1751,47 @@ form#question_add input {
   }
 }
 @media (min-width: 45em) {
-  /* line 1240, ../sass/screen.sass */
+  /* line 1128, ../sass/screen.sass */
   .your-stay article ul {
     width: 43.18182%;
     float: left;
     margin-right: 2.27273%;
   }
 }
-/* line 1246, ../sass/screen.sass */
+/* line 1134, ../sass/screen.sass */
 .your-stay article ul li {
   line-height: 1em;
   margin-bottom: 0.5em;
 }
-/* line 1249, ../sass/screen.sass */
+/* line 1137, ../sass/screen.sass */
 .your-stay article .recommendations {
   max-width: 100%;
   font-size: 0.8em;
 }
-/* line 1252, ../sass/screen.sass */
+/* line 1140, ../sass/screen.sass */
 .your-stay article .recommendations h3 {
   color: #95b257;
   margin-bottom: 0;
   font-style: italic;
 }
-/* line 1256, ../sass/screen.sass */
+/* line 1144, ../sass/screen.sass */
 .your-stay article .recommendations p {
   margin-top: 0;
 }
-/* line 1258, ../sass/screen.sass */
+/* line 1146, ../sass/screen.sass */
 .your-stay article .recommendations p.note {
   font-size: 1em;
   margin-bottom: 0.8em;
   color: #999999;
 }
 @media (min-width: 45em) {
-  /* line 1258, ../sass/screen.sass */
+  /* line 1146, ../sass/screen.sass */
   .your-stay article .recommendations p.note {
     font-size: 0.8em;
   }
 }
 @media (min-width: 35em) {
-  /* line 1249, ../sass/screen.sass */
+  /* line 1137, ../sass/screen.sass */
   .your-stay article .recommendations {
     width: 41.17647%;
     float: right;
@@ -1978,7 +1799,7 @@ form#question_add input {
   }
 }
 @media (min-width: 45em) {
-  /* line 1249, ../sass/screen.sass */
+  /* line 1137, ../sass/screen.sass */
   .your-stay article .recommendations {
     width: 43.18182%;
     float: right;
@@ -1987,22 +1808,22 @@ form#question_add input {
 }
 
 @media print {
-  /* line 1269, ../sass/screen.sass */
+  /* line 1157, ../sass/screen.sass */
   a[href]:after {
     content: "";
   }
 
-  /* line 1271, ../sass/screen.sass */
+  /* line 1159, ../sass/screen.sass */
   article {
     font-size: 1em;
   }
 
-  /* line 1273, ../sass/screen.sass */
+  /* line 1161, ../sass/screen.sass */
   body > div.container > footer {
     display: none;
   }
 
-  /* line 1275, ../sass/screen.sass */
+  /* line 1163, ../sass/screen.sass */
   div.container #app-promo.item {
     display: none;
   }
