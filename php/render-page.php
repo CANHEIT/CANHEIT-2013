@@ -235,7 +235,7 @@
       $stmt = $db->prepare($poi_query);
       $stmt->bindParam(':id', $poi_category_id, SQLITE3_INTEGER);
       $template_file = $matches[1].'/index.twig';
-      array_push($parse_functions, 'get_all_results_pages');
+      array_push($parse_functions, 'prepare_sponsors_data');
       break;
 
 
@@ -396,6 +396,40 @@
     unset($data['objects']);
 
     $data['days'] = $list_of_days;
+
+  }
+
+  function prepare_sponsors_data(&$data) {
+    group_sponsors_by_level($data);
+  }
+
+  function group_sponsors_by_level(&$data) {
+
+    $list_of_levels= array();
+
+    foreach ($data['objects'] as $sponsor) {
+      $group = strtolower($sponsor['label']);
+
+        if (!isset($list_of_levels[$group])) {
+            $list_of_levels[$group] =
+            array(
+              'label' => $sponsor['label'],
+              'sponsors' => array(),
+            );
+        }
+
+          array_push(
+            $list_of_levels[$group]['sponsors'],
+            array(
+              'name' => $sponsor['name'],
+              'id' => $sponsor['id']
+            )
+          );
+        }
+
+    unset($data['objects']);
+
+    $data['levels'] = $list_of_levels;
 
   }
 
