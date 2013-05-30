@@ -17,14 +17,14 @@ bold, strong {
   *zoom: 1;
   max-width: 19em;
   _width: 19em;
-  padding-left: 1em;
-  padding-right: 1em;
   margin-left: auto;
   margin-right: auto;
+  padding-left: 1em;
+  padding-right: 1em;
   background-color: white;
   padding: 1em 1em;
 }
-/* line 38, ../../../.rvm/gems/ruby-2.0.0-p195/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+/* line 38, ../../../../../../usr/local/Cellar/ruby/1.9.3-p286/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
 .container:after {
   content: "";
   display: table;
@@ -34,12 +34,12 @@ bold, strong {
   /* line 18, ../sass/screen.sass */
   .container {
     max-width: 29em;
-    padding-left: 1em;
-    padding-right: 1em;
     margin-left: auto;
     margin-right: auto;
+    padding-left: 1em;
+    padding-right: 1em;
   }
-  /* line 38, ../../../.rvm/gems/ruby-2.0.0-p195/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+  /* line 38, ../../../../../../usr/local/Cellar/ruby/1.9.3-p286/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
   .container:after {
     content: "";
     display: table;
@@ -50,12 +50,12 @@ bold, strong {
   /* line 18, ../sass/screen.sass */
   .container {
     max-width: 34em;
-    padding-left: 1em;
-    padding-right: 1em;
     margin-left: auto;
     margin-right: auto;
+    padding-left: 1em;
+    padding-right: 1em;
   }
-  /* line 38, ../../../.rvm/gems/ruby-2.0.0-p195/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+  /* line 38, ../../../../../../usr/local/Cellar/ruby/1.9.3-p286/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
   .container:after {
     content: "";
     display: table;
@@ -66,12 +66,12 @@ bold, strong {
   /* line 18, ../sass/screen.sass */
   .container {
     max-width: 44em;
-    padding-left: 1em;
-    padding-right: 1em;
     margin-left: auto;
     margin-right: auto;
+    padding-left: 1em;
+    padding-right: 1em;
   }
-  /* line 38, ../../../.rvm/gems/ruby-2.0.0-p195/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+  /* line 38, ../../../../../../usr/local/Cellar/ruby/1.9.3-p286/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
   .container:after {
     content: "";
     display: table;
@@ -688,10 +688,10 @@ div#app-promo.item {
   *zoom: 1;
   max-width: 19em;
   _width: 19em;
-  padding-left: 1em;
-  padding-right: 1em;
   margin-left: auto;
   margin-right: auto;
+  padding-left: 1em;
+  padding-right: 1em;
   padding: 1em 1em;
   overflow: hidden;
   display: block;
@@ -702,7 +702,7 @@ div#app-promo.item {
   background-color: white;
   padding: 1em 1em 0 1em;
 }
-/* line 38, ../../../.rvm/gems/ruby-2.0.0-p195/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+/* line 38, ../../../../../../usr/local/Cellar/ruby/1.9.3-p286/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
 .no-touch div#app-promo.item:after {
   content: "";
   display: table;
@@ -712,12 +712,12 @@ div#app-promo.item {
   /* line 428, ../sass/screen.sass */
   .no-touch div#app-promo.item {
     max-width: 29em;
-    padding-left: 1em;
-    padding-right: 1em;
     margin-left: auto;
     margin-right: auto;
+    padding-left: 1em;
+    padding-right: 1em;
   }
-  /* line 38, ../../../.rvm/gems/ruby-2.0.0-p195/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+  /* line 38, ../../../../../../usr/local/Cellar/ruby/1.9.3-p286/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
   .no-touch div#app-promo.item:after {
     content: "";
     display: table;
@@ -728,12 +728,12 @@ div#app-promo.item {
   /* line 428, ../sass/screen.sass */
   .no-touch div#app-promo.item {
     max-width: 34em;
-    padding-left: 1em;
-    padding-right: 1em;
     margin-left: auto;
     margin-right: auto;
+    padding-left: 1em;
+    padding-right: 1em;
   }
-  /* line 38, ../../../.rvm/gems/ruby-2.0.0-p195/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+  /* line 38, ../../../../../../usr/local/Cellar/ruby/1.9.3-p286/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
   .no-touch div#app-promo.item:after {
     content: "";
     display: table;
@@ -744,12 +744,12 @@ div#app-promo.item {
   /* line 428, ../sass/screen.sass */
   .no-touch div#app-promo.item {
     max-width: 44em;
-    padding-left: 1em;
-    padding-right: 1em;
     margin-left: auto;
     margin-right: auto;
+    padding-left: 1em;
+    padding-right: 1em;
   }
-  /* line 38, ../../../.rvm/gems/ruby-2.0.0-p195/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+  /* line 38, ../../../../../../usr/local/Cellar/ruby/1.9.3-p286/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
   .no-touch div#app-promo.item:after {
     content: "";
     display: table;
@@ -1447,47 +1447,47 @@ header h1 {
 }
 
 /* line 921, ../sass/screen.sass */
-.register .iframe {
+.register .iframe, .register.sponsors .iframe {
   display: none;
 }
 @media (min-width: 30em) {
   /* line 921, ../sass/screen.sass */
-  .register .iframe {
+  .register .iframe, .register.sponsors .iframe {
     display: block;
   }
 }
 @media (min-width: 35em) {
   /* line 921, ../sass/screen.sass */
-  .register .iframe {
+  .register .iframe, .register.sponsors .iframe {
     display: block;
   }
 }
 @media (min-width: 45em) {
   /* line 921, ../sass/screen.sass */
-  .register .iframe {
+  .register .iframe, .register.sponsors .iframe {
     display: block;
   }
 }
 
 /* line 930, ../sass/screen.sass */
-.touch .register .iframe {
+.touch .register .iframe, .touch .register.sponsors .iframe {
   display: none;
 }
 @media (min-width: 30em) {
   /* line 930, ../sass/screen.sass */
-  .touch .register .iframe {
+  .touch .register .iframe, .touch .register.sponsors .iframe {
     display: none;
   }
 }
 @media (min-width: 35em) {
   /* line 930, ../sass/screen.sass */
-  .touch .register .iframe {
+  .touch .register .iframe, .touch .register.sponsors .iframe {
     display: none;
   }
 }
 @media (min-width: 45em) {
   /* line 930, ../sass/screen.sass */
-  .touch .register .iframe {
+  .touch .register .iframe, .touch .register.sponsors .iframe {
     display: none;
   }
 }
@@ -1541,49 +1541,49 @@ header h1 {
 }
 
 /* line 959, ../sass/screen.sass */
-.register div.fullInfo a.bigbutton {
+.register div.fullInfo a.bigbutton, .register.sponsors a.bigbutton {
   display: block;
   text-align: center;
   margin-left: 1em;
 }
 @media (min-width: 30em) {
   /* line 959, ../sass/screen.sass */
-  .register div.fullInfo a.bigbutton {
+  .register div.fullInfo a.bigbutton, .register.sponsors a.bigbutton {
     display: none;
   }
 }
 @media (min-width: 35em) {
   /* line 959, ../sass/screen.sass */
-  .register div.fullInfo a.bigbutton {
+  .register div.fullInfo a.bigbutton, .register.sponsors a.bigbutton {
     display: none;
   }
 }
 @media (min-width: 45em) {
   /* line 959, ../sass/screen.sass */
-  .register div.fullInfo a.bigbutton {
+  .register div.fullInfo a.bigbutton, .register.sponsors a.bigbutton {
     display: none;
   }
 }
 
 /* line 970, ../sass/screen.sass */
-.touch .register div.fullInfo a.bigbutton {
+.touch .register div.fullInfo a.bigbutton, .touch .register.sponsors a.bigbutton {
   display: block;
 }
 @media (min-width: 30em) {
   /* line 970, ../sass/screen.sass */
-  .touch .register div.fullInfo a.bigbutton {
+  .touch .register div.fullInfo a.bigbutton, .touch .register.sponsors a.bigbutton {
     display: block;
   }
 }
 @media (min-width: 35em) {
   /* line 970, ../sass/screen.sass */
-  .touch .register div.fullInfo a.bigbutton {
+  .touch .register div.fullInfo a.bigbutton, .touch .register.sponsors a.bigbutton {
     display: block;
   }
 }
 @media (min-width: 45em) {
   /* line 970, ../sass/screen.sass */
-  .touch .register div.fullInfo a.bigbutton {
+  .touch .register div.fullInfo a.bigbutton, .touch .register.sponsors a.bigbutton {
     display: block;
   }
 }

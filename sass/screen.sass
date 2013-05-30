@@ -918,7 +918,7 @@ header h1
 .register section a
   text-decoration: none
 
-.register .iframe
+.register .iframe, .register.sponsors .iframe
   display: none
   +at-breakpoint(30em 6)
     display: block
@@ -927,7 +927,7 @@ header h1
   +at-breakpoint(45em 9)
     display: block
 
-.touch .register .iframe
+.touch .register .iframe, .touch .register.sponsors .iframe
   display: none
   +at-breakpoint(30em 6)
     display: none
@@ -956,7 +956,7 @@ header h1
   +at-breakpoint(45em 9)
     display: block
 
-.register div.fullInfo a.bigbutton
+.register div.fullInfo a.bigbutton, .register.sponsors a.bigbutton
   display: block
   text-align: center
   margin-left: 1em
@@ -967,7 +967,7 @@ header h1
   +at-breakpoint(45em 9)
     display: none
 
-.touch .register div.fullInfo a.bigbutton
+.touch .register div.fullInfo a.bigbutton, .touch .register.sponsors a.bigbutton
   display: block
   +at-breakpoint(30em 6)
     display: block
