@@ -85,8 +85,13 @@
           </header>
           <article>
             <header>
-              <a href="../<?php echo $session_id; ?>" rel="home" class="return"><?php echo $session_name; ?></a>
-              
+              <?php
+              		if($_GET['app'] == 1) {
+              			echo '<a href="gb://guide/5396/event/'.$session_id.'" rel="home" class="return"><?php echo $session_name; ?></a>'
+              		} else {
+              			echo '<a href="../<?php echo $session_id; ?>" rel="home" class="return"><?php echo $session_name; ?></a>'
+              		}
+              	?>
 <!--               <h1><?php echo $session_name; ?></h1> -->
               <h2>Interactive Question Period</h2>
               <?php if(!$viewonly) { ?>
