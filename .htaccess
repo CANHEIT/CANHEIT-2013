@@ -545,3 +545,6 @@ AddDefaultCharset utf-8
 #<IfModule php5_module>
 #  php_value session.cookie_httponly true
 #</IfModule>
+
+Options +Includes
+AddOutputFilter INCLUDES .html .twig
