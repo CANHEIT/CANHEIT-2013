@@ -47,8 +47,13 @@
             </header>
 
             <ul>
-              {% for object in objects %}
-                <li><a href="{{ object.id }}">{{ object.name }}</a> {% if object.label %}<span class="level">{{ object.label }}</span>{% endif %}</li>
+              {% for level in levels %}
+                <li><span class="level">{{ level.label }}</span>
+                    <ul>
+                      {% for sponsor in level.sponsors %}
+                          <li><a href="{{ sponsor.id }}">{{ sponsor.name }}</a></li>
+                      {% endfor %}
+                    </ul></li>
               {% endfor %}
             </ul>
 
