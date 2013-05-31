@@ -38,7 +38,7 @@ article
       padding: 0.85em /* 1.4 * 0.875 */
       margin: -0.85em /* */
       margin-bottom: 1em
-  
+
 img, video, embed, object
   max-width: 100%
 
@@ -53,7 +53,7 @@ article figure.right
     max-width: 16.5em /* 34em - 1em for margin / 2 */
   +at-breakpoint(45em 9)
     max-width: 15.5em /* 32em - 1em for margin / 2 */
-  
+
 article figure.right.one-third
   +at-breakpoint(35em 7)
     max-width: 11em /* 34em - 1em for margin / 3 */
@@ -74,20 +74,20 @@ h2
   color: $primary-orange
   font-size: 1.875em /* 30 / 16 = 1.875 */
   line-height: 1.06666666666667em /* 32 / 30 = 1.06666666666667 */
-  
+
 h3
   color: $primary-gray
   font-weight: $weight-normal
   font-size: 1.25em /* 20 / 16 = 1.25 */
   line-height: 1.2em /* 24 / 20 = 1.2 */
-  
+
 a:link, a:visited
-  font-weight: $weight-bold   
+  font-weight: $weight-bold
   color: #55bed8
 
 a:hover
   color: lighten($secondary-blue, 10%)
-  
+
 a:link, a:visited, a:hover, input[type=submit], button
   -webkit-transition: color 0.2s linear, background-color 0.2s linear, opacity 0.2s linear
   -moz-transition: color 0.2s linear, background-color 0.2s linear, opacity 0.2s linear
@@ -121,7 +121,7 @@ a.button + p, a.bigbutton + p, input[type=submit] + p, button + p
 
 a.button.secondary, a.bigbutton.secondary, input[type=submit].secondary, button.secondary
   background: $secondary-green
-  
+
 a.button:hover, a.bigbutton:hover, input[type=submit]:hover, button:hover
   background: lighten($secondary-blue, 10%)
 
@@ -179,7 +179,7 @@ header
     padding-left: 16em
     padding-right: 1em
     padding-top: 1.8em
-    
+
     img#logo
       float: left
       margin: -.8em 0 0 -15em
@@ -189,7 +189,7 @@ header
     padding-left: 22em
     padding-right: 2em
     padding-top: 2.8em
-    
+
     img#logo
       max-width: 18em
       margin: -1.8em 0 0 -21em
@@ -205,12 +205,12 @@ header
 
   margin: -1em -1em 1em
   padding: 1em
-  
+
   img#logo
     display: block
     max-width: 14em
     margin: 0 auto
-  
+
   p.tagline
     color: #333
     margin-bottom: 1em
@@ -221,22 +221,22 @@ header
       margin: 0
   span.location
     padding-right: 1em
-  
+
   p.theme
     font-size: 1.125em /* 18px / 16px = 1.125 */
     padding: 0 2em
     color: $primary-orange
     margin: 0
-    
+
   +at-breakpoint(30em 6)
     padding: 1em
-    
+
     img#logo
       float: none
       margin: 0 auto
     p.location-date, p.tagline
       text-align: inherit
-	   
+
   +at-breakpoint(45em 9)
     margin: 0 1em 1em
     background-image: -moz-radial-gradient(12.5em 12em, circle closest-side, white, white 8em, darken(white, 5%) 11em)
@@ -245,7 +245,7 @@ header
     background-image: -ms-radial-gradient(12.5em 12em, circle closest-side, white, white 8em, darken(white, 5%) 11em)
     background-image: radial-gradient(12.5em 12em, circle closest-side, white, white 8em, darken(white, 5%) 11em)
     +clearfix
-    
+
     padding-left: 22em
     padding-right: 1em
     padding-top: 5em
@@ -280,13 +280,13 @@ header
       width: 100px
       height: 118px
       background-size: 100px 118px
-      
+
       transform: rotate(12deg)
       -ms-transform: rotate(12deg) /* IE 9 */
       -moz-transform: rotate(12deg) /* Firefox */
       -webkit-transform: rotate(12deg) /* Safari and Chrome */
       -o-transform: rotate(12deg) /* Opera */
-      
+
       padding: 0
       margin: -2em -4em -3em 12em
       position: relative
@@ -339,7 +339,7 @@ footer
 .home footer
   +at-breakpoint(45em 7)
     background-color: transparent
-  
+
 #promovideo
   width: 144px
   border: 6px solid white
@@ -376,7 +376,7 @@ p.note
   border-bottom: 1px solid #ccc
   p
     color: $primary-gray
-  
+
 p.theme
   font-style: italic
   margin: 0 4em 0 2em
@@ -413,7 +413,7 @@ p.theme
     -moz-transform: rotate(1deg) /* Firefox */
     -webkit-transform: rotate(1deg) /* Safari and Chrome */
     -o-transform: rotate(1deg) /* Opera */
-    
+
   .home div#program, .home div#your-stay, .home div#speakers-toolkit
     margin-right: -1em
     transform: rotate(-1deg)
@@ -421,26 +421,31 @@ p.theme
     -moz-transform: rotate(-1deg) /* Firefox */
     -webkit-transform: rotate(-1deg) /* Safari and Chrome */
     -o-transform: rotate(-1deg) /* Opera */
-  
+
 div#app-promo.item
   display: none
 
 .no-touch div#app-promo.item
+  +container
+  padding: 1em 1em
+  +at-breakpoint(30em 6)
+    +container
+  +at-breakpoint(35em 7)
+    +container
+  +at-breakpoint(45em 9)
+    +container
   overflow: hidden
   display: block
   padding: 0 1em 1em
   -moz-border-radius: 10px
   -webkit-border-radius: 10px
   border-radius: 10px
-  +at-breakpoint(30em 6)
-  +at-breakpoint(35em 7)
-  +at-breakpoint(45em 9)
-    background-color: white
-    padding: 1em 1em 0 1em
-	
+  background-color: white
+  padding: 1em 1em 0 1em
+
   img
     float: left
-    display: none 
+    display: none
     margin-right: 2em
     margin-top: 0
     margin-left: 0
@@ -448,14 +453,14 @@ div#app-promo.item
     max-width: 4em
     +at-breakpoint(30em 6)
       max-width: 5em
-      display: block 
+      display: block
     +at-breakpoint(35em 7)
       max-width: 6em
     +at-breakpoint(45em 9)
       margin-bottom: 1em
-		
+
   h2
-    margin: 0.1em auto 
+    margin: 0.1em auto
     font-size: 2em
     float: none
     +at-breakpoint(30em 6)
@@ -480,10 +485,10 @@ div#app-promo.item
       margin-bottom: 0
       margin-right: 2em
     +at-breakpoint(45em 9)
-		
+
   div.headings
     float: left
-    display: block	
+    display: block
     max-width: 18em
 
     +at-breakpoint(30em 6)
@@ -493,7 +498,7 @@ div#app-promo.item
     +at-breakpoint(45em 9)
 
 
-		
+
   div.actions
     margin-top: 10px
     float: left
@@ -501,9 +506,9 @@ div#app-promo.item
     clear: both
 
     +at-breakpoint(30em 6)
-   
+
       margin-left: 7.1em
- 
+
     +at-breakpoint(35em 7)
       margin-left: 8.1em
 
@@ -514,29 +519,29 @@ div#app-promo.item
       max-width: 15em
       margin-left: 0
       margin-top: 3em
- 
-		
+
+
   div.actions .button
     max-width: 60em
     margin-right: 0.4em
     +at-breakpoint(30em 6)
- 
+
     +at-breakpoint(35em 7)
 
     +at-breakpoint(45em 9)
-     
-		
+
+
   div.actions .cancel
     margin-left: 1em
     margin-right: 0
     +at-breakpoint(30em 6)
- 
+
     +at-breakpoint(35em 7)
 
     +at-breakpoint(45em 9)
       margin-left: 0
-    
-    
+
+
 #organizers
   clear: left
   background-color: $charcoal
@@ -545,8 +550,8 @@ div#app-promo.item
   background-image: -o-radial-gradient(50% 50%, circle closest-side, $charcoal, $charcoal 8em, darken($charcoal, 5%) 11em)
   background-image: -ms-radial-gradient(50% 50%, circle closest-side, $charcoal, $charcoal 8em, darken($charcoal, 5%) 11em)
   background-image: radial-gradient(50% 50%, circle closest-side, $charcoal, $charcoal 8em, darken($charcoal, 5%) 11em)
-  
-  
+
+
   +at-breakpoint(45em 9)
     background-image: -moz-radial-gradient(50% 50%, circle closest-side, $charcoal, $charcoal 12em, darken($charcoal, 5%) 19em)
     background-image: -webkit-radial-gradient(50% 50%, circle closest-side, $charcoal, $charcoal 12em, darken($charcoal, 5%) 19em)
@@ -599,7 +604,7 @@ div#app-promo.item
     .uottawa-logo, .carleton-logo
       background-image: url(../img/organizer-logos@2x.png)
       background-size: 246px 72px
-    
+
 aside.highlight
   border: 2px solid $primary-orange
   padding: 1em
@@ -681,16 +686,16 @@ aside.note
       font-size: 1.8em
     +at-breakpoint(35em 7)
     +at-breakpoint(45em 9)
-		
+
   a.bigbutton
     background-color: $secondary-pink
-		
+
   a.bigbutton:hover
     background: lighten($secondary-pink, 10%)
-				
+
   a.button.secondary.register
     background-color: $secondary-green
-		
+
   a.button.secondary.register:hover
     background: lighten($secondary-green, 10%)
 
@@ -702,30 +707,30 @@ aside.note
       font-size: 1.8em
     +at-breakpoint(35em 7)
     +at-breakpoint(45em 9)
-		
+
   a.bigbutton
     background-color: $secondary-pink
 
   a.bigbutton:hover
     background: lighten($secondary-pink, 10%)
-		
+
   a.bigbutton.secondary
     background-color: $secondary-blue
-		
+
   a.bigbutton.secondary:hover
     background: lighten($secondary-blue, 10%)
 
   a.button.secondary.register
     background-color: $secondary-green
-		
+
   a.button.secondary.register:hover
     background: lighten($secondary-green, 10%)
-		
+
   div#interested
     +at-breakpoint(45em 9)
       display: none
 
-    
+
 
   .level
     color: $primary-gray
@@ -735,11 +740,11 @@ aside.note
     font-size: 0.6em
     white-space: normal
     display: inline
-  
+
 
 .sponsors header a.register
   background-color: $secondary-pink
-	
+
 .sponsors header
   h1
     margin: 1.6em auto
@@ -748,18 +753,17 @@ aside.note
     margin-top: 3.5em
     margin-left: 0
     margin-right: 1em
-    float: left	
+    float: left
     +at-breakpoint(30em 6)
       margin-top: 2.4em
     +at-breakpoint(35em 7)
     +at-breakpoint(45em 9)
       margin-top: 2em
-    
+
 section#description h1
   margin-top: 0
   font-weight: normal
-  
-section#program, article#session
+article#program, article#session
   .eventname
     font-weight: $weight-bold
     display: block
@@ -768,7 +772,41 @@ section#program, article#session
     display: block
   .endtime
     color: $primary-gray
+  .intro
+    border-bottom: none
 
+table
+  border-top: 1px solid lighten($primary-gray, 20%)
+  tbody tr th, tbody tr td
+    padding: 0.5em
+    border-bottom: 1px solid lighten($primary-gray, 20%)
+  tbody tr td
+    color: lighten($charcoal, 20%)
+
+article#program .intro table
+  thead
+    display: none
+
+article#program
+  .day-title
+    margin: 1em 0
+    h2
+      margin: 0
+      padding: 0.2em 0
+      border-bottom: 1px solid rgba(0,0,0,0.1)
+  .day-title h2.fixed
+    position: fixed
+    top: 0
+    background: rgba(255,255,255,0.9)
+    width: 10.13333333333333em // 304 / 30
+    +at-breakpoint(30em 6)
+      width: 15.46666666666667em // 464 / 30
+    +at-breakpoint(35em 7)
+      width: 18.13333333333333em // 544 / 30
+    +at-breakpoint(45em 9)
+      width: 16.76190476190476em // 704 / 42
+  .day-title h2.absolute
+    position: absolute
 header
   h1
     margin: 1.6em auto
@@ -777,7 +815,7 @@ header
     margin-top: 2em
     margin-left: 0
     margin-right: 1em
-    float: left	
+    float: left
 
 header h1
   font-size: 2em
@@ -787,25 +825,25 @@ header h1
     font-size: 2.5em
   +at-breakpoint(45em 9)
     font-size: 2em
-		
+
 #notice
   background-color: #fca045
   display: block
   -webkit-border-radius: 10px
   -moz-border-radius: 10px
-  border-radius: 10px 
+  border-radius: 10px
   h3
     color: white
-    padding: 20px 15px 0 15px	  
+    padding: 20px 15px 0 15px
   p
     color: white
     padding: 0 15px 20px 15px
   img
     max-width: 40%
-    margin: 12px 0 5px 0 
+    margin: 12px 0 5px 0
     float: right
 
-section div:first-child
+.register section div:first-child
   display: block
   border: 1px solid #f4f4f4
   -webkit-border-radius: 10px
@@ -832,9 +870,9 @@ section div:first-child
   background: -o-linear-gradient(top,  #ffffff 0%,#fdfdfd 28%,#f9f9f9 65%,#f4f4f4 100%) /* Opera 11.10+ */
   background: -ms-linear-gradient(top,  #ffffff 0%,#fdfdfd 28%,#f9f9f9 65%,#f4f4f4 100%) /* IE10+ */
   background: linear-gradient(to bottom,  #ffffff 0%,#fdfdfd 28%,#f9f9f9 65%,#f4f4f4 100%) /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f4f4f4',GradientType=0 ) /* IE6-8 */  
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f4f4f4',GradientType=0 ) /* IE6-8 */
 
-section div:first-child h3
+.register section div:first-child h3
   color: #989a9e
   font-size: 1em
   margin: 1em auto
@@ -845,20 +883,20 @@ section div:first-child h3
   +at-breakpoint(45em 9)
     font-size: 1.5em
 
-section div:first-child img.numberIcon
+.register section div:first-child img.numberIcon
   max-width: 2em
   margin-top: 0
   margin-left: 1em
   margin-right: 0.5em
   margin-bottom: auto
   +at-breakpoint(30em 6)
-    
-  +at-breakpoint(35em 7)
-    
-  +at-breakpoint(45em 9)
-    
 
-section div:first-child:hover
+  +at-breakpoint(35em 7)
+
+  +at-breakpoint(45em 9)
+
+
+.register section div:first-child:hover
   border: 1px solid rgba(252, 160, 69, .5)
   -webkit-background-clip: padding-box
   background-clip: padding-box
@@ -874,13 +912,13 @@ section div:first-child:hover
   -o-transition-duration: 0.5s
   transition-duration: 0.5s
 
-h3.or
+.register h3.or
   text-align: center
 
-section a
+.register section a
   text-decoration: none
 
-.iframe
+.register .continue .iframe
   display: none
   +at-breakpoint(30em 6)
     display: block
@@ -889,7 +927,7 @@ section a
   +at-breakpoint(45em 9)
     display: block
 
-.touch .iframe
+.touch .register .continue .iframe
   display: none
   +at-breakpoint(30em 6)
     display: none
@@ -898,7 +936,7 @@ section a
   +at-breakpoint(45em 9)
     display: none
 
-div.virtualInfo a.bigbutton 
+.register .continue a.bigbutton
   display: block
   text-align: center
   margin-left: 1em
@@ -909,126 +947,15 @@ div.virtualInfo a.bigbutton
   +at-breakpoint(45em 9)
     display: none
 
-.touch div.virtualInfo a.bigbutton 
-  display: block
-  +at-breakpoint(30em 6)
-    display: block
-  +at-breakpoint(35em 7)
-    display: block
-  +at-breakpoint(45em 9)
-    display: block 
-
-div.fullInfo a.bigbutton 
+.touch .register .continue a.bigbutton
   display: block
   text-align: center
-  margin-left: 1em
-  +at-breakpoint(30em 6)
-    display: none
-  +at-breakpoint(35em 7)
-    display: none
-  +at-breakpoint(45em 9)
-    display: none
-
-.touch div.fullInfo a.bigbutton 
-  display: block
   +at-breakpoint(30em 6)
     display: block
   +at-breakpoint(35em 7)
     display: block
   +at-breakpoint(45em 9)
-    display: block    
-
-div.partialInfo a.bigbutton 
-  display: block
-  text-align: center
-  margin-left: 1em
-  +at-breakpoint(30em 6)
-    display: none
-  +at-breakpoint(35em 7)
-    display: none
-  +at-breakpoint(45em 9)
-    display: none  
-
-.touch div.partialInfo a.bigbutton 
-  display: block
-  +at-breakpoint(30em 6)
     display: block
-  +at-breakpoint(35em 7)
-    display: block
-  +at-breakpoint(45em 9)
-    display: block  
-		
-div.virtualInfo
-  border: 1px solid #f4f4f4
-  -webkit-border-radius: 10px
-  -moz-border-radius: 10px
-  border-radius: 10px
-  display: block
-  background-color: white
-  -webkit-box-shadow: 0 0 5px #f4f4f4
-  -moz-box-shadow: 0 0 5px #f4f4f4
-  box-shadow: 0 0 5px #f4f4f4
-  -moz-transition-property: all
-  -webkit-transition-property: all
-  -o-transition-property: all
-  transition-property: all
-  -moz-transition-duration: 0.5s
-  -webkit-transition-duration: 0.5s
-  -o-transition-duration: 0.5s
-  transition-duration: 0.5s
-  margin: 15px 6px 5px 5px
-  p
-    padding: 10px
-    color: #999a9e
-    font-size: 1em
-
-div.fullInfo
-  border: 1px solid #f4f4f4
-  -webkit-border-radius: 10px
-  -moz-border-radius: 10px
-  border-radius: 10px
-  display: block
-  background-color: white
-  -webkit-box-shadow: 0 0 5px #f4f4f4
-  -moz-box-shadow: 0 0 5px #f4f4f4
-  box-shadow: 0 0 5px #f4f4f4
-  -moz-transition-property: all
-  -webkit-transition-property: all
-  -o-transition-property: all
-  transition-property: all
-  -moz-transition-duration: 0.5s
-  -webkit-transition-duration: 0.5s
-  -o-transition-duration: 0.5s
-  transition-duration: 0.5s
-  margin: 15px 6px 5px 5px
-  p
-    padding: 10px
-    color: #999a9e
-    font-size: 1em
-	
-div.partialInfo
-  border: 1px solid #f4f4f4
-  -webkit-border-radius: 10px
-  -moz-border-radius: 10px
-  border-radius: 10px
-  display: block
-  background-color: white
-  -webkit-box-shadow: 0 0 5px #f4f4f4
-  -moz-box-shadow: 0 0 5px #f4f4f4
-  box-shadow: 0 0 5px #f4f4f4
-  -moz-transition-property: all
-  -webkit-transition-property: all
-  -o-transition-property: all
-  transition-property: all
-  -moz-transition-duration: 0.5s
-  -webkit-transition-duration: 0.5s
-  -o-transition-duration: 0.5s
-  transition-duration: 0.5s
-  margin: 15px 6px 5px 5px
-  p
-    padding: 10px
-    color: #999a9e
-    font-size: 1em
 
 section div.iconsBoxes
   display: block
@@ -1052,7 +979,7 @@ section div.iconsBoxes
   -webkit-transition-duration: 0.5s
   -o-transition-duration: 0.5s
   transition-duration: 0.5s
-  background: #ffffff 
+  background: #ffffff
   background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjI4JSIgc3RvcC1jb2xvcj0iI2ZkZmRmZCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjY1JSIgc3RvcC1jb2xvcj0iI2Y5ZjlmOSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNmNGY0ZjQiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+)
   background: -moz-linear-gradient(top,  #ffffff 0%, #fdfdfd 28%, #f9f9f9 65%, #f4f4f4 100%)
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(28%,#fdfdfd), color-stop(65%,#f9f9f9), color-stop(100%,#f4f4f4))
@@ -1064,7 +991,7 @@ section div.iconsBoxes
   img
     max-width: 3.5em
     display: block
-    margin: 18px auto 
+    margin: 18px auto
     +at-breakpoint(45em 9)
       margin-top: 25px
   img.oneLine
@@ -1111,11 +1038,11 @@ section div.iconBoxes:last-child
 
 //add questions page styles
 
-.voting-buttons 
+.voting-buttons
   margin-left: 70px
-		
-		
-a.vote 
+
+
+a.vote
   text-decoration: none
   border: 1px solid #fff
   padding: 5px
@@ -1125,25 +1052,25 @@ a.vote
   -webkit-box-shadow: 1px 3px 10px 0px rgba(0, 0, 0, 0.2)
   box-shadow: 1px 3px 10px 0px rgba(0, 0, 0, 0.2)
   font-size: 20px
-	
-		
-a.vote.vote-up 
-  background-color: $secondary-green
-	
 
-a.vote.vote-up:hover 
+
+a.vote.vote-up
+  background-color: $secondary-green
+
+
+a.vote.vote-up:hover
   background-color: #abc27a
-		
-		
-a.vote.vote-down 
+
+
+a.vote.vote-down
   background-color: $secondary-pink
-	
-		
-a.vote.vote-down:hover 
+
+
+a.vote.vote-down:hover
   background-color: #F79A95
-	
-		
-span.question-score 
+
+
+span.question-score
   padding: 7px 15px
   margin-right: 20px
   background-color: #f2f2f2
@@ -1153,31 +1080,31 @@ span.question-score
   font-weight: bold
   border-radius: 5px
   border: 1px solid #ddd
-	
 
-//.question-text 
+
+//.question-text
 //  margin-bottom: 10px
 //  font-size: 28px
 //  font-weight: bold
-	
+
 //.question
 //  margin: 50px 0
 
-		
-//#questions 
 
-//form#question_add 
+//#questions
+
+//form#question_add
 //  text-align: center
-//	
-		
+//
+
 label.error
-  width: 250px 
+  width: 250px
   display: inline
   color: red
-	
-label#name_label 
+
+label#name_label
   text-align: left
-  font-weight: bold 
+  font-weight: bold
   margin-bottom: 1em
   margin-top: 0.5em
   display: block
@@ -1194,7 +1121,7 @@ form#question_add
   background-color: #f2f2f2
   margin-bottom: 2em
 
-form#question_add input 
+form#question_add input
   margin-top: 1.5em
 	
 div.question-text
@@ -1256,3 +1183,13 @@ div.voting-buttons
       +span-columns(3 omega,7)
     +at-breakpoint(45em 9)
       +span-columns(4 omega,9)
+@media print
+  a[href]:after
+    content: ""
+  article
+    font-size: 1em
+  body > div.container > footer
+    display: none
+  div.container #app-promo.item
+    display: none
+

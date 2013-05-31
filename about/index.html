@@ -7,7 +7,7 @@
         <title>About CANHEIT 2013, Canada's premier Higher Education IT Conference</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-        
+
         <meta name="apple-itunes-app" content="app-id=595230973, app-argument=gb://guide/5396/">
         <meta name="google-play-app" content="app-id=com.guidebook.apps.CANHEIT2013.android">
 
@@ -24,6 +24,8 @@
             <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
         <![endif]-->
 
+        <!--#include virtual="/include/app-banner.html" -->
+
         <div class="container">
           <header>
             <a href="../" rel="home" class="return"><img src="../img/canheit2013_logo_horizontal.png" alt="home" id="logo" /></a>
@@ -36,40 +38,40 @@
           </header>
           <article>
             <header>
-              <a href="../register/" class="button secondary register">Register Now</a>
+              <!--#include virtual="/include/top-call-to-action.html" -->
               <a href="../" rel="home" class="return">Home</a>
-              
+
               <h1>About CANHEIT</h1>
             </header>
-            
-            <p>The Canadian Higher Education Information Technology Conference (CANHEIT) is Canada’s premier Higher Education IT conference, overseen by <a href="http://cuccio.net">CUCCIO-CDPIUC</a>, which brings together people from both public and private sectors to talk about technology in the context of higher education. We cover topics of critical importance for colleges and universities across Canada, such as: ERPs, learning systems, campus information systems, technology infrastructures…just to name a few! Whether you’re a staff member, manager, or senior administrator at a Canadian college or university, this conference is for you.</p> 
+
+            <p>The Canadian Higher Education Information Technology Conference (CANHEIT) is Canada’s premier Higher Education IT conference, overseen by <a href="http://cuccio.net">CUCCIO-CDPIUC</a>, which brings together people from both public and private sectors to talk about technology in the context of higher education. We cover topics of critical importance for colleges and universities across Canada, such as: ERPs, learning systems, campus information systems, technology infrastructures…just to name a few! Whether you’re a staff member, manager, or senior administrator at a Canadian college or university, this conference is for you.</p>
             <p>Co-hosted by the University of Ottawa and Carleton University in our nation’s capital, Ottawa, Ontario, CANHEIT 2013 is going to be EPIC and we have more to talk about than ever! CANHEIT 2013 will offer a remarkable conference experience where we foster an environment where inspirational and visionary stories are told, shared and expanded. This year’s conference will create a space for sharing and celebrating exceptional ideas to inspire and ignite change in our work environments and our institutions.</p>
-            
+
             <h2>Theme</h2>
-            
+
             <p>The theme for this year’s CANHEIT conference is “Exceptional ideas for a changing world”. We all know that the pace of change in the world of IT is fast and furious, and unfortunately, not all of us have been blessed with the creative genius of the likes of Steve Jobs to deal with this pace of change. But that doesn’t mean we have to throw in the towel and give up the race. Now, more than ever, it is critically important to collaborate with our industry peers to stay apace with industry trends and issues in higher education. Exceptional ideas can come from anywhere and anyone, leading to an exceptional opportunity to do things differently. In 2013, we will usher in a revitalized decade of CANHEIT conferences by injecting more fun, more awesome, more ‘WoW’ and more exceptional ideas!</p>
-            
+
             <h2>About the Institutions</h2>
-            
+
             <p>This year’s CANHEIT 2013 is a joint venture between two great Canadian universities situated in our nation’s capital, Ottawa, Ontario, Canada.</p>
-            
+
             <h3>University of Ottawa</h3>
-            
+
             <p>Since 1848 the University of Ottawa has been Canada's university. Located in the heart of the nation's capital, the University has emerged as a vibrant "centre of learning", with a total population including students, teaching and support staff - of 45,000. The largest bilingual university in North America, the University is a major player in the cultural and economic development of the National Capital Region.</p>
-            
+
             <h3>Carleton University</h3>
-            
+
             <p>Situated on a beautiful campus bordered by the sparkling Rideau River and Canal, Carleton is just minutes from the heart of our nation’s government and enjoys easy access to the many organizations, associations and businesses which thrive in Ottawa. Many of Ontario’s leading high tech companies surround our campus where cutting-edge research joins with highly innovative teaching to solve real-life problems.  Members of a dynamic, research-intensive university, Carleton’s faculty and staff provide a superior learning experience for our fine students who hail from every province and from over 100 countries around the world.</p>
-            
+
             <h2 id="geeven">About the Mascot</h2>
-            
+
             <p>Like a hot new celebrity couple, the name of the CANHEIT 2013 mascot is a mash-up of the University of Ottawa and Carleton University mascots:  Geeven! That’s what you get when you mix the University of Ottawa’s GeeGee horse with Carleton University’s Rodney the Raven. The result is a genetically altered, biotechnological work of art that evokes just the sort of wonder and awe we feel is perfect for CANHEIT 2013! The rare and highly elusive CANHEIT hybrid mascot is native to Canada’s National Capital Region and is representative of our two great universities coming together to collaborate on something so unique, so special and so exceptional, that it will be an event to remember!</p>
-            
+
             <p>Combining the strength and speed of a horse, with the grace and efficiency of a bird: behold the Geeven!</p>
-            
+
             <img src="../img/geeven.png" alt="The Geeven, half Geegee, half Raven!" />
-            
-					</article>  				
+
+					</article>
 					<footer>
 					  <h2>Don't be shy! Stay in touch&hellip;</h2>
 					  <a href="https://twitter.com/CANHEIT2013" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @CANHEIT2013</a>
@@ -82,7 +84,7 @@
   						</form>
   					</div>
 					</footer>
-					
+
         </div>
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
@@ -90,13 +92,16 @@
         <script src="../js/plugins.js"></script>
         <script src="../js/main.js"></script><script src="../js/vendor/jquery.smartbanner/jquery.smartbanner.js"></script>
         <script src="../js/vendor/jquery.collapse.js"></script>
+        <script src="/js/vendor/jquery.cookie.js"></script>
+        <script src="/js/downloadMobile.js"></script>
+
 
         <script>
           jQuery(document).ready(function($){
             $("aside.note").collapse({
               open: function() {
                 // The context of 'this' is applied to
-                // the collapsed details in a jQuery wrapper 
+                // the collapsed details in a jQuery wrapper
                 _gaq = window._gaq || [];
                 _gaq.push(['canheit._trackEvent', 'page-content' , 'open', 'sessions-formats' ]);
                 this.slideDown(200);
@@ -111,7 +116,7 @@
             });
           });
         </script>
-        
+
 
         <script>
             var _gaq=[['canheit._setAccount','UA-35890616-1'],['canheit._trackPageview']];

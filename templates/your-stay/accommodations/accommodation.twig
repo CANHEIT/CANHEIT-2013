@@ -7,7 +7,7 @@
         <title>Where to Stay: {{ name }} - CANHEIT 2013, Canada's premier Higher Education IT Conference</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-        
+
         <meta name="apple-itunes-app" content="app-id=595230973, app-argument=gb://guide/5396/poi/{{ id }}">
         <meta name="google-play-app" content="app-id=com.guidebook.apps.CANHEIT2013.android">
 
@@ -19,11 +19,12 @@
         <link rel="stylesheet" href="../../css/screen.css"><link rel="stylesheet" href="../../js/vendor/jquery.smartbanner/jquery.smartbanner.css">
         <script src="../../js/vendor/modernizr-2.6.2.min.js"></script>
     </head>
-    <body>
+    <body class="your-stay accommodations">
         <!--[if lt IE 9]>
             <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
         <![endif]-->
 
+        {% include 'app-banner.html' %}
         <div class="container">
           <header>
             <a href="../../" rel="home" class="return"><img src="../../img/canheit2013_logo_horizontal.png" alt="home" id="logo" /></a>
@@ -36,27 +37,27 @@
           </header>
           <article>
             <header>
-              <a href="../../register/" class="button secondary register">Register Now</a>
+              {% include 'top-call-to-action.html' %}
               <a href="./" rel="home" class="return">Where to Stay</a>
-              
+
               <h1>{{ name }}</h1>
             </header>
-            
+
             {% if image %}
-            
+
             <img src="{{ image }}" />
-            
+
             {% endif %}
-            
+
             <section id="location">
               {{ location.name }}
             </section>
-            
+
             <section id="description">{% autoescape false %}
               {{ description }}
             {% endautoescape %}
             </section>
-            
+
             {% if links %}
             <h2>Links</h2>
             <ul id="links">
@@ -81,7 +82,7 @@
   						</form>
   					</div>
 					</footer>
-					
+
         </div>
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
@@ -89,13 +90,15 @@
         <script src="../../js/plugins.js"></script>
         <script src="../../js/main.js"></script><script src="../../js/vendor/jquery.smartbanner/jquery.smartbanner.js"></script>
         <script src="../../js/vendor/jquery.collapse.js"></script>
+        <script src="/js/vendor/jquery.cookie.js"></script>
+        <script src="/js/downloadMobile.js"></script>
 
         <script>
           jQuery(document).ready(function($){
             $("aside.note").collapse({
               open: function() {
                 // The context of 'this' is applied to
-                // the collapsed details in a jQuery wrapper 
+                // the collapsed details in a jQuery wrapper
                 _gaq = window._gaq || [];
                 _gaq.push(['canheit._trackEvent', 'page-content' , 'open', 'sessions-formats' ]);
                 this.slideDown(200);
@@ -110,7 +113,7 @@
             });
           });
         </script>
-        
+
 
         <script>
             var _gaq=[['canheit._setAccount','UA-35890616-1'],['canheit._trackPageview']];
