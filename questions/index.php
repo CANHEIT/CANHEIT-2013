@@ -2,10 +2,7 @@
 # set defaults
 
 	require_once '../config.php';
-<<<<<<< HEAD
-=======
 
->>>>>>> master
 # load requirements
 
 	require_once '../lib/.vendor/autoload.php';
@@ -67,15 +64,10 @@
         <link rel="stylesheet" href="../../css/normalize.css">
         <link rel="stylesheet" href="../../css/boilerplate.css">
         <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700,400italic,600italic,700italic' rel='stylesheet' type='text/css'>
-<<<<<<< HEAD
         <link rel="stylesheet" href="../../css/screen.css">
         <link rel="stylesheet" href="../../js/vendor/jquery.smartbanner/jquery.smartbanner.css">
         <script src="../../js/vendor/modernizr-2.6.2.min.js"></script>
-	        
-=======
-        <link rel="stylesheet" href="../css/screen.css"><link rel="stylesheet" href="../js/vendor/jquery.smartbanner/jquery.smartbanner.css">
-        <script src="../js/vendor/modernizr-2.6.2.min.js"></script>
->>>>>>> master
+
     </head>
     <body>
         <!--[if lt IE 9]>
@@ -94,16 +86,11 @@
           </header>
           <article>
             <header>
-<<<<<<< HEAD
               <?php
               		if($_GET['app'] != 1) {
               			echo '<a href="../'.$session_id.'" rel="home" class="return">'.$session_name.'</a>';
               		}
               	?>
-=======
-              <a href="../program/<?php echo $session_id; ?>" rel="home" class="return"><?php echo $session_name; ?></a>
-
->>>>>>> master
 <!--               <h1><?php echo $session_name; ?></h1> -->
               <h2>Interactive Question Period</h2>
               <?php if(!$viewonly) { ?>
@@ -111,8 +98,6 @@
               <?php } ?>
 
             </header>
-<<<<<<< HEAD
-            
             
 	           	<?php 
 	           		if (($current_time >= $session_start) and ($current_time <= ($session_end + 300)))
@@ -136,24 +121,7 @@
 				?>				
 				<!-- Question and voting buttons automatically outputted into this div -->
 				<div id="questions"><div>
-=======
 
-
-				<form name="question_add" id="question_add" action="" method="POST">
-	           	<?php
-	           		if (($current_time >= $session_start) and ($current_time <= ($session_end + 300)))
-	           		{
-	           	?>
-				<!-- The Name form field -->
-					<label for="question" id="name_label">Enter your question</label>
-
-					<!-- <input type="text" name="question" id="question" size="30" value=""/>   -->
-					<textarea name="question" id="question" autofocus></textarea>
-					<br>
-				<!-- The Submit button -->
-					<input type="hidden" name="sessionid" value="<?php echo $session_id; ?>"/>
-					<input type="submit" name="submit" value="Submit">
->>>>>>> master
 				<?php
 					}
 					elseif ($current_time < $session_start)
@@ -174,17 +142,12 @@
 
 				<!-- Question and voting buttons automatically outputted into this div -->
 				<div id="questions"><div>
-<<<<<<< HEAD
-					
 				<?php
 				}
 				?>
             
 					</article>  				
-=======
 
-					</article>
->>>>>>> master
 					<footer>
 					  <h2>Don't be shy! Stay in touch&hellip;</h2>
 					  <a href="https://twitter.com/CANHEIT2013" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @CANHEIT2013</a>
@@ -198,10 +161,6 @@
   					</div>
 					</footer>
 
-<<<<<<< HEAD
-					
-=======
->>>>>>> master
         </div>
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
