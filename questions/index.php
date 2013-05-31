@@ -87,7 +87,8 @@
             <header>
               <?php
               		if($_GET['app'] == 1) {
-              			echo '<a href="x-gb5396://guide/5396/event/'.$session_id.'" rel="home" class="return">'.$session_name.'</a>';
+              			//echo '<a href="x-gb5396://guide/5396/event/'.$session_id.'" rel="home" class="return">'.$session_name.'</a>';
+              			echo '<a href="../'.$session_id.'" rel="home" class="return">'.$session_name.'</a>';
               		} else {
               			echo '<a href="../'.$session_id.'" rel="home" class="return">'.$session_name.'</a>';
               		}
