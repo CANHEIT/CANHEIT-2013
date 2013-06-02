@@ -321,9 +321,23 @@
 
     if(is_array($new_links) && !empty($new_links) && is_array($new_links[0]) && is_array($new_links[0]['links'])) {
       $data['links'] = $new_links[0]['links'];
+      remove_prod_domain_and_app_toggle_param_from_link_url($data);
     }
   }
-
+  
+  function remove_prod_domain_and_app_toggle_param_from_link_url(&$data) {
+    foreach($data['links'] as &$link) {
+      # remove production domain if found
+      $link['gb_url'] = preg_replace('/http:\/\/canheit\.uottawa\.ca/','', $link['gb_url']);
+      # remove app=1 and &app=1 if found
+      $link['gb_url'] = preg_replace('/&?app=1/','', $link['gb_url']);
+      # remove trailing ? if found
+      if ('?' == substr($link['gb_url'],-1)) {
+        $link['gb_url'] = substr($link['gb_url'],0,-1);
+      }
+    }
+  }
+  
 # program helpers
 
   function prepare_program_data(&$data) {
