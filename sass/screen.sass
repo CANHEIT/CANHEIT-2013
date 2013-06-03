@@ -407,6 +407,8 @@ p.theme
     clear: right
   .home div#program.item
     float: left
+  .home div#sponsor-highlight.item
+    min-width: 100%
   .home div#why-attend, .home div#sponsors, .home div#register
     transform: rotate(1deg)
     -ms-transform: rotate(1deg) /* IE 9 */
@@ -1209,6 +1211,23 @@ div.voting-buttons
       +span-columns(4 omega,9)
     div
       padding: 1em
+.thslide
+  .thslide_nav_previous,  .thslide_nav_next
+    display: none
+
+.thslide_list
+  overflow: hidden
+  position: relative
+  ul
+    width: 9000px
+    padding: 0
+    margin: 0
+    list-style: none
+  li
+    float: left
+    margin-right: 3px
+  li img
+    width: 250px
 
 @media print
   a[href]:after

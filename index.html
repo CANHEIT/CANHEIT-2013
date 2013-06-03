@@ -57,6 +57,39 @@
   					<a class="button" href="program/">Program</a>
   				</div>
 
+          <div id="sponsor-highlight" class="item">
+            <h2>Top Sponsors...</h2>
+            <div id="sponor-carousel" class="thslide">
+              <div class="thslide_nav_previous">
+                  <a href="#">prev</a>
+              </div>
+              <div class="thslide_list">
+                  <ul>
+                      <li><img src='http://s3.amazonaws.com/media.guidebook.com/upload/5396/poi_image_46850.png'/></li>
+                      <li><img src='http://s3.amazonaws.com/media.guidebook.com/upload/5396/poi_image_13711.png'/></li>
+                      <li><img src='http://s3.amazonaws.com/media.guidebook.com/upload/5396/poi_image_46135.png'/></li>
+                      <li><img src='http://s3.amazonaws.com/media.guidebook.com/upload/5396/poi_image_34743.png'/></li>
+                      <li><img src='http://s3.amazonaws.com/media.guidebook.com/upload/5396/poi_image_26552.png'/></li>
+                      <li><img src='http://s3.amazonaws.com/media.guidebook.com/upload/5396/poi_image_49366.png'/></li>
+                      <li><img src='http://s3.amazonaws.com/media.guidebook.com/upload/5396/poi_image_26067.png'/></li>
+                      <li><img src='http://s3.amazonaws.com/media.guidebook.com/upload/5396/poi_image_55048.png'/></li>
+                      <li><img src='http://s3.amazonaws.com/media.guidebook.com/upload/5396/poi_image_06657.png'/></li>
+                      <li><img src='http://s3.amazonaws.com/media.guidebook.com/upload/5396/poi_image_25816.png'/></li>
+                      <li><img src='http://s3.amazonaws.com/media.guidebook.com/upload/5396/poi_image_23321.png'/></li>
+                      <li><img src='http://s3.amazonaws.com/media.guidebook.com/upload/5396/poi_image_40442.png'/></li>
+                      <li><img src='http://s3.amazonaws.com/media.guidebook.com/upload/5396/poi_image_10765.png'/></li>
+                      <li><img src='http://s3.amazonaws.com/media.guidebook.com/upload/5396/poi_image_22525.png'/></li>
+                      <li><img src='http://s3.amazonaws.com/media.guidebook.com/upload/5396/poi_image_29345.png'/></li>
+                      <li><img src='http://s3.amazonaws.com/media.guidebook.com/upload/5396/poi_image_34412.png'/></li>
+                  </ul>
+              </div>
+              <div class="thslide_nav_next">
+                  <a href="#">next</a>
+              </div>
+          </div>
+            <a class="button" href="sponsors/">Our sponsors</a>
+          </div>
+
   				<div id="why-attend" class="item">
   					<h2>It's going to be EPIC!</h2>
   					<p>A <strong>well-known Canadian celebrity</strong>. <strong>Thought-provoking</strong> keynotes and sessions. <strong>Hands-on</strong> training and workshops. <strong>Virtual Attendance</strong>(?!) <em>Oh Yeah, we got that.</em></p>
@@ -115,6 +148,14 @@
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script><script src="js/vendor/jquery.smartbanner/jquery.smartbanner.js"></script>
         <script src="/js/vendor/jquery.cookie.js"></script>
+        <script src="/js/vendor/jquery.thslide.min.js"></script>
+        <script>$('#sponor-carousel').thslide({
+           itemOffset: 80,
+           infiniteScroll: 1,
+           slideSpeedFast: 100
+        });
+        window.setInterval(function(){$('.thslide_nav_next a').mousedown().mouseup();}, 5000);
+        </script>
 	   <script src="/js/downloadMobile.js"></script>
 
         <script>
