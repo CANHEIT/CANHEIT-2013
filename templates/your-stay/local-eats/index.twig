@@ -55,11 +55,10 @@
               {% endfor %}
             </ul>
 
-            <div class="recommendations">
-              <h3>Geeven recommends</h3>
-              <p class="note">(What the heck is a <a href="../../about/#geeven">Geeven</a>?)</p>
-              <p>In the mood for Italian ? Check out <a href="632412">Mamma Grazzi’s</a> in the heart of Ottawa’s Byward Market. It’s won the “Best Italian Food” award numerous times by Ottawa Xpress Readers. </p>
-            </div>
+            {% set rec %}
+                In the mood for Italian ? Check out <a href="632412">Mamma Grazzi’s</a> in the heart of Ottawa’s Byward Market. It’s won the “Best Italian Food” award numerous times by Ottawa Xpress Readers.
+            {% endset %}
+            {% include 'geeven-recommends.twig' with {'rec' : rec} %}
 
 					</article>
 					<footer>

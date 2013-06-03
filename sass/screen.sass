@@ -1167,6 +1167,11 @@ div.voting-buttons
   .recommendations
     max-width: 100%
     font-size: 0.8em
+    background: url('/img/Geeven-holding-sign-middle.png') no-repeat
+    background-size: 100% 100%
+    img
+      height: 100%
+      width: 100%
     h3
       color: $secondary-green
       margin-bottom: 0
@@ -1183,6 +1188,9 @@ div.voting-buttons
       +span-columns(3 omega,7)
     +at-breakpoint(45em 9)
       +span-columns(4 omega,9)
+    div
+      padding: 1em
+
 @media print
   a[href]:after
     content: ""

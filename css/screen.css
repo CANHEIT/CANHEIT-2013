@@ -17,14 +17,14 @@ bold, strong {
   *zoom: 1;
   max-width: 19em;
   _width: 19em;
-  padding-left: 1em;
-  padding-right: 1em;
   margin-left: auto;
   margin-right: auto;
+  padding-left: 1em;
+  padding-right: 1em;
   background-color: white;
   padding: 1em 1em;
 }
-/* line 38, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+/* line 38, ../../../../../../usr/local/Cellar/ruby/1.9.3-p286/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
 .container:after {
   content: "";
   display: table;
@@ -34,12 +34,12 @@ bold, strong {
   /* line 18, ../sass/screen.sass */
   .container {
     max-width: 29em;
-    padding-left: 1em;
-    padding-right: 1em;
     margin-left: auto;
     margin-right: auto;
+    padding-left: 1em;
+    padding-right: 1em;
   }
-  /* line 38, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+  /* line 38, ../../../../../../usr/local/Cellar/ruby/1.9.3-p286/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
   .container:after {
     content: "";
     display: table;
@@ -50,12 +50,12 @@ bold, strong {
   /* line 18, ../sass/screen.sass */
   .container {
     max-width: 34em;
-    padding-left: 1em;
-    padding-right: 1em;
     margin-left: auto;
     margin-right: auto;
+    padding-left: 1em;
+    padding-right: 1em;
   }
-  /* line 38, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+  /* line 38, ../../../../../../usr/local/Cellar/ruby/1.9.3-p286/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
   .container:after {
     content: "";
     display: table;
@@ -66,12 +66,12 @@ bold, strong {
   /* line 18, ../sass/screen.sass */
   .container {
     max-width: 44em;
-    padding-left: 1em;
-    padding-right: 1em;
     margin-left: auto;
     margin-right: auto;
+    padding-left: 1em;
+    padding-right: 1em;
   }
-  /* line 38, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+  /* line 38, ../../../../../../usr/local/Cellar/ruby/1.9.3-p286/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
   .container:after {
     content: "";
     display: table;
@@ -688,10 +688,10 @@ div#app-promo.item {
   *zoom: 1;
   max-width: 19em;
   _width: 19em;
-  padding-left: 1em;
-  padding-right: 1em;
   margin-left: auto;
   margin-right: auto;
+  padding-left: 1em;
+  padding-right: 1em;
   padding: 1em 1em;
   overflow: hidden;
   display: block;
@@ -702,7 +702,7 @@ div#app-promo.item {
   background-color: white;
   padding: 1em 1em 0 1em;
 }
-/* line 38, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+/* line 38, ../../../../../../usr/local/Cellar/ruby/1.9.3-p286/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
 .no-touch div#app-promo.item:after {
   content: "";
   display: table;
@@ -712,12 +712,12 @@ div#app-promo.item {
   /* line 428, ../sass/screen.sass */
   .no-touch div#app-promo.item {
     max-width: 29em;
-    padding-left: 1em;
-    padding-right: 1em;
     margin-left: auto;
     margin-right: auto;
+    padding-left: 1em;
+    padding-right: 1em;
   }
-  /* line 38, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+  /* line 38, ../../../../../../usr/local/Cellar/ruby/1.9.3-p286/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
   .no-touch div#app-promo.item:after {
     content: "";
     display: table;
@@ -728,12 +728,12 @@ div#app-promo.item {
   /* line 428, ../sass/screen.sass */
   .no-touch div#app-promo.item {
     max-width: 34em;
-    padding-left: 1em;
-    padding-right: 1em;
     margin-left: auto;
     margin-right: auto;
+    padding-left: 1em;
+    padding-right: 1em;
   }
-  /* line 38, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+  /* line 38, ../../../../../../usr/local/Cellar/ruby/1.9.3-p286/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
   .no-touch div#app-promo.item:after {
     content: "";
     display: table;
@@ -744,12 +744,12 @@ div#app-promo.item {
   /* line 428, ../sass/screen.sass */
   .no-touch div#app-promo.item {
     max-width: 44em;
-    padding-left: 1em;
-    padding-right: 1em;
     margin-left: auto;
     margin-right: auto;
+    padding-left: 1em;
+    padding-right: 1em;
   }
-  /* line 38, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+  /* line 38, ../../../../../../usr/local/Cellar/ruby/1.9.3-p286/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
   .no-touch div#app-promo.item:after {
     content: "";
     display: table;
@@ -1806,25 +1806,32 @@ div.voting-buttons {
 .your-stay article .recommendations {
   max-width: 100%;
   font-size: 0.8em;
+  background: url("/img/Geeven-holding-sign-middle.png") no-repeat;
+  background-size: 100% 100%;
 }
-/* line 1170, ../sass/screen.sass */
+/* line 1172, ../sass/screen.sass */
+.your-stay article .recommendations img {
+  height: 100%;
+  width: 100%;
+}
+/* line 1175, ../sass/screen.sass */
 .your-stay article .recommendations h3 {
   color: #95b257;
   margin-bottom: 0;
   font-style: italic;
 }
-/* line 1174, ../sass/screen.sass */
+/* line 1179, ../sass/screen.sass */
 .your-stay article .recommendations p {
   margin-top: 0;
 }
-/* line 1176, ../sass/screen.sass */
+/* line 1181, ../sass/screen.sass */
 .your-stay article .recommendations p.note {
   font-size: 1em;
   margin-bottom: 0.8em;
   color: #999999;
 }
 @media (min-width: 45em) {
-  /* line 1176, ../sass/screen.sass */
+  /* line 1181, ../sass/screen.sass */
   .your-stay article .recommendations p.note {
     font-size: 0.8em;
   }
@@ -1845,24 +1852,28 @@ div.voting-buttons {
     margin-right: 0;
   }
 }
+/* line 1191, ../sass/screen.sass */
+.your-stay article .recommendations div {
+  padding: 1em;
+}
 
 @media print {
-  /* line 1187, ../sass/screen.sass */
+  /* line 1195, ../sass/screen.sass */
   a[href]:after {
     content: "";
   }
 
-  /* line 1189, ../sass/screen.sass */
+  /* line 1197, ../sass/screen.sass */
   article {
     font-size: 1em;
   }
 
-  /* line 1191, ../sass/screen.sass */
+  /* line 1199, ../sass/screen.sass */
   body > div.container > footer {
     display: none;
   }
 
-  /* line 1193, ../sass/screen.sass */
+  /* line 1201, ../sass/screen.sass */
   div.container #app-promo.item {
     display: none;
   }
