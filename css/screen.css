@@ -1946,25 +1946,32 @@ form#question_add input {
 .your-stay article .recommendations {
   max-width: 100%;
   font-size: 0.8em;
+  background: url("/img/Geeven-holding-sign-middle.png") no-repeat;
+  background-size: 100% 100%;
 }
-/* line 1252, ../sass/screen.sass */
+/* line 1254, ../sass/screen.sass */
+.your-stay article .recommendations img {
+  height: 100%;
+  width: 100%;
+}
+/* line 1257, ../sass/screen.sass */
 .your-stay article .recommendations h3 {
   color: #95b257;
   margin-bottom: 0;
   font-style: italic;
 }
-/* line 1256, ../sass/screen.sass */
+/* line 1261, ../sass/screen.sass */
 .your-stay article .recommendations p {
   margin-top: 0;
 }
-/* line 1258, ../sass/screen.sass */
+/* line 1263, ../sass/screen.sass */
 .your-stay article .recommendations p.note {
   font-size: 1em;
   margin-bottom: 0.8em;
   color: #999999;
 }
 @media (min-width: 45em) {
-  /* line 1258, ../sass/screen.sass */
+  /* line 1263, ../sass/screen.sass */
   .your-stay article .recommendations p.note {
     font-size: 0.8em;
   }
@@ -1985,24 +1992,28 @@ form#question_add input {
     margin-right: 0;
   }
 }
+/* line 1273, ../sass/screen.sass */
+.your-stay article .recommendations div {
+  padding: 1em;
+}
 
 @media print {
-  /* line 1269, ../sass/screen.sass */
+  /* line 1277, ../sass/screen.sass */
   a[href]:after {
     content: "";
   }
 
-  /* line 1271, ../sass/screen.sass */
+  /* line 1279, ../sass/screen.sass */
   article {
     font-size: 1em;
   }
 
-  /* line 1273, ../sass/screen.sass */
+  /* line 1281, ../sass/screen.sass */
   body > div.container > footer {
     display: none;
   }
 
-  /* line 1275, ../sass/screen.sass */
+  /* line 1283, ../sass/screen.sass */
   div.container #app-promo.item {
     display: none;
   }

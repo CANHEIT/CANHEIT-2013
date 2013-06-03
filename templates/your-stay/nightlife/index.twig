@@ -52,11 +52,10 @@
               {% endfor %}
             </ul>
 
-            <div class="recommendations">
-              <h3>Geeven recommends</h3>
-              <p class="note">(What the heck is a <a href="/about/#geeven">Geeven</a>?)</p>
-              <p>Looking for a place to kick up your heels while you’re in Ottawa? Head down to the Byward Market! Love live rock music? Try <a href="728523">Zaphod Beeblebrox Nightclub</a>. Want to dance the night away to electronic music? <a href="728898">The Mercury Lounge</a> is the place for you. Or if you want to share some pints with friends and listen to some great Irish music, hit the <a href="635155">Heart &amp; Crown</a>. Time to party!</p>
-            </div>
+            {% set rec %}
+                Looking for a place to kick up your heels while you’re in Ottawa? Head down to the Byward Market! Love live rock music? Try <a href="728523">Zaphod Beeblebrox Nightclub</a>. Want to dance the night away to electronic music? <a href="728898">The Mercury Lounge</a> is the place for you. Or if you want to share some pints with friends and listen to some great Irish music, hit the <a href="635155">Heart &amp; Crown</a>. Time to party!
+            {% endset %}
+            {% include 'geeven-recommends.twig' with {'rec' : rec} %}
 
 					</article>
 					<footer>
