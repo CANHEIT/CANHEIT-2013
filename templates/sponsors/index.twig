@@ -44,11 +44,12 @@
               <img id="icon" src="../img/canheiticon-sponsors-120x100.png" alt=" ">
 
               <h1>Our sponsors</h1>
+              <p>SORRY, sponsorship opportunities and vendor booths for CANHEIT 2013 are sold out. Thank you for being so excited about participating in CANHEIT 2013, we hope you can join us next year.</p>
             </header>
 
             <ul>
               {% for level in levels %}
-                <li><span class="level">{{ level.label }}</span>
+                <li><h2>{{ level.label }}</h2>
                     <ul>
                       {% for sponsor in level.sponsors %}
                           <li><a href="{{ sponsor.id }}">{{ sponsor.name }}</a></li>
@@ -58,9 +59,6 @@
             </ul>
 
             <br/>
-            <p class='note'>SORRY, sponsorship opportunities and vendor booths for CANHEIT 2013 are sold out. Thank you for being so excited about participating in CANHEIT 2013, we hope you can join us next year.</p>
-
-
 					</article>
 					<footer>
 					  <h2>Don't be shy! Stay in touch&hellip;</h2>
