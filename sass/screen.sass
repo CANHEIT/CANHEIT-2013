@@ -764,6 +764,10 @@ section#description h1
   margin-top: 0
   font-weight: normal
 article#program, article#session
+  .sessions
+    color: $primary-gray
+    li
+      margin-bottom: 0.5em
   .eventname
     font-weight: $weight-bold
     display: block
@@ -772,8 +776,14 @@ article#program, article#session
     display: block
   .endtime
     color: $primary-gray
+  .location
+    font-style: italic
+    color: $primary-gray
   .intro
     border-bottom: none
+article#session
+  p .location
+    display: block
 
 table
   border-top: 1px solid lighten($primary-gray, 20%)

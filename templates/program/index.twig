@@ -86,9 +86,9 @@
             {% for starttime in day.starttimes %}
             <div class="time">
             <h3 id="{{ starttime.starttime | date("l-g:iA") | lower }}">{{ starttime.starttime | date("g:i A") }}</h3>
-            <ul>
+            <ul class="sessions">
               {% for event in starttime.events %}
-                <li><span class="eventname"><a href="{{ event.id }}">{{ event.name }}</a></span> <span class="endtime">until {{ event.endTime | date("g:i A") }}</span></li>
+                <li><span class="eventname"><a href="{{ event.id }}">{{ event.name }}</a></span> <span class="endtime">until {{ event.endTime | date("g:i A") }}</span> - <span class="location">{{ event.location }}</span></li>
               {% endfor %}
             </ul>
             </div><!-- /div.time -->
