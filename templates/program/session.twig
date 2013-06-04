@@ -43,6 +43,7 @@
               <p>
                 <span class="starttime">{{ startTime | date("D. M d") }} at {{ startTime | date("g:i A") }}</span>
                 <span class="endtime">until {{ endTime | date("g:i A") }}</span>
+                <span class="location">in {{ location }}</span>
               </p>
             </header>
 
@@ -51,10 +52,6 @@
             <img src="{{ image }}" />
 
             {% endif %}
-
-            <section id="location">
-              {{ location.name }}
-            </section>
 
             <section id="description">{% autoescape false %}
               {{ description }}

@@ -46,7 +46,7 @@
         "/^\/(program)\/([0-9]{1,10})$/"
         , $p, $matches) ? true : false
       ) :
-      $stmt = $db->prepare('SELECT * FROM `guidebook_event` WHERE id = :id');
+      $stmt = $db->prepare('SELECT `guidebook_event`.*, `guidebook_location`.name as "location" FROM `guidebook_event`, `guidebook_location` WHERE `guidebook_location`.id == `guidebook_event`.locations AND `guidebook_event`.id = :id ORDER BY startTime;');
       $stmt->bindParam(':id', $matches[2], SQLITE3_INTEGER);
       $is_single_object_expected = true;
       $template_file = $matches[1].'/session.twig';
@@ -58,7 +58,7 @@
         "/^\/(program)\/$/"
         , $p, $matches) ? true : false
       ) :
-      $stmt = $db->prepare('SELECT * FROM `guidebook_event` ORDER BY startTime;');
+      $stmt = $db->prepare('SELECT `guidebook_event`.*, `guidebook_location`.name as "location" FROM `guidebook_event`, `guidebook_location` WHERE `guidebook_location`.id == `guidebook_event`.locations ORDER BY startTime;');
       $template_file = $matches[1].'/index.twig';
       array_push($parse_functions, 'prepare_program_data');
       break;

@@ -764,6 +764,10 @@ section#description h1
   margin-top: 0
   font-weight: normal
 article#program, article#session
+  .sessions
+    color: $primary-gray
+    li
+      margin-bottom: 0.5em
   .eventname
     font-weight: $weight-bold
     display: block
@@ -772,8 +776,14 @@ article#program, article#session
     display: block
   .endtime
     color: $primary-gray
+  .location
+    font-style: italic
+    color: $primary-gray
   .intro
     border-bottom: none
+article#session
+  p .location
+    display: block
 
 table
   border-top: 1px solid lighten($primary-gray, 20%)
@@ -788,6 +798,16 @@ article#program .intro table
     display: none
 
 article#program
+  .day-title
+    margin: 1em 0
+    h2
+      margin: 0
+      padding: 0.2em 0
+      border-bottom: 1px solid rgba(0,0,0,0.1)
+      a
+        color: $primary-orange
+        text-decoration: none
+        font-weight: $weight-normal
   .fixed
     position: fixed
     top: 0
@@ -797,17 +817,13 @@ article#program
   nav.fixed
     background: white
     width: 31.5em // 704 / 22
-  h3.fixed
-    top: 47px
-    width: 15.2em // 304 / 20
-    +at-breakpoint(30em 6)
-      width: 23.2em // 464 / 20
-    +at-breakpoint(35em 7)
-      width: 27.2em // 544 / 20
-    +at-breakpoint(45em 9)
-      width: 25.14285714285714em // 704 / 28
   .absolute
     position: absolute
+  h3
+    a
+      color: $primary-gray
+      text-decoration: none
+      font-weight: $weight-normal
   nav
     color: $primary-gray
     .prevday, .nextday
