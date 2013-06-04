@@ -11,7 +11,7 @@ $(function() {
 		{
 			$.ajax({
 				type: "POST",
-				url: "question_vote.php",
+				url: "../../questions/question_vote.php",
 				data: dataString,
 				cache: false,
 
@@ -25,7 +25,7 @@ $(function() {
 		{
 			$.ajax({
 				type: "POST",
-				url: "question_vote.php",
+				url: "../../questions/question_vote.php",
 				data: dataString,
 				cache: false,
 
@@ -47,14 +47,17 @@ include("config.php");
 // Our SQL query for fetching the questions for a particular Session ID
 $query = "SELECT * FROM questions WHERE sessionid = '$_GET[sessionid]' ORDER BY score DESC";
 
+// Are we in a "view only" mode for demonstration purposes?
+if ($_GET['viewonly'] == 1) { $viewonly = 1; } else { $viewonly = 0; }
+
 if ($result = $mysqli->query($query)) {
 
     /* fetch object array */
     while ($obj = $result->fetch_object()) {
 		printf("<div class=\"question\">");
-		printf("<div class=\"question-text\"><span class=\"question-score\">%s</span>%s</div>", $obj->score, urldecode($obj->question));
-        printf("<div class=\"voting-buttons\"><a href=\"#\" id=\"%s\" class=\"vote vote-up\" name=\"up\">Up vote</a>&nbsp;&nbsp;<a href=\"#\" id=\"%s\" class=\"vote vote-down\" name=\"down\">Down vote</a></div>", $obj->id, $obj->id);
-        printf("</div><hr>");
+		printf("<div class=\"question-text\"><span class=\"question-score\">%s</span><p>%s</p></div>", $obj->score, urldecode($obj->question));
+        if(!$voting_closed and !$viewonly) { printf("<div class=\"voting-buttons\"><a href=\"#\" id=\"%s\" class=\"vote vote-up\" name=\"up\">Up vote</a>&nbsp;&nbsp;<a href=\"#\" id=\"%s\" class=\"vote vote-down\" name=\"down\">Down vote</a></div>", $obj->id, $obj->id); }
+        printf("</div><hr class=\"rule\" clear=\"all\">");
     }
 
     /* free result set */
