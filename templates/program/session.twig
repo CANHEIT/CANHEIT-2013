@@ -38,7 +38,7 @@
           <article id="session">
             <header>
               {% include 'top-call-to-action.html' %}
-              <a href="./#{{ startTime | date("l-g:iA") | lower }}" rel="home" class="return">Program</a>
+              <a href="./#{{ startTime | date("l-g:iA") | lower }}" rel="home" class="return">{{ startTime | date("l") }}</a>
               <h1>{{ name }}</h1>
               <p>
                 <span class="starttime">{{ startTime | date("D. M d") }} at {{ startTime | date("g:i A") }}</span>
