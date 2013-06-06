@@ -4,7 +4,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>Attend CANHEIT 2013 Virtually! Canada's premier Higher Education IT Conference</title>
+        <title>Virtual Attendance - CANHEIT 2013, Canada's premier Higher Education IT Conference</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
@@ -38,14 +38,21 @@
           <article>
             <header>
               <!--#include virtual="/include/top-call-to-action.html" -->
-              <a href="../" rel="home" class="return">Why attend</a>
+              <a href="/" rel="home" class="return">Home</a>
 
-              <h1>Attend CANHEIT 2013 Virtually!</h1>
+              <br clear="all">
+              <img id="icon" src="/img/canheiticon-virtualattendance-120x100.png" alt=" ">
+              
+              <h1>Virtual Attendance</h1>
             </header>
 
             <div class="intro">
               <p>We're Trying Something New - A Virtual CANHEIT experience!</p>
               <p>We realize that not everyone can come to our beautiful nation’s capital - too much work, not enough time, travel funding being reduced… but we understand! That's right, for the first time in CANHEIT history, attend all the sessions and keynotes from your comfy chair of choice.</p>
+
+              <a class="bigbutton" href="/register/">
+                <strong>Continue to login</strong>
+              </a>
             </div>
 
             <h2>Virtual what?</h2>
@@ -91,14 +98,11 @@
 
             <p>Send us an email at <a href="mailto:canheit@uottawa.ca">canheit@uottawa.ca</a> and we'll be happy to help!</p>
 
-            <div id="interested">
-              <h2>Interested?</h2>
-            	<a class="bigbutton secondary" href="/register/">
-            	  Register for
-            	  <strong>Virtual Attendance</strong>
-            	</a>
-            </div>
-
+            
+            <a class="bigbutton" href="/register/">
+              <strong>Continue to login</strong>
+            </a>
+            
 					</article>
 					<footer>
 					  <h2>Don't be shy! Stay in touch&hellip;</h2>
@@ -121,30 +125,7 @@
         <script src="/js/main.js"></script><script src="/js/vendor/jquery.smartbanner/jquery.smartbanner.js"></script>
         <script src="/js/vendor/jquery.collapse.js"></script>
         <script src="/js/vendor/jquery.cookie.js"></script>
-       <script src="/js/downloadMobile.js"></script>
-
-
-        <script>
-          jQuery(document).ready(function($){
-            $("aside.note").collapse({
-              open: function() {
-                // The context of 'this' is applied to
-                // the collapsed details in a jQuery wrapper
-                _gaq = window._gaq || [];
-                _gaq.push(['canheit._trackEvent', 'page-content' , 'open', 'sessions-formats' ]);
-                this.slideDown(200);
-              },
-              close: function() {
-                _gaq = window._gaq || [];
-                _gaq.push(['canheit._trackEvent', 'page-content' , 'close', 'sessions-formats' ]);
-                this.slideUp(200);
-              },
-              accordion : true,
-              persist: false
-            });
-          });
-        </script>
-
+        <script src="/js/downloadMobile.js"></script>
 
         <script>
             var _gaq=[['canheit._setAccount','UA-35890616-1'],['canheit._trackPageview']];
