@@ -343,6 +343,7 @@
   RewriteRule ^index-fr\.html$ / [R=301,L]
   RewriteRule ^proposals/(index\.html)?$ / [R=301,L]
   RewriteRule ^why-attend/(index\.html)?$ / [R=301,L]
+  RewriteRule ^why-attend/virtually/(index\.html)?$ /virtual/ [R=301,L]
 </IfModule>
 
 # ----------------------------------------------------------------------
