@@ -85,27 +85,6 @@
         <script src="/js/vendor/jquery.cookie.js"></script>
         <script src="/js/downloadMobile.js"></script>
 
-        <script>
-          jQuery(document).ready(function($){
-            $("aside.note").collapse({
-              open: function() {
-                // The context of 'this' is applied to
-                // the collapsed details in a jQuery wrapper
-                _gaq = window._gaq || [];
-                _gaq.push(['canheit._trackEvent', 'page-content' , 'open', 'sessions-formats' ]);
-                this.slideDown(200);
-              },
-              close: function() {
-                _gaq = window._gaq || [];
-                _gaq.push(['canheit._trackEvent', 'page-content' , 'close', 'sessions-formats' ]);
-                this.slideUp(200);
-              },
-              accordion : true,
-              persist: false
-            });
-          });
-        </script>
-
 
         <script>
             var _gaq=[['canheit._setAccount','UA-35890616-1'],['canheit._trackPageview']];
