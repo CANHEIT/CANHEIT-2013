@@ -2059,6 +2059,7 @@ form#question_add input {
 
 /* line 1312, ../sass/screen.sass */
 #hamburger-icon {
+  position: fixed;
   left: 5px;
   margin: 0;
   padding: 0;
@@ -2069,9 +2070,12 @@ form#question_add input {
   -ms-transition: opacity 0.4s ease 0.4s;
   -o-transition: opacity 0.4s ease 0.4s;
   transition: opacity 0.4s ease 0.4s;
+  -webkit-box-shadow: 7px 7px 10px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 7px 7px 10px 0px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 7px 7px 10px 0px rgba(0, 0, 0, 0.2);
 }
 
-/* line 1325, ../sass/screen.sass */
+/* line 1328, ../sass/screen.sass */
 .meny-active #hamburger-icon {
   opacity: 0;
   -webkit-transition: opacity 0.2s ease;
@@ -2082,22 +2086,22 @@ form#question_add input {
 }
 
 @media print {
-  /* line 1334, ../sass/screen.sass */
+  /* line 1337, ../sass/screen.sass */
   a[href]:after {
     content: "";
   }
 
-  /* line 1336, ../sass/screen.sass */
+  /* line 1339, ../sass/screen.sass */
   article {
     font-size: 1em;
   }
 
-  /* line 1338, ../sass/screen.sass */
+  /* line 1341, ../sass/screen.sass */
   body > div.container > footer {
     display: none;
   }
 
-  /* line 1340, ../sass/screen.sass */
+  /* line 1343, ../sass/screen.sass */
   div.container #app-promo.item {
     display: none;
   }
