@@ -1292,6 +1292,44 @@ form#question_add input
   li img
     width: 250px
 
+.meny
+  h2
+    padding: 1em
+  ul
+    margin: auto
+    padding: 1em
+    list-style: none
+  li
+    line-height: 4em
+  li img
+    width: 25%
+  li a
+    text-decoration: none
+    font-size: 1.2em
+  li:hover
+    zoom: 1.1
+
+#hamburger-icon
+  //position: fixed
+  left: 5px
+  margin: 0
+  padding: 0
+  width: 50px
+  z-index: 999
+  -webkit-transition: opacity 0.4s ease 0.4s
+  -moz-transition: opacity 0.4s ease 0.4s
+  -ms-transition: opacity 0.4s ease 0.4s
+  -o-transition: opacity 0.4s ease 0.4s
+  transition: opacity 0.4s ease 0.4s
+
+.meny-active #hamburger-icon
+  opacity: 0
+  -webkit-transition: opacity 0.2s ease
+  -moz-transition: opacity 0.2s ease
+  -ms-transition: opacity 0.2s ease
+  -o-transition: opacity 0.2s ease
+  transition: opacity 0.2s ease
+
 @media print
   a[href]:after
     content: ""
