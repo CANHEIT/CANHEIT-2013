@@ -1,0 +1,3 @@
+RewriteEngine On
+
+RewriteRule ^$ /php/render-page.php [L]
