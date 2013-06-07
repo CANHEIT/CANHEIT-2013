@@ -251,6 +251,26 @@
       $template_file = $matches[1].'/index.twig';
       break;
 
+      
+    # shuttle
+
+    case (
+      preg_match(
+        "/^\/(shuttle)\/(to-(uottawa|hotels|casino|convention-centre))$/"
+        , $p, $matches) ? true : false
+      ) :
+      $shuttle_aliases = array (
+        'to-uottawa' => 27846,
+        'to-hotels' => 27848,
+        'to-casino' => 27851,
+        'to-convention-centre' => 27852
+      );
+      $poi_category_id = $shuttle_aliases[$matches[2]];
+      $stmt = $db->prepare($poi_query);
+      $stmt->bindParam(':id', $poi_category_id, SQLITE3_INTEGER);
+      $template_file = $matches[1].'/'.$matches[2].'.twig';
+      break;
+      
     # otherwise, 404
 
     default:
@@ -443,6 +463,19 @@
 
     $data['levels'] = $list_of_levels;
 
+  }
+
+# shuttle helpers
+
+  function get_shuttle_location_db_text_match_from_token ($location_token) {
+    $location_name_in_db = array(
+      'hotels' => 'Hotels',
+      'uottawa' => 'uOttawa',
+      'carleton' => 'Carleton U',
+      'casino' => 'Casino Lac-Leamy',
+      'hotels+uottawa' => 'Hotels & uOttawa',
+      'convention-centre' => 'Convention Centre'      
+    );
   }
 
 ?>

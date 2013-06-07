@@ -594,7 +594,7 @@ p.theme {
   }
 
   /* line 363, ../sass/screen.sass */
-  .home div#speakers-toolkit.item, .home div#your-stay.item {
+  .home div#speakers-toolkit.item, .home div#your-stay.item, .home div#shuttle.item {
     float: right;
     margin-right: 0;
   }
@@ -610,7 +610,7 @@ p.theme {
   }
 
   /* line 370, ../sass/screen.sass */
-  .home div#your-stay, .home div#speakers-toolkit {
+  .home div#your-stay, .home div#speakers-toolkit, .home div#shuttle {
     transform: rotate(1deg);
     -ms-transform: rotate(1deg);
     -moz-transform: rotate(1deg);
@@ -1261,18 +1261,18 @@ article#program h3 a {
 }
 
 /* line 782, ../sass/screen.sass */
-.contact article h2 {
+.contact article h2, .shuttle article h2 {
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   margin-bottom: 0;
 }
 /* line 785, ../sass/screen.sass */
-.contact article .subtitle {
+.contact article .subtitle, .shuttle article .subtitle {
   margin-top: 0;
   color: #989a9e;
   margin-bottom: 1em;
 }
 /* line 789, ../sass/screen.sass */
-.contact article section.description {
+.contact article section.description, .shuttle article section.description {
   padding-left: 1em;
 }
 
