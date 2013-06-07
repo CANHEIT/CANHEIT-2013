@@ -2029,23 +2029,75 @@ form#question_add input {
   width: 250px;
 }
 
+/* line 1296, ../sass/screen.sass */
+.meny h2 {
+  padding: 1em;
+}
+/* line 1298, ../sass/screen.sass */
+.meny ul {
+  margin: auto;
+  padding: 1em;
+  list-style: none;
+}
+/* line 1302, ../sass/screen.sass */
+.meny li {
+  line-height: 4em;
+}
+/* line 1304, ../sass/screen.sass */
+.meny li img {
+  width: 25%;
+}
+/* line 1306, ../sass/screen.sass */
+.meny li a {
+  text-decoration: none;
+  font-size: 1.2em;
+}
+/* line 1309, ../sass/screen.sass */
+.meny li:hover {
+  zoom: 1.1;
+}
+
+/* line 1312, ../sass/screen.sass */
+#hamburger-icon {
+  left: 5px;
+  margin: 0;
+  padding: 0;
+  width: 50px;
+  z-index: 999;
+  -webkit-transition: opacity 0.4s ease 0.4s;
+  -moz-transition: opacity 0.4s ease 0.4s;
+  -ms-transition: opacity 0.4s ease 0.4s;
+  -o-transition: opacity 0.4s ease 0.4s;
+  transition: opacity 0.4s ease 0.4s;
+}
+
+/* line 1325, ../sass/screen.sass */
+.meny-active #hamburger-icon {
+  opacity: 0;
+  -webkit-transition: opacity 0.2s ease;
+  -moz-transition: opacity 0.2s ease;
+  -ms-transition: opacity 0.2s ease;
+  -o-transition: opacity 0.2s ease;
+  transition: opacity 0.2s ease;
+}
+
 @media print {
-  /* line 1296, ../sass/screen.sass */
+  /* line 1334, ../sass/screen.sass */
   a[href]:after {
     content: "";
   }
 
-  /* line 1298, ../sass/screen.sass */
+  /* line 1336, ../sass/screen.sass */
   article {
     font-size: 1em;
   }
 
-  /* line 1300, ../sass/screen.sass */
+  /* line 1338, ../sass/screen.sass */
   body > div.container > footer {
     display: none;
   }
 
-  /* line 1302, ../sass/screen.sass */
+  /* line 1340, ../sass/screen.sass */
   div.container #app-promo.item {
     display: none;
   }

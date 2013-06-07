@@ -24,17 +24,8 @@
             <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
         <![endif]-->
 
-        <!--#include virtual="/include/app-banner.html" -->
-        <div class="container">
-          <header>
-            <a href="/" rel="home" class="return"><img src="/img/canheit2013_logo_horizontal.png" alt="home" id="logo" /></a>
-            <p class="tagline">Canada's premier Higher Education IT Conference</p>
-            <p class="location-date">
-              <span class="host">University of Ottawa</span>
-              <span class="location">Ottawa, Ontario</span>
-              <span class="date">June 9 - 12, 2013</span>
-            </p>
-          </header>
+        <!--#include virtual="/include/header.html" -->
+
           <article>
             <header>
               <a href="/register/" class="button secondary register">Register Now</a>
@@ -100,20 +91,7 @@
             </div>
 
 					</article>
-					<footer>
-					  <h2>Don't be shy! Stay in touch&hellip;</h2>
-					  <a href="https://twitter.com/CANHEIT2013" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @CANHEIT2013</a>
-					  <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-					  <div id="subscribe">
-  						<div id="mesaj"></div>
-  						<form action="/php/subscribe.php" method="post" id="subscribeform" name="subscribeform" class="clearfix">
-  							<input type="text" name="email" placeholder="Enter your email address to get notified" id="subemail">
-  							<input type="submit" name="send" value="Subscribe" id="subsubmit">
-  						</form>
-  					</div>
-					</footer>
-
-        </div>
+					<!--#include virtual="/include/footer.html" -->
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="/js/vendor/jquery-1.8.2.min.js"><\/script>')</script>
@@ -122,6 +100,8 @@
         <script src="/js/vendor/jquery.collapse.js"></script>
         <script src="/js/vendor/jquery.cookie.js"></script>
        <script src="/js/downloadMobile.js"></script>
+       <script src="/js/vendor/meny.min.js"></script>
+       <script src="/js/menu.js"></script>
 
 
         <script>
