@@ -650,7 +650,7 @@ p.theme {
   }
 
   /* line 406, ../sass/screen.sass */
-  .home div#program.item, div#register.item {
+  .home div#program.item, .home div#register.item, .home div#contact.item {
     float: left;
   }
 
@@ -669,7 +669,7 @@ p.theme {
   }
 
   /* line 417, ../sass/screen.sass */
-  .home div#program, .home div#register {
+  .home div#program, .home div#register, .home div#contact {
     margin-right: -1em;
     transform: rotate(-1deg);
     -ms-transform: rotate(-1deg);
@@ -1944,23 +1944,28 @@ div.voting-buttons {
   width: 250px;
 }
 
+/* line 1248, ../sass/screen.sass */
+.tel {
+  white-space: nowrap;
+}
+
 @media print {
-  /* line 1250, ../sass/screen.sass */
+  /* line 1252, ../sass/screen.sass */
   a[href]:after {
     content: "";
   }
 
-  /* line 1252, ../sass/screen.sass */
+  /* line 1254, ../sass/screen.sass */
   article {
     font-size: 1em;
   }
 
-  /* line 1254, ../sass/screen.sass */
+  /* line 1256, ../sass/screen.sass */
   body > div.container > footer {
     display: none;
   }
 
-  /* line 1256, ../sass/screen.sass */
+  /* line 1258, ../sass/screen.sass */
   div.container #app-promo.item {
     display: none;
   }
