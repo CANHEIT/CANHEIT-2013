@@ -237,7 +237,7 @@
       $template_file = $matches[1].'/index.twig';
       array_push($parse_functions, 'prepare_sponsors_data');
       break;
-      
+
     # contact
 
     case (
@@ -251,7 +251,7 @@
       $template_file = $matches[1].'/index.twig';
       break;
 
-      
+
     # shuttle
 
     case (
@@ -270,7 +270,7 @@
       $stmt->bindParam(':id', $poi_category_id, SQLITE3_INTEGER);
       $template_file = $matches[1].'/'.$matches[2].'.twig';
       break;
-      
+
     # otherwise, 404
 
     default:
@@ -356,7 +356,7 @@
       remove_prod_domain_and_app_toggle_param_from_link_url($data);
     }
   }
-  
+
   function remove_prod_domain_and_app_toggle_param_from_link_url(&$data) {
     foreach($data['links'] as &$link) {
       # remove production domain if found
@@ -369,7 +369,7 @@
       }
     }
   }
-  
+
 # program helpers
 
   function prepare_program_data(&$data) {
@@ -474,7 +474,7 @@
       'carleton' => 'Carleton U',
       'casino' => 'Casino Lac-Leamy',
       'hotels+uottawa' => 'Hotels & uOttawa',
-      'convention-centre' => 'Convention Centre'      
+      'convention-centre' => 'Convention Centre'
     );
   }
 
