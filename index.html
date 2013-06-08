@@ -49,6 +49,11 @@
             </div>
           </div>
 
+          <div id="now" class="item">
+            <h2>Happening now!</h2>
+            <div id='now-content'></div>
+          </div>
+
   				<div id="program" class="item">
   					<h2>Behold, the program.</h2>
   					<p>The details are in! See who will be presenting at CANHEIT this year.</p>
@@ -195,7 +200,7 @@
                         top-= ul.children(':nth-child('+(i)+')').outerHeight();
                     }
                     top-=ul.children(':nth-child('+(ctop++)+')').outerHeight();
-                    if (h + top <= 0) {ctop = 1 ; top = 0;}
+                    if (h + top <= 20) {ctop = 1 ; top = 0;}
                     ul.animate( {top: top}, 500 );
                     ticker();
                   }, 5000);
@@ -203,6 +208,20 @@
                 ticker();
               });
             });
+
+          function refreshNowContent(){
+            $.ajax({
+              type: "GET",
+              url: "/php/ajax.php?now",
+              cache: false,
+              success: function(html)
+              {
+                $('#now-content').html(html);
+              }
+            });
+          }
+          refreshNowContent();
+          setInterval(function(){refreshNowContent();}, 60000);
       </script>
 
         <script>
