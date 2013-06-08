@@ -46,16 +46,15 @@
               <h1>Our sponsors</h1>
             </header>
 
-            <ul>
-              {% for level in levels %}
-                <li><h2>{{ level.label }}</h2>
-                    <ul>
-                      {% for sponsor in level.sponsors %}
-                          <li><a href="{{ sponsor.id }}">{{ sponsor.name }}</a></li>
-                      {% endfor %}
-                    </ul></li>
-              {% endfor %}
-            </ul>
+            
+            {% for level in levels %}
+              <h2>{{ level.label }}</h2>
+              <ul>
+                {% for sponsor in level.sponsors %}
+                    <li><a href="{{ sponsor.id }}">{{ sponsor.name }}</a></li>
+                {% endfor %}
+              </ul>
+            {% endfor %}
 
 					</article>
 					<footer>
