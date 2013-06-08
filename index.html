@@ -36,6 +36,13 @@
 
 					<div id="options">
 
+          <div id="tweets" class="item">
+            <h2>Tweets...</h2>
+            <div>
+              <div id="tweets-ticker"></div>
+            </div>
+          </div>
+
   				<div id="program" class="item">
   					<h2>Behold, the program.</h2>
   					<p>The details are in! See who will be presenting at CANHEIT this year.</p>
@@ -157,6 +164,40 @@
 	   <script src="/js/downloadMobile.js"></script>
      <script src="/js/vendor/meny.min.js"></script>
      <script src="/js/menu.js"></script>
+     <script src="/js/vendor/jquery.tweet.js"></script>
+     <script type='text/javascript'>
+           jQuery(function($){
+              $("#tweets-ticker").tweet({
+                username: "CANHEIT2013",
+                page: 1,
+                avatar_size: 32,
+                count: 25,
+                loading_text: "loading ...",
+                refresh_interval: 25*5+1,
+              }).bind("loaded", function() {
+                var ul = $(this).find(".tweet_list");
+                var ctop = 1;
+                var h = 0;
+                var ticker = function() {
+                  setTimeout(function() {
+                    var top = ul.position().top;
+                    if(h != ul.height())
+                    {
+                      h = ul.height();
+                      top=0;
+                      for(i=1;i<ctop;i++)
+                        top-= ul.children(':nth-child('+(i)+')').outerHeight();
+                    }
+                    top-=ul.children(':nth-child('+(ctop++)+')').outerHeight();
+                    if (h + top <= 0) {ctop = 1 ; top = 0;}
+                    ul.animate( {top: top}, 500 );
+                    ticker();
+                  }, 5000);
+                };
+                ticker();
+              });
+            });
+      </script>
 
         <script>
             var _gaq=[['canheit._setAccount','UA-35890616-1'],['canheit._trackPageview']];

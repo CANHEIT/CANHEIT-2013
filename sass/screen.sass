@@ -365,6 +365,9 @@ p.theme
     margin-right: 0
   .home div#program.item, .home div#register.item, .home div#contact.item, .home div#virtual.item
     float: left
+  .home div#tweets.item
+    float: left
+    min-width: 19em
   .home div#sponsor-highlight.item
     min-width: 100%
   .home div#your-stay, .home div#speakers-toolkit, .home div#shuttle
@@ -374,7 +377,7 @@ p.theme
     -webkit-transform: rotate(1deg) /* Safari and Chrome */
     -o-transform: rotate(1deg) /* Opera */
 
-  .home div#program, .home div#register, .home div#contact, .home div#virtual
+  .home div#program, .home div#register, .home div#contact, .home div#virtual, .home div#tweets
     margin-right: -1em
     transform: rotate(-1deg)
     -ms-transform: rotate(-1deg) /* IE 9 */
@@ -1282,6 +1285,38 @@ a#menu-icon
     display: block
 .home .container > header
   display: block
+
+#tweets-ticker
+  overflow-y: hidden
+  height: 15em
+  position: relative
+  ul.tweet_list
+    position: absolute
+    -webkit-border-radius: 0
+    -moz-border-radius: 0
+    border-radius: 0
+
+.tweet_list
+  -webkit-border-radius: 0.5em
+  -moz-border-radius: 0.5em
+  border-radius: 0.5em
+  list-style: none
+  margin: 0
+  padding: 0
+  overflow-y: hidden
+  li
+    padding: 0.5em
+    list-style-type: none
+  .tweet_time
+    font-size: 0.7em
+    display: block
+  .tweet_even
+    background-color: #f2f2f2
+  .tweet_avatar
+    padding-right: .5em
+    float: left
+    img
+      vertical-align: middle
 
 @media print
   a[href]:after
