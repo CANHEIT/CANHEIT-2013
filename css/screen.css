@@ -594,7 +594,7 @@ p.theme {
   }
 
   /* line 363, ../sass/screen.sass */
-  .home div#speakers-toolkit.item, .home div#your-stay.item, .home div#shuttle.item {
+  .home div#speakers-toolkit.item, .home div#your-stay.item, .home div#shuttle.item, .home div#now.item {
     float: right;
     margin-right: 0;
   }
@@ -616,7 +616,7 @@ p.theme {
   }
 
   /* line 373, ../sass/screen.sass */
-  .home div#your-stay, .home div#speakers-toolkit, .home div#shuttle {
+  .home div#your-stay, .home div#speakers-toolkit, .home div#shuttle, .home div#now {
     transform: rotate(1deg);
     -ms-transform: rotate(1deg);
     -moz-transform: rotate(1deg);
