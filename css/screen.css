@@ -600,7 +600,7 @@ p.theme {
   }
 
   /* line 366, ../sass/screen.sass */
-  .home div#program.item, .home div#register.item, .home div#contact.item {
+  .home div#program.item, .home div#register.item, .home div#contact.item, .home div#virtual.item {
     float: left;
   }
 
@@ -619,7 +619,7 @@ p.theme {
   }
 
   /* line 377, ../sass/screen.sass */
-  .home div#program, .home div#register, .home div#contact {
+  .home div#program, .home div#register, .home div#contact, .home div#virtual {
     margin-right: -1em;
     transform: rotate(-1deg);
     -ms-transform: rotate(-1deg);
