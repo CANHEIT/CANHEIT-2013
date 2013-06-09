@@ -23,8 +23,7 @@
     $stmt = $db->prepare('SELECT `guidebook_event`.*, `guidebook_location`.name as "location" FROM `guidebook_event`, `guidebook_location`
                             WHERE `guidebook_location`.id == `guidebook_event`.locations AND (:now BETWEEN `guidebook_event`.startTime AND
                             `guidebook_event`.endTime)
-                            ORDER BY startTime
-                            LIMIT 2;');
+                            ORDER BY startTime;');
     $stmt->bindValue(':now', date('Y-m-d H:i:s', strtotime("+15 minutes")), SQLITE3_TEXT);
     if ($result = $stmt->execute())
     {
@@ -61,7 +60,7 @@
       }
     }
 
-    echo "<h2>".($nowCount ? "Happening now!" : "Coming up...")."</h2>".$content;
+    echo "<h2>".($nowCount ? "Happening now!" : "Coming up...")."</h2><div id='events'>".$content."</div>";
   }
   $db->close();
 ?>
