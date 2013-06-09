@@ -3,6 +3,8 @@
   //ini_set('error_reporting', E_ALL);
   //ini_set('display_errors', 1);
 
+  date_default_timezone_set('Canada/Eastern');
+
 # set defaults
 
   require_once '../config.php';
@@ -15,22 +17,55 @@
 
   if(isset($_GET['now']))
   {
+    $nowCount = 0;
+    $content = "";
+
     $stmt = $db->prepare('SELECT `guidebook_event`.*, `guidebook_location`.name as "location" FROM `guidebook_event`, `guidebook_location`
-                            WHERE `guidebook_location`.id == `guidebook_event`.locations AND `guidebook_event`.startTime > date("now", "-1 hour")
+                            WHERE `guidebook_location`.id == `guidebook_event`.locations AND (`guidebook_event`.startTime <= :now AND
+                            (`guidebook_event`.startTime > :startTime))
                             ORDER BY startTime
-                            LIMIT 3;');
+                            LIMIT 2;');
+
+    $stmt->bindValue(':startTime', date('Y-m-d H:i:s', strtotime("-1 hour")), SQLITE3_TEXT);
+    $stmt->bindValue(':now', date('Y-m-d H:i:s', strtotime("+15 minutes")), SQLITE3_TEXT);
+    //$stmt->bindValue(':endTime', date('Y-m-d H:i:s', strtotime("+6 hours")), SQLITE3_TEXT);
 
     if ($result = $stmt->execute())
     {
         while($data = $result->fetchArray())
         {
-          echo
+          $content .=
             "<div class='time'>
-            <h4>".date('g:iA', strtotime($data['startTime']))."</h4>
+            <strong>".date('g:iA', strtotime($data['startTime'])).":</strong>
                 <span class='eventname'><a href='/program/{$data['id']}'>{$data['name']}</a></span> <span class='endtime'>until ".date('g:iA', strtotime($data['endTime']))."</span> - <span class='location'>{$data['location']}</span>
-            </div>";
+            </div>
+            <br/>";
+            $nowCount++;
         }
     }
+
+    if(!$nowCount)
+    {
+      $stmt = $db->prepare('SELECT `guidebook_event`.*,  `guidebook_location`.name as "location" FROM `guidebook_event`, `guidebook_location`
+                              WHERE `guidebook_location`.id == `guidebook_event`.locations AND `guidebook_event`.startTime > :startTime
+                              ORDER BY startTime
+                              LIMIT 2;');
+      $stmt->bindValue(':startTime', date('Y-m-d H:i:s'), SQLITE3_TEXT);
+      if ($result = $stmt->execute())
+      {
+          while($data = $result->fetchArray())
+          {
+            $content .=
+              "<div class='time'>
+              <strong>".date('g:iA', strtotime($data['startTime'])).":</strong>
+                  <span class='eventname'><a href='/program/{$data['id']}'>{$data['name']}</a></span> <span class='endtime'>until ".date('g:iA', strtotime($data['endTime']))."</span> - <span class='location'>{$data['location']}</span>
+              </div>
+              <br/>";
+          }
+      }
+    }
+
+    echo "<h2>".($nowCount ? "Happening now!" : "Coming up...")."</h2>".$content;
   }
   $db->close();
 ?>
