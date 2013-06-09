@@ -6,4 +6,4 @@ var meny = Meny.create({
     threshold: 0,
     use3D: false
   });
-$('#menu-icon').click(function(){meny.open();});
+$('#menu-icon').click(function(){meny.open(); event.preventDefault();});

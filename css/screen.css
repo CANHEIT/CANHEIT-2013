@@ -1921,25 +1921,57 @@ div.voting-buttons {
 }
 
 /* line 1228, ../sass/screen.sass */
-#menu-icon {
-  position: fixed;
-  top: 0px;
-  left: 5px;
+a#menu-icon {
   margin: 0;
-  padding: 0;
-  width: 50px;
+  padding: 0.3em;
+  padding-left: 0.5em;
+  display: block;
+  font-size: 1.2em;
+  width: 68px;
   z-index: 999;
+  color: #989a9e;
+  text-decoration: none;
+  font-weight: 400;
+  cursor: pointer;
+}
+/* line 1240, ../sass/screen.sass */
+a#menu-icon i {
+  padding-right: 0.3em;
+}
+
+/* line 1243, ../sass/screen.sass */
+#nav-bar {
+  position: fixed;
+  z-index: 1000;
+  top: 0px;
+  display: block;
+  width: 100%;
+  background: #303030;
+  color: white;
   -moz-transition: opacity 0.4s ease 0.4s;
   -ms-transition: opacity 0.4s ease 0.4s;
   -o-transition: opacity 0.4s ease 0.4s;
   transition: opacity 0.4s ease 0.4s;
-  -webkit-box-shadow: 7px 7px 10px 0px rgba(0, 0, 0, 0.2);
-  box-shadow: 7px 7px 10px 0px rgba(0, 0, 0, 0.2);
-  -moz-box-shadow: 7px 7px 10px 0px rgba(0, 0, 0, 0.2);
+}
+/* line 1251, ../sass/screen.sass */
+#nav-bar a#menu-icon {
+  color: #cccccc;
+}
+@media (min-width: 57em) {
+  /* line 1243, ../sass/screen.sass */
+  #nav-bar {
+    background: none;
+    color: #303030;
+    width: 68px;
+  }
+  /* line 1264, ../sass/screen.sass */
+  #nav-bar a#menu-icon {
+    color: #989a9e;
+  }
 }
 
-/* line 1244, ../sass/screen.sass */
-.meny-active #menu-icon {
+/* line 1267, ../sass/screen.sass */
+.meny-active #nav-bar {
   opacity: 0;
   -moz-transition: opacity 0.2s ease;
   -ms-transition: opacity 0.2s ease;
@@ -1947,23 +1979,50 @@ div.voting-buttons {
   transition: opacity 0.2s ease;
 }
 
+/* line 1274, ../sass/screen.sass */
+.content {
+  padding-top: 40px;
+}
+@media (min-width: 57em) {
+  /* line 1274, ../sass/screen.sass */
+  .content {
+    padding-top: 0;
+  }
+}
+
+/* line 1278, ../sass/screen.sass */
+.container > header {
+  display: none;
+}
+@media (min-width: 45em) {
+  /* line 1278, ../sass/screen.sass */
+  .container > header {
+    display: block;
+  }
+}
+
+/* line 1282, ../sass/screen.sass */
+.home .container > header {
+  display: block;
+}
+
 @media print {
-  /* line 1252, ../sass/screen.sass */
+  /* line 1286, ../sass/screen.sass */
   a[href]:after {
     content: "";
   }
 
-  /* line 1254, ../sass/screen.sass */
+  /* line 1288, ../sass/screen.sass */
   article {
     font-size: 1em;
   }
 
-  /* line 1256, ../sass/screen.sass */
+  /* line 1290, ../sass/screen.sass */
   body > div.container > footer {
     display: none;
   }
 
-  /* line 1258, ../sass/screen.sass */
+  /* line 1292, ../sass/screen.sass */
   div.container #app-promo.item {
     display: none;
   }

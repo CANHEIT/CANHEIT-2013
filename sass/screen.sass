@@ -1225,28 +1225,62 @@ div.voting-buttons
   -moz-box-sizing: border-box
   -webkit-box-sizing: border-box
 
-#menu-icon
-  position: fixed
-  top: 0px
-  left: 5px
+a#menu-icon
   margin: 0
-  padding: 0
-  width: 50px
+  padding: 0.3em
+  padding-left: 0.5em
+  display: block
+  font-size: 1.2em
+  width: 68px
   z-index: 999
+  color: $primary-gray
+  text-decoration: none
+  font-weight: $weight-normal
+  cursor: pointer
+  i
+    padding-right: 0.3em
+
+#nav-bar
+  position: fixed
+  z-index: 1000
+  top: 0px
+  display: block
+  width: 100%
+  background: $charcoal
+  color: white
+  a#menu-icon
+    color: darken(white,20%)
   -moz-transition: opacity 0.4s ease 0.4s
   -ms-transition: opacity 0.4s ease 0.4s
   -o-transition: opacity 0.4s ease 0.4s
   transition: opacity 0.4s ease 0.4s
-  -webkit-box-shadow: 7px 7px 10px 0px rgba(0, 0, 0, .2)
-  box-shadow: 7px 7px 10px 0px rgba(0, 0, 0, .2)
-  -moz-box-shadow: 7px 7px 10px 0px rgba(0, 0, 0, .2)
+  +at-breakpoint(30em 6)
+  +at-breakpoint(35em 7)
+  +at-breakpoint(45em 9)
+  +at-breakpoint(57em 9)
+    background: none
+    color: $charcoal
+    width: 68px
+    a#menu-icon
+      color: $primary-gray    
 
-.meny-active #menu-icon
+.meny-active #nav-bar
   opacity: 0
   -moz-transition: opacity 0.2s ease
   -ms-transition: opacity 0.2s ease
   -o-transition: opacity 0.2s ease
   transition: opacity 0.2s ease
+
+.content
+  padding-top: 40px
+  +at-breakpoint(57em 9)
+    padding-top: 0
+.container > header
+  display: none
+  +at-breakpoint(45em 9)
+    display: block
+.home .container > header
+  display: block
 
 @media print
   a[href]:after
