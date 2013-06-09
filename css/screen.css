@@ -1921,7 +1921,7 @@ div.voting-buttons {
 }
 
 /* line 1228, ../sass/screen.sass */
-#hamburger-icon {
+#menu-icon {
   position: fixed;
   top: 0px;
   left: 5px;
@@ -1939,7 +1939,7 @@ div.voting-buttons {
 }
 
 /* line 1244, ../sass/screen.sass */
-.meny-active #hamburger-icon {
+.meny-active #menu-icon {
   opacity: 0;
   -moz-transition: opacity 0.2s ease;
   -ms-transition: opacity 0.2s ease;

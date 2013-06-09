@@ -6,4 +6,4 @@ var meny = Meny.create({
     threshold: 0,
     use3D: false
   });
-$('#hamburger-icon').click(function(){meny.open();});
+$('#menu-icon').click(function(){meny.open();});
