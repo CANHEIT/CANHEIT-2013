@@ -2035,49 +2035,48 @@ a#menu-icon i {
   list-style: none;
   margin: 0;
   padding: 0;
-  overflow-y: hidden;
 }
-/* line 1307, ../sass/screen.sass */
+/* line 1306, ../sass/screen.sass */
 .tweet_list li {
   padding: 0.5em;
   list-style-type: none;
 }
-/* line 1310, ../sass/screen.sass */
+/* line 1309, ../sass/screen.sass */
 .tweet_list .tweet_time {
   font-size: 0.7em;
   display: block;
 }
-/* line 1313, ../sass/screen.sass */
+/* line 1312, ../sass/screen.sass */
 .tweet_list .tweet_even {
   background-color: #f2f2f2;
 }
-/* line 1315, ../sass/screen.sass */
+/* line 1314, ../sass/screen.sass */
 .tweet_list .tweet_avatar {
   padding-right: 0.5em;
   float: left;
 }
-/* line 1318, ../sass/screen.sass */
+/* line 1317, ../sass/screen.sass */
 .tweet_list .tweet_avatar img {
   vertical-align: middle;
 }
 
 @media print {
-  /* line 1322, ../sass/screen.sass */
+  /* line 1321, ../sass/screen.sass */
   a[href]:after {
     content: "";
   }
 
-  /* line 1324, ../sass/screen.sass */
+  /* line 1323, ../sass/screen.sass */
   article {
     font-size: 1em;
   }
 
-  /* line 1326, ../sass/screen.sass */
+  /* line 1325, ../sass/screen.sass */
   body > div.container > footer {
     display: none;
   }
 
-  /* line 1328, ../sass/screen.sass */
+  /* line 1327, ../sass/screen.sass */
   div.container #app-promo.item {
     display: none;
   }
