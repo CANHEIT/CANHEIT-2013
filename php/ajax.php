@@ -21,15 +21,11 @@
     $content = "";
 
     $stmt = $db->prepare('SELECT `guidebook_event`.*, `guidebook_location`.name as "location" FROM `guidebook_event`, `guidebook_location`
-                            WHERE `guidebook_location`.id == `guidebook_event`.locations AND (`guidebook_event`.startTime <= :now AND
-                            (`guidebook_event`.startTime > :startTime))
+                            WHERE `guidebook_location`.id == `guidebook_event`.locations AND (:now BETWEEN `guidebook_event`.startTime AND
+                            `guidebook_event`.endTime)
                             ORDER BY startTime
                             LIMIT 2;');
-
-    $stmt->bindValue(':startTime', date('Y-m-d H:i:s', strtotime("-1 hour")), SQLITE3_TEXT);
     $stmt->bindValue(':now', date('Y-m-d H:i:s', strtotime("+15 minutes")), SQLITE3_TEXT);
-    //$stmt->bindValue(':endTime', date('Y-m-d H:i:s', strtotime("+6 hours")), SQLITE3_TEXT);
-
     if ($result = $stmt->execute())
     {
         while($data = $result->fetchArray())
