@@ -1927,7 +1927,7 @@ a#menu-icon {
   padding-left: 0.5em;
   display: block;
   font-size: 1.2em;
-  width: 68px;
+  width: 72px;
   z-index: 999;
   color: #989a9e;
   text-decoration: none;
@@ -1981,7 +1981,7 @@ a#menu-icon i {
 
 /* line 1274, ../sass/screen.sass */
 .content {
-  padding-top: 40px;
+  padding-top: 50px;
 }
 @media (min-width: 57em) {
   /* line 1274, ../sass/screen.sass */
