@@ -203,6 +203,12 @@
                 }
                 prevMaxT = maxT;
                 newCount = 0;
+                if($('#now').css('float') == 'right')
+                  {
+                    $('#now').css({height: $('#tweets').height() + 20});
+                  }
+                else
+                  $('#now').css({height: "auto"});
               });
             });
 
@@ -214,6 +220,12 @@
               success: function(html)
               {
                 $('#now-content').html(html);
+                if($('#now').css('float') == 'right')
+                  {
+                    $('#now').css({height: $('#tweets').height() + 20});
+                  }
+                else
+                  $('#now').css({height: "auto"});
               }
             });
           }
