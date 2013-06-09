@@ -3,7 +3,7 @@ var meny = Meny.create({
     contentsElement: document.querySelector( '.content' ),
     position: 'left',
     width: 260,
-    threshold: 40,
+    threshold: 0,
     use3D: false
   });
 $('#hamburger-icon').click(function(){meny.open();});

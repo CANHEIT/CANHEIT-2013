@@ -1197,6 +1197,10 @@ div.voting-buttons
 
 .meny
   display: none
+  overflow: auto
+  box-sizing: border-box
+  -moz-box-sizing: border-box
+  -webkit-box-sizing: border-box
   h2
     padding: 1em
   ul
@@ -1213,14 +1217,25 @@ div.voting-buttons
   li:hover
     zoom: 1.1
 
+.content
+  height: 100%
+  width: 100%
+  overflow-y: auto
+
+  -webkit-overflow-scrolling: touch
+
+  box-sizing: border-box
+  -moz-box-sizing: border-box
+  -webkit-box-sizing: border-box
+
 #hamburger-icon
   position: fixed
+  top: 0px
   left: 5px
   margin: 0
   padding: 0
   width: 50px
   z-index: 999
-  -webkit-transition: opacity 0.4s ease 0.4s
   -moz-transition: opacity 0.4s ease 0.4s
   -ms-transition: opacity 0.4s ease 0.4s
   -o-transition: opacity 0.4s ease 0.4s
@@ -1231,7 +1246,6 @@ div.voting-buttons
 
 .meny-active #hamburger-icon
   opacity: 0
-  -webkit-transition: opacity 0.2s ease
   -moz-transition: opacity 0.2s ease
   -ms-transition: opacity 0.2s ease
   -o-transition: opacity 0.2s ease
