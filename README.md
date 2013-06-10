@@ -48,6 +48,10 @@ Start up the local dev server (Vagrant)
     
 The CANHEIT website should now run at [http://localhost:8080/](http://localhost:8080/)
 
+Make sure ``susy`` and ``compass`` are installed
+
+    gem install susy compass
+
 Start the CSS pre-processor that comes with Susy
 
     compass watch
