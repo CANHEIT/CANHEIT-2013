@@ -21,10 +21,12 @@
     $content = "";
 
     $stmt = $db->prepare('SELECT `guidebook_event`.*, `guidebook_location`.name as "location" FROM `guidebook_event`, `guidebook_location`
-                            WHERE `guidebook_location`.id == `guidebook_event`.locations AND (:now BETWEEN `guidebook_event`.startTime AND
-                            `guidebook_event`.endTime)
-                            ORDER BY startTime;');
-    $stmt->bindValue(':now', date('Y-m-d H:i:s', strtotime("+5 minutes")), SQLITE3_TEXT);
+                            WHERE `guidebook_location`.id == `guidebook_event`.locations AND (Datetime(:now) > Datetime(`guidebook_event`.startTime) AND Datetime(:now) < 
+                            Datetime(`guidebook_event`.endTime))
+                            ORDER BY endtime;');
+    $stmt->bindValue(':now', date('Y-m-d H:i:s'), SQLITE3_TEXT);
+    
+        
     if ($result = $stmt->execute())
     {
         while($data = $result->fetchArray())
@@ -44,7 +46,7 @@
       $stmt = $db->prepare('SELECT `guidebook_event`.*,  `guidebook_location`.name as "location" FROM `guidebook_event`, `guidebook_location`
                               WHERE `guidebook_location`.id == `guidebook_event`.locations AND `guidebook_event`.startTime > :startTime
                               ORDER BY startTime
-                              LIMIT 2;');
+                              LIMIT 7;');
       $stmt->bindValue(':startTime', date('Y-m-d H:i:s'), SQLITE3_TEXT);
       if ($result = $stmt->execute())
       {
