@@ -45,18 +45,7 @@
 
           <div id="now" class="item">
             <div id='now-content'></div>
-          </div>
-
-  				<div id="program" class="item">
-  					<h2>Behold, the program.</h2>
-  					<p>The details are in! See who will be presenting at CANHEIT this year.</p>
-  					<a class="button" href="program/">Program</a>
-  				</div>
-
-          <div id="your-stay" class="item">
-          	<h2>Get your trip ready</h2>
-          	<p>Get to know the <strong>local eats</strong> and <strong>attractions</strong> in beautiful Ottawa.</p>
-          	<a class="button" href="your-stay/">Your stay</a>
+            <a class="button" href="program/">Program</a>
           </div>
 
           <div id="sponsor-highlight" class="item">
@@ -100,10 +89,10 @@
           	<a class="button" href="virtual/">Virtual Attendance</a>
           </div>
 
-          <div id="shuttle" class="item">
-          	<h2>Shuttle Bus</h2>
-          	<p>A shuttle offers service between uOttawa, Hotels, Carleton U, the Casino and the Convention Centre.</p>
-          	<a class="button" href="shuttle/">Shuttle Bus</a>
+          <div id="your-stay" class="item">
+          	<h2>Know the town</h2>
+          	<p>Get to know the <strong>local eats</strong> and <strong>attractions</strong> in beautiful Ottawa.</p>
+          	<a class="button" href="your-stay/">Your stay</a>
           </div>
 
           <div id="register" class="item">
@@ -111,16 +100,22 @@
           	<p>If you're a sponsor, however, visit the <a href="register/sponsors/">sponsor's registration</a> page.</p>
           </div>
 
-          <div id="speakers-toolkit" class="item">
-          	<h2>Speaking at CANHEIT?</h2>
-          	<p>We've put together some guidelines and a list of tools to help you prepare for your presentation.</p>
-          	<a class="button" href="speakers-toolkit/">Speakers Toolkit</a>
+          <div id="shuttle" class="item">
+          	<h2>Shuttle Bus</h2>
+          	<p>A shuttle offers service between uOttawa, Hotels, Carleton U, the Casino and the Convention Centre.</p>
+          	<a class="button" href="shuttle/">Shuttle Bus</a>
           </div>
 
           <div id="contact" class="item">
           	<h2>Who to contact</h2>
           	<p>For general conference questions: <strong class="tel">613-562-5644</strong> or <a href="mailto:canheit@uOttawa.ca">canheit@uOttawa.ca</a></p>
           	<a class="button" href="contact">More Contacts</a>
+          </div>
+
+          <div id="speakers-toolkit" class="item">
+          	<h2>Speaking at CANHEIT?</h2>
+          	<p>We've put together some guidelines and a list of tools to help you prepare for your presentation.</p>
+          	<a class="button" href="speakers-toolkit/">Speakers Toolkit</a>
           </div>
 
   				</div><!-- /#options -->
@@ -218,7 +213,7 @@
           function matchHeight(){
             if($('#now').css('float') == 'right')
               {
-                $('#events').css({height: $('#tweets').height() - 20});
+                $('#events').css({height: parseInt($('#tweets').height()) - (parseInt($('#now').height()) - parseInt($('#events').height()))});
               }
             else
               $('#events').css({height: "auto"});
