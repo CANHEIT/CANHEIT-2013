@@ -210,7 +210,7 @@
 			};
 
 		$(document).ready(function() {
-		  setTimeout("ReloadPage()", <?php echo $refresh; ?> );
+		  //setTimeout("ReloadPage()", <?php echo $refresh; ?> );
 		  });
         </script>
     </body>
