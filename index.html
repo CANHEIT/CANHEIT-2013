@@ -218,10 +218,10 @@
           function matchHeight(){
             if($('#now').css('float') == 'right')
               {
-                $('#now').css({height: $('#tweets').height() + 20});
+                $('#events').css({height: $('#tweets').height() - 20});
               }
             else
-              $('#now').css({height: "auto"});
+              $('#events').css({height: "auto"});
           }
           $(window).resize(function() {
             matchHeight();
