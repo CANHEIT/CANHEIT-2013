@@ -44,6 +44,10 @@
 		// Are we in a "view only" mode for demonstration purposes?
 		if ($_GET['viewonly'] == 1) { $viewonly = 1; } else { $viewonly = 0; }
 	}
+	
+	if ($current_time < $session_start) {
+		$refresh = ($session_start - $current_time) * 1000;
+	}
 ?>
 
 <!DOCTYPE html>
@@ -120,7 +124,7 @@
 					{
 				?>
 				<form name="question_add" id="question_add" action="" method="POST">  
-					<p style="color:red;">The interactive question period for the session "<?php echo $session_name; ?>" has not yet started. The session is scheduled to start on <?php echo date("l, F jS", $session_start); ?> at <?php echo date("g:i a", $session_start); ?>.</p>
+					<p style="color:red;">The interactive question period for the session "<?php echo $session_name; ?>" has not yet started. The session is scheduled to start on <?php echo date("l, F jS", $session_start); ?> at <?php echo date("g:i a", $session_start); ?>. This page will automatically refresh when the session starts.</p>
 				</form>
 				<?php
 				}
@@ -198,6 +202,16 @@
             (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
             g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
             s.parentNode.insertBefore(g,s)}(document,'script'));
+        </script>
+        
+        <script>
+	        function ReloadPage() {
+			   location.reload();
+			};
+
+		$(document).ready(function() {
+		  setTimeout("ReloadPage()", <?php echo $refresh; ?> );
+		  });
         </script>
     </body>
 </html>
