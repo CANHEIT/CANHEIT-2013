@@ -69,7 +69,7 @@
         <!--[if lt IE 9]>
             <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
         <![endif]-->
-
+      <div class='content'>
         <div class="container">
           <header>
             <a href="/" rel="home" class="return"><img src="/img/canheit2013_logo_horizontal.png" alt="home" id="logo" /></a>
@@ -158,6 +158,7 @@
 					</footer>
 
         </div>
+      </div
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="/js/vendor/jquery-1.8.2.min.js"><\/script>')</script>
