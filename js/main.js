@@ -106,5 +106,15 @@ jQuery(document).ready(function(){
     daysHidden: 0,
     icon: 'https://lh4.ggpht.com/0-4b0HHC6tcIQdY4zvnhWvH_Tn0yoO8rafCSZEfwjArpgs2fFGD0ji6J3-ROxkUqDWQ=w124'
   });
+
+  // the smartbanner div will exist only on mobile
+  if ($('#smartbanner').length > 0) {
+    // HACK: set a timeout for 500ms to make sure the div is created
+    // get the div height of the smartbanner and tweak the 'top' css value
+    setTimeout(function(){
+      var height = $('#smartbanner').height();
+      $('#smartbanner').css('top', '-'+(height+6)+'px'); // modify the page margin to remove whitespace
+    }, 500);
+  }
 });
 
