@@ -370,6 +370,7 @@ p.theme
   .home div#now.item
     #events
       overflow: scroll
+      margin-bottom: 1em
   .home div#sponsor-highlight.item
     min-width: 100%
   .home div#your-stay, .home div#speakers-toolkit, .home div#shuttle, .home div#now
@@ -720,7 +721,7 @@ aside.alternative
 section#description h1
   margin-top: 0
   font-weight: normal
-article#program, article#session
+article#program, article#session, .home #events
   .sessions
     color: $primary-gray
     li
@@ -741,6 +742,11 @@ article#program, article#session
 article#session
   p .location
     display: block
+.home #events
+  .starttime, .eventname
+    display: inline
+  .now-event .endtime
+    color: $primary-orange
 
 table
   border-top: 1px solid lighten($primary-gray, 20%)
@@ -1293,7 +1299,6 @@ a#menu-icon
   height: 15em
   position: relative
   ul.tweet_list
-//    position: absolute
     -webkit-border-radius: 0
     -moz-border-radius: 0
     border-radius: 0
