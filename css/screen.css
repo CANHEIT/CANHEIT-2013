@@ -602,7 +602,7 @@ p.theme {
   }
 
   /* line 368, ../sass/screen.sass */
-  .home div#program.item, .home div#contact.item, .home div#virtual.item {
+  .home div#program.item, .home div#baggage-check.item, .home div#contact.item, .home div#virtual.item {
     float: left;
   }
 
@@ -623,7 +623,7 @@ p.theme {
   }
 
   /* line 378, ../sass/screen.sass */
-  .home div#your-stay, .home div#speakers-toolkit, .home div#shuttle, .home div#now {
+  .home div#your-stay, .home div#baggage-check, .home div#speakers-toolkit, .home div#shuttle, .home div#now {
     transform: rotate(1deg);
     -ms-transform: rotate(1deg);
     -moz-transform: rotate(1deg);
