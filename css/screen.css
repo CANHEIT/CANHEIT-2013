@@ -623,7 +623,7 @@ p.theme {
   }
 
   /* line 378, ../sass/screen.sass */
-  .home div#your-stay, .home div#baggage-check, .home div#speakers-toolkit, .home div#shuttle, .home div#now {
+  .home div#your-stay, .home div#speakers-toolkit, .home div#shuttle, .home div#now {
     transform: rotate(1deg);
     -ms-transform: rotate(1deg);
     -moz-transform: rotate(1deg);
@@ -632,7 +632,7 @@ p.theme {
   }
 
   /* line 385, ../sass/screen.sass */
-  .home div#program, .home div#contact, .home div#virtual, .home div#tweets {
+  .home div#program, .home div#baggage-check, .home div#contact, .home div#virtual, .home div#tweets {
     margin-right: -1em;
     transform: rotate(-1deg);
     -ms-transform: rotate(-1deg);
