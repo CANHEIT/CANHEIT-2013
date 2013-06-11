@@ -618,7 +618,7 @@ p.theme {
   }
 
   /* line 376, ../sass/screen.sass */
-  .home div#sponsor-highlight.item {
+  .home div#sponsor-highlight.item, .home div#survey.item {
     min-width: 100%;
   }
 
