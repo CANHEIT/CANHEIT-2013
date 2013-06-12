@@ -341,9 +341,10 @@
 <IfModule mod_rewrite.c>
   RewriteEngine On
   RewriteRule ^index-fr\.html$ / [R=301,L]
-  RewriteRule ^proposals/(index\.html)?$ / [R=301,L]
-  RewriteRule ^why-attend/(index\.html)?$ / [R=301,L]
+  RewriteRule ^proposals(/index\.html)?$ / [R=301,L]
+  RewriteRule ^why-attend(/index\.html)?$ / [R=301,L]
   RewriteRule ^why-attend/virtually/(index\.html)?$ /virtual/ [R=301,L]
+  RewriteRule ^speakers-toolkit(/index\.html)?$ / [R=301,L]
   RewriteRule ^register(/.*)? / [R=301,L]
   RewriteRule ^contacts/(.*)$ /contact/$1 [R=301,L]
 </IfModule>
