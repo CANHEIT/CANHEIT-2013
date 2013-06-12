@@ -44,12 +44,22 @@
               <li><a href="http://m.guidebook.com/guide/5396/forms/1137/menuItem/163341/?header=1">I tried the virtual world</a> <em>(at least once)</em></li>
             </ol>
           </div>
-
-          <div id="tweets" class="item">
-            <h2>Updates</h2>
-            <a href="https://twitter.com/CANHEIT2013" target="_blank" id='moreTweets' style="display:none"></a>
-            <div id="tweets-ticker"></div>
-            <a class="button" href="https://twitter.com/CANHEIT2013">Twitter feed</a>
+          
+          <div id="stay-in-touch" class="item">
+            <h2>Stay in touch!</h2>
+            
+            <p>The session videos will be available within the next couple weeks, so stay in touch!</p>
+            <a href="https://twitter.com/CANHEIT2013" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @CANHEIT2013</a>
+            <a href="http://www.linkedin.com/groups/CANHEIT-2013-4672666" class="linkedin-follow-button" target='_blank'><img src='/img/linkedin.png'/></a>
+            
+            <div id="subscribe-top">
+            	<div id="mesaj"></div>
+            	<form action="php/subscribe.php" method="post" id="subscribeform" name="subscribeform" class="clearfix">
+            		<input type="text" name="email" placeholder="Enter your email address to get notified" id="subemail-home">
+            		<input type="submit" name="send" value="Subscribe" id="subsubmit-home">
+            	</form>
+            </div>
+            
           </div>
 
           <div id="now" class="item">
@@ -151,39 +161,7 @@
 	   <script src="/js/downloadMobile.js"></script>
      <script src="/js/vendor/meny.min.js"></script>
      <script src="/js/menu.js"></script>
-     <script src="/js/vendor/jquery.tweet.js"></script>
      <script type='text/javascript'>
-           jQuery(function($){
-              var maxT = 0, prevMaxT = 0, newCount = 0;
-              $("#tweets-ticker").tweet({
-                username: "CANHEIT2013",
-                page: 1,
-                avatar_size: 32,
-                count: 2,
-                fetch: 20,
-                loading_text: "loading ...",
-                refresh_interval: 30,
-                filter: function(t){
-                    if(maxT < t.tweet_time)
-                      maxT = t.tweet_time;
-                    if(t.tweet_time > prevMaxT)
-                      newCount++;
-                    return true;
-                  },
-              }).bind("loaded",function(){
-                if(prevMaxT)
-                {
-                  if(newCount)
-                    $('#moreTweets').text(newCount+" more tweet"+(newCount > 1 ? "s" : "")).slideDown();
-                  else
-                    $('#moreTweets').slideUp();
-                }
-                prevMaxT = maxT;
-                newCount = 0;
-                matchHeight();
-              });
-            });
-
           function refreshNowContent(){
             $.ajax({
               type: "GET",
@@ -198,17 +176,6 @@
           }
           refreshNowContent();
           setInterval(function(){refreshNowContent();}, 60000);
-          function matchHeight(){
-            if($('#now').css('float') == 'right')
-              {
-                $('#events').css({height: parseInt($('#tweets').height()) - (parseInt($('#now').height()) - parseInt($('#events').height()))});
-              }
-            else
-              $('#events').css({height: "auto"});
-          }
-          $(window).resize(function() {
-            matchHeight();
-          });
       </script>
 
         <script>

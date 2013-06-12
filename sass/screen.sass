@@ -374,7 +374,7 @@ p.theme
     margin-right: 0
   .home div#program.item, .home div#baggage-check.item
     float: left
-  .home div#tweets.item
+  .home div#stay-in-touch.item
     float: left
   .home div#now.item
     #events
@@ -382,20 +382,25 @@ p.theme
       margin-bottom: 1em
   .home div#sponsor-highlight.item, .home div#survey.item
     min-width: 100%
-  .home div#your-stay, .home div#speakers-toolkit, .home div#shuttle, .home div#now, .home div#contact
+  .home div#your-stay, .home div#speakers-toolkit, .home div#shuttle, .home div#contact
     transform: rotate(1deg)
     -ms-transform: rotate(1deg) /* IE 9 */
     -moz-transform: rotate(1deg) /* Firefox */
     -webkit-transform: rotate(1deg) /* Safari and Chrome */
     -o-transform: rotate(1deg) /* Opera */
 
-  .home div#program, .home div#baggage-check, .home div#virtual, .home div#tweets
+  .home div#program, .home div#baggage-check, .home div#virtual
     margin-right: -1em
     transform: rotate(-1deg)
     -ms-transform: rotate(-1deg) /* IE 9 */
     -moz-transform: rotate(-1deg) /* Firefox */
     -webkit-transform: rotate(-1deg) /* Safari and Chrome */
     -o-transform: rotate(-1deg) /* Opera */
+
+.home div#stay-in-touch.item
+  .twitter-follow-button, .linkedin-follow-button
+    margin: 10px 0
+    display: block
 
 div#app-promo.item
   display: none
@@ -606,13 +611,13 @@ aside.alternative
     color: black
     font-weight: $weight-bold
 
-#subscribe
+#subscribe, #subscribe-home
   .subscribe-loader
     background: url(/img/ajax-loader.gif) no-repeat top left
     width: 12px
     height: 12px
     display: inline-block
-  #subemail
+  #subemail, #subemail-home
     width: 100%
     padding: 0.3em 0.5em
     -webkit-box-sizing: border-box
@@ -626,7 +631,10 @@ aside.alternative
       +span-columns(6, 8)
     +at-breakpoint(35em 9)
       +span-columns(7, 9)
-  #subsubmit
+  #subemail-home
+    margin-bottom: 10px
+    display: block
+  #subsubmit, #subsubmit-home
     +at-breakpoint(30em 8)
       +span-columns(2, 8)
       +omega
@@ -636,7 +644,7 @@ aside.alternative
   .error_message
     margin-bottom: 1em
     color: #f36f67
-  #success_page
+  #success_page, #success_page-home
     h3
       color: #95b257
       margin: 0
