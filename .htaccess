@@ -344,11 +344,11 @@
   RewriteRule ^proposals(/index\.html)?$ / [R=301,L]
   RewriteRule ^why-attend(/index\.html)?$ / [R=301,L]
   RewriteRule ^why-attend/virtually/(index\.html)?$ /virtual/ [R=301,L]
-  RewriteRule ^speakers-toolkit(/index\.html)?$ / [R=301,L]
+  RewriteRule ^speakers-toolkit(/.*)?$ / [R=301,L]
   RewriteRule ^register(/.*)? / [R=301,L]
   RewriteRule ^contacts/(.*)$ /contact/$1 [R=301,L]
-  RewriteRule ^shuttle(/index.html)?$ / [R=301,L]
-  RewriteRule ^baggage-check(/index.html)?$ / [R=301,L]
+  RewriteRule ^shuttle(/.*)?$ / [R=301,L]
+  RewriteRule ^baggage-check(/.*)?$ / [R=301,L]
 </IfModule>
 
 # ----------------------------------------------------------------------
