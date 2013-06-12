@@ -347,7 +347,8 @@
   RewriteRule ^speakers-toolkit(/index\.html)?$ / [R=301,L]
   RewriteRule ^register(/.*)? / [R=301,L]
   RewriteRule ^contacts/(.*)$ /contact/$1 [R=301,L]
-  RewriteRule ^baggage-check(/index.html)$ / [R=301,L]
+  RewriteRule ^shuttle(/index.html)?$ / [R=301,L]
+  RewriteRule ^baggage-check(/index.html)?$ / [R=301,L]
 </IfModule>
 
 # ----------------------------------------------------------------------
