@@ -611,13 +611,13 @@ p.theme {
   }
 
   /* line 372, ../sass/screen.sass */
-  .home div#shuttle.item, .home div#now.item, .home div#contact.item {
+  .home div#program.item, .home div#contact.item {
     float: right;
     margin-right: 0;
   }
 
   /* line 375, ../sass/screen.sass */
-  .home div#program.item, .home div#baggage-check.item {
+  .home div#baggage-check.item {
     float: left;
   }
 
@@ -638,7 +638,7 @@ p.theme {
   }
 
   /* line 385, ../sass/screen.sass */
-  .home div#your-stay, .home div#speakers-toolkit, .home div#shuttle, .home div#contact {
+  .home div#program, .home div#contact {
     transform: rotate(1deg);
     -ms-transform: rotate(1deg);
     -moz-transform: rotate(1deg);
@@ -647,7 +647,7 @@ p.theme {
   }
 
   /* line 392, ../sass/screen.sass */
-  .home div#program, .home div#baggage-check, .home div#virtual {
+  .home div#virtual {
     margin-right: -1em;
     transform: rotate(-1deg);
     -ms-transform: rotate(-1deg);
