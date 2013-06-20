@@ -611,7 +611,7 @@ p.theme {
   }
 
   /* line 372, ../sass/screen.sass */
-  .home div#program.item, .home div#contact.item {
+  .home div#program.item {
     float: right;
     margin-right: 0;
   }
@@ -1060,18 +1060,18 @@ article#program h3 a {
 }
 
 /* line 661, ../sass/screen.sass */
-.contact article h2, .shuttle article h2 {
+.shuttle article h2 {
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   margin-bottom: 0;
 }
 /* line 664, ../sass/screen.sass */
-.contact article .subtitle, .shuttle article .subtitle {
+.shuttle article .subtitle {
   margin-top: 0;
   color: #989a9e;
   margin-bottom: 1em;
 }
 /* line 668, ../sass/screen.sass */
-.contact article section.description, .shuttle article section.description {
+.shuttle article section.description {
   padding-left: 1em;
 }
 

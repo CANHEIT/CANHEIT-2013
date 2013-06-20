@@ -238,20 +238,6 @@
       array_push($parse_functions, 'prepare_sponsors_data');
       break;
 
-    # contact
-
-    case (
-      preg_match(
-        "/^\/(contact)\/$/"
-        , $p, $matches) ? true : false
-      ) :
-      $poi_category_id = 17173;
-      $stmt = $db->prepare($poi_query);
-      $stmt->bindParam(':id', $poi_category_id, SQLITE3_INTEGER);
-      $template_file = $matches[1].'/index.twig';
-      break;
-
-
     # shuttle
 
     case (
