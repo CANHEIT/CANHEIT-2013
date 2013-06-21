@@ -50,7 +50,7 @@
       $stmt->bindParam(':id', $matches[2], SQLITE3_INTEGER);
       $is_single_object_expected = true;
       $template_file = $matches[1].'/session.twig';
-      array_push($parse_functions, 'get_correct_image_urls', 'parse_links');
+      array_push($parse_functions, 'get_correct_image_urls', 'parse_links', 'get_tracks_for_session', 'check_if_session_should_have_video');
       break;
 
     case (
@@ -258,9 +258,8 @@
         array_push($data['objects'], $row);
       }
     }
-
-    $db->close();
   }
+  
 # test and parse the data
 
   # test the data, throw a 404 on error
@@ -274,6 +273,8 @@
       $parse_function($data);
     }
   }
+  
+  $db->close();
 
 # load the template
 
@@ -322,6 +323,66 @@
       $data['links'] = $new_links[0]['links'];
       remove_prod_domain_and_app_toggle_param_from_link_url($data);
     }
+  }
+  
+  function get_tracks_for_session(&$data) {
+    global $db;
+  
+    if(!isset($data['id'])) {
+      return;
+    }
+
+    $stmt = $db->prepare('SELECT `guidebook_schedule`.id as "track_id", `guidebook_schedule`.name as "track_name" FROM `guidebook_schedule`, `guidebook_event_scheduleTrack` WHERE `guidebook_schedule`.id == `guidebook_event_scheduleTrack`.schedule_id AND `guidebook_event_scheduleTrack`.event_id = :id;');
+    $stmt->bindParam(':id', $data['id'], SQLITE3_INTEGER);
+    
+    $tracks = array();
+    $data['tracks'] = array();
+    $result = $stmt->execute();    
+
+    while($row = $result->fetchArray()) {
+      array_push($data['tracks'], $row);
+    }
+    
+    return true;
+  }
+  
+  function check_if_session_should_have_video(&$data) {
+    
+    $data['should_have_video'] = 'no';
+    
+    if (
+      $data['id'] == 969452 // Meet the Expert, Dell
+    ) {
+      $data['should_have_video'] = 'cancelled';
+      return;
+    }
+    
+    if (
+      $data['id'] == 2414670 // Tuesday Keynote
+    ) {
+      $data['should_have_video'] = 'not_allowed';
+      return;
+    }
+
+    if (!isset($data['tracks']) || !is_array($data['tracks']) || count($data['tracks']) < 1) {
+      return; // No tracks, no video for sure
+    }
+    
+    foreach($data['tracks'] as $track) {
+      if (
+           $track['track_id'] == 28263 // Program (Sessions)
+        || $track['track_id'] == 28262 // Program (Vendor Sponsored Sessions)
+        || $track['track_id'] == 28267 // Program (Keynote)
+      ) {
+        $data['should_have_video'] = 'yes';
+        return;
+      } else if (
+           $track['track_id'] == 28259 // Program (Workshops & Training)
+      ) {
+        $data['should_have_video'] = 'workshop_so_no';
+      }
+    }
+    
   }
 
   function remove_prod_domain_and_app_toggle_param_from_link_url(&$data) {

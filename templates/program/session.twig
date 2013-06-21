@@ -25,12 +25,48 @@
               {% include 'top-call-to-action.html' %}
               <a href="./#{{ startTime | date("l-g:iA") | lower }}" rel="home" class="return">{{ startTime | date("l") }}</a>
               <h1>{{ name }}</h1>
+              
               <p>
                 <span class="starttime">{{ startTime | date("D. M d") }} at {{ startTime | date("g:i A") }}</span>
                 <span class="endtime">until {{ endTime | date("g:i A") }}</span>
                 <span class="location">in {{ location }}</span>
               </p>
             </header>
+
+            {% if should_have_video == "yes" %}
+            <aside class="video_{{should_have_video}}">
+              Looking for the video of this session? Stay tuned. They'll be available soon.
+              <p class="note">Note that some sessions won't have a video available. We've done our best to record most of them.</p>
+            </aside>
+            {% elseif should_have_video == "not_allowed" %}
+            <aside class="video_{{should_have_video}}">
+              Looking for the video of this session?
+              <p class="note">Unfortunately, no video was taken of this session, at the request of the presenter.</p>
+            </aside>
+            {% elseif should_have_video == "cancelled" %}
+            <aside class="video_{{should_have_video}}">
+              Looking for the video of this session?
+              <p class="note">Unfortunately, this session was cancelled.</p>
+            </aside>
+            {% elseif should_have_video == "workshop_so_no" %}
+            <aside class="video_{{should_have_video}}">
+              Looking for the video of this session?
+              <p class="note">Unfortunately, no video was taken of this workshop. However, videos were recorded for most of the sessions given on <a href="./#monday">Monday</a>, <a href="./#tuesday">Tuesday</a> or <a href="./#wednesday">Wednesday</a>.</p>
+            </aside>
+            {% endif %}
+            
+            {% if links %}
+            <h2>Links</h2>
+            <ul id="links">
+            {% for link in links %}
+              {% if link.gb_url|slice(0, 4) == 'http' or link.gb_url|slice(0, 1) == '/' %}
+              <li><a href="{{ link.gb_url }}">{{ link.title }}</a></li>
+              {% endif %}
+            {% endfor %}
+            </ul>
+            {% endif %}
+            
+            <h2>About the session</h2>
 
             {% if image %}
 
@@ -42,17 +78,6 @@
               {{ description }}
             {% endautoescape %}
             </section>
-
-            {% if links %}
-            <h2>Links</h2>
-            <ul id="links">
-            {% for link in links %}
-              {% if link.gb_url|slice(0, 4) == 'http' or link.gb_url|slice(0, 1) == '/' %}
-              <li><a href="{{ link.gb_url }}">{{ link.title }}</a></li>
-              {% endif %}
-            {% endfor %}
-            </ul>
-            {% endif %}
 
 					</article>
 					{% include 'footer.html' %}
