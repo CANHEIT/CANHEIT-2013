@@ -380,6 +380,10 @@
            $track['track_id'] == 28259 // Program (Workshops & Training)
       ) {
         $data['should_have_video'] = 'workshop_so_no';
+      } else if (
+           $track['track_id'] == 28265 // Program (BOFs)
+      ) {
+        $data['should_have_video'] = 'bof_so_no';
       }
     }
     
