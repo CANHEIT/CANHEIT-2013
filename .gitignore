@@ -5,6 +5,6 @@
 .cache/
 .DS_Store
 *.esproj
-.vagrant
+.vagrant*
 localhost\:8080
 wget.log
