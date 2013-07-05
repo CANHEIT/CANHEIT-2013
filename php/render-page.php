@@ -358,6 +358,13 @@
     }
     
     if (
+      $data['id'] == 969426 // Monday Keynote
+    ) {
+      $data['should_have_video'] = 'not_allowed';
+      return;
+    }
+    
+    if (
       $data['id'] == 2414670 // Tuesday Keynote
     ) {
       $data['should_have_video'] = 'not_allowed';
