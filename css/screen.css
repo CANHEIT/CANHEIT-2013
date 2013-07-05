@@ -633,7 +633,7 @@ p.theme {
   }
 
   /* line 383, ../sass/screen.sass */
-  .home div#sponsor-highlight.item, .home div#survey.item {
+  .home div#sponsor-highlight.item {
     min-width: 100%;
   }
 }
