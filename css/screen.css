@@ -994,7 +994,7 @@ article#session aside a {
   color: white;
 }
 /* line 624, ../sass/screen.sass */
-article#session aside.video_workshop_so_no, article#session aside.video_bof_so_no, article#session aside.video_not_allowed, article#session aside.video_cancelled {
+article#session aside.video_workshop_so_no, article#session aside.video_bof_so_no, article#session aside.video_not_allowed, article#session aside.video_glitch, article#session aside.video_cancelled {
   background: #989a9e;
 }
 
