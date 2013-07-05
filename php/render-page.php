@@ -50,7 +50,7 @@
       $stmt->bindParam(':id', $matches[2], SQLITE3_INTEGER);
       $is_single_object_expected = true;
       $template_file = $matches[1].'/session.twig';
-      array_push($parse_functions, 'get_correct_image_urls', 'parse_links', 'get_tracks_for_session', 'check_if_session_should_have_video');
+      array_push($parse_functions, 'get_correct_image_urls', 'parse_links', 'get_tracks_for_session', 'check_if_session_should_have_video', 'remove_video_url_from_links');
       break;
 
     case (
@@ -387,6 +387,15 @@
       }
     }
     
+  }
+  
+  function remove_video_url_from_links(&$data) {
+    $providers_pattern = '/(hml\.med\.uottawa.ca|vimeo\.com|youtube\.com)/';
+    for ($i = 0; $i < count($data['links']); $i++) {
+      if (preg_match($providers_pattern, $data['links'][$i]['gb_url'])) {
+        unset($data['links'][$i]);
+      }
+    }
   }
 
   function remove_prod_domain_and_app_toggle_param_from_link_url(&$data) {
