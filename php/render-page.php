@@ -360,7 +360,7 @@
     if (
       $data['id'] == 969426 // Monday Keynote
     ) {
-      $data['should_have_video'] = 'not_allowed';
+      $data['should_have_video'] = 'glitch';
       return;
     }
     

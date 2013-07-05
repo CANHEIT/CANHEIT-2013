@@ -43,6 +43,11 @@
               Looking for the video of this session?
               <p class="note">Unfortunately, no video was taken of this session, at the request of the presenter.</p>
             </aside>
+            {% elseif should_have_video == "glitch" %}
+            <aside class="video_{{should_have_video}}">
+              Looking for the video of this session?
+              <p class="note">Unfortunately, we encountered a glitch while recording this session, so the video isn't available. We're really sorry about that.</p>
+            </aside>
             {% elseif should_have_video == "cancelled" %}
             <aside class="video_{{should_have_video}}">
               Looking for the video of this session?
