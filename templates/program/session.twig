@@ -33,11 +33,13 @@
               </p>
             </header>
 
-            {% if video_url %}
+            {% if video_embed_url %}
 
             <div class="video">
-              {% if 'hml.med.uottawa.ca' in video_url %}
-                <iframe width="845" height="515" src="{{video_url}}" frameborder="0" scrolling="no"></iframe>
+              {% if 'hml.med.uottawa.ca' in video_embed_url %}
+                <iframe width="845" height="515" src="{{video_embed_url}}" frameborder="0" scrolling="no"></iframe>
+              {% elseif 'youtube.com' in video_embed_url %}
+                <iframe width="704" height="396" src="{{video_embed_url}}" frameborder="0" allowfullscreen></iframe>
               {% endif %}
             </div>
             
