@@ -28,8 +28,8 @@
               
               <p>
                 <span class="starttime">{{ startTime | date("D. M d") }} at {{ startTime | date("g:i A") }}</span>
-                <span class="endtime">until {{ endTime | date("g:i A") }}</span>
-                <span class="location">in {{ location }}</span>
+                <span class="endtime">(until {{ endTime | date("g:i A") }})</span>
+                <span class="location">- {{ location }}</span>
               </p>
             </header>
 
