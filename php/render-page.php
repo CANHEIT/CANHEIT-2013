@@ -406,7 +406,8 @@
       // just grabs the first video URL it finds from the list
       if (preg_match($providers_pattern, $data['links'][$i]['gb_url'])) {
       
-        if(preg_match($youtube_pattern, $test_youtube_url, $matches)) {
+        if( 969429 == $data['id'] // session with test youtube
+            && preg_match($youtube_pattern, $test_youtube_url, $matches)) {
           $data['video_embed_url'] = '//www.youtube.com/embed/' . $matches[0];
         } else {
           $data['video_embed_url'] = $data['links'][$i]['gb_url'];
