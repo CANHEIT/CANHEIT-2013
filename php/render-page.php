@@ -397,23 +397,18 @@
   }
   
   function extract_video_embed_url_from_links(&$data) {
-    $providers_pattern = '/(hml\.med\.uottawa.ca|vimeo\.com|youtube\.com)/';
+    $providers_pattern = '/youtube\.com/';
     
-    $test_youtube_url = 'http://www.youtube.com/watch?v=H-uoE8ZNQZg';
     $youtube_pattern = '#(?<=v=)[a-zA-Z0-9-]+(?=&)|(?<=v\/)[^&\n]+(?=\?)|(?<=v=)[^&\n]+|(?<=youtu.be/)[^&\n]+#';
     
     for ($i = 0; $i < count($data['links']); $i++) {
       // just grabs the first video URL it finds from the list
       if (preg_match($providers_pattern, $data['links'][$i]['gb_url'])) {
-      
-        if( 969429 == $data['id'] // session with test youtube
-            && preg_match($youtube_pattern, $test_youtube_url, $matches)) {
+        if(preg_match($youtube_pattern, $data['links'][$i]['gb_url'], $matches)) {
           $data['video_embed_url'] = '//www.youtube.com/embed/' . $matches[0];
-        } else {
-          $data['video_embed_url'] = $data['links'][$i]['gb_url'];
+          unset($data['links'][$i]);
+          return;
         }
-        unset($data['links'][$i]);
-        return;
       }
     }
   }
