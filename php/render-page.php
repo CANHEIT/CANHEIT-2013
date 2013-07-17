@@ -50,7 +50,7 @@
       $stmt->bindParam(':id', $matches[2], SQLITE3_INTEGER);
       $is_single_object_expected = true;
       $template_file = $matches[1].'/session.twig';
-      array_push($parse_functions, 'get_correct_image_urls', 'parse_links', 'get_tracks_for_session', 'check_if_session_should_have_video', 'remove_video_url_from_links');
+      array_push($parse_functions, 'get_correct_image_urls', 'parse_links', 'get_tracks_for_session', 'check_if_session_should_have_video', 'extract_video_embed_url_from_links');
       break;
 
     case (
@@ -396,11 +396,19 @@
     
   }
   
-  function remove_video_url_from_links(&$data) {
-    $providers_pattern = '/(hml\.med\.uottawa.ca|vimeo\.com|youtube\.com)/';
+  function extract_video_embed_url_from_links(&$data) {
+    $providers_pattern = '/youtube\.com/';
+    
+    $youtube_pattern = '#(?<=v=)[a-zA-Z0-9-]+(?=&)|(?<=v\/)[^&\n]+(?=\?)|(?<=v=)[^&\n]+|(?<=youtu.be/)[^&\n]+#';
+    
     for ($i = 0; $i < count($data['links']); $i++) {
+      // just grabs the first video URL it finds from the list
       if (preg_match($providers_pattern, $data['links'][$i]['gb_url'])) {
-        unset($data['links'][$i]);
+        if(preg_match($youtube_pattern, $data['links'][$i]['gb_url'], $matches)) {
+          $data['video_embed_url'] = '//www.youtube.com/embed/' . $matches[0];
+          unset($data['links'][$i]);
+          return;
+        }
       }
     }
   }

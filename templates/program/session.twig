@@ -28,16 +28,19 @@
               
               <p>
                 <span class="starttime">{{ startTime | date("D. M d") }} at {{ startTime | date("g:i A") }}</span>
-                <span class="endtime">until {{ endTime | date("g:i A") }}</span>
-                <span class="location">in {{ location }}</span>
+                <span class="endtime">(until {{ endTime | date("g:i A") }})</span>
+                <span class="location">- {{ location }}</span>
               </p>
             </header>
 
-            {% if should_have_video == "yes" %}
-            <aside class="video_{{should_have_video}}">
-              Looking for the video of this session? Stay tuned. It'll be available soon.
-              <p class="note">Note that some sessions won't have a video available. We've done our best to record most of them.</p>
-            </aside>
+            {% if video_embed_url %}
+
+            <div class="video">
+              {% if 'youtube.com' in video_embed_url %}
+                <iframe width="704" height="396" src="{{video_embed_url}}" frameborder="0" allowfullscreen></iframe>
+              {% endif %}
+            </div>
+            
             {% elseif should_have_video == "not_allowed" %}
             <aside class="video_{{should_have_video}}">
               Looking for the video of this session?
@@ -94,12 +97,20 @@
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="/js/vendor/jquery-1.8.2.min.js"><\/script>')</script>
+        <script src="/js/vendor/jquery.fitvids.js"></script>
         <script src="/js/plugins.js"></script>
         <script src="/js/main.js"></script><script src="/js/vendor/jquery.smartbanner/jquery.smartbanner.js"></script>
         <script src="/js/vendor/jquery.collapse.js"></script>
         <script src="/js/vendor/jquery.cookie.js"></script>
         <script src="/js/vendor/meny.min.js"></script>
         <script src="/js/menu.js"></script>
+        
+        <script>
+          $(document).ready(function(){
+            // Target your .container, .wrapper, .post, etc.
+            $(".video").fitVids();
+          });
+        </script>
 
 
         <script>
